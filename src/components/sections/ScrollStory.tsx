@@ -22,15 +22,24 @@ export function useScrollStory() {
 }
 
 // Section heights in vh units, matching the storyboard
-const SECTION_HEIGHTS = [150, 200, 100, 300, 100, 200, 100]; // 7 sections, 1250vh total
+const SECTION_HEIGHTS = [115, 200, 100, 300, 100, 200, 100]; // 7 sections, 1115vh total
+
+const VIEWPORT_VH = 100;
+// Content activates when section top is this fraction of viewport from the top.
+// 0.15 = section nearly at viewport top when animation starts.
+const TRIGGER_POINT = 0.15;
 
 function getSectionPosition(index: number): { start: number; duration: number } {
   const total = SECTION_HEIGHTS.reduce((sum, h) => sum + h, 0);
+  const scrollRange = total - VIEWPORT_VH; // actual scrollable distance
   let offset = 0;
   for (let i = 0; i < index; i++) {
     offset += SECTION_HEIGHTS[i];
   }
-  return { start: offset / total, duration: SECTION_HEIGHTS[index] / total };
+  return {
+    start: Math.max(0, (offset - TRIGGER_POINT * VIEWPORT_VH) / scrollRange),
+    duration: SECTION_HEIGHTS[index] / scrollRange,
+  };
 }
 
 export { getSectionPosition, SECTION_HEIGHTS };
@@ -78,7 +87,7 @@ export default function ScrollStory({ children }: { children: ReactNode }) {
 
           ScrollTrigger.create({
             trigger: section,
-            start: "top 80%",
+            start: "top 60%",
             onEnter: () => {
               gsap.to(targets, {
                 opacity: 1,

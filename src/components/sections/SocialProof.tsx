@@ -135,8 +135,9 @@ export default function SocialProof() {
     <section
       ref={sectionRef}
       data-scroll-section
-      className="min-h-[200vh] bg-sage-50 py-20"
+      className="min-h-[200vh] bg-sage-50 relative"
     >
+      <div className="sticky top-0 min-h-screen flex items-center py-20">
       <div className="max-w-5xl mx-auto px-4">
         <h2
           data-social-headline
@@ -200,6 +201,7 @@ export default function SocialProof() {
             See All Reviews
           </Button>
         </div>
+      </div>
       </div>
     </section>
   );

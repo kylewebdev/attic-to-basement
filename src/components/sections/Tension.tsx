@@ -4,20 +4,13 @@ import { useRef } from "react";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 
-const questions = [
-  "What is worth selling? What should be donated? What do you keep?",
-  "How do you price a lifetime of collected things fairly?",
-  "Who handles the marketing, the staging, the buyers, the cleanup?",
-  "And how do you do all of this while grieving, or while managing a move, or while living 200 miles away?",
-];
-
-// Progressive text styling — each question gets heavier
-const questionStyles = [
-  "text-stone-400 text-lg md:text-xl",
-  "text-stone-500 text-xl md:text-2xl",
-  "text-stone-600 text-xl md:text-2xl font-medium",
-  "text-stone-700 text-2xl md:text-3xl font-semibold",
-];
+const paragraph =
+  "Every room tells a story. Every drawer holds a decision. " +
+  "What is worth selling? What should be donated? What do you keep? " +
+  "How do you price a lifetime of collected things fairly? " +
+  "Who handles the marketing, the staging, the buyers, the cleanup? " +
+  "And how do you do all of this while grieving, or while managing a move, " +
+  "or while living 200 miles away?";
 
 export default function Tension() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -28,58 +21,46 @@ export default function Tension() {
     registerSection(start, duration, (tl, s, d) => {
       if (!sectionRef.current) return;
 
-      const headline = sectionRef.current.querySelector(
-        "[data-tension-headline]"
+      const words = sectionRef.current.querySelectorAll("[data-word]");
+      if (words.length === 0) return;
+
+      // Stagger each word from muted to highlighted
+      tl.fromTo(
+        words,
+        { color: "#d6d3d1" }, // stone-300
+        {
+          color: "#292524", // stone-800
+          duration: d * 0.9,
+          stagger: (d * 0.9) / words.length,
+          ease: "none",
+        },
+        s + d * 0.05
       );
-      const items = sectionRef.current.querySelectorAll("[data-tension-q]");
-
-      if (headline) {
-        tl.fromTo(
-          headline,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
-          s
-        );
-      }
-
-      items.forEach((item, i) => {
-        const segmentStart = s + d * (0.15 + i * 0.175);
-        tl.fromTo(
-          item,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
-          segmentStart
-        );
-      });
     });
   }, { scope: sectionRef });
+
+  const words = paragraph.split(" ");
 
   return (
     <section
       ref={sectionRef}
       data-scroll-section
-      className="min-h-[200vh] flex items-start justify-center bg-warm-white"
+      className="min-h-[200vh] bg-warm-white relative"
     >
-      <div className="max-w-3xl mx-auto px-4 pt-32 md:pt-40 space-y-10">
-        <h2
-          data-tension-headline
-          data-animate
-          className="font-serif text-3xl md:text-4xl text-stone-800 text-center"
-        >
-          Every room tells a story. Every drawer holds a decision.
-        </h2>
-
-        <div className="space-y-8 pt-8">
-          {questions.map((q, i) => (
-            <p
-              key={i}
-              data-tension-q
-              data-animate
-              className={`leading-relaxed ${questionStyles[i]}`}
-            >
-              {q}
-            </p>
-          ))}
+      <div className="sticky top-0 min-h-screen flex items-center justify-center">
+        <div className="max-w-3xl mx-auto px-4">
+          <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center">
+            {words.map((word, i) => (
+              <span
+                key={i}
+                data-word
+                data-animate
+                className="inline-block mr-[0.3em] text-stone-300 transition-colors"
+              >
+                {word}
+              </span>
+            ))}
+          </p>
         </div>
       </div>
     </section>

@@ -125,64 +125,66 @@ export default function Process() {
     <section
       ref={sectionRef}
       data-scroll-section
-      className="min-h-[300vh] bg-warm-white py-20"
+      className="min-h-[300vh] bg-warm-white relative"
     >
-      <div className="max-w-3xl mx-auto px-4">
-        <h2
-          data-process-headline
-          data-animate
-          className="font-serif text-3xl md:text-4xl text-stone-800 text-center mb-16"
-        >
-          From attic to basement. Here is how it works.
-        </h2>
+      <div className="sticky top-0 min-h-screen flex items-center py-20">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2
+            data-process-headline
+            data-animate
+            className="font-serif text-3xl md:text-4xl text-stone-800 text-center mb-16"
+          >
+            From attic to basement. Here is how it works.
+          </h2>
 
-        <div className="relative">
-          {/* Progress line */}
-          <div
-            data-process-line
-            className="absolute left-5 md:left-6 top-0 bottom-0 w-0.5 bg-sage-200 origin-top"
-            aria-hidden="true"
-          />
+          <div className="relative">
+            {/* Progress line */}
+            <div
+              data-process-line
+              className="absolute left-5 md:left-6 top-0 bottom-0 w-0.5 bg-sage-200 origin-top"
+              aria-hidden="true"
+            />
 
-          <div className="space-y-16">
-            {steps.map((step) => (
-              <div
-                key={step.number}
-                data-process-step
-                className="relative flex gap-6 md:gap-8"
-              >
-                {/* Icon circle */}
+            <div className="space-y-16">
+              {steps.map((step) => (
                 <div
-                  data-step-icon
-                  data-animate
-                  className="relative z-10 flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-sage-500 text-white flex items-center justify-center"
+                  key={step.number}
+                  data-process-step
+                  className="relative flex gap-6 md:gap-8"
                 >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
+                  {/* Icon circle */}
+                  <div
+                    data-step-icon
+                    data-animate
+                    className="relative z-10 flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-sage-500 text-white flex items-center justify-center"
                   >
-                    <path d={step.icon} />
-                  </svg>
-                </div>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d={step.icon} />
+                    </svg>
+                  </div>
 
-                {/* Text */}
-                <div data-step-text data-animate className="pt-1">
-                  <h3 className="font-serif text-xl md:text-2xl text-stone-800 mb-2">
-                    Step {step.number}: {step.title}
-                  </h3>
-                  <p className="text-stone-500 leading-relaxed">
-                    {step.description}
-                  </p>
+                  {/* Text */}
+                  <div data-step-text data-animate className="pt-1">
+                    <h3 className="font-serif text-xl md:text-2xl text-stone-800 mb-2">
+                      Step {step.number}: {step.title}
+                    </h3>
+                    <p className="text-stone-500 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
