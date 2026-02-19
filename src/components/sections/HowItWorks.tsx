@@ -1,0 +1,11 @@
+export default function HowItWorks() {
+  return (
+    <section className="py-16 md:py-24 bg-warm-50">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <p className="text-stone-400 text-sm uppercase tracking-widest">
+          How It Works
+        </p>
+      </div>
+    </section>
+  );
+}
