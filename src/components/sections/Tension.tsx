@@ -12,6 +12,13 @@ const paragraph =
   "And how do you do all of this while grieving, or while managing a move, " +
   "or while living 200 miles away?";
 
+// Reading pace weights — pause longer after sentence-ending punctuation
+function getWordWeight(word: string): number {
+  if (word.endsWith(".") || word.endsWith("?")) return 2.5;
+  if (word.endsWith(",")) return 1.6;
+  return 1;
+}
+
 export default function Tension() {
   const sectionRef = useRef<HTMLElement>(null);
   const { registerSection } = useScrollStory();
@@ -24,22 +31,32 @@ export default function Tension() {
       const words = sectionRef.current.querySelectorAll("[data-word]");
       if (words.length === 0) return;
 
-      // Stagger each word from muted to highlighted
-      tl.fromTo(
-        words,
-        { color: "#d6d3d1" }, // stone-300
-        {
-          color: "#292524", // stone-800
-          duration: d * 0.9,
-          stagger: (d * 0.9) / words.length,
-          ease: "none",
-        },
-        s + d * 0.05
-      );
+      // Calculate total weight for natural reading rhythm
+      const wordTexts = paragraph.split(/\s+/);
+      const weights = wordTexts.map(getWordWeight);
+      const totalWeight = weights.reduce((sum, w) => sum + w, 0);
+
+      // Place each word's tween at a weighted position on the timeline
+      const revealDuration = d * 0.9;
+      let weightOffset = 0;
+
+      words.forEach((word, i) => {
+        const wordStart = s + d * 0.05 + (weightOffset / totalWeight) * revealDuration;
+        const wordDur = (weights[i] / totalWeight) * revealDuration * 0.3;
+
+        tl.fromTo(
+          word,
+          { color: "#d6d3d1" }, // stone-300
+          { color: "#292524", duration: wordDur, ease: "power1.out" },
+          wordStart
+        );
+
+        weightOffset += weights[i];
+      });
     });
   }, { scope: sectionRef });
 
-  const words = paragraph.split(" ");
+  const words = paragraph.split(/\s+/);
 
   return (
     <section
@@ -49,15 +66,10 @@ export default function Tension() {
     >
       <div className="sticky top-0 min-h-screen flex items-center justify-center">
         <div className="max-w-3xl mx-auto px-4">
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center">
+          <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center text-stone-300">
             {words.map((word, i) => (
-              <span
-                key={i}
-                data-word
-                data-animate
-                className="inline-block mr-[0.3em] text-stone-300 transition-colors"
-              >
-                {word}
+              <span key={i} data-word data-animate className="inline">
+                {word}{" "}
               </span>
             ))}
           </p>
