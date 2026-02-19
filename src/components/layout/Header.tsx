@@ -72,7 +72,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-sans text-stone-600 hover:text-sage-600 transition-colors"
+                className="text-sm font-sans text-stone-400 hover:text-sage-300 transition-colors"
               >
                 {link.label}
               </Link>
@@ -84,7 +84,7 @@ export default function Header() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 text-stone-600 hover:text-stone-800 min-h-11 min-w-11 flex items-center justify-center"
+            className="lg:hidden p-2 text-stone-400 hover:text-stone-200 min-h-11 min-w-11 flex items-center justify-center"
             onClick={() => setMobileNavOpen(true)}
             aria-label="Open menu"
           >

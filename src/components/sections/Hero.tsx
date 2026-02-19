@@ -90,11 +90,11 @@ export default function Hero({
         </div>
       )}
       <div className="relative max-w-4xl mx-auto px-4 text-center">
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-800 leading-tight">
+        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-200 leading-tight">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-6 text-lg md:text-xl text-stone-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed">
             {subtitle}
           </p>
         )}

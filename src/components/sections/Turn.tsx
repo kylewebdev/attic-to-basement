@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 
@@ -24,32 +25,32 @@ export default function Turn() {
         tl.fromTo(
           headline,
           { opacity: 0, y: -20 },
-          { opacity: 1, y: 0, duration: d * 0.35, ease: "power3.out" },
-          s + d * 0.15
+          { opacity: 1, y: 0, duration: d * 0.25, ease: "power3.out" },
+          s
         );
       }
       if (subtext) {
         tl.fromTo(
           subtext,
           { opacity: 0 },
-          { opacity: 1, duration: d * 0.3, ease: "power2.out" },
-          s + d * 0.4
+          { opacity: 1, duration: d * 0.2, ease: "power2.out" },
+          s + d * 0.1
         );
       }
       if (supporting) {
         tl.fromTo(
           supporting,
           { opacity: 0 },
-          { opacity: 1, duration: d * 0.3, ease: "power2.out" },
-          s + d * 0.4
+          { opacity: 1, duration: d * 0.2, ease: "power2.out" },
+          s + d * 0.15
         );
       }
       if (photo) {
         tl.fromTo(
           photo,
           { opacity: 0, x: 60 },
-          { opacity: 1, x: 0, duration: d * 0.3, ease: "power2.out" },
-          s + d * 0.5
+          { opacity: 1, x: 0, duration: d * 0.25, ease: "power2.out" },
+          s + d * 0.05
         );
       }
     });
@@ -67,14 +68,14 @@ export default function Turn() {
           <h2
             data-turn-headline
             data-animate
-            className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-800 leading-tight"
+            className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-200 leading-tight"
           >
             That is where we come in.
           </h2>
           <p
             data-turn-subtext
             data-animate
-            className="mt-6 text-lg text-stone-600 leading-relaxed"
+            className="mt-6 text-lg text-stone-400 leading-relaxed"
           >
             Attic to Basement Estate Liquidators handles everything, from the
             first walkthrough to the final sweep, so you do not have to figure
@@ -83,7 +84,7 @@ export default function Turn() {
           <p
             data-turn-supporting
             data-animate
-            className="mt-4 text-stone-500 leading-relaxed"
+            className="mt-4 text-stone-400 leading-relaxed"
           >
             Over 20 years of combined experience across Northern California.
             Hundreds of families served. Led by Cortnee Beggs, who treats every
@@ -91,16 +92,19 @@ export default function Turn() {
           </p>
         </div>
 
-        {/* Photo placeholder */}
+        {/* Team photo */}
         <div
           data-turn-photo
           data-animate
-          className="aspect-[4/3] rounded-xl bg-gradient-to-br from-sage-100 to-sage-200 flex items-center justify-center"
-          aria-label="Team photo placeholder"
+          className="relative aspect-[4/3] rounded-xl overflow-hidden"
         >
-          <span className="text-sage-400 text-sm uppercase tracking-widest">
-            Team Photo
-          </span>
+          <Image
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+            alt="Estate liquidation professional ready to help"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
         </div>
       </div>
     </section>

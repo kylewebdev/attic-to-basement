@@ -60,13 +60,13 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
       {/* Drawer */}
       <nav
         ref={drawerRef}
-        className="absolute right-0 top-0 h-full w-72 bg-warm-white shadow-xl translate-x-full"
+        className="absolute right-0 top-0 h-full w-72 bg-warm-50 shadow-xl translate-x-full"
         aria-label="Mobile navigation"
       >
         <div className="flex justify-end p-4">
           <button
             onClick={onClose}
-            className="p-2 text-stone-600 hover:text-stone-800 min-h-11 min-w-11 flex items-center justify-center"
+            className="p-2 text-stone-400 hover:text-stone-200 min-h-11 min-w-11 flex items-center justify-center"
             aria-label="Close menu"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -81,7 +81,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
               <Link
                 href={link.href}
                 onClick={onClose}
-                className="block py-3 text-lg text-stone-700 hover:text-sage-600 transition-colors"
+                className="block py-3 text-lg text-stone-300 hover:text-sage-300 transition-colors"
               >
                 {link.label}
               </Link>

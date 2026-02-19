@@ -46,8 +46,8 @@ export default function Tension() {
 
         tl.fromTo(
           word,
-          { color: "#d6d3d1" }, // stone-300
-          { color: "#292524", duration: wordDur, ease: "power1.out" },
+          { color: "#57534e" }, // stone-600 (dimmed on dark bg)
+          { color: "#e7e5e4", duration: wordDur, ease: "power1.out" },
           wordStart
         );
 
@@ -66,7 +66,7 @@ export default function Tension() {
     >
       <div className="sticky top-0 min-h-screen flex items-center justify-center">
         <div className="max-w-3xl mx-auto px-4">
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center text-stone-300">
+          <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center text-stone-600">
             {words.map((word, i) => (
               <span key={i} data-word data-animate className="inline">
                 {word}{" "}

@@ -72,14 +72,14 @@ export default function TheAsk() {
         <h2
           data-ask-headline
           data-animate
-          className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-800 leading-tight"
+          className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-200 leading-tight"
         >
           Ready to talk? We are ready to listen.
         </h2>
         <p
           data-ask-subtext
           data-animate
-          className="mt-6 text-lg text-stone-500 leading-relaxed"
+          className="mt-6 text-lg text-stone-400 leading-relaxed"
         >
           Schedule your free, no-obligation consultation. We will come to you,
           walk through your situation, and give you a clear plan. No surprises.
@@ -92,12 +92,12 @@ export default function TheAsk() {
         <p
           data-ask-phone
           data-animate
-          className="mt-6 text-stone-500"
+          className="mt-6 text-stone-400"
         >
           Prefer to call?{" "}
           <a
             href="tel:+19165211077"
-            className="text-sage-600 hover:text-sage-700 font-semibold transition-colors"
+            className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
           >
             (916) 521-1077
           </a>

@@ -36,8 +36,8 @@ export default function ConsultationForm() {
   if (status === "success") {
     return (
       <div className="rounded-xl bg-sage-50 border border-sage-200 p-8 text-center">
-        <p className="font-serif text-2xl text-stone-800 mb-2">Thank you!</p>
-        <p className="text-stone-600">
+        <p className="font-serif text-2xl text-stone-200 mb-2">Thank you!</p>
+        <p className="text-stone-400">
           We&apos;ve received your message and will be in touch within 24 hours.
         </p>
       </div>
@@ -57,7 +57,7 @@ export default function ConsultationForm() {
       />
 
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-stone-700 mb-1">
+        <label htmlFor="name" className="block text-sm font-semibold text-stone-300 mb-1">
           Name <span className="text-sage-500">*</span>
         </label>
         <input
@@ -65,26 +65,26 @@ export default function ConsultationForm() {
           id="name"
           name="name"
           required
-          className="w-full rounded-lg border border-warm-100 bg-white px-4 py-3 text-stone-700 placeholder:text-warm-200 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+          className="w-full rounded-lg border border-warm-100 bg-warm-50 px-4 py-3 text-stone-200 placeholder:text-stone-500 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
           placeholder="Your full name"
         />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-stone-700 mb-1">
+          <label htmlFor="phone" className="block text-sm font-semibold text-stone-300 mb-1">
             Phone
           </label>
           <input
             type="tel"
             id="phone"
             name="phone"
-            className="w-full rounded-lg border border-warm-100 bg-white px-4 py-3 text-stone-700 placeholder:text-warm-200 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+            className="w-full rounded-lg border border-warm-100 bg-warm-50 px-4 py-3 text-stone-200 placeholder:text-stone-500 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
             placeholder="(555) 555-5555"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-stone-700 mb-1">
+          <label htmlFor="email" className="block text-sm font-semibold text-stone-300 mb-1">
             Email <span className="text-sage-500">*</span>
           </label>
           <input
@@ -92,27 +92,27 @@ export default function ConsultationForm() {
             id="email"
             name="email"
             required
-            className="w-full rounded-lg border border-warm-100 bg-white px-4 py-3 text-stone-700 placeholder:text-warm-200 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+            className="w-full rounded-lg border border-warm-100 bg-warm-50 px-4 py-3 text-stone-200 placeholder:text-stone-500 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
             placeholder="you@example.com"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="city" className="block text-sm font-semibold text-stone-700 mb-1">
+        <label htmlFor="city" className="block text-sm font-semibold text-stone-300 mb-1">
           City or Zip Code
         </label>
         <input
           type="text"
           id="city"
           name="city"
-          className="w-full rounded-lg border border-warm-100 bg-white px-4 py-3 text-stone-700 placeholder:text-warm-200 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+          className="w-full rounded-lg border border-warm-100 bg-warm-50 px-4 py-3 text-stone-200 placeholder:text-stone-500 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
           placeholder="Sacramento, 95821, etc."
         />
       </div>
 
       <div>
-        <label htmlFor="description" className="block text-sm font-semibold text-stone-700 mb-1">
+        <label htmlFor="description" className="block text-sm font-semibold text-stone-300 mb-1">
           How can we help? <span className="text-sage-500">*</span>
         </label>
         <textarea
@@ -120,13 +120,13 @@ export default function ConsultationForm() {
           name="description"
           required
           rows={4}
-          className="w-full rounded-lg border border-warm-100 bg-white px-4 py-3 text-stone-700 placeholder:text-warm-200 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors resize-y"
+          className="w-full rounded-lg border border-warm-100 bg-warm-50 px-4 py-3 text-stone-200 placeholder:text-stone-500 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors resize-y"
           placeholder="Tell us briefly about your situation..."
         />
       </div>
 
       <fieldset>
-        <legend className="block text-sm font-semibold text-stone-700 mb-2">
+        <legend className="block text-sm font-semibold text-stone-300 mb-2">
           Preferred contact method
         </legend>
         <div className="flex gap-6">
@@ -138,7 +138,7 @@ export default function ConsultationForm() {
               defaultChecked
               className="text-sage-500 focus:ring-sage-500"
             />
-            <span className="text-sm text-stone-700">Phone</span>
+            <span className="text-sm text-stone-300">Phone</span>
           </label>
           <label className="flex items-center gap-2 cursor-pointer">
             <input
@@ -147,7 +147,7 @@ export default function ConsultationForm() {
               value="email"
               className="text-sage-500 focus:ring-sage-500"
             />
-            <span className="text-sm text-stone-700">Email</span>
+            <span className="text-sm text-stone-300">Email</span>
           </label>
         </div>
       </fieldset>

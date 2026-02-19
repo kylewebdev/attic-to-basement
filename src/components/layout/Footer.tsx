@@ -18,7 +18,7 @@ const externalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-800 text-warm-100 py-12">
+    <footer className="bg-warm-50 text-stone-300 py-12 border-t border-warm-100">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company info */}
@@ -30,10 +30,10 @@ export default function Footer() {
               height={120}
               className="h-12 w-auto mb-2 invert"
             />
-            <p className="text-sm text-warm-200 mt-1">Sacramento, CA 95821</p>
+            <p className="text-sm text-stone-400 mt-1">Sacramento, CA 95821</p>
             <a
               href="tel:+19165211077"
-              className="inline-block mt-3 text-sage-300 hover:text-sage-200 font-semibold transition-colors"
+              className="inline-block mt-3 text-sage-300 hover:text-sage-400 font-semibold transition-colors"
             >
               (916) 521-1077
             </a>
@@ -42,7 +42,7 @@ export default function Footer() {
                 href="https://www.instagram.com/abe.liquidators"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-warm-200 hover:text-white transition-colors"
+                className="text-sm text-stone-400 hover:text-white transition-colors"
               >
                 @abe.liquidators
               </a>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-warm-200 hover:text-white transition-colors"
+                    className="text-sm text-stone-400 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -76,21 +76,21 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-warm-200 hover:text-white transition-colors"
+                    className="text-sm text-stone-400 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-            <p className="text-sm text-warm-200">
+            <p className="text-sm text-stone-400">
               Serving the Bay Area, Greater Sacramento, Placer County, El Dorado
               County, and the Sierra foothills.
             </p>
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-stone-700 text-center text-sm text-warm-200">
+        <div className="mt-10 pt-6 border-t border-warm-100 text-center text-sm text-stone-400">
           &copy; {new Date().getFullYear()} Attic to Basement Estate
           Liquidators. All Rights Reserved.
         </div>

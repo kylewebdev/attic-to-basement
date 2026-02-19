@@ -18,7 +18,7 @@ export default function TestimonialCard({
           {Array.from({ length: 5 }, (_, i) => (
             <span
               key={i}
-              className={i < rating ? "text-gold-400" : "text-warm-200"}
+              className={i < rating ? "text-gold-400" : "text-warm-100"}
               aria-hidden="true"
             >
               ★
@@ -26,11 +26,11 @@ export default function TestimonialCard({
           ))}
         </div>
       )}
-      <p className="text-stone-700 leading-relaxed italic mb-4">
+      <p className="text-stone-300 leading-relaxed italic mb-4">
         &ldquo;{quote}&rdquo;
       </p>
-      <footer className="text-sm text-stone-500">
-        <cite className="not-italic font-semibold text-stone-700">{name}</cite>
+      <footer className="text-sm text-stone-400">
+        <cite className="not-italic font-semibold text-stone-200">{name}</cite>
         {" — "}
         {location}
       </footer>

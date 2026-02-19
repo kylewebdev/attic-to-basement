@@ -15,9 +15,9 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary:
     "bg-sage-500 text-white hover:bg-sage-600 active:bg-sage-700",
   secondary:
-    "border-2 border-sage-500 text-sage-600 hover:bg-sage-50 active:bg-sage-100",
+    "border-2 border-sage-500 text-sage-300 hover:bg-sage-50 active:bg-sage-100",
   ghost:
-    "text-sage-600 hover:text-sage-700 hover:bg-sage-50",
+    "text-sage-300 hover:text-sage-400 hover:bg-sage-50",
 };
 
 export default function Button({

@@ -97,28 +97,39 @@ export default function SocialProof() {
         );
       });
 
-      // Animate counter numbers
+      // Animate counter numbers (use tl.to so values count UP with scrub)
       statNumbers.forEach((el) => {
         const target = parseFloat(el.getAttribute("data-target") || "0");
         const decimals = parseInt(el.getAttribute("data-decimals") || "0");
         if (target > 0) {
-          tl.from(
-            { val: 0 },
+          const proxy = { val: 0 };
+          tl.to(
+            proxy,
             {
               val: target,
               duration: d * 0.2,
-              ease: "power2.out",
-              onUpdate: function () {
-                const current = this.targets()[0].val as number;
+              ease: "none",
+              onUpdate: () => {
                 el.textContent = decimals > 0
-                  ? current.toFixed(decimals)
-                  : Math.round(current).toString();
+                  ? proxy.val.toFixed(decimals)
+                  : Math.round(proxy.val).toString();
               },
             },
             s + d * 0.55
           );
         }
       });
+
+      // Animate BBB badge
+      const badge = sectionRef.current.querySelector("[data-stat-badge]");
+      if (badge) {
+        tl.fromTo(
+          badge,
+          { scale: 0, opacity: 0 },
+          { scale: 1, opacity: 1, duration: d * 0.12, ease: "back.out(1.7)" },
+          s + d * 0.6
+        );
+      }
 
       if (footer) {
         tl.fromTo(
@@ -142,7 +153,7 @@ export default function SocialProof() {
         <h2
           data-social-headline
           data-animate
-          className="font-serif text-3xl md:text-4xl text-stone-800 text-center mb-12"
+          className="font-serif text-3xl md:text-4xl text-stone-200 text-center mb-12"
         >
           Do not take our word for it.
         </h2>
@@ -171,11 +182,14 @@ export default function SocialProof() {
               className="text-center"
             >
               {stat.isBadge ? (
-                <div className="text-2xl md:text-3xl font-serif text-sage-600 font-bold">
-                  BBB
+                <div
+                  data-stat-badge
+                  className="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-sage-500 text-white text-lg md:text-xl font-bold mx-auto"
+                >
+                  A+
                 </div>
               ) : (
-                <div className="text-2xl md:text-3xl font-serif text-sage-600 font-bold">
+                <div className="text-2xl md:text-3xl font-serif text-sage-300 font-bold">
                   <span
                     data-stat-number
                     data-target={stat.value}
@@ -186,7 +200,7 @@ export default function SocialProof() {
                   {stat.suffix}
                 </div>
               )}
-              <p className="mt-1 text-sm text-stone-500">{stat.label}</p>
+              <p className="mt-1 text-sm text-stone-400">{stat.label}</p>
             </div>
           ))}
         </div>

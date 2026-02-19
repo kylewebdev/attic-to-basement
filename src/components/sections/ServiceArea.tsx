@@ -15,11 +15,14 @@ export default function ServiceArea() {
       if (!sectionRef.current) return;
 
       const headline = sectionRef.current.querySelector("[data-area-headline]");
-      const regionPaths = sectionRef.current.querySelectorAll(
-        "[data-region-path]"
+      const surroundingPaths = sectionRef.current.querySelectorAll(
+        "[data-county-path]"
       );
-      const regionLabels = sectionRef.current.querySelectorAll(
-        "[data-region-label]"
+      const servicePaths = sectionRef.current.querySelectorAll(
+        "[data-service-path]"
+      );
+      const serviceLabels = sectionRef.current.querySelectorAll(
+        "[data-service-label]"
       );
       const subtext = sectionRef.current.querySelector("[data-area-subtext]");
 
@@ -27,40 +30,65 @@ export default function ServiceArea() {
         tl.fromTo(
           headline,
           { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
+          { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
           s
         );
       }
 
-      // Animate each region sequentially
-      regionPaths.forEach((path, i) => {
-        const regionStart = s + d * (0.2 + i * 0.12);
+      // Draw in surrounding counties first (subtle, fast)
+      surroundingPaths.forEach((path, i) => {
         tl.to(
           path,
           {
-            fill: "#d1d7c7", // sage-200
-            stroke: "#5c7a45", // sage-500
-            duration: d * 0.1,
+            strokeDashoffset: 0,
+            duration: d * 0.2,
+            ease: "power1.inOut",
+          },
+          s + d * (0.1 + i * 0.015)
+        );
+      });
+
+      // Draw in service area counties (more prominent, staggered)
+      servicePaths.forEach((path, i) => {
+        const countyStart = s + d * (0.35 + i * 0.1);
+        tl.to(
+          path,
+          {
+            strokeDashoffset: 0,
+            duration: d * 0.15,
+            ease: "power2.inOut",
+          },
+          countyStart
+        );
+        // Fill after drawing
+        tl.to(
+          path,
+          {
+            fill: "rgba(61, 74, 53, 0.5)", // sage-200 (now dark sage) with transparency
+            stroke: "#a8b496", // sage-300 (lighter for visibility on dark)
+            duration: d * 0.08,
             ease: "power2.out",
           },
-          regionStart
+          countyStart + d * 0.12
         );
-        if (regionLabels[i]) {
-          tl.fromTo(
-            regionLabels[i],
-            { opacity: 0 },
-            { opacity: 1, duration: d * 0.08 },
-            regionStart + d * 0.02
-          );
-        }
+      });
+
+      // Fade in service area labels
+      serviceLabels.forEach((label, i) => {
+        tl.fromTo(
+          label,
+          { opacity: 0 },
+          { opacity: 1, duration: d * 0.08, ease: "power2.out" },
+          s + d * (0.5 + i * 0.08)
+        );
       });
 
       if (subtext) {
         tl.fromTo(
           subtext,
           { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
-          s + d * 0.8
+          { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
+          s + d * 0.85
         );
       }
     });
@@ -76,22 +104,22 @@ export default function ServiceArea() {
         <h2
           data-area-headline
           data-animate
-          className="font-serif text-3xl md:text-4xl text-stone-800 mb-12"
+          className="font-serif text-3xl md:text-4xl text-stone-200 mb-12"
         >
           Serving Northern California, from the Bay to the Foothills
         </h2>
 
-        <ServiceAreaMap className="w-full max-w-lg mx-auto text-stone-400 mb-10" />
+        <ServiceAreaMap className="w-full max-w-2xl mx-auto mb-10" />
 
         <p
           data-area-subtext
           data-animate
-          className="text-lg text-stone-500"
+          className="text-lg text-stone-400"
         >
           Not sure if you are in our range?{" "}
           <a
             href="tel:+19165211077"
-            className="text-sage-600 hover:text-sage-700 font-semibold transition-colors"
+            className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
           >
             Call us
           </a>

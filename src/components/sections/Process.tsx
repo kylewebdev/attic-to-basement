@@ -127,12 +127,12 @@ export default function Process() {
       data-scroll-section
       className="min-h-[300vh] bg-warm-white relative"
     >
-      <div className="sticky top-0 min-h-screen flex items-center py-20">
+      <div className="sticky top-0 min-h-screen flex items-center py-32 md:py-40">
         <div className="max-w-3xl mx-auto px-4">
           <h2
             data-process-headline
             data-animate
-            className="font-serif text-3xl md:text-4xl text-stone-800 text-center mb-16"
+            className="font-serif text-3xl md:text-4xl text-stone-200 text-center mb-16"
           >
             From attic to basement. Here is how it works.
           </h2>
@@ -175,10 +175,10 @@ export default function Process() {
 
                   {/* Text */}
                   <div data-step-text data-animate className="pt-1">
-                    <h3 className="font-serif text-xl md:text-2xl text-stone-800 mb-2">
+                    <h3 className="font-serif text-xl md:text-2xl text-stone-200 mb-2">
                       Step {step.number}: {step.title}
                     </h3>
-                    <p className="text-stone-500 leading-relaxed">
+                    <p className="text-stone-400 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
