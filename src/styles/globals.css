@@ -1,1 +1,44 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+/* ===== Design Tokens ===== */
+@theme {
+  /* Sage green palette — primary accent */
+  --color-sage-50: #f6f7f4;
+  --color-sage-100: #e8ebe3;
+  --color-sage-200: #d1d7c7;
+  --color-sage-300: #a8b496;
+  --color-sage-400: #7f9268;
+  --color-sage-500: #5c7a45;
+  --color-sage-600: #4a6338;
+  --color-sage-700: #3a4d2d;
+
+  /* Warm neutrals */
+  --color-warm-white: #faf9f6;
+  --color-warm-50: #f5f3ef;
+  --color-warm-100: #e8e4dc;
+  --color-warm-200: #d4cec3;
+
+  /* Gold accent */
+  --color-gold-400: #c8a951;
+
+  /* Typography — references next/font CSS variables set on <html> */
+  --font-sans: var(--font-nunito-sans), "Nunito Sans", sans-serif;
+  --font-serif: var(--font-libre-baskerville), "Libre Baskerville", serif;
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  body {
+    @apply bg-warm-white text-stone-700 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-stone-800;
+  }
+
+  /* Accessible focus ring */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-sage-500;
+  }
+}
