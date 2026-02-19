@@ -60,11 +60,12 @@ export default function TheAsk() {
       data-scroll-section
       className="min-h-[100vh] flex items-center bg-warm-white relative overflow-hidden"
     >
+      {/* Center glow */}
       <div
         className="absolute inset-0"
         aria-hidden="true"
         style={{
-          background: "radial-gradient(ellipse at center, color-mix(in srgb, var(--color-gold-400) 12%, var(--color-warm-100)) 0%, var(--color-warm-white) 70%)",
+          background: "radial-gradient(ellipse at center, color-mix(in srgb, var(--color-gold-400) 8%, var(--color-warm-50)) 0%, transparent 45%)",
           animation: "breathe 6s ease-in-out infinite",
         }}
       />

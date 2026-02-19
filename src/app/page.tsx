@@ -11,15 +11,15 @@ import TheAsk from "@/components/sections/TheAsk";
 export const metadata = getPageMetadata("home");
 
 export default function HomePage() {
-  return (
-    <ScrollStory>
-      <Hook />
-      <Tension />
-      <Turn />
-      <Process />
-      <ServiceArea />
-      <SocialProof />
-      <TheAsk />
-    </ScrollStory>
-  );
+    return (
+        <ScrollStory>
+            <Hook />
+            <Tension />
+            <Turn />
+            <Process />
+            <ServiceArea />
+            <SocialProof />
+            <TheAsk />
+        </ScrollStory>
+    );
 }

@@ -141,7 +141,7 @@ export default function Process() {
             {/* Progress line */}
             <div
               data-process-line
-              className="absolute left-5 md:left-6 top-0 bottom-0 w-0.5 bg-sage-200 origin-top"
+              className="absolute left-5 md:left-6 top-5 md:top-6 bottom-24 w-0.5 bg-sage-200 origin-top"
               aria-hidden="true"
             />
 
