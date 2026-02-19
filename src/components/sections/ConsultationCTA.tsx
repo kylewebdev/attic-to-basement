@@ -29,7 +29,7 @@ export default function ConsultationCTA({ showForm = false }: ConsultationCTAPro
           <ConsultationForm />
         ) : (
           <div className="text-center">
-            <Button href="/#consultation" variant="primary">
+            <Button href="/contact" variant="primary">
               Schedule a Free Consultation
             </Button>
           </div>

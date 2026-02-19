@@ -1,16 +1,19 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import { gsap, useGSAP } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 
 const navLinks = [
   { label: "Estate Sales", href: "/estate-sales" },
-  { label: "Estate Liquidation", href: "/estate-liquidation" },
-  { label: "Appraisals", href: "/appraisals" },
   { label: "Our Promise", href: "/our-promise" },
   { label: "Reviews", href: "/reviews" },
+];
+
+const serviceLinks = [
+  { label: "Estate Liquidation", href: "/estate-liquidation" },
+  { label: "Appraisals", href: "/appraisals" },
 ];
 
 interface MobileNavProps {
@@ -21,6 +24,7 @@ interface MobileNavProps {
 export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
+  const [servicesExpanded, setServicesExpanded] = useState(false);
 
   useGSAP({ scope: overlayRef });
 
@@ -76,7 +80,56 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
         </div>
 
         <ul className="px-6 space-y-1">
-          {navLinks.map((link) => (
+          {/* Estate Sales — top level */}
+          <li>
+            <Link
+              href="/estate-sales"
+              onClick={onClose}
+              className="block py-3 text-lg text-stone-300 hover:text-sage-300 transition-colors"
+            >
+              Estate Sales
+            </Link>
+          </li>
+
+          {/* Services — expandable */}
+          <li>
+            <button
+              onClick={() => setServicesExpanded(!servicesExpanded)}
+              className="flex items-center justify-between w-full py-3 text-lg text-stone-300 hover:text-sage-300 transition-colors"
+              aria-expanded={servicesExpanded}
+            >
+              Services
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className={`transition-transform duration-200 ${servicesExpanded ? "rotate-180" : ""}`}
+              >
+                <path d="M4 6l4 4 4-4" />
+              </svg>
+            </button>
+            {servicesExpanded && (
+              <ul className="pl-4 space-y-1">
+                {serviceLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={onClose}
+                      className="block py-2 text-base text-stone-400 hover:text-sage-300 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          {/* Remaining top-level links */}
+          {navLinks.slice(1).map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
@@ -90,7 +143,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
         </ul>
 
         <div className="px-6 mt-6">
-          <Button href="/#consultation" variant="primary" className="w-full">
+          <Button href="/contact" variant="primary" className="w-full">
             Free Consultation
           </Button>
         </div>
