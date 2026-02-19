@@ -1,0 +1,101 @@
+"use client";
+
+import { useRef } from "react";
+import { useGSAP } from "@/lib/gsap";
+import { useScrollStory, getSectionPosition } from "./ScrollStory";
+import Button from "@/components/ui/Button";
+
+export default function TheAsk() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { registerSection } = useScrollStory();
+  const { start, duration } = getSectionPosition(6);
+
+  registerSection(start, duration, (tl, s, d) => {
+    if (!sectionRef.current) return;
+
+    const headline = sectionRef.current.querySelector("[data-ask-headline]");
+    const subtext = sectionRef.current.querySelector("[data-ask-subtext]");
+    const cta = sectionRef.current.querySelector("[data-ask-cta]");
+    const phone = sectionRef.current.querySelector("[data-ask-phone]");
+
+    if (headline) {
+      tl.fromTo(
+        headline,
+        { scale: 0.95, opacity: 0 },
+        { scale: 1, opacity: 1, duration: d * 0.4, ease: "power2.out" },
+        s + d * 0.2
+      );
+    }
+    if (subtext) {
+      tl.fromTo(
+        subtext,
+        { opacity: 0 },
+        { opacity: 1, duration: d * 0.3, ease: "power2.out" },
+        s + d * 0.5
+      );
+    }
+    if (cta) {
+      tl.fromTo(
+        cta,
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
+        s + d * 0.5
+      );
+    }
+    if (phone) {
+      tl.fromTo(
+        phone,
+        { opacity: 0 },
+        { opacity: 1, duration: d * 0.3 },
+        s + d * 0.7
+      );
+    }
+  });
+
+  useGSAP(() => {}, { scope: sectionRef });
+
+  return (
+    <section
+      ref={sectionRef}
+      data-scroll-section
+      className="min-h-[100vh] flex items-center bg-warm-white"
+    >
+      <div className="max-w-2xl mx-auto px-4 text-center py-20">
+        <h2
+          data-ask-headline
+          data-animate
+          className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-800 leading-tight"
+        >
+          Ready to talk? We are ready to listen.
+        </h2>
+        <p
+          data-ask-subtext
+          data-animate
+          className="mt-6 text-lg text-stone-500 leading-relaxed"
+        >
+          Schedule your free, no-obligation consultation. We will come to you,
+          walk through your situation, and give you a clear plan. No surprises.
+        </p>
+        <div data-ask-cta data-animate className="mt-10">
+          <Button href="/contact" variant="primary">
+            Schedule Your Free Consultation
+          </Button>
+        </div>
+        <p
+          data-ask-phone
+          data-animate
+          className="mt-6 text-stone-500"
+        >
+          Prefer to call?{" "}
+          <a
+            href="tel:+19165211077"
+            className="text-sage-600 hover:text-sage-700 font-semibold transition-colors"
+          >
+            (916) 521-1077
+          </a>
+          . We are available 24/7.
+        </p>
+      </div>
+    </section>
+  );
+}
