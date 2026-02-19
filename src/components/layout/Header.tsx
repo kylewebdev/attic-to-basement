@@ -17,6 +17,7 @@ const navLinks = [
 
 export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
+  const logoRef = useRef<HTMLImageElement>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   useGSAP(
@@ -26,18 +27,16 @@ export default function Header() {
         end: "max",
         onUpdate: (self) => {
           if (!headerRef.current) return;
-          if (self.scroll() > 80) {
-            gsap.to(headerRef.current, {
-              paddingTop: "0.5rem",
-              paddingBottom: "0.5rem",
-              boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-              duration: 0.3,
-            });
-          } else {
-            gsap.to(headerRef.current, {
-              paddingTop: "1rem",
-              paddingBottom: "1rem",
-              boxShadow: "none",
+          const scrolled = self.scroll() > 80;
+          gsap.to(headerRef.current, {
+            paddingTop: scrolled ? "0.5rem" : "1.25rem",
+            paddingBottom: scrolled ? "0.5rem" : "1.25rem",
+            boxShadow: scrolled ? "0 1px 3px rgba(0,0,0,0.1)" : "none",
+            duration: 0.3,
+          });
+          if (logoRef.current) {
+            gsap.to(logoRef.current, {
+              height: scrolled ? 36 : 56,
               duration: 0.3,
             });
           }
@@ -51,17 +50,18 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className="fixed top-0 left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm py-4 transition-[padding]"
+        className="fixed top-0 left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm py-5 transition-[padding]"
       >
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="block">
             <Image
+              ref={logoRef}
               src="/logo.webp"
               alt="Attic to Basement Estate Liquidators"
               width={160}
               height={120}
-              className="h-10 w-auto"
+              className="h-14 w-auto"
               priority
             />
           </Link>
