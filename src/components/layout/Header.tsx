@@ -7,12 +7,6 @@ import { gsap, useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 import MobileNav from "@/components/layout/MobileNav";
 
-const navLinks = [
-  { label: "Estate Sales", href: "/estate-sales" },
-  { label: "Our Promise", href: "/our-promise" },
-  { label: "Reviews", href: "/reviews" },
-];
-
 const serviceLinks = [
   { label: "Estate Liquidation", href: "/estate-liquidation" },
   { label: "Appraisals", href: "/appraisals" },

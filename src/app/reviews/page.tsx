@@ -4,7 +4,6 @@ import { useState } from "react";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import TestimonialCard from "@/components/ui/TestimonialCard";
-import Button from "@/components/ui/Button";
 import { testimonials, type Testimonial } from "@/lib/data/testimonials";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 

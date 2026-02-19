@@ -1,7 +1,6 @@
 "use client";
 
 import Hero from "@/components/sections/Hero";
-import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SaleCard from "@/components/ui/SaleCard";
 import Button from "@/components/ui/Button";
