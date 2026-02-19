@@ -58,9 +58,17 @@ export default function TheAsk() {
     <section
       ref={sectionRef}
       data-scroll-section
-      className="min-h-[100vh] flex items-center bg-warm-white"
+      className="min-h-[100vh] flex items-center bg-warm-white relative overflow-hidden"
     >
-      <div className="max-w-2xl mx-auto px-4 text-center py-20">
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background: "radial-gradient(ellipse at center, color-mix(in srgb, var(--color-gold-400) 12%, var(--color-warm-100)) 0%, var(--color-warm-white) 70%)",
+          animation: "breathe 6s ease-in-out infinite",
+        }}
+      />
+      <div className="relative max-w-2xl mx-auto px-4 text-center py-20">
         <h2
           data-ask-headline
           data-animate
