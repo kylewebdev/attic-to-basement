@@ -42,3 +42,9 @@
     @apply outline-2 outline-offset-2 outline-sage-500;
   }
 }
+
+/* ===== Animations ===== */
+@keyframes breathe {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
