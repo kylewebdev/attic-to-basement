@@ -9,7 +9,7 @@ Scaffold the ABE Liquidators marketing website using `create-next-app` (App Rout
 
 ## Decisions
 
-- **Approach:** `create-next-app@latest` + manual customization (strip boilerplate, add brand config, build component structure)
+- **Approach:** `create-next-app@latest` + manual customization (strip boilerplate, add brand config, build component structure) + react compiler
 - **Fonts:** Libre Baskerville (serif, headlines) + Nunito Sans (sans, body) via `next/font/google`
 - **Color direction:** Muted sage green as primary accent, warm neutrals
 - **Form handling:** Formspree (drop-in endpoint, env var for ID)
