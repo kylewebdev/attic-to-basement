@@ -5,51 +5,7 @@ import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import Button from "@/components/ui/Button";
-
-const testimonials = [
-  {
-    quote:
-      "Cortnee and her team turned what felt like an impossible task into something completely manageable. They organized my mother's entire home in just three days.",
-    name: "Sarah M.",
-    location: "Yelp",
-    rating: 5,
-  },
-  {
-    quote:
-      "We were settling my father's estate from out of state and Cortnee handled every detail. The itemized report after the sale was incredibly thorough.",
-    name: "David R.",
-    location: "BBB",
-    rating: 5,
-  },
-  {
-    quote:
-      "I've been to dozens of estate sales and ABE's are always the best organized. Fair prices, friendly staff, and the homes are staged beautifully.",
-    name: "Linda K.",
-    location: "EstateSales.org",
-    rating: 5,
-  },
-  {
-    quote:
-      "Made an impossible situation manageable. We were grieving and overwhelmed, and Cortnee treated everything with such care and respect.",
-    name: "James T.",
-    location: "Yelp",
-    rating: 5,
-  },
-  {
-    quote:
-      "Professional from start to finish. The sale brought in more than we expected, and the donation coordination afterward was a wonderful touch.",
-    name: "Patricia H.",
-    location: "EstateSales.org",
-    rating: 4,
-  },
-];
-
-const stats = [
-  { value: 20, suffix: "+", label: "Years Combined Experience" },
-  { value: 4.5, suffix: "", label: "Star Average Rating", decimals: 1 },
-  { value: 49, suffix: "+", label: "Reviews on Yelp" },
-  { value: 0, suffix: "", label: "BBB Accredited", isBadge: true },
-];
+import { homepageTestimonials as testimonials, stats } from "@/lib/data/testimonials";
 
 export default function SocialProof() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -165,7 +121,7 @@ export default function SocialProof() {
               <TestimonialCard
                 quote={t.quote}
                 name={t.name}
-                location={t.location}
+                location={t.source}
                 rating={t.rating}
               />
             </div>
