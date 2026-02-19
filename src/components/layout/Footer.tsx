@@ -23,10 +23,10 @@ export default function Footer() {
           {/* Company info */}
           <div>
             <p className="font-serif text-xl text-white mb-2">
-              ABE Liquidators
+              Attic to Basement
             </p>
             <p className="text-sm text-warm-200">
-              Attic to Basement Estate Liquidators
+              Estate Liquidators
             </p>
             <p className="text-sm text-warm-200 mt-1">Sacramento, CA 95821</p>
             <a

@@ -55,7 +55,7 @@ export default function Header() {
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="font-serif text-xl text-stone-800 hover:text-sage-600 transition-colors">
-            ABE Liquidators
+            Attic to Basement
           </Link>
 
           {/* Desktop nav */}
