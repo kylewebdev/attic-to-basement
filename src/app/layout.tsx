@@ -6,46 +6,46 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 import type { Metadata } from "next";
 
 const libreBaskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-libre-baskerville",
-  display: "swap",
+    subsets: ["latin"],
+    weight: ["400", "700"],
+    variable: "--font-libre-baskerville",
+    display: "swap",
 });
 
 const nunitoSans = Nunito_Sans({
-  subsets: ["latin"],
-  variable: "--font-nunito-sans",
-  display: "swap",
+    subsets: ["latin"],
+    variable: "--font-nunito-sans",
+    display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "ABE Liquidators | Estate Sales & Liquidation Services",
-    template: "%s",
-  },
-  description:
-    "Full-service estate sales, buyouts, cleanouts, and appraisals across Northern California.",
-  metadataBase: new URL("https://abeliquidators.com"),
+    title: {
+        default: "ABE Liquidators | Estate Sales & Liquidation Services",
+        template: "%s",
+    },
+    description:
+        "Full-service estate sales, buyouts, cleanouts, and appraisals across Northern California.",
+    metadataBase: new URL("https://abeliquidators.com"),
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <html
-      lang="en"
-      className={`${libreBaskerville.variable} ${nunitoSans.variable}`}
-    >
-      <body>
-        <SmoothScroll>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </SmoothScroll>
+    return (
+        <html
+            lang="en"
+            className={`${libreBaskerville.variable} ${nunitoSans.variable}`}
+        >
+            <body>
+                <SmoothScroll>
+                    <Header />
+                    <main>{children}</main>
+                    <Footer />
+                </SmoothScroll>
 
-        {/* Google Tag Manager — uncomment when GTM ID is available
+                {/* Google Tag Manager — uncomment when GTM ID is available
         <Script
           id="gtm"
           strategy="afterInteractive"
@@ -58,7 +58,7 @@ export default function RootLayout({
           }}
         />
         */}
-      </body>
-    </html>
-  );
+            </body>
+        </html>
+    );
 }

@@ -3,9 +3,9 @@ import { getPageMetadata } from "@/lib/metadata";
 export const metadata = getPageMetadata("contact");
 
 export default function ContactLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return <>{children}</>;
+    return <>{children}</>;
 }

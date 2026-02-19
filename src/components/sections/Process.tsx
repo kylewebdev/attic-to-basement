@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 
@@ -51,8 +51,50 @@ const steps = [
 
 export default function Process() {
   const sectionRef = useRef<HTMLElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(3);
+
+  // Dynamically size the progress line to span exactly from the first to last icon center.
+  // Uses offsetTop (immune to GSAP transforms) instead of getBoundingClientRect.
+  useEffect(() => {
+    const section = sectionRef.current;
+    const line = lineRef.current;
+    if (!section || !line) return;
+
+    // Walk offsetParent chain to compute offset relative to a given ancestor
+    const offsetRelativeTo = (el: HTMLElement, ancestor: HTMLElement): number => {
+      let offset = 0;
+      let cur: HTMLElement | null = el;
+      while (cur && cur !== ancestor) {
+        offset += cur.offsetTop;
+        cur = cur.offsetParent as HTMLElement | null;
+      }
+      return offset;
+    };
+
+    const update = () => {
+      const icons = section.querySelectorAll("[data-step-icon]");
+      if (icons.length < 2) return;
+
+      const parent = line.parentElement as HTMLElement | null;
+      if (!parent) return;
+
+      const firstIcon = icons[0] as HTMLElement;
+      const lastIcon = icons[icons.length - 1] as HTMLElement;
+      const startY = offsetRelativeTo(firstIcon, parent) + firstIcon.offsetHeight / 2;
+      const endY = offsetRelativeTo(lastIcon, parent) + lastIcon.offsetHeight / 2;
+
+      line.style.top = `${startY}px`;
+      line.style.height = `${endY - startY}px`;
+      line.style.bottom = "auto";
+    };
+
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(section);
+    return () => ro.disconnect();
+  }, []);
 
   useGSAP(() => {
     // Mobile: skip scroll-scrub animation, let ScrollStory mobile fallback handle fade-ins
@@ -142,8 +184,9 @@ export default function Process() {
           </h2>
 
           <div className="relative">
-            {/* Progress line */}
+            {/* Progress line — top/height set dynamically via JS to span first→last icon */}
             <div
+              ref={lineRef}
               data-process-line
               className="absolute left-5 md:left-6 top-5 md:top-6 bottom-24 w-0.5 bg-sage-200 origin-top"
               aria-hidden="true"

@@ -3,9 +3,9 @@ import { getPageMetadata } from "@/lib/metadata";
 export const metadata = getPageMetadata("estateLiquidation");
 
 export default function EstateLiquidationLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return <>{children}</>;
+    return <>{children}</>;
 }

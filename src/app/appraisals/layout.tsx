@@ -3,9 +3,9 @@ import { getPageMetadata } from "@/lib/metadata";
 export const metadata = getPageMetadata("appraisals");
 
 export default function AppraisalsLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return <>{children}</>;
+    return <>{children}</>;
 }
