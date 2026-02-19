@@ -8,10 +8,10 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            "--tw-prose-body": "#44403c",
-            "--tw-prose-headings": "#292524",
-            "--tw-prose-links": "#4a6338",
-            "--tw-prose-bold": "#292524",
+            "--tw-prose-body": "#d6d3d1",      // stone-300
+            "--tw-prose-headings": "#e7e5e4",   // stone-200
+            "--tw-prose-links": "#a8b496",      // sage-300
+            "--tw-prose-bold": "#e7e5e4",       // stone-200
             "h1, h2, h3, h4": {
               fontFamily: "var(--font-serif)",
             },
