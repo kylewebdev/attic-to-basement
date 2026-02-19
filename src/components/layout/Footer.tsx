@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Estate Sales", href: "/estate-sales" },
@@ -22,12 +23,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company info */}
           <div>
-            <p className="font-serif text-xl text-white mb-2">
-              Attic to Basement
-            </p>
-            <p className="text-sm text-warm-200">
-              Estate Liquidators
-            </p>
+            <Image
+              src="/logo.webp"
+              alt="Attic to Basement Estate Liquidators"
+              width={160}
+              height={120}
+              className="h-12 w-auto mb-2 invert"
+            />
             <p className="text-sm text-warm-200 mt-1">Sacramento, CA 95821</p>
             <a
               href="tel:+19165211077"

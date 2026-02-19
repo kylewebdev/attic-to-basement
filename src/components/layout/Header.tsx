@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { gsap, useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 import MobileNav from "@/components/layout/MobileNav";
@@ -54,8 +55,15 @@ export default function Header() {
       >
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="font-serif text-xl text-stone-800 hover:text-sage-600 transition-colors">
-            Attic to Basement
+          <Link href="/" className="block">
+            <Image
+              src="/logo.webp"
+              alt="Attic to Basement Estate Liquidators"
+              width={160}
+              height={120}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
