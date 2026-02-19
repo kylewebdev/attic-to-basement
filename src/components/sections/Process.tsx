@@ -54,72 +54,72 @@ export default function Process() {
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(3);
 
-  registerSection(start, duration, (tl, s, d) => {
-    if (!sectionRef.current) return;
+  useGSAP(() => {
+    registerSection(start, duration, (tl, s, d) => {
+      if (!sectionRef.current) return;
 
-    const headline = sectionRef.current.querySelector(
-      "[data-process-headline]"
-    );
-    const progressLine = sectionRef.current.querySelector(
-      "[data-process-line]"
-    );
-    const stepEls = sectionRef.current.querySelectorAll("[data-process-step]");
-
-    if (headline) {
-      tl.fromTo(
-        headline,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: d * 0.1, ease: "power2.out" },
-        s
+      const headline = sectionRef.current.querySelector(
+        "[data-process-headline]"
       );
-    }
-
-    if (progressLine) {
-      tl.fromTo(
-        progressLine,
-        { scaleY: 0 },
-        { scaleY: 1, duration: d * 0.85, ease: "none" },
-        s + d * 0.1
+      const progressLine = sectionRef.current.querySelector(
+        "[data-process-line]"
       );
-    }
+      const stepEls = sectionRef.current.querySelectorAll("[data-process-step]");
 
-    stepEls.forEach((step, i) => {
-      const stepStart = s + d * (0.1 + i * 0.15);
-      const icon = step.querySelector("[data-step-icon]");
-      const text = step.querySelector("[data-step-text]");
-
-      if (icon) {
+      if (headline) {
         tl.fromTo(
-          icon,
-          { scale: 0, opacity: 0 },
-          { scale: 1, opacity: 1, duration: d * 0.08, ease: "back.out(1.7)" },
-          stepStart
-        );
-      }
-      if (text) {
-        tl.fromTo(
-          text,
-          { opacity: 0, x: 20 },
-          { opacity: 1, x: 0, duration: d * 0.1, ease: "power2.out" },
-          stepStart + d * 0.03
+          headline,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: d * 0.1, ease: "power2.out" },
+          s
         );
       }
 
-      // Fade previous step's text
-      if (i > 0) {
-        const prevText = stepEls[i - 1].querySelector("[data-step-text]");
-        if (prevText) {
-          tl.to(
-            prevText,
-            { opacity: 0.4, duration: d * 0.08 },
+      if (progressLine) {
+        tl.fromTo(
+          progressLine,
+          { scaleY: 0 },
+          { scaleY: 1, duration: d * 0.85, ease: "none" },
+          s + d * 0.1
+        );
+      }
+
+      stepEls.forEach((step, i) => {
+        const stepStart = s + d * (0.1 + i * 0.15);
+        const icon = step.querySelector("[data-step-icon]");
+        const text = step.querySelector("[data-step-text]");
+
+        if (icon) {
+          tl.fromTo(
+            icon,
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, duration: d * 0.08, ease: "back.out(1.7)" },
             stepStart
           );
         }
-      }
-    });
-  });
+        if (text) {
+          tl.fromTo(
+            text,
+            { opacity: 0, x: 20 },
+            { opacity: 1, x: 0, duration: d * 0.1, ease: "power2.out" },
+            stepStart + d * 0.03
+          );
+        }
 
-  useGSAP(() => {}, { scope: sectionRef });
+        // Fade previous step's text
+        if (i > 0) {
+          const prevText = stepEls[i - 1].querySelector("[data-step-text]");
+          if (prevText) {
+            tl.to(
+              prevText,
+              { opacity: 0.4, duration: d * 0.08 },
+              stepStart
+            );
+          }
+        }
+      });
+    });
+  }, { scope: sectionRef });
 
   return (
     <section

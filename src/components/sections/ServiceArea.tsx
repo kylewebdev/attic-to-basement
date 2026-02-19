@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
+import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import ServiceAreaMap from "./ServiceAreaMap";
 
@@ -10,61 +10,61 @@ export default function ServiceArea() {
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(4);
 
-  registerSection(start, duration, (tl, s, d) => {
-    if (!sectionRef.current) return;
+  useGSAP(() => {
+    registerSection(start, duration, (tl, s, d) => {
+      if (!sectionRef.current) return;
 
-    const headline = sectionRef.current.querySelector("[data-area-headline]");
-    const regionPaths = sectionRef.current.querySelectorAll(
-      "[data-region-path]"
-    );
-    const regionLabels = sectionRef.current.querySelectorAll(
-      "[data-region-label]"
-    );
-    const subtext = sectionRef.current.querySelector("[data-area-subtext]");
-
-    if (headline) {
-      tl.fromTo(
-        headline,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
-        s
+      const headline = sectionRef.current.querySelector("[data-area-headline]");
+      const regionPaths = sectionRef.current.querySelectorAll(
+        "[data-region-path]"
       );
-    }
-
-    // Animate each region sequentially
-    regionPaths.forEach((path, i) => {
-      const regionStart = s + d * (0.2 + i * 0.12);
-      tl.to(
-        path,
-        {
-          fill: "#d1d7c7", // sage-200
-          stroke: "#5c7a45", // sage-500
-          duration: d * 0.1,
-          ease: "power2.out",
-        },
-        regionStart
+      const regionLabels = sectionRef.current.querySelectorAll(
+        "[data-region-label]"
       );
-      if (regionLabels[i]) {
+      const subtext = sectionRef.current.querySelector("[data-area-subtext]");
+
+      if (headline) {
         tl.fromTo(
-          regionLabels[i],
-          { opacity: 0 },
-          { opacity: 1, duration: d * 0.08 },
-          regionStart + d * 0.02
+          headline,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
+          s
+        );
+      }
+
+      // Animate each region sequentially
+      regionPaths.forEach((path, i) => {
+        const regionStart = s + d * (0.2 + i * 0.12);
+        tl.to(
+          path,
+          {
+            fill: "#d1d7c7", // sage-200
+            stroke: "#5c7a45", // sage-500
+            duration: d * 0.1,
+            ease: "power2.out",
+          },
+          regionStart
+        );
+        if (regionLabels[i]) {
+          tl.fromTo(
+            regionLabels[i],
+            { opacity: 0 },
+            { opacity: 1, duration: d * 0.08 },
+            regionStart + d * 0.02
+          );
+        }
+      });
+
+      if (subtext) {
+        tl.fromTo(
+          subtext,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
+          s + d * 0.8
         );
       }
     });
-
-    if (subtext) {
-      tl.fromTo(
-        subtext,
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
-        s + d * 0.8
-      );
-    }
-  });
-
-  useGSAP(() => {}, { scope: sectionRef });
+  }, { scope: sectionRef });
 
   return (
     <section

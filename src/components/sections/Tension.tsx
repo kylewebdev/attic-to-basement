@@ -24,35 +24,35 @@ export default function Tension() {
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(1);
 
-  registerSection(start, duration, (tl, s, d) => {
-    if (!sectionRef.current) return;
+  useGSAP(() => {
+    registerSection(start, duration, (tl, s, d) => {
+      if (!sectionRef.current) return;
 
-    const headline = sectionRef.current.querySelector(
-      "[data-tension-headline]"
-    );
-    const items = sectionRef.current.querySelectorAll("[data-tension-q]");
-
-    if (headline) {
-      tl.fromTo(
-        headline,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
-        s
+      const headline = sectionRef.current.querySelector(
+        "[data-tension-headline]"
       );
-    }
+      const items = sectionRef.current.querySelectorAll("[data-tension-q]");
 
-    items.forEach((item, i) => {
-      const segmentStart = s + d * (0.15 + i * 0.175);
-      tl.fromTo(
-        item,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
-        segmentStart
-      );
+      if (headline) {
+        tl.fromTo(
+          headline,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
+          s
+        );
+      }
+
+      items.forEach((item, i) => {
+        const segmentStart = s + d * (0.15 + i * 0.175);
+        tl.fromTo(
+          item,
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
+          segmentStart
+        );
+      });
     });
-  });
-
-  useGSAP(() => {}, { scope: sectionRef });
+  }, { scope: sectionRef });
 
   return (
     <section

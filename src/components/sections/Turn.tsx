@@ -9,51 +9,51 @@ export default function Turn() {
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(2);
 
-  registerSection(start, duration, (tl, s, d) => {
-    if (!sectionRef.current) return;
+  useGSAP(() => {
+    registerSection(start, duration, (tl, s, d) => {
+      if (!sectionRef.current) return;
 
-    const headline = sectionRef.current.querySelector("[data-turn-headline]");
-    const subtext = sectionRef.current.querySelector("[data-turn-subtext]");
-    const supporting = sectionRef.current.querySelector(
-      "[data-turn-supporting]"
-    );
-    const photo = sectionRef.current.querySelector("[data-turn-photo]");
+      const headline = sectionRef.current.querySelector("[data-turn-headline]");
+      const subtext = sectionRef.current.querySelector("[data-turn-subtext]");
+      const supporting = sectionRef.current.querySelector(
+        "[data-turn-supporting]"
+      );
+      const photo = sectionRef.current.querySelector("[data-turn-photo]");
 
-    if (headline) {
-      tl.fromTo(
-        headline,
-        { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, duration: d * 0.35, ease: "power3.out" },
-        s + d * 0.15
-      );
-    }
-    if (subtext) {
-      tl.fromTo(
-        subtext,
-        { opacity: 0 },
-        { opacity: 1, duration: d * 0.3, ease: "power2.out" },
-        s + d * 0.4
-      );
-    }
-    if (supporting) {
-      tl.fromTo(
-        supporting,
-        { opacity: 0 },
-        { opacity: 1, duration: d * 0.3, ease: "power2.out" },
-        s + d * 0.4
-      );
-    }
-    if (photo) {
-      tl.fromTo(
-        photo,
-        { opacity: 0, x: 60 },
-        { opacity: 1, x: 0, duration: d * 0.3, ease: "power2.out" },
-        s + d * 0.5
-      );
-    }
-  });
-
-  useGSAP(() => {}, { scope: sectionRef });
+      if (headline) {
+        tl.fromTo(
+          headline,
+          { opacity: 0, y: -20 },
+          { opacity: 1, y: 0, duration: d * 0.35, ease: "power3.out" },
+          s + d * 0.15
+        );
+      }
+      if (subtext) {
+        tl.fromTo(
+          subtext,
+          { opacity: 0 },
+          { opacity: 1, duration: d * 0.3, ease: "power2.out" },
+          s + d * 0.4
+        );
+      }
+      if (supporting) {
+        tl.fromTo(
+          supporting,
+          { opacity: 0 },
+          { opacity: 1, duration: d * 0.3, ease: "power2.out" },
+          s + d * 0.4
+        );
+      }
+      if (photo) {
+        tl.fromTo(
+          photo,
+          { opacity: 0, x: 60 },
+          { opacity: 1, x: 0, duration: d * 0.3, ease: "power2.out" },
+          s + d * 0.5
+        );
+      }
+    });
+  }, { scope: sectionRef });
 
   return (
     <section

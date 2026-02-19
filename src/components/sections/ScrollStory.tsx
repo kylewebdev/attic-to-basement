@@ -116,7 +116,7 @@ export default function ScrollStory({ children }: { children: ReactNode }) {
 
   return (
     <ScrollStoryContext.Provider
-      value={{ timeline: timelineRef.current, registerSection }}
+      value={{ timeline: null, registerSection }}
     >
       <div ref={containerRef}>{children}</div>
     </ScrollStoryContext.Provider>

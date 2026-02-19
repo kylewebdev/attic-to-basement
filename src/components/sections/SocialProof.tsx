@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
+import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import Button from "@/components/ui/Button";
@@ -56,80 +56,80 @@ export default function SocialProof() {
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(5);
 
-  registerSection(start, duration, (tl, s, d) => {
-    if (!sectionRef.current) return;
+  useGSAP(() => {
+    registerSection(start, duration, (tl, s, d) => {
+      if (!sectionRef.current) return;
 
-    const headline = sectionRef.current.querySelector(
-      "[data-social-headline]"
-    );
-    const cards = sectionRef.current.querySelectorAll("[data-social-card]");
-    const statEls = sectionRef.current.querySelectorAll("[data-social-stat]");
-    const statNumbers = sectionRef.current.querySelectorAll(
-      "[data-stat-number]"
-    );
-    const footer = sectionRef.current.querySelector("[data-social-footer]");
-
-    if (headline) {
-      tl.fromTo(
-        headline,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
-        s
+      const headline = sectionRef.current.querySelector(
+        "[data-social-headline]"
       );
-    }
-
-    cards.forEach((card, i) => {
-      tl.fromTo(
-        card,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: d * 0.08, ease: "power2.out" },
-        s + d * (0.15 + i * 0.08)
+      const cards = sectionRef.current.querySelectorAll("[data-social-card]");
+      const statEls = sectionRef.current.querySelectorAll("[data-social-stat]");
+      const statNumbers = sectionRef.current.querySelectorAll(
+        "[data-stat-number]"
       );
-    });
+      const footer = sectionRef.current.querySelector("[data-social-footer]");
 
-    statEls.forEach((stat, i) => {
-      tl.fromTo(
-        stat,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: d * 0.06, ease: "power2.out" },
-        s + d * (0.55 + i * 0.05)
-      );
-    });
+      if (headline) {
+        tl.fromTo(
+          headline,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: d * 0.15, ease: "power2.out" },
+          s
+        );
+      }
 
-    // Animate counter numbers
-    statNumbers.forEach((el) => {
-      const target = parseFloat(el.getAttribute("data-target") || "0");
-      const decimals = parseInt(el.getAttribute("data-decimals") || "0");
-      if (target > 0) {
-        tl.from(
-          { val: 0 },
-          {
-            val: target,
-            duration: d * 0.2,
-            ease: "power2.out",
-            onUpdate: function () {
-              const current = this.targets()[0].val as number;
-              el.textContent = decimals > 0
-                ? current.toFixed(decimals)
-                : Math.round(current).toString();
+      cards.forEach((card, i) => {
+        tl.fromTo(
+          card,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: d * 0.08, ease: "power2.out" },
+          s + d * (0.15 + i * 0.08)
+        );
+      });
+
+      statEls.forEach((stat, i) => {
+        tl.fromTo(
+          stat,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: d * 0.06, ease: "power2.out" },
+          s + d * (0.55 + i * 0.05)
+        );
+      });
+
+      // Animate counter numbers
+      statNumbers.forEach((el) => {
+        const target = parseFloat(el.getAttribute("data-target") || "0");
+        const decimals = parseInt(el.getAttribute("data-decimals") || "0");
+        if (target > 0) {
+          tl.from(
+            { val: 0 },
+            {
+              val: target,
+              duration: d * 0.2,
+              ease: "power2.out",
+              onUpdate: function () {
+                const current = this.targets()[0].val as number;
+                el.textContent = decimals > 0
+                  ? current.toFixed(decimals)
+                  : Math.round(current).toString();
+              },
             },
-          },
-          s + d * 0.55
+            s + d * 0.55
+          );
+        }
+      });
+
+      if (footer) {
+        tl.fromTo(
+          footer,
+          { opacity: 0 },
+          { opacity: 1, duration: d * 0.15 },
+          s + d * 0.8
         );
       }
     });
-
-    if (footer) {
-      tl.fromTo(
-        footer,
-        { opacity: 0 },
-        { opacity: 1, duration: d * 0.15 },
-        s + d * 0.8
-      );
-    }
-  });
-
-  useGSAP(() => {}, { scope: sectionRef });
+  }, { scope: sectionRef });
 
   return (
     <section

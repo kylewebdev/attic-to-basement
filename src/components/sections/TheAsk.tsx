@@ -10,49 +10,49 @@ export default function TheAsk() {
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(6);
 
-  registerSection(start, duration, (tl, s, d) => {
-    if (!sectionRef.current) return;
+  useGSAP(() => {
+    registerSection(start, duration, (tl, s, d) => {
+      if (!sectionRef.current) return;
 
-    const headline = sectionRef.current.querySelector("[data-ask-headline]");
-    const subtext = sectionRef.current.querySelector("[data-ask-subtext]");
-    const cta = sectionRef.current.querySelector("[data-ask-cta]");
-    const phone = sectionRef.current.querySelector("[data-ask-phone]");
+      const headline = sectionRef.current.querySelector("[data-ask-headline]");
+      const subtext = sectionRef.current.querySelector("[data-ask-subtext]");
+      const cta = sectionRef.current.querySelector("[data-ask-cta]");
+      const phone = sectionRef.current.querySelector("[data-ask-phone]");
 
-    if (headline) {
-      tl.fromTo(
-        headline,
-        { scale: 0.95, opacity: 0 },
-        { scale: 1, opacity: 1, duration: d * 0.4, ease: "power2.out" },
-        s + d * 0.2
-      );
-    }
-    if (subtext) {
-      tl.fromTo(
-        subtext,
-        { opacity: 0 },
-        { opacity: 1, duration: d * 0.3, ease: "power2.out" },
-        s + d * 0.5
-      );
-    }
-    if (cta) {
-      tl.fromTo(
-        cta,
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
-        s + d * 0.5
-      );
-    }
-    if (phone) {
-      tl.fromTo(
-        phone,
-        { opacity: 0 },
-        { opacity: 1, duration: d * 0.3 },
-        s + d * 0.7
-      );
-    }
-  });
-
-  useGSAP(() => {}, { scope: sectionRef });
+      if (headline) {
+        tl.fromTo(
+          headline,
+          { scale: 0.95, opacity: 0 },
+          { scale: 1, opacity: 1, duration: d * 0.4, ease: "power2.out" },
+          s + d * 0.2
+        );
+      }
+      if (subtext) {
+        tl.fromTo(
+          subtext,
+          { opacity: 0 },
+          { opacity: 1, duration: d * 0.3, ease: "power2.out" },
+          s + d * 0.5
+        );
+      }
+      if (cta) {
+        tl.fromTo(
+          cta,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: d * 0.2, ease: "power2.out" },
+          s + d * 0.5
+        );
+      }
+      if (phone) {
+        tl.fromTo(
+          phone,
+          { opacity: 0 },
+          { opacity: 1, duration: d * 0.3 },
+          s + d * 0.7
+        );
+      }
+    });
+  }, { scope: sectionRef });
 
   return (
     <section

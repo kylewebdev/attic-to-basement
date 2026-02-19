@@ -1,31 +1,25 @@
 import { getPageMetadata } from "@/lib/metadata";
-import Hero from "@/components/sections/Hero";
-import TrustBar from "@/components/sections/TrustBar";
-import ServicesOverview from "@/components/sections/ServicesOverview";
-import HowItWorks from "@/components/sections/HowItWorks";
+import ScrollStory from "@/components/sections/ScrollStory";
+import Hook from "@/components/sections/Hook";
+import Tension from "@/components/sections/Tension";
+import Turn from "@/components/sections/Turn";
+import Process from "@/components/sections/Process";
 import ServiceArea from "@/components/sections/ServiceArea";
-import TestimonialHighlight from "@/components/sections/TestimonialHighlight";
-import MeetCortnee from "@/components/sections/MeetCortnee";
-import ConsultationCTA from "@/components/sections/ConsultationCTA";
+import SocialProof from "@/components/sections/SocialProof";
+import TheAsk from "@/components/sections/TheAsk";
 
 export const metadata = getPageMetadata("home");
 
 export default function HomePage() {
   return (
-    <>
-      <Hero
-        title="We handle everything so you don't have to"
-        subtitle="Full-service estate sales, buyouts, cleanouts, and appraisals for Northern California families. Over 20 years of combined experience."
-        primaryCTA={{ label: "Schedule a Free Consultation", href: "#consultation" }}
-        secondaryCTA={{ label: "Learn How It Works", href: "/estate-sales" }}
-      />
-      <TrustBar />
-      <ServicesOverview />
-      <HowItWorks />
+    <ScrollStory>
+      <Hook />
+      <Tension />
+      <Turn />
+      <Process />
       <ServiceArea />
-      <TestimonialHighlight />
-      <MeetCortnee />
-      <ConsultationCTA showForm />
-    </>
+      <SocialProof />
+      <TheAsk />
+    </ScrollStory>
   );
 }

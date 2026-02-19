@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
+import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 
 export default function Hook() {
@@ -9,44 +9,44 @@ export default function Hook() {
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(0);
 
-  registerSection(start, duration, (tl, s, d) => {
-    if (!sectionRef.current) return;
+  useGSAP(() => {
+    registerSection(start, duration, (tl, s, d) => {
+      if (!sectionRef.current) return;
 
-    const headline = sectionRef.current.querySelector("[data-hook-headline]");
-    const subtext = sectionRef.current.querySelector("[data-hook-subtext]");
-    const bg = sectionRef.current.querySelector("[data-hook-bg]");
-    const arrow = sectionRef.current.querySelector("[data-hook-arrow]");
+      const headline = sectionRef.current.querySelector("[data-hook-headline]");
+      const subtext = sectionRef.current.querySelector("[data-hook-subtext]");
+      const bg = sectionRef.current.querySelector("[data-hook-bg]");
+      const arrow = sectionRef.current.querySelector("[data-hook-arrow]");
 
-    if (headline) {
-      tl.fromTo(
-        headline,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: d * 0.3, ease: "power2.out" },
-        s
-      );
-    }
-    if (subtext) {
-      tl.fromTo(
-        subtext,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: d * 0.4, ease: "power2.out" },
-        s + d * 0.2
-      );
-    }
-    if (bg) {
-      tl.fromTo(
-        bg,
-        { scale: 1 },
-        { scale: 1.05, duration: d * 0.3, ease: "none" },
-        s + d * 0.5
-      );
-    }
-    if (arrow) {
-      tl.to(arrow, { opacity: 0, duration: d * 0.3 }, s + d * 0.7);
-    }
-  });
-
-  useGSAP(() => {}, { scope: sectionRef });
+      if (headline) {
+        tl.fromTo(
+          headline,
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: d * 0.3, ease: "power2.out" },
+          s
+        );
+      }
+      if (subtext) {
+        tl.fromTo(
+          subtext,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: d * 0.4, ease: "power2.out" },
+          s + d * 0.2
+        );
+      }
+      if (bg) {
+        tl.fromTo(
+          bg,
+          { scale: 1 },
+          { scale: 1.05, duration: d * 0.3, ease: "none" },
+          s + d * 0.5
+        );
+      }
+      if (arrow) {
+        tl.to(arrow, { opacity: 0, duration: d * 0.3 }, s + d * 0.7);
+      }
+    });
+  }, { scope: sectionRef });
 
   return (
     <section
