@@ -10,6 +10,7 @@ export default function EstateSalesPage() {
       <Hero
         title="Full-Service Estate Sales, Start to Finish"
         subtitle="We handle every aspect of your estate sale with care and expertise."
+        colorScheme="estate-sales"
       />
       <ConsultationCTA />
     </>

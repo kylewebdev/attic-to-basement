@@ -10,6 +10,7 @@ export default function EstateLiquidationPage() {
       <Hero
         title="Comprehensive Estate Liquidation Solutions"
         subtitle="Not every situation calls for a traditional sale. We offer multiple paths tailored to your needs."
+        colorScheme="estate-liquidation"
       />
       <ConsultationCTA />
     </>

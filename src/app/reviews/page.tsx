@@ -10,6 +10,7 @@ export default function ReviewsPage() {
       <Hero
         title="What Our Clients Say"
         subtitle="The best measure of our work is the experience of the families we serve."
+        colorScheme="reviews"
       />
       <ConsultationCTA />
     </>

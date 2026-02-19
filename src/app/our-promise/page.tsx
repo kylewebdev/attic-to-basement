@@ -10,6 +10,7 @@ export default function OurPromisePage() {
       <Hero
         title="Our Commitment to You"
         subtitle="We understand the emotional weight of estate liquidation. Here's what you can expect from us."
+        colorScheme="our-promise"
       />
       <ConsultationCTA />
     </>

@@ -10,6 +10,7 @@ export default function AppraisalsPage() {
       <Hero
         title="Accurate, Professional Appraisals"
         subtitle="Knowing what your belongings are worth is the foundation of a successful estate sale."
+        colorScheme="appraisals"
       />
       <ConsultationCTA />
     </>
