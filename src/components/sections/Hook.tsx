@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 
@@ -68,12 +69,55 @@ export default function Hook() {
       data-scroll-section
       className="relative min-h-[115vh] overflow-hidden"
     >
-      {/* Background */}
+      {/* Background image */}
       <div
         data-hook-bg
-        className="absolute inset-0 bg-gradient-to-b from-warm-white to-warm-50"
+        className="absolute inset-0"
         aria-hidden="true"
-      />
+      >
+        <Image
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        {/* Base overlay for text readability */}
+        <div className="absolute inset-0 bg-warm-white/[0.78]" />
+        {/* Edge fade — bottom dissolves into next section */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-1/3"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 0%, var(--color-warm-white) 100%)",
+          }}
+        />
+        {/* Edge fade — top softens the header boundary */}
+        <div
+          className="absolute inset-x-0 top-0 h-24"
+          style={{
+            background:
+              "linear-gradient(to top, transparent 0%, var(--color-warm-white) 100%)",
+          }}
+        />
+        {/* Edge fade — left */}
+        <div
+          className="absolute inset-y-0 left-0 w-1/4"
+          style={{
+            background:
+              "linear-gradient(to left, transparent 0%, var(--color-warm-white) 100%)",
+          }}
+        />
+        {/* Edge fade — right */}
+        <div
+          className="absolute inset-y-0 right-0 w-1/4"
+          style={{
+            background:
+              "linear-gradient(to right, transparent 0%, var(--color-warm-white) 100%)",
+          }}
+        />
+      </div>
 
       <div className="sticky top-0 min-h-screen flex items-center justify-center relative z-10">
         <div className="max-w-4xl mx-auto px-4 text-center">
