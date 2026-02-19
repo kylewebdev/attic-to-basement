@@ -112,6 +112,26 @@ export default function ConsultationForm() {
       </div>
 
       <div>
+        <label htmlFor="situation" className="block text-sm font-semibold text-stone-300 mb-1">
+          What best describes your situation?
+        </label>
+        <select
+          id="situation"
+          name="situation"
+          className="w-full rounded-lg border border-warm-100 bg-warm-50 px-4 py-3 text-stone-200 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+          defaultValue=""
+        >
+          <option value="" disabled>Select one...</option>
+          <option value="settling">Settling an estate</option>
+          <option value="downsizing">Downsizing</option>
+          <option value="cleanout">Property cleanout</option>
+          <option value="appraisal">Appraisal needed</option>
+          <option value="buying">Buying at a sale</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
         <label htmlFor="description" className="block text-sm font-semibold text-stone-300 mb-1">
           How can we help? <span className="text-sage-500">*</span>
         </label>
