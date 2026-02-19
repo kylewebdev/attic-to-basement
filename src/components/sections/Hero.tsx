@@ -12,56 +12,46 @@ interface HeroProps {
 
 const colorSchemes: Record<ColorScheme, {
   gradient: string;
-  blobs: Array<{ color: string; size: number; top?: string; bottom?: string; left?: string; right?: string; borderRadius: string }>;
+  blobs: Array<{ color: string; opacity: number; size: number; top?: string; bottom?: string; left?: string; right?: string; borderRadius: string }>;
 }> = {
   "estate-sales": {
     gradient: "linear-gradient(135deg, var(--color-warm-white) 0%, var(--color-sage-50) 100%)",
     blobs: [
-      { color: "var(--color-sage-200)", size: 380, top: "-80px", right: "-60px", borderRadius: "60% 40% 50% 70% / 50% 60% 40% 60%" },
-      { color: "var(--color-warm-200)", size: 280, bottom: "-40px", left: "-50px", borderRadius: "40% 60% 70% 30% / 60% 40% 50% 60%" },
-      { color: "var(--color-sage-100)", size: 200, top: "20%", left: "60%", borderRadius: "50% 60% 40% 70% / 40% 50% 60% 50%" },
+      { color: "var(--color-sage-200)", opacity: 0.3, size: 380, top: "-80px", right: "-60px", borderRadius: "60% 40% 50% 70% / 50% 60% 40% 60%" },
+      { color: "var(--color-warm-200)", opacity: 0.2, size: 280, bottom: "-40px", left: "-50px", borderRadius: "40% 60% 70% 30% / 60% 40% 50% 60%" },
+      { color: "var(--color-sage-100)", opacity: 0.2, size: 200, top: "20%", left: "60%", borderRadius: "50% 60% 40% 70% / 40% 50% 60% 50%" },
     ],
   },
   "estate-liquidation": {
     gradient: "linear-gradient(150deg, var(--color-warm-white) 0%, var(--color-warm-100) 100%)",
     blobs: [
-      { color: "var(--color-sage-100)", size: 350, top: "-70px", left: "-80px", borderRadius: "50% 60% 40% 70% / 60% 40% 60% 50%" },
-      { color: "var(--color-gold-400)", size: 240, bottom: "-50px", right: "-40px", borderRadius: "60% 40% 50% 60% / 50% 60% 40% 70%" },
+      { color: "var(--color-sage-100)", opacity: 0.25, size: 350, top: "-70px", left: "-80px", borderRadius: "50% 60% 40% 70% / 60% 40% 60% 50%" },
+      { color: "var(--color-gold-400)", opacity: 0.1, size: 240, bottom: "-50px", right: "-40px", borderRadius: "60% 40% 50% 60% / 50% 60% 40% 70%" },
     ],
   },
   appraisals: {
     gradient: "linear-gradient(160deg, var(--color-warm-50) 0%, var(--color-sage-50) 100%)",
     blobs: [
-      { color: "var(--color-sage-300)", size: 320, top: "-60px", right: "-70px", borderRadius: "45% 55% 60% 40% / 55% 45% 50% 60%" },
-      { color: "var(--color-warm-200)", size: 300, bottom: "-80px", left: "-60px", borderRadius: "55% 45% 40% 60% / 50% 60% 55% 45%" },
-      { color: "var(--color-sage-100)", size: 180, top: "30%", right: "20%", borderRadius: "60% 40% 55% 45% / 45% 55% 40% 60%" },
+      { color: "var(--color-sage-300)", opacity: 0.15, size: 320, top: "-60px", right: "-70px", borderRadius: "45% 55% 60% 40% / 55% 45% 50% 60%" },
+      { color: "var(--color-warm-200)", opacity: 0.25, size: 300, bottom: "-80px", left: "-60px", borderRadius: "55% 45% 40% 60% / 50% 60% 55% 45%" },
+      { color: "var(--color-sage-100)", opacity: 0.2, size: 200, top: "30%", right: "20%", borderRadius: "60% 40% 55% 45% / 45% 55% 40% 60%" },
     ],
   },
   "our-promise": {
     gradient: "linear-gradient(140deg, var(--color-warm-white) 0%, var(--color-warm-50) 100%)",
     blobs: [
-      { color: "var(--color-sage-200)", size: 360, bottom: "-60px", right: "-80px", borderRadius: "50% 60% 45% 55% / 55% 45% 60% 50%" },
-      { color: "var(--color-warm-100)", size: 300, top: "-50px", left: "-40px", borderRadius: "45% 55% 50% 60% / 60% 40% 55% 45%" },
+      { color: "var(--color-sage-200)", opacity: 0.2, size: 360, bottom: "-60px", right: "-80px", borderRadius: "50% 60% 45% 55% / 55% 45% 60% 50%" },
+      { color: "var(--color-warm-100)", opacity: 0.3, size: 300, top: "-50px", left: "-40px", borderRadius: "45% 55% 50% 60% / 60% 40% 55% 45%" },
     ],
   },
   reviews: {
     gradient: "linear-gradient(130deg, var(--color-sage-50) 0%, var(--color-warm-white) 100%)",
     blobs: [
-      { color: "var(--color-sage-100)", size: 340, top: "-70px", left: "-60px", borderRadius: "55% 45% 60% 40% / 45% 55% 40% 60%" },
-      { color: "var(--color-gold-400)", size: 200, bottom: "-40px", right: "-50px", borderRadius: "40% 60% 45% 55% / 60% 40% 55% 45%" },
+      { color: "var(--color-sage-100)", opacity: 0.2, size: 340, top: "-70px", left: "-60px", borderRadius: "55% 45% 60% 40% / 45% 55% 40% 60%" },
+      { color: "var(--color-gold-400)", opacity: 0.08, size: 200, bottom: "-40px", right: "-50px", borderRadius: "40% 60% 45% 55% / 60% 40% 55% 45%" },
     ],
   },
 };
-
-function getBlobOpacity(color: string): number {
-  if (color.includes("gold-400")) return 0.08;
-  if (color.includes("sage-300")) return 0.15;
-  if (color.includes("sage-200")) return 0.25;
-  if (color.includes("sage-100")) return 0.2;
-  if (color.includes("warm-200")) return 0.2;
-  if (color.includes("warm-100")) return 0.25;
-  return 0.2;
-}
 
 export default function Hero({
   title,
@@ -92,7 +82,7 @@ export default function Hero({
                 right: blob.right,
                 borderRadius: blob.borderRadius,
                 backgroundColor: blob.color,
-                opacity: getBlobOpacity(blob.color),
+                opacity: blob.opacity,
                 filter: "blur(40px)",
               }}
             />
