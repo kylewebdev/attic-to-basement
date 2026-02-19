@@ -55,6 +55,10 @@ export default function Process() {
   const { start, duration } = getSectionPosition(3);
 
   useGSAP(() => {
+    // Mobile: skip scroll-scrub animation, let ScrollStory mobile fallback handle fade-ins
+    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+    if (isMobile) return;
+
     registerSection(start, duration, (tl, s, d) => {
       if (!sectionRef.current) return;
 
@@ -125,9 +129,9 @@ export default function Process() {
     <section
       ref={sectionRef}
       data-scroll-section
-      className="min-h-[300vh] bg-warm-white relative"
+      className="min-h-0 sm:min-h-[300vh] bg-warm-white relative"
     >
-      <div className="sticky top-0 min-h-screen flex items-center py-32 md:py-40">
+      <div className="sm:sticky sm:top-0 sm:min-h-screen flex items-center py-16 sm:py-32 md:py-40">
         <div className="max-w-3xl mx-auto px-4">
           <h2
             data-process-headline

@@ -25,6 +25,18 @@ export default function Tension() {
   const { start, duration } = getSectionPosition(1);
 
   useGSAP(() => {
+    if (!sectionRef.current) return;
+
+    // Mobile: show text at final color, skip scroll-scrub animation
+    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+    if (isMobile) {
+      const words = sectionRef.current.querySelectorAll("[data-word]");
+      words.forEach((w) => {
+        (w as HTMLElement).style.color = "#e7e5e4";
+      });
+      return;
+    }
+
     registerSection(start, duration, (tl, s, d) => {
       if (!sectionRef.current) return;
 
@@ -62,9 +74,9 @@ export default function Tension() {
     <section
       ref={sectionRef}
       data-scroll-section
-      className="min-h-[200vh] bg-warm-white relative"
+      className="min-h-screen sm:min-h-[200vh] bg-warm-white relative"
     >
-      <div className="sticky top-0 min-h-screen flex items-center justify-center">
+      <div className="sm:sticky sm:top-0 min-h-screen flex items-center justify-center">
         <div className="max-w-3xl mx-auto px-4">
           <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center text-stone-600">
             {words.map((word, i) => (

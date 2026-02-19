@@ -13,6 +13,23 @@ export default function SocialProof() {
   const { start, duration } = getSectionPosition(5);
 
   useGSAP(() => {
+    // Mobile: set stat numbers to final values, skip scroll-scrub animation
+    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+    if (isMobile) {
+      if (!sectionRef.current) return;
+      const statNumbers = sectionRef.current.querySelectorAll("[data-stat-number]");
+      statNumbers.forEach((el) => {
+        const target = parseFloat(el.getAttribute("data-target") || "0");
+        const decimals = parseInt(el.getAttribute("data-decimals") || "0");
+        if (target > 0) {
+          el.textContent = decimals > 0
+            ? target.toFixed(decimals)
+            : Math.round(target).toString();
+        }
+      });
+      return;
+    }
+
     registerSection(start, duration, (tl, s, d) => {
       if (!sectionRef.current) return;
 
@@ -102,9 +119,9 @@ export default function SocialProof() {
     <section
       ref={sectionRef}
       data-scroll-section
-      className="min-h-[200vh] bg-sage-50 relative"
+      className="min-h-0 sm:min-h-[200vh] bg-sage-50 relative"
     >
-      <div className="sticky top-0 min-h-screen flex items-center py-20">
+      <div className="sm:sticky sm:top-0 sm:min-h-screen flex items-center py-20">
       <div className="max-w-5xl mx-auto px-4">
         <h2
           data-social-headline

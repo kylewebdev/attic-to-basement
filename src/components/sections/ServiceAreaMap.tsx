@@ -1,5 +1,6 @@
 interface ServiceAreaMapProps {
   className?: string;
+  animated?: boolean;
 }
 
 const serviceAreaCounties = [
@@ -57,7 +58,7 @@ const surroundingCounties = [
   { id: "county-16", d: "M204,893 L202,902 L213,931 L213,965 L216,971 L231,977 L247,976 L288,988 L284,982 L284,977 L296,935 L239,937 L215,913 L209,896 L206,893 Z", length: 342 },
 ];
 
-export default function ServiceAreaMap({ className = "" }: ServiceAreaMapProps) {
+export default function ServiceAreaMap({ className = "", animated = true }: ServiceAreaMapProps) {
   return (
     <svg
       viewBox="148 470 467 531"
@@ -79,10 +80,10 @@ export default function ServiceAreaMap({ className = "" }: ServiceAreaMapProps) 
           strokeLinecap="round"
           strokeLinejoin="round"
           className="text-stone-600"
-          style={{
+          style={animated ? {
             strokeDasharray: county.length,
             strokeDashoffset: county.length,
-          }}
+          } : undefined}
         />
       ))}
 
@@ -94,16 +95,16 @@ export default function ServiceAreaMap({ className = "" }: ServiceAreaMapProps) 
             data-length={county.length}
             data-service-path
             d={county.d}
-            fill="none"
-            stroke="currentColor"
+            fill={animated ? "none" : "rgba(61, 74, 53, 0.5)"}
+            stroke={animated ? "currentColor" : "#a8b496"}
             strokeWidth="2.2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-sage-400"
-            style={{
+            className={animated ? "text-sage-400" : undefined}
+            style={animated ? {
               strokeDasharray: county.length,
               strokeDashoffset: county.length,
-            }}
+            } : undefined}
           />
           <text
             x={county.labelX}
@@ -113,7 +114,7 @@ export default function ServiceAreaMap({ className = "" }: ServiceAreaMapProps) 
             fontSize="14"
             fontWeight="600"
             data-service-label
-            opacity="0"
+            opacity={animated ? "0" : "1"}
           >
             {county.label}
           </text>

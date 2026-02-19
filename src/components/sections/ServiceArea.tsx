@@ -1,16 +1,24 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import ServiceAreaMap from "./ServiceAreaMap";
 
 export default function ServiceArea() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [animated, setAnimated] = useState(true);
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(4);
 
   useGSAP(() => {
+    // Mobile: show completed map, skip scroll-scrub animation
+    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+    if (isMobile) {
+      setAnimated(false);
+      return;
+    }
+
     registerSection(start, duration, (tl, s, d) => {
       if (!sectionRef.current) return;
 
@@ -109,7 +117,7 @@ export default function ServiceArea() {
           Serving Northern California, from the Bay to the Foothills
         </h2>
 
-        <ServiceAreaMap className="w-full max-w-2xl mx-auto mb-10" />
+        <ServiceAreaMap className="w-full max-w-2xl mx-auto mb-10" animated={animated} />
 
         <p
           data-area-subtext
