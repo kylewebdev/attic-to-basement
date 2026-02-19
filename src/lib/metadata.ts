@@ -9,7 +9,8 @@ type PageKey =
   | "estateLiquidation"
   | "appraisals"
   | "ourPromise"
-  | "reviews";
+  | "reviews"
+  | "contact";
 
 const pages: Record<PageKey, { title: string; description: string; path: string }> = {
   home: {
@@ -47,6 +48,12 @@ const pages: Record<PageKey, { title: string; description: string; path: string 
     description:
       "See what families across Northern California say about working with ABE Liquidators. 4.5 stars across review platforms.",
     path: "/reviews",
+  },
+  contact: {
+    title: "Contact Us | Free Consultation | ABE Liquidators",
+    description:
+      "Schedule a free, no-obligation estate sale consultation. Call (916) 521-1077 or fill out our contact form. Available 24/7.",
+    path: "/contact",
   },
 };
 
