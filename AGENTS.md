@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file is the entry point for Claude Code (claude.ai/code).
+This file is the entry point for Codex and other agent-based tools.
 
 **All instructions live in `.ai/assistant.md`** — this file just points there.
 
