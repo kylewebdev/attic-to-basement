@@ -5,6 +5,10 @@ import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import JsonLd from "@/components/seo/JsonLd";
 import { getLocalBusinessSchema } from "@/lib/schema";
+import {
+    GoogleTagManagerHead,
+    GoogleTagManagerBody,
+} from "@/components/layout/GoogleTagManager";
 import type { Metadata } from "next";
 
 const libreBaskerville = Libre_Baskerville({
@@ -41,12 +45,14 @@ export default function RootLayout({
             className={`${libreBaskerville.variable} ${nunitoSans.variable}`}
         >
             <body>
+                <GoogleTagManagerBody />
                 <JsonLd data={getLocalBusinessSchema()} />
                 <SmoothScroll>
                     <Header />
                     <main id="main-content">{children}</main>
                     <Footer />
                 </SmoothScroll>
+                <GoogleTagManagerHead />
             </body>
         </html>
     );
