@@ -1,28 +1,167 @@
 # Build Plan — Attic To Basement
 
-<!-- This is your implementation roadmap. Break work into phases and steps. -->
-<!-- AI assistants will read this to understand what to work on next. -->
+## Phase 1 — MVP (COMPLETE)
 
-## Phase 1 — MVP
+All core pages built, styled, and building successfully.
 
-<!-- Describe the minimum viable version of your project. -->
+### Step 1: Project scaffold and design system ✅
 
-### Step 1: ...
+- Next.js App Router + TypeScript + Tailwind CSS
+- Font setup (Libre Baskerville + Nunito Sans)
+- Global styles, color tokens, dark warm palette
+- Reusable UI components: Button, Card, SectionHeading, TestimonialCard, SaleCard
 
-<!-- What needs to happen first? -->
+### Step 2: Layout shell ✅
 
-### Step 2: ...
+- Header with sticky scroll behavior, desktop nav, mobile hamburger
+- MobileNav slide-out drawer
+- Footer with contact info, social links, nav links
+- SmoothScroll wrapper (Lenis)
 
-<!-- What comes next? -->
+### Step 3: Homepage scroll story ✅
+
+- ScrollStory GSAP-driven narrative (desktop: scrub timeline, mobile: intersection reveals)
+- Sections: Hook → Tension → Turn → Process → ServiceArea → SocialProof → TheAsk
+- Respects `prefers-reduced-motion`
+- Mobile fallbacks for all scroll-driven sections
+
+### Step 4: Interior pages ✅
+
+- `/estate-sales` — service detail + SaleCard listings (dummy data)
+- `/estate-liquidation` — buyouts, cleanouts, service types
+- `/appraisals` — appraisal services, categories, credentials
+- `/our-promise` — values, Cortnee bio, trust signals
+- `/reviews` — filterable testimonials by category (15+ reviews)
+- `/contact` — standalone form page with full contact info
+
+### Step 5: Consultation form ✅
+
+- ConsultationForm component (shared across pages)
+- Formspree integration (honeypot spam protection, no CAPTCHA)
+- Fields: name, phone, email, city/zip, situation dropdown, description, contact preference
+- Success/error states
+
+### Step 6: SEO metadata ✅
+
+- Unique title + meta description per page (`lib/metadata.ts`)
+- Open Graph + Twitter Card tags
+- Canonical URLs via `metadataBase`
 
 ---
 
-## Phase 2 — Enhancements
+## Phase 2 — Production Ready (COMPLETE)
 
-<!-- What comes after the MVP? -->
+What's needed to go from "builds cleanly" to "ready for launch."
+
+### Step 1: Schema.org structured data ✅
+
+- [x] Add JSON-LD `LocalBusiness` schema to root layout (name, phone, address, geo, hours, logo, sameAs links)
+- [x] Add `Service` schema to `/estate-sales`, `/estate-liquidation`, `/appraisals`
+- [x] Add `Review` / `AggregateRating` schema to `/reviews`
+- [x] Add `BreadcrumbList` schema to all interior pages
+- [ ] Validate with Google Rich Results Test
+
+### Step 2: Sitemap and robots.txt ✅
+
+- [x] Add `sitemap.ts` to `src/app/` (Next.js auto-generates XML sitemap)
+- [x] Add `robots.ts` to `src/app/` (allow all, reference sitemap URL)
+
+### Step 3: Google Tag Manager ✅
+
+- [x] GTM component with env var toggle (`NEXT_PUBLIC_GTM_ID`)
+- [x] Add `<Script>` tag with afterInteractive strategy
+- [x] Add `noscript` GTM iframe to `<body>`
+- [ ] Get GTM container ID from client
+- [ ] Set up GA4 tag inside GTM
+- [ ] Configure form submission conversion event
+- [ ] Configure phone click tracking event
+
+### Step 4: Image optimization ✅
+
+- [x] Add favicon and touch icons to `/public`
+- [x] Add OG image (1200x630) for social sharing
+- [x] Add OG/Twitter image metadata to `getPageMetadata()`
+- [ ] Replace Unsplash placeholder images with real client photos
+- [ ] Add meaningful alt text describing final image content
+
+### Step 5: 404 page ✅
+
+- [x] Create `src/app/not-found.tsx` with branded styling
+- [x] Include nav back to homepage and consultation CTA
+- [x] Match site design language
+
+### Step 6: Accessibility audit ✅
+
+- [x] Skip-to-content link (Header → main#main-content)
+- [x] MobileNav: dialog role, aria-modal, focus trap, Escape key, focus restore
+- [x] ConsultationForm: aria-live regions for success/error, aria-disabled on submit
+- [x] Aria-labels on all homepage scroll sections
+- [ ] Run axe-core or Lighthouse accessibility audit on every page
+- [ ] Verify color contrast meets WCAG AA (especially sage-on-dark combos)
+
+### Step 7: Performance audit
+
+- [ ] Run Lighthouse on every page — target 90+ performance
+- [ ] Verify LCP < 2.5s, CLS < 0.1
+- [ ] Verify total page weight < 1MB per page (excluding lazy images)
+- [ ] Check bundle size — tree-shake GSAP if possible
+- [ ] Ensure fonts load with `font-display: swap` (already configured)
+
+---
+
+## Phase 3 — Final Polish
+
+Last round before handing off to the client.
+
+### Step 1: Content review
+
+- [ ] Client reviews and approves all page copy
+- [ ] Replace dummy estate sale listings with real data (or hide section if no upcoming sales)
+- [ ] Verify all phone numbers, email addresses, and external links are correct
+- [ ] Verify Instagram handle (@abe.liquidators) links correctly
+- [ ] Verify BBB, Yelp, EstateSales.net, EstateSales.org links are correct
+
+### Step 2: Cross-browser testing
+
+- [ ] Chrome (desktop + mobile)
+- [ ] Safari (desktop + iOS)
+- [ ] Firefox
+- [ ] Edge
+- [ ] Test scroll story animations on each browser
+- [ ] Test form submission end-to-end on each browser
+
+### Step 3: Mobile device testing
+
+- [ ] Test on real iOS device (iPhone)
+- [ ] Test on real Android device
+- [ ] Verify click-to-call works on mobile
+- [ ] Verify no horizontal scrolling at any viewport
+- [ ] Verify hamburger menu opens/closes correctly
+
+### Step 4: Pre-launch SEO checklist
+
+- [ ] Validate structured data (Google Rich Results Test)
+- [ ] Submit sitemap to Google Search Console
+- [ ] Verify canonical URLs resolve correctly
+- [ ] Verify Open Graph previews render on Facebook/LinkedIn/Twitter
+- [ ] Set up 301 redirects if any old URLs change
+
+### Step 5: Deployment
+
+- [ ] Verify `.env` variables are set in Vercel dashboard (NEXT_PUBLIC_FORMSPREE_ID)
+- [ ] Deploy to Vercel production
+- [ ] Point abeliquidators.com DNS to Vercel
+- [ ] Verify SSL certificate is active (HTTPS)
+- [ ] Smoke test all pages on live domain
+- [ ] Test form submission on live domain
+- [ ] Test click-to-call on live domain
 
 ---
 
 ## Notes
 
-<!-- Any additional context, open questions, or constraints. -->
+- **No CMS at launch** — all content is hardcoded but structured for future CMS extraction
+- **GTM ID needed from client** — GTM script is ready in layout.tsx, just needs the real container ID
+- **Real photos needed** — professional headshot of Cortnee, estate sale staging shots, detail shots of items, team photos
+- **Cookie/privacy notice** — may be needed depending on GTM/analytics setup; check with client
+- **`type: "module"` warning** — Tailwind logs a minor warning about package.json missing `"type": "module"`; doesn't affect builds
