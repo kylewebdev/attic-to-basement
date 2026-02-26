@@ -71,11 +71,20 @@ export function getPageMetadata(page: PageKey): Metadata {
       url,
       siteName,
       type: "website",
+      images: [
+        {
+          url: `${siteUrl}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: "ABE Liquidators — Estate Sales & Liquidation Services",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [`${siteUrl}/og-image.jpg`],
     },
   };
 }
