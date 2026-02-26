@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { gsap, useGSAP } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
@@ -16,6 +16,9 @@ const serviceLinks = [
   { label: "Appraisals", href: "/appraisals" },
 ];
 
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
 interface MobileNavProps {
   isOpen: boolean;
   onClose: () => void;
@@ -24,9 +27,59 @@ interface MobileNavProps {
 export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
   const [servicesExpanded, setServicesExpanded] = useState(false);
 
   useGSAP({ scope: overlayRef });
+
+  // Capture focus on open, restore on close
+  useEffect(() => {
+    if (isOpen) {
+      previousFocusRef.current = document.activeElement as HTMLElement;
+      // Delay focus to allow drawer animation to start
+      requestAnimationFrame(() => {
+        closeButtonRef.current?.focus();
+      });
+    } else if (previousFocusRef.current) {
+      previousFocusRef.current.focus();
+      previousFocusRef.current = null;
+    }
+  }, [isOpen]);
+
+  // Escape key closes drawer
+  useEffect(() => {
+    if (!isOpen) return;
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
+
+  // Focus trap
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key !== "Tab" || !drawerRef.current) return;
+
+      const focusable = drawerRef.current.querySelectorAll(FOCUSABLE_SELECTOR);
+      if (focusable.length === 0) return;
+
+      const first = focusable[0] as HTMLElement;
+      const last = focusable[focusable.length - 1] as HTMLElement;
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    },
+    []
+  );
 
   useEffect(() => {
     if (!overlayRef.current || !drawerRef.current) return;
@@ -53,12 +106,15 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
       ref={overlayRef}
       className="fixed inset-0 z-50 opacity-0 invisible"
       aria-hidden={!isOpen}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+      onKeyDown={handleKeyDown}
     >
       {/* Overlay backdrop */}
       <div
         className="absolute inset-0 bg-black/40"
         onClick={onClose}
-        aria-label="Close menu"
       />
 
       {/* Drawer */}
@@ -69,6 +125,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
       >
         <div className="flex justify-end p-4">
           <button
+            ref={closeButtonRef}
             onClick={onClose}
             className="p-2 text-stone-400 hover:text-stone-200 min-h-11 min-w-11 flex items-center justify-center"
             aria-label="Close menu"
