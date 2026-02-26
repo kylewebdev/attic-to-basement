@@ -9,6 +9,7 @@ interface ButtonProps {
   type?: "button" | "submit";
   className?: string;
   onClick?: () => void;
+  "aria-disabled"?: boolean;
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
@@ -27,6 +28,7 @@ export default function Button({
   type = "button",
   className = "",
   onClick,
+  "aria-disabled": ariaDisabled,
 }: ButtonProps) {
   const styles = [
     "inline-flex items-center justify-center",
@@ -47,7 +49,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} className={styles} onClick={onClick}>
+    <button type={type} className={styles} onClick={onClick} aria-disabled={ariaDisabled}>
       {children}
     </button>
   );

@@ -35,7 +35,7 @@ export default function ConsultationForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-xl bg-sage-50 border border-sage-200 p-8 text-center">
+      <div role="status" aria-live="polite" className="rounded-xl bg-sage-50 border border-sage-200 p-8 text-center">
         <p className="font-serif text-2xl text-stone-200 mb-2">Thank you!</p>
         <p className="text-stone-400">
           We&apos;ve received your message and will be in touch within 24 hours.
@@ -173,13 +173,13 @@ export default function ConsultationForm() {
       </fieldset>
 
       {status === "error" && (
-        <p className="text-red-600 text-sm">
+        <p role="alert" aria-live="assertive" className="text-red-600 text-sm">
           Something went wrong. Please try again or call us at{" "}
           <a href="tel:+19165211077" className="underline">(916) 521-1077</a>.
         </p>
       )}
 
-      <Button type="submit" variant="primary" className="w-full sm:w-auto">
+      <Button type="submit" variant="primary" className="w-full sm:w-auto" aria-disabled={status === "submitting"}>
         {status === "submitting" ? "Sending..." : "Schedule a Free Consultation"}
       </Button>
     </form>
