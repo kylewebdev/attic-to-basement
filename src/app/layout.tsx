@@ -44,7 +44,7 @@ export default function RootLayout({
                 <JsonLd data={getLocalBusinessSchema()} />
                 <SmoothScroll>
                     <Header />
-                    <main>{children}</main>
+                    <main id="main-content">{children}</main>
                     <Footer />
                 </SmoothScroll>
             </body>
