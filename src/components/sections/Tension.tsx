@@ -74,6 +74,7 @@ export default function Tension() {
     <section
       ref={sectionRef}
       data-scroll-section
+      aria-label="The challenge of estate liquidation"
       className="min-h-screen sm:min-h-[200vh] bg-warm-white relative"
     >
       <div className="sm:sticky sm:top-0 min-h-screen flex items-center justify-center">

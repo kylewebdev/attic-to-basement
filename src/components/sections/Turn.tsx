@@ -60,6 +60,7 @@ export default function Turn() {
     <section
       ref={sectionRef}
       data-scroll-section
+      aria-label="How we help"
       className="min-h-[100vh] flex items-center bg-sage-50"
     >
       <div className="max-w-6xl mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

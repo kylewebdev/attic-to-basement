@@ -119,6 +119,7 @@ export default function SocialProof() {
     <section
       ref={sectionRef}
       data-scroll-section
+      aria-label="Client testimonials"
       className="min-h-0 sm:min-h-[200vh] bg-sage-50 relative"
     >
       <div className="sm:sticky sm:top-0 sm:min-h-screen flex items-center py-20">

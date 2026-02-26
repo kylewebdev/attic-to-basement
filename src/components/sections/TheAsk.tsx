@@ -58,6 +58,7 @@ export default function TheAsk() {
     <section
       ref={sectionRef}
       data-scroll-section
+      aria-label="Schedule a consultation"
       className="min-h-[100vh] flex items-center bg-warm-white relative overflow-hidden"
     >
       {/* Center glow */}

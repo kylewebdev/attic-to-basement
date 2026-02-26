@@ -67,6 +67,7 @@ export default function Hook() {
     <section
       ref={sectionRef}
       data-scroll-section
+      aria-label="Welcome"
       className="relative min-h-[115vh] overflow-hidden"
     >
       {/* Background image */}

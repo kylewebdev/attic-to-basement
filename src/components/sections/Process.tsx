@@ -171,6 +171,7 @@ export default function Process() {
     <section
       ref={sectionRef}
       data-scroll-section
+      aria-label="Our process"
       className="min-h-0 sm:min-h-[300vh] bg-warm-white relative"
     >
       <div className="sm:sticky sm:top-0 sm:min-h-screen flex items-center py-16 sm:py-32 md:py-40">
