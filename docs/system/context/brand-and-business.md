@@ -18,3 +18,14 @@ Full brand guide: `.ai/context/brand.md`. Key points:
 - **Phone:** (916) 521-1077
 - **Primary conversion:** Free consultation form submission
 - **Every page must have a clear path to schedule a free consultation**
+
+
+## Social
+
+- TikTok: https://www.tiktok.com/@attic.to.basement
+- Instagram: https://www.instagram.com/abe.liquidators
+
+- BBB: https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497
+- Yelp: https://www.yelp.com/biz/attic-to-basement-estate-liquidators-sacramento
+- EstateSales.org: https://estatesales.org/estate-sale-companies/attic-to-basement-estate-liquidators-23935
+- EstateSales.net: https://www.estatesales.net/companies/CA/Sacramento/95821/156176
