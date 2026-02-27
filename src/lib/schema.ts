@@ -88,6 +88,23 @@ export function getBreadcrumbSchema(
     };
 }
 
+export function getFAQSchema(
+    items: { question: string; answer: string }[]
+) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: items.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+            },
+        })),
+    };
+}
+
 export function getReviewSchema(testimonials: Testimonial[]) {
     const total = testimonials.length;
     const avg =

@@ -4,6 +4,8 @@ import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
+import AccordionItem from "@/components/ui/AccordionItem";
+import { faq } from "@/lib/data/faqs";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 const services = [
@@ -102,6 +104,25 @@ export default function EstateLiquidationPage() {
                             </li>
                         ))}
                     </ul>
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="py-16 md:py-24 bg-warm-white">
+                <div className="max-w-3xl mx-auto px-4">
+                    <div data-reveal>
+                        <SectionHeading title="Frequently Asked Questions" />
+                    </div>
+                    <div className="mt-12" data-reveal data-reveal-delay={100}>
+                        {faq.map((item) => (
+                            <AccordionItem
+                                key={item.question}
+                                question={item.question}
+                            >
+                                {item.answer}
+                            </AccordionItem>
+                        ))}
+                    </div>
                 </div>
             </section>
 

@@ -1,6 +1,7 @@
 import { getPageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/seo/JsonLd";
-import { getServiceSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/schema";
+import { faqPlainText } from "@/lib/data/faqs";
 
 export const metadata = getPageMetadata("estateLiquidation");
 
@@ -24,6 +25,7 @@ export default function EstateLiquidationLayout({
                     { name: "Estate Liquidation", path: "/estate-liquidation" },
                 ])}
             />
+            <JsonLd data={getFAQSchema(faqPlainText)} />
             {children}
         </>
     );
