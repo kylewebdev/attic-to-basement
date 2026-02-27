@@ -81,7 +81,7 @@ What's needed to go from "builds cleanly" to "ready for launch."
 - [x] Add favicon and touch icons to `/public`
 - [x] Add OG image (1200x630) for social sharing
 - [x] Add OG/Twitter image metadata to `getPageMetadata()`
-- [ ] Replace Unsplash placeholder images with real client photos
+- [x] Replace Unsplash placeholder images with real client photos
 - [ ] Add meaningful alt text describing final image content
 
 ### Step 5: 404 page ✅
@@ -101,11 +101,11 @@ What's needed to go from "builds cleanly" to "ready for launch."
 
 ### Step 7: Performance audit
 
-- [ ] Run Lighthouse on every page — target 90+ performance
-- [ ] Verify LCP < 2.5s, CLS < 0.1
-- [ ] Verify total page weight < 1MB per page (excluding lazy images)
+- [x] Run Lighthouse on every page — target 90+ performance
+- [x] Verify LCP < 2.5s, CLS < 0.1
+- [x] Verify total page weight < 1MB per page (excluding lazy images)
 - [ ] Check bundle size — tree-shake GSAP if possible
-- [ ] Ensure fonts load with `font-display: swap` (already configured)
+- [x] Ensure fonts load with `font-display: swap` (already configured)
 
 ---
 
@@ -116,27 +116,27 @@ Last round before handing off to the client.
 ### Step 1: Content review
 
 - [ ] Client reviews and approves all page copy
-- [ ] Replace dummy estate sale listings with real data (or hide section if no upcoming sales)
-- [ ] Verify all phone numbers, email addresses, and external links are correct
-- [ ] Verify Instagram handle (@abe.liquidators) links correctly
-- [ ] Verify BBB, Yelp, EstateSales.net, EstateSales.org links are correct
+- [x] Replace dummy estate sale listings with real data (or hide section if no upcoming sales)
+- [x] Verify all phone numbers, email addresses, and external links are correct
+- [x] Verify Instagram handle (@abe.liquidators) links correctly
+- [x] Verify BBB, Yelp, EstateSales.net, EstateSales.org links are correct
 
 ### Step 2: Cross-browser testing
 
-- [ ] Chrome (desktop + mobile)
-- [ ] Safari (desktop + iOS)
-- [ ] Firefox
-- [ ] Edge
-- [ ] Test scroll story animations on each browser
-- [ ] Test form submission end-to-end on each browser
+- [x] Chrome (desktop + mobile)
+- [x] Safari (desktop + iOS)
+- [x] Firefox
+- [x] Edge
+- [x] Test scroll story animations on each browser
+- [x] Test form submission end-to-end on each browser
 
 ### Step 3: Mobile device testing
 
-- [ ] Test on real iOS device (iPhone)
-- [ ] Test on real Android device
-- [ ] Verify click-to-call works on mobile
+- [x] Test on real iOS device (iPhone)
+- [x] Test on real Android device
+- [x] Verify click-to-call works on mobile
 - [ ] Verify no horizontal scrolling at any viewport
-- [ ] Verify hamburger menu opens/closes correctly
+- [x] Verify hamburger menu opens/closes correctly
 
 ### Step 4: Pre-launch SEO checklist
 
@@ -148,8 +148,8 @@ Last round before handing off to the client.
 
 ### Step 5: Deployment
 
-- [ ] Verify `.env` variables are set in Vercel dashboard (NEXT_PUBLIC_FORMSPREE_ID)
-- [ ] Deploy to Vercel production
+- [x] Verify `.env` variables are set in Vercel dashboard (NEXT_PUBLIC_FORMSPREE_ID)
+- [x] Deploy to Vercel production
 - [ ] Point abeliquidators.com DNS to Vercel
 - [ ] Verify SSL certificate is active (HTTPS)
 - [ ] Smoke test all pages on live domain

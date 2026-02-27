@@ -55,7 +55,7 @@ export default function OurPromisePage() {
             />
 
             {/* Cortnee's Story */}
-            <section className="py-16 md:py-24 bg-warm-white">
+            {/*<section className="py-16 md:py-24 bg-warm-white">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-12 items-start">
                         <div
@@ -101,7 +101,7 @@ export default function OurPromisePage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>*/}
 
             {/* Values */}
             <section className="py-16 md:py-24 bg-sage-50">
@@ -154,7 +154,7 @@ export default function OurPromisePage() {
                                 >
                                     {credential.text}
                                 </span>
-                            )
+                            ),
                         )}
                     </div>
                 </div>
