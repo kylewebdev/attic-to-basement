@@ -120,14 +120,14 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
       {/* Drawer */}
       <nav
         ref={drawerRef}
-        className="absolute right-0 top-0 h-full w-72 bg-warm-50 shadow-xl translate-x-full"
+        className="absolute right-0 top-0 h-full w-72 bg-bg-card shadow-xl translate-x-full"
         aria-label="Mobile navigation"
       >
         <div className="flex justify-end p-4">
           <button
             ref={closeButtonRef}
             onClick={onClose}
-            className="p-2 text-stone-400 hover:text-stone-200 min-h-11 min-w-11 flex items-center justify-center"
+            className="p-2 text-text-secondary hover:text-text-heading min-h-11 min-w-11 flex items-center justify-center"
             aria-label="Close menu"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -142,7 +142,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
             <Link
               href="/estate-sales"
               onClick={onClose}
-              className="block py-3 text-lg text-stone-300 hover:text-sage-300 transition-colors"
+              className="block py-3 text-lg text-text-body hover:text-sage-300 transition-colors"
             >
               Estate Sales
             </Link>
@@ -152,7 +152,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
           <li>
             <button
               onClick={() => setServicesExpanded(!servicesExpanded)}
-              className="flex items-center justify-between w-full py-3 text-lg text-stone-300 hover:text-sage-300 transition-colors"
+              className="flex items-center justify-between w-full py-3 text-lg text-text-body hover:text-sage-300 transition-colors"
               aria-expanded={servicesExpanded}
             >
               Services
@@ -175,7 +175,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                     <Link
                       href={link.href}
                       onClick={onClose}
-                      className="block py-2 text-base text-stone-400 hover:text-sage-300 transition-colors"
+                      className="block py-2 text-base text-text-secondary hover:text-sage-300 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -191,7 +191,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
               <Link
                 href={link.href}
                 onClick={onClose}
-                className="block py-3 text-lg text-stone-300 hover:text-sage-300 transition-colors"
+                className="block py-3 text-lg text-text-body hover:text-sage-300 transition-colors"
               >
                 {link.label}
               </Link>

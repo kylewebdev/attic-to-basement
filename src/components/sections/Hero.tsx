@@ -71,7 +71,7 @@ export default function Hero({
 
   return (
     <section
-      className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-warm-white overflow-hidden"
+      className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-bg-primary overflow-hidden"
       style={scheme ? { background: scheme.gradient } : undefined}
     >
       {scheme && (
@@ -97,11 +97,11 @@ export default function Hero({
         </div>
       )}
       <div className="relative max-w-4xl mx-auto px-4 text-center">
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-200 leading-tight">
+        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-text-heading leading-tight">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-6 text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
             {subtitle}
           </p>
         )}

@@ -120,14 +120,14 @@ export default function SocialProof() {
       ref={sectionRef}
       data-scroll-section
       aria-label="Client testimonials"
-      className="min-h-0 sm:min-h-[200vh] bg-sage-50 relative"
+      className="min-h-0 sm:min-h-[200vh] bg-bg-alt relative"
     >
       <div className="sm:sticky sm:top-0 sm:min-h-screen flex items-center py-20">
       <div className="max-w-5xl mx-auto px-4">
         <h2
           data-social-headline
           data-animate
-          className="font-serif text-3xl md:text-4xl text-stone-200 text-center mb-12"
+          className="font-serif text-3xl md:text-4xl text-text-heading text-center mb-12"
         >
           Do not take our word for it.
         </h2>
@@ -170,7 +170,7 @@ export default function SocialProof() {
                     {stat.suffix}
                   </div>
                 )}
-                <p className="mt-1 text-sm text-stone-400">{stat.label}</p>
+                <p className="mt-1 text-sm text-text-secondary">{stat.label}</p>
               </>
             );
 

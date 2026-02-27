@@ -74,7 +74,7 @@ export default function AppraisalsPage() {
             />
 
             {/* What we appraise */}
-            <section className="py-16 md:py-24 bg-warm-white">
+            <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-6xl mx-auto px-4">
                     <div data-reveal>
                         <SectionHeading
@@ -100,7 +100,7 @@ export default function AppraisalsPage() {
             </section>
 
             {/* When you need an appraisal */}
-            <section className="py-16 md:py-24 bg-sage-50">
+            <section className="py-16 md:py-24 bg-bg-alt">
                 <div className="max-w-4xl mx-auto px-4">
                     <div data-reveal>
                         <SectionHeading title="When you need an appraisal" />
@@ -126,7 +126,7 @@ export default function AppraisalsPage() {
                                         />
                                     </svg>
                                 </span>
-                                <span className="text-stone-300 text-lg">
+                                <span className="text-text-body text-lg">
                                     {reason}
                                 </span>
                             </li>
@@ -136,7 +136,7 @@ export default function AppraisalsPage() {
             </section>
 
             {/* Credentials */}
-            <section className="py-16 md:py-24 bg-warm-white">
+            <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="grid gap-6 md:grid-cols-3">
                         {credentials.map((credential, i) => (
@@ -153,7 +153,7 @@ export default function AppraisalsPage() {
                         ))}
                     </div>
                     <p
-                        className="mt-8 text-center text-sm text-stone-400"
+                        className="mt-8 text-center text-sm text-text-secondary"
                         data-reveal
                     >
                         Verify our accreditation on{" "}

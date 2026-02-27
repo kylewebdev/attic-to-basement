@@ -7,13 +7,13 @@ interface ConsultationCTAProps {
 
 export default function ConsultationCTA({ showForm = false }: ConsultationCTAProps) {
   return (
-    <section id="consultation" className="py-16 md:py-24 bg-sage-50">
+    <section id="consultation" className="py-16 md:py-24 bg-bg-alt">
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="font-serif text-3xl md:text-4xl text-stone-200">
+          <h2 className="font-serif text-3xl md:text-4xl text-text-heading">
             Ready to Get Started?
           </h2>
-          <p className="mt-4 text-lg text-stone-400 max-w-xl mx-auto">
+          <p className="mt-4 text-lg text-text-secondary max-w-xl mx-auto">
             Schedule a free, no-obligation consultation. We respond to inquiries
             7 days a week.
           </p>

@@ -46,7 +46,7 @@ export default function EstateLiquidationPage() {
             />
 
             {/* Service blocks */}
-            <section className="py-16 md:py-24 bg-warm-white">
+            <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-6xl mx-auto px-4">
                     <div data-reveal>
                         <SectionHeading
@@ -72,7 +72,7 @@ export default function EstateLiquidationPage() {
             </section>
 
             {/* Differentiators */}
-            <section className="py-16 md:py-24 bg-sage-50">
+            <section className="py-16 md:py-24 bg-bg-alt">
                 <div className="max-w-4xl mx-auto px-4">
                     <div data-reveal>
                         <SectionHeading title="What makes us different" />
@@ -98,14 +98,14 @@ export default function EstateLiquidationPage() {
                                         />
                                     </svg>
                                 </span>
-                                <span className="text-stone-300 text-lg">
+                                <span className="text-text-body text-lg">
                                     {item}
                                 </span>
                             </li>
                         ))}
                     </ul>
                     <p
-                        className="mt-10 text-center text-sm text-stone-400"
+                        className="mt-10 text-center text-sm text-text-secondary"
                         data-reveal
                     >
                         See our reviews on{" "}
@@ -132,7 +132,7 @@ export default function EstateLiquidationPage() {
             </section>
 
             {/* FAQ */}
-            <section className="py-16 md:py-24 bg-warm-white">
+            <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-3xl mx-auto px-4">
                     <div data-reveal>
                         <SectionHeading title="Frequently Asked Questions" />

@@ -40,7 +40,7 @@ export default function ReviewsPage() {
                 colorScheme="reviews"
             />
 
-            <section className="py-16 md:py-24 bg-warm-white">
+            <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-5xl mx-auto px-4">
                     {/* Filter tabs */}
                     <div
@@ -54,7 +54,7 @@ export default function ReviewsPage() {
                                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors min-h-11 ${
                                     activeFilter === f.value
                                         ? "bg-sage-500 text-white"
-                                        : "bg-warm-50 text-stone-400 hover:bg-warm-100 border border-warm-100"
+                                        : "bg-bg-card text-text-secondary hover:bg-border-default border border-border-default"
                                 }`}
                             >
                                 {f.label}
@@ -82,7 +82,7 @@ export default function ReviewsPage() {
                     </div>
 
                     {filtered.length === 0 && (
-                        <p className="text-center text-stone-400 py-12">
+                        <p className="text-center text-text-secondary py-12">
                             No reviews in this category yet. Try selecting a
                             different filter.
                         </p>
@@ -91,10 +91,10 @@ export default function ReviewsPage() {
             </section>
 
             {/* External platform links */}
-            <section className="py-12 bg-sage-50">
+            <section className="py-12 bg-bg-alt">
                 <div className="max-w-3xl mx-auto px-4 text-center">
                     <p
-                        className="font-serif text-xl text-stone-200 mb-6"
+                        className="font-serif text-xl text-text-heading mb-6"
                         data-reveal
                     >
                         Read more reviews on these platforms
@@ -110,7 +110,7 @@ export default function ReviewsPage() {
                                 href={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-sage-500 text-sage-300 hover:bg-sage-50 font-semibold text-sm transition-colors min-h-11"
+                                className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-sage-500 text-sage-300 hover:bg-bg-alt font-semibold text-sm transition-colors min-h-11"
                             >
                                 {link.label}
                             </a>

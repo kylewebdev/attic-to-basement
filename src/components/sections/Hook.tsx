@@ -132,13 +132,13 @@ export default function Hook() {
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <h1
                         data-hook-headline
-                        className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-200 leading-tight"
+                        className="font-serif text-4xl md:text-5xl lg:text-6xl text-text-heading leading-tight"
                     >
                         A lifetime of memories. One decision to make.
                     </h1>
                     <p
                         data-hook-subtext
-                        className="mt-8 text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed"
+                        className="mt-8 text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed"
                     >
                         Whether you are downsizing, settling an estate, or
                         simply ready for a fresh start, the weight of sorting
@@ -150,7 +150,7 @@ export default function Hook() {
                 {/* Scroll indicator */}
                 <div
                     data-hook-arrow
-                    className="absolute bottom-12 left-1/2 -translate-x-1/2 text-stone-500 animate-bounce"
+                    className="absolute bottom-12 left-1/2 -translate-x-1/2 text-text-muted animate-bounce"
                     aria-hidden="true"
                 >
                     <svg

@@ -59,7 +59,7 @@ export default function TheAsk() {
       ref={sectionRef}
       data-scroll-section
       aria-label="Schedule a consultation"
-      className="min-h-[100vh] flex items-center bg-warm-white relative overflow-hidden"
+      className="min-h-[100vh] flex items-center bg-bg-primary relative overflow-hidden"
     >
       {/* Center glow */}
       <div
@@ -74,14 +74,14 @@ export default function TheAsk() {
         <h2
           data-ask-headline
           data-animate
-          className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-200 leading-tight"
+          className="font-serif text-3xl md:text-4xl lg:text-5xl text-text-heading leading-tight"
         >
           Ready to talk? We are ready to listen.
         </h2>
         <p
           data-ask-subtext
           data-animate
-          className="mt-6 text-lg text-stone-400 leading-relaxed"
+          className="mt-6 text-lg text-text-secondary leading-relaxed"
         >
           Schedule your free, no-obligation consultation. We will come to you,
           walk through your situation, and give you a clear plan. No surprises.
@@ -94,7 +94,7 @@ export default function TheAsk() {
         <p
           data-ask-phone
           data-animate
-          className="mt-6 text-stone-400"
+          className="mt-6 text-text-secondary"
         >
           Prefer to call?{" "}
           <a

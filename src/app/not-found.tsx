@@ -7,13 +7,13 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-warm-white">
+        <div className="min-h-screen flex items-center justify-center bg-bg-primary">
             <div className="max-w-lg mx-auto px-4 text-center py-20">
                 <p className="text-8xl font-serif text-sage-200 mb-4">404</p>
-                <h1 className="font-serif text-3xl md:text-4xl text-stone-200 mb-4">
+                <h1 className="font-serif text-3xl md:text-4xl text-text-heading mb-4">
                     Page not found
                 </h1>
-                <p className="text-stone-400 mb-10 leading-relaxed">
+                <p className="text-text-secondary mb-10 leading-relaxed">
                     The page you are looking for may have been moved or no
                     longer exists. Let us help you find what you need.
                 </p>

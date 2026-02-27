@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { gsap, useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import MobileNav from "@/components/layout/MobileNav";
 
 const serviceLinks = [
@@ -75,7 +76,8 @@ export default function Header() {
               alt="Attic to Basement Estate Liquidators"
               width={160}
               height={120}
-              className="h-14 w-auto brightness-0 invert-[.75] sepia-[.15] saturate-[3] hue-rotate-[70deg]"
+              className="h-14 w-auto"
+              style={{ filter: "var(--logo-filter)" }}
               priority
             />
           </Link>
@@ -84,7 +86,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
             <Link
               href="/estate-sales"
-              className="text-sm font-sans text-stone-400 hover:text-sage-300 transition-colors"
+              className="text-sm font-sans text-text-secondary hover:text-sage-300 transition-colors"
             >
               Estate Sales
             </Link>
@@ -96,7 +98,7 @@ export default function Header() {
               onMouseLeave={closeServices}
             >
               <button
-                className="text-sm font-sans text-stone-400 hover:text-sage-300 transition-colors flex items-center gap-1"
+                className="text-sm font-sans text-text-secondary hover:text-sage-300 transition-colors flex items-center gap-1"
                 onClick={() => setServicesOpen(!servicesOpen)}
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
@@ -121,12 +123,12 @@ export default function Header() {
                   onMouseEnter={openServices}
                   onMouseLeave={closeServices}
                 >
-                  <div className="bg-warm-50 border border-warm-100 rounded-lg shadow-lg py-2 min-w-[180px]">
+                  <div className="bg-bg-card border border-border-default rounded-lg shadow-lg py-2 min-w-[180px]">
                     {serviceLinks.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="block px-4 py-2 text-sm text-stone-400 hover:text-sage-300 hover:bg-warm-white/50 transition-colors"
+                        className="block px-4 py-2 text-sm text-text-secondary hover:text-sage-300 hover:bg-bg-primary/50 transition-colors"
                         onClick={() => setServicesOpen(false)}
                       >
                         {link.label}
@@ -139,32 +141,37 @@ export default function Header() {
 
             <Link
               href="/our-promise"
-              className="text-sm font-sans text-stone-400 hover:text-sage-300 transition-colors"
+              className="text-sm font-sans text-text-secondary hover:text-sage-300 transition-colors"
             >
               Our Promise
             </Link>
             <Link
               href="/reviews"
-              className="text-sm font-sans text-stone-400 hover:text-sage-300 transition-colors"
+              className="text-sm font-sans text-text-secondary hover:text-sage-300 transition-colors"
             >
               Reviews
             </Link>
+
+            <ThemeToggle />
 
             <Button href="/contact" variant="primary">
               Free Consultation
             </Button>
           </nav>
 
-          {/* Mobile hamburger */}
-          <button
-            className="lg:hidden p-2 text-stone-400 hover:text-stone-200 min-h-11 min-w-11 flex items-center justify-center"
+          {/* Mobile: theme toggle + hamburger */}
+          <div className="lg:hidden flex items-center">
+            <ThemeToggle />
+            <button
+              className="p-2 text-text-secondary hover:text-text-heading min-h-11 min-w-11 flex items-center justify-center"
             onClick={() => setMobileNavOpen(true)}
             aria-label="Open menu"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M3 12h18M3 6h18M3 18h18" />
-            </svg>
-          </button>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M3 12h18M3 6h18M3 18h18" />
+              </svg>
+            </button>
+          </div>
         </div>
       </header>
 

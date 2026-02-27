@@ -79,7 +79,7 @@ export default function ServiceAreaMap({ className = "", animated = true }: Serv
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-stone-600"
+          className="text-text-dim"
           style={animated ? {
             strokeDasharray: county.length,
             strokeDashoffset: county.length,
@@ -95,8 +95,8 @@ export default function ServiceAreaMap({ className = "", animated = true }: Serv
             data-length={county.length}
             data-service-path
             d={county.d}
-            fill={animated ? "none" : "rgba(61, 74, 53, 0.5)"}
-            stroke={animated ? "currentColor" : "#a8b496"}
+            fill={animated ? "none" : "color-mix(in srgb, var(--sage-200) 50%, transparent)"}
+            stroke={animated ? "currentColor" : "var(--sage-300)"}
             strokeWidth="2.2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -110,7 +110,7 @@ export default function ServiceAreaMap({ className = "", animated = true }: Serv
             x={county.labelX}
             y={county.labelY}
             textAnchor="middle"
-            className="fill-stone-300 font-sans"
+            className="fill-text-body font-sans"
             fontSize="14"
             fontWeight="600"
             data-service-label

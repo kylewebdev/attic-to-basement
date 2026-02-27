@@ -17,10 +17,10 @@ export default function AccordionItem({
     const [isOpen, setIsOpen] = useState(defaultOpen);
 
     return (
-        <div className="border-b border-warm-100">
+        <div className="border-b border-border-default">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-between w-full py-5 text-left text-lg font-medium text-stone-200 hover:text-sage-300 transition-colors"
+                className="flex items-center justify-between w-full py-5 text-left text-lg font-medium text-text-heading hover:text-sage-300 transition-colors"
                 aria-expanded={isOpen}
             >
                 {question}
@@ -37,7 +37,7 @@ export default function AccordionItem({
                 </svg>
             </button>
             {isOpen && (
-                <div className="pb-5 text-stone-400 leading-relaxed [&_p]:mb-3 [&_p:last-child]:mb-0 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-3 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-3 [&_li]:mb-1 [&_strong]:text-stone-300">
+                <div className="pb-5 text-text-secondary leading-relaxed [&_p]:mb-3 [&_p:last-child]:mb-0 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-3 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-3 [&_li]:mb-1 [&_strong]:text-text-body">
                     {children}
                 </div>
             )}

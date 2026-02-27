@@ -19,7 +19,7 @@ export default function EstateSalesPage() {
             />
 
             {/* Sale listings */}
-            <section className="py-16 md:py-24 bg-warm-white">
+            <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-6xl mx-auto px-4">
                     {sales.length > 0 ? (
                         <>
@@ -43,10 +43,10 @@ export default function EstateSalesPage() {
                         </>
                     ) : (
                         <div data-reveal className="text-center py-12">
-                            <p className="text-lg text-stone-400 mb-2">
+                            <p className="text-lg text-text-secondary mb-2">
                                 No upcoming sales right now.
                             </p>
-                            <p className="text-stone-500 mb-6">
+                            <p className="text-text-muted mb-6">
                                 Follow us on Instagram for the latest updates
                                 and sale announcements.
                             </p>
@@ -76,12 +76,12 @@ export default function EstateSalesPage() {
             </section>
 
             {/* Cross-sell */}
-            <section className="py-16 md:py-24 bg-sage-50">
+            <section className="py-16 md:py-24 bg-bg-alt">
                 <div className="max-w-3xl mx-auto px-4 text-center" data-reveal>
-                    <h2 className="font-serif text-3xl md:text-4xl text-stone-200">
+                    <h2 className="font-serif text-3xl md:text-4xl text-text-heading">
                         Have a home that needs an estate sale?
                     </h2>
-                    <p className="mt-4 text-lg text-stone-400 max-w-xl mx-auto">
+                    <p className="mt-4 text-lg text-text-secondary max-w-xl mx-auto">
                         We handle everything from start to finish — organizing,
                         staging, pricing, marketing, and cleanup. Let us take it
                         from here.

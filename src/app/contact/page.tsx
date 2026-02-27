@@ -15,12 +15,12 @@ export default function ContactPage() {
                 colorScheme="contact"
             />
 
-            <section className="py-16 md:py-24 bg-warm-white">
+            <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-5xl mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         {/* Left: Form */}
                         <div data-reveal>
-                            <h2 className="font-serif text-2xl text-stone-200 mb-6">
+                            <h2 className="font-serif text-2xl text-text-heading mb-6">
                                 Request Your Free Consultation
                             </h2>
                             <ConsultationForm />
@@ -28,14 +28,14 @@ export default function ContactPage() {
 
                         {/* Right: Contact info */}
                         <div data-reveal data-reveal-delay="100">
-                            <h2 className="font-serif text-2xl text-stone-200 mb-6">
+                            <h2 className="font-serif text-2xl text-text-heading mb-6">
                                 Get in Touch Directly
                             </h2>
 
                             <div className="space-y-6">
                                 {/* Phone */}
                                 <div>
-                                    <p className="text-sm font-semibold text-stone-300 mb-1">
+                                    <p className="text-sm font-semibold text-text-body mb-1">
                                         Phone
                                     </p>
                                     <a
@@ -44,24 +44,24 @@ export default function ContactPage() {
                                     >
                                         (916) 521-1077
                                     </a>
-                                    <p className="text-sm text-stone-400 mt-1">
+                                    <p className="text-sm text-text-secondary mt-1">
                                         Available 24/7
                                     </p>
                                 </div>
 
                                 {/* Location */}
                                 <div>
-                                    <p className="text-sm font-semibold text-stone-300 mb-1">
+                                    <p className="text-sm font-semibold text-text-body mb-1">
                                         Location
                                     </p>
-                                    <p className="text-stone-400">
+                                    <p className="text-text-secondary">
                                         Sacramento, CA 95821
                                     </p>
                                 </div>
 
                                 {/* Instagram */}
                                 <div>
-                                    <p className="text-sm font-semibold text-stone-300 mb-1">
+                                    <p className="text-sm font-semibold text-text-body mb-1">
                                         Instagram
                                     </p>
                                     <a
@@ -76,15 +76,15 @@ export default function ContactPage() {
 
                                 {/* Service area */}
                                 <div>
-                                    <p className="text-sm font-semibold text-stone-300 mb-1">
+                                    <p className="text-sm font-semibold text-text-body mb-1">
                                         Service Area
                                     </p>
-                                    <p className="text-stone-400 leading-relaxed">
+                                    <p className="text-text-secondary leading-relaxed">
                                         We serve the Bay Area, Greater
                                         Sacramento, Placer County, El Dorado
                                         County, and the Sierra foothills.
                                     </p>
-                                    <p className="text-stone-500 text-sm mt-2">
+                                    <p className="text-text-muted text-sm mt-2">
                                         Not sure if you are in our range? Call
                                         us. We will figure it out.
                                     </p>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                     {/* Reassurance */}
                     <p
                         data-reveal
-                        className="mt-12 text-center text-stone-500 text-sm"
+                        className="mt-12 text-center text-text-muted text-sm"
                     >
                         We typically respond within 24 hours. Your information
                         stays private, always.

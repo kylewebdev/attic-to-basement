@@ -172,14 +172,14 @@ export default function Process() {
       ref={sectionRef}
       data-scroll-section
       aria-label="Our process"
-      className="min-h-0 sm:min-h-[300vh] bg-warm-white relative"
+      className="min-h-0 sm:min-h-[300vh] bg-bg-primary relative"
     >
       <div className="sm:sticky sm:top-0 sm:min-h-screen flex items-center py-16 sm:py-32 md:py-40">
         <div className="max-w-3xl mx-auto px-4">
           <h2
             data-process-headline
             data-animate
-            className="font-serif text-3xl md:text-4xl text-stone-200 text-center mb-16"
+            className="font-serif text-3xl md:text-4xl text-text-heading text-center mb-16"
           >
             From attic to basement. Here is how it works.
           </h2>
@@ -223,10 +223,10 @@ export default function Process() {
 
                   {/* Text */}
                   <div data-step-text data-animate className="pt-1">
-                    <h3 className="font-serif text-xl md:text-2xl text-stone-200 mb-2">
+                    <h3 className="font-serif text-xl md:text-2xl text-text-heading mb-2">
                       Step {step.number}: {step.title}
                     </h3>
-                    <p className="text-stone-400 leading-relaxed">
+                    <p className="text-text-secondary leading-relaxed">
                       {step.description}
                     </p>
                   </div>

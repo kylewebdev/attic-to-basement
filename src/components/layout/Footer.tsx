@@ -30,7 +30,7 @@ const externalLinks = [
 
 export default function Footer() {
     return (
-        <footer className="bg-warm-50 text-stone-300 py-12 border-t border-warm-100">
+        <footer className="bg-bg-card text-text-body py-12 border-t border-border-default">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Company info */}
@@ -40,9 +40,10 @@ export default function Footer() {
                             alt="Attic to Basement Estate Liquidators"
                             width={160}
                             height={120}
-                            className="h-24 w-auto mb-6 invert"
+                            className="h-24 w-auto mb-6"
+                            style={{ filter: "var(--logo-footer-filter)" }}
                         />
-                        <p className="text-sm text-stone-400 mt-1">
+                        <p className="text-sm text-text-secondary mt-1">
                             Sacramento, CA 95821
                         </p>
                         <a
@@ -56,7 +57,7 @@ export default function Footer() {
                                 href="https://www.instagram.com/abe.liquidators"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-stone-400 hover:text-white transition-colors"
+                                className="text-text-secondary hover:text-text-heading transition-colors"
                                 aria-label="Instagram"
                             >
                                 <svg
@@ -71,7 +72,7 @@ export default function Footer() {
                                 href="https://www.tiktok.com/@attic.to.basement"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-stone-400 hover:text-white transition-colors"
+                                className="text-text-secondary hover:text-text-heading transition-colors"
                                 aria-label="TikTok"
                             >
                                 <svg
@@ -87,13 +88,13 @@ export default function Footer() {
 
                     {/* Navigation */}
                     <nav aria-label="Footer navigation">
-                        <p className="font-semibold text-white mb-3">Pages</p>
+                        <p className="font-semibold text-text-heading mb-3">Pages</p>
                         <ul className="space-y-2">
                             {navLinks.map((link) => (
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className="text-sm text-stone-400 hover:text-white transition-colors"
+                                        className="text-sm text-text-secondary hover:text-text-heading transition-colors"
                                     >
                                         {link.label}
                                     </Link>
@@ -104,7 +105,7 @@ export default function Footer() {
 
                     {/* External links + service area */}
                     <div>
-                        <p className="font-semibold text-white mb-3">Find Us</p>
+                        <p className="font-semibold text-text-heading mb-3">Find Us</p>
                         <ul className="space-y-2 mb-6">
                             {externalLinks.map((link) => (
                                 <li key={link.href}>
@@ -112,21 +113,21 @@ export default function Footer() {
                                         href={link.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-sm text-stone-400 hover:text-white transition-colors"
+                                        className="text-sm text-text-secondary hover:text-text-heading transition-colors"
                                     >
                                         {link.label}
                                     </a>
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-sm text-stone-400">
+                        <p className="text-sm text-text-secondary">
                             Serving the Greater Sacramento, Placer County, El
                             Dorado County, Bay Area, and the Sierra foothills.
                         </p>
                     </div>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-warm-100 text-center text-sm text-stone-400">
+                <div className="mt-10 pt-6 border-t border-border-default text-center text-sm text-text-secondary">
                     &copy; {new Date().getFullYear()} Attic to Basement Estate
                     Liquidators. All Rights Reserved.
                 </div>

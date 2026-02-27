@@ -19,6 +19,10 @@ export default function ServiceArea() {
       return;
     }
 
+    const rootStyle = getComputedStyle(document.documentElement);
+    const sage200 = rootStyle.getPropertyValue("--sage-200").trim();
+    const sage300 = rootStyle.getPropertyValue("--sage-300").trim();
+
     registerSection(start, duration, (tl, s, d) => {
       if (!sectionRef.current) return;
 
@@ -72,8 +76,8 @@ export default function ServiceArea() {
         tl.to(
           path,
           {
-            fill: "rgba(61, 74, 53, 0.5)", // sage-200 (now dark sage) with transparency
-            stroke: "#a8b496", // sage-300 (lighter for visibility on dark)
+            fill: `color-mix(in srgb, ${sage200} 50%, transparent)`,
+            stroke: sage300,
             duration: d * 0.08,
             ease: "power2.out",
           },
@@ -107,13 +111,13 @@ export default function ServiceArea() {
       ref={sectionRef}
       data-scroll-section
       aria-label="Service area"
-      className="min-h-[100vh] flex items-center bg-warm-50"
+      className="min-h-[100vh] flex items-center bg-bg-card"
     >
       <div className="max-w-4xl mx-auto px-4 py-20 text-center">
         <h2
           data-area-headline
           data-animate
-          className="font-serif text-3xl md:text-4xl text-stone-200 mb-12"
+          className="font-serif text-3xl md:text-4xl text-text-heading mb-12"
         >
           Serving Northern California, from the Bay to the Foothills
         </h2>
@@ -123,7 +127,7 @@ export default function ServiceArea() {
         <p
           data-area-subtext
           data-animate
-          className="text-lg text-stone-400"
+          className="text-lg text-text-secondary"
         >
           Not sure if you are in our range?{" "}
           <a

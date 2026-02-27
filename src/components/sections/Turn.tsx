@@ -93,7 +93,7 @@ export default function Turn() {
             ref={sectionRef}
             data-scroll-section
             aria-label="How we help"
-            className="min-h-[100vh] flex items-center bg-sage-50"
+            className="min-h-[100vh] flex items-center bg-bg-alt"
         >
             <div className="max-w-6xl mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Text */}
@@ -101,14 +101,14 @@ export default function Turn() {
                     <h2
                         data-turn-headline
                         data-animate
-                        className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-200 leading-tight"
+                        className="font-serif text-3xl md:text-4xl lg:text-5xl text-text-heading leading-tight"
                     >
                         That is where we come in.
                     </h2>
                     <p
                         data-turn-subtext
                         data-animate
-                        className="mt-6 text-lg text-stone-400 leading-relaxed"
+                        className="mt-6 text-lg text-text-secondary leading-relaxed"
                     >
                         Attic to Basement Estate Liquidators handles everything,
                         from the first walkthrough to the final sweep, so you do
@@ -117,7 +117,7 @@ export default function Turn() {
                     <p
                         data-turn-supporting
                         data-animate
-                        className="mt-4 text-stone-400 leading-relaxed"
+                        className="mt-4 text-text-secondary leading-relaxed"
                     >
                         Over 20 years of combined experience across Northern
                         California. Hundreds of families served. Led by Cortnee

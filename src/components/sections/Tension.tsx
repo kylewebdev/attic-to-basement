@@ -27,12 +27,16 @@ export default function Tension() {
   useGSAP(() => {
     if (!sectionRef.current) return;
 
+    const rootStyle = getComputedStyle(document.documentElement);
+    const headingColor = rootStyle.getPropertyValue("--text-heading").trim();
+    const dimColor = rootStyle.getPropertyValue("--text-dim").trim();
+
     // Mobile: show text at final color, skip scroll-scrub animation
     const isMobile = window.matchMedia("(max-width: 639px)").matches;
     if (isMobile) {
       const words = sectionRef.current.querySelectorAll("[data-word]");
       words.forEach((w) => {
-        (w as HTMLElement).style.color = "#e7e5e4";
+        (w as HTMLElement).style.color = headingColor;
       });
       return;
     }
@@ -58,8 +62,8 @@ export default function Tension() {
 
         tl.fromTo(
           word,
-          { color: "#57534e" }, // stone-600 (dimmed on dark bg)
-          { color: "#e7e5e4", duration: wordDur, ease: "power1.out" },
+          { color: dimColor },
+          { color: headingColor, duration: wordDur, ease: "power1.out" },
           wordStart
         );
 
@@ -75,11 +79,11 @@ export default function Tension() {
       ref={sectionRef}
       data-scroll-section
       aria-label="The challenge of estate liquidation"
-      className="min-h-screen sm:min-h-[200vh] bg-warm-white relative"
+      className="min-h-screen sm:min-h-[200vh] bg-bg-primary relative"
     >
       <div className="sm:sticky sm:top-0 min-h-screen flex items-center justify-center">
         <div className="max-w-3xl mx-auto px-4">
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center text-stone-600">
+          <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center text-text-dim">
             {words.map((word, i) => (
               <span key={i} data-word data-animate className="inline">
                 {word}{" "}
