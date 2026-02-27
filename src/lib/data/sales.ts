@@ -11,40 +11,63 @@ export interface Sale {
 
 export const sales: Sale[] = [
     {
-        id: "roseville-march-2026",
-        title: "Roseville Estate — Mid-Century Modern & Vintage Collection",
-        dates: "March 7–8, 2026 | 8 AM – 3 PM",
-        area: "Roseville, CA",
-        categories: [
-            "Mid-Century Furniture",
-            "Vintage Kitchenware",
-            "Art Glass",
-            "Vinyl Records",
-        ],
-        externalUrlNet: "https://www.estatesales.net",
-        externalUrlOrg: "https://www.estatesales.org",
+        id: "cameron-park-february-2026",
+        title: "Cameron Park — Vintage, Antiques & More Blow Out Sale",
+        dates: "February 27–28, 2026 | 9 AM – 3 PM",
+        area: "Cameron Park, CA",
+        categories: ["Vintage", "Antiques", "Military Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Shingle-Springs/95682/4814808",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/cameron-park/95682/30-off-blow-out-sale-2426359",
     },
     {
-        id: "sacramento-march-2026",
-        title: "East Sacramento — 40-Year Family Home",
-        dates: "March 14–15, 2026 | 9 AM – 4 PM",
+        id: "sacramento-vintage-modern-march-2026",
+        title: "Sacramento — Vintage & Modern Mix Estate Sale",
+        dates: "February 27 & March 1, 2026 | 9 AM – 2 PM",
         area: "Sacramento, CA",
-        categories: ["Antique Furniture", "Fine China", "Tools", "Linens"],
-        externalUrlNet: "https://www.estatesales.net",
-        externalUrlOrg: "https://www.estatesales.org",
+        categories: ["Vintage", "Modern Furnishings"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95826/4817208",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95826/vintage-modern-mix-estate-sale-2426680",
     },
     {
-        id: "folsom-march-2026",
-        title: "Folsom Downsizing Sale — Quality Household Goods",
-        dates: "March 21–22, 2026 | 8 AM – 3 PM",
-        area: "Folsom, CA",
+        id: "rancho-cordova-march-2026",
+        title: "Rancho Cordova — Atomic Age Accents & Cozy Classics",
+        dates: "February 27 & March 1, 2026 | 9 AM – 3 PM",
+        area: "Rancho Cordova, CA",
+        categories: ["Mid-Century Modern", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Rancho-Cordova/95670/4817574",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/rancho-cordova/95670/atomic-age-accents-cozy-classics-2426719",
+    },
+    {
+        id: "sacramento-sea-ray-march-2026",
+        title: "Sacramento — Sea Ray Boat, Tools, Sporting Goods & Antiques",
+        dates: "February 27 & March 1, 2026 | 9 AM – 3 PM",
+        area: "Sacramento, CA",
         categories: [
-            "Patio Furniture",
-            "Kitchen Appliances",
-            "Books",
-            "Holiday Decor",
+            "Boats & Watercraft",
+            "Tools",
+            "Sporting Goods",
+            "Antiques",
         ],
-        externalUrlNet: "https://www.estatesales.net",
-        externalUrlOrg: "https://www.estatesales.org",
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95826/4818621",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95826/1987-sea-ray-43-v6-2426855",
+    },
+    {
+        id: "sacramento-natomas-march-2026",
+        title: "Sacramento — Nifty Natomas Sale",
+        dates: "March 6, 2026 | 9 AM",
+        area: "Sacramento, CA",
+        categories: ["Clothing", "Books", "Kitchen Items", "Jewelry"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95835/4814823",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95835/nifty-natomas-sale-2426361",
     },
 ];
