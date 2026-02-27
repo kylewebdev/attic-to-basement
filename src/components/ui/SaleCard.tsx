@@ -47,28 +47,15 @@ export default function SaleCard({ sale }: SaleCardProps) {
                     </div>
                 )}
                 {(sale.externalUrlNet || sale.externalUrlOrg) && (
-                    <div className="flex flex-wrap gap-x-4 gap-y-1">
+                    <div className="flex flex-wrap gap-x-3 gap-y-2">
                         {sale.externalUrlNet && (
                             <a
                                 href={sale.externalUrlNet}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center text-sm text-sage-300 hover:text-sage-400 font-semibold transition-colors"
+                                className="inline-flex items-center justify-center px-4 py-2 rounded-lg border-2 border-sage-500 text-sage-300 hover:bg-sage-50 active:bg-sage-100 font-sans font-semibold text-sm transition-colors duration-200"
                             >
-                                View on EstateSales.NET
-                                <svg
-                                    className="ml-1 w-4 h-4"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                    />
-                                </svg>
+                                Photos on EstateSales.NET
                             </a>
                         )}
                         {sale.externalUrlOrg && (
@@ -76,22 +63,9 @@ export default function SaleCard({ sale }: SaleCardProps) {
                                 href={sale.externalUrlOrg}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center text-sm text-sage-300 hover:text-sage-400 font-semibold transition-colors"
+                                className="inline-flex items-center justify-center px-4 py-2 rounded-lg border-2 border-sage-500 text-sage-300 hover:bg-sage-50 active:bg-sage-100 font-sans font-semibold text-sm transition-colors duration-200"
                             >
-                                View on EstateSales.ORG
-                                <svg
-                                    className="ml-1 w-4 h-4"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                    />
-                                </svg>
+                                Photos on EstateSales.ORG
                             </a>
                         )}
                     </div>
