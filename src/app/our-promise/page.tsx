@@ -154,7 +154,7 @@ export default function OurPromisePage() {
                                 >
                                     {credential.text}
                                 </span>
-                            )
+                            ),
                         )}
                     </div>
                 </div>
