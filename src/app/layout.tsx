@@ -3,6 +3,8 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
+import ThemeScript from "@/components/layout/ThemeScript";
+import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import JsonLd from "@/components/seo/JsonLd";
 import { getLocalBusinessSchema } from "@/lib/schema";
 import {
@@ -51,16 +53,22 @@ export default function RootLayout({
         <html
             lang="en"
             className={`${libreBaskerville.variable} ${nunitoSans.variable}`}
+            suppressHydrationWarning
         >
+            <head>
+                <ThemeScript />
+            </head>
             <body>
-                <GoogleTagManagerBody />
-                <JsonLd data={getLocalBusinessSchema()} />
-                <SmoothScroll>
-                    <Header />
-                    <main id="main-content">{children}</main>
-                    <Footer />
-                </SmoothScroll>
-                <GoogleTagManagerHead />
+                <ThemeProvider>
+                    <GoogleTagManagerBody />
+                    <JsonLd data={getLocalBusinessSchema()} />
+                    <SmoothScroll>
+                        <Header />
+                        <main id="main-content">{children}</main>
+                        <Footer />
+                    </SmoothScroll>
+                    <GoogleTagManagerHead />
+                </ThemeProvider>
             </body>
         </html>
     );

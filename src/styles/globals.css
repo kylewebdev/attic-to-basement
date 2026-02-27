@@ -1,26 +1,88 @@
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
 
+/* ===== Semantic Theme Tokens ===== */
+:root {
+  --bg-primary: #faf9f7;
+  --bg-card: #f5f4f2;
+  --bg-alt: #f0f3ed;
+  --border-default: #e5e2de;
+  --border-muted: #d4d0cb;
+  --text-heading: #1c1917;
+  --text-body: #44403c;
+  --text-secondary: #78716c;
+  --text-muted: #a8a29e;
+  --text-dim: #d6d3d1;
+
+  /* Switchable palette aliases */
+  --sage-50: #f0f3ed;
+  --sage-100: #dce5d4;
+  --sage-200: #bccaaf;
+  --sage-300: #6b8c55;
+  --gold-400: #b8942f;
+
+  /* Logo filters */
+  --logo-filter: brightness(0) saturate(100%) sepia(15%) hue-rotate(70deg) saturate(300%);
+  --logo-footer-filter: brightness(0);
+}
+
+:root.dark {
+  --bg-primary: #1c1917;
+  --bg-card: #292524;
+  --bg-alt: #232820;
+  --border-default: #44403c;
+  --border-muted: #57534e;
+  --text-heading: #e7e5e4;
+  --text-body: #d6d3d1;
+  --text-secondary: #a8a29e;
+  --text-muted: #78716c;
+  --text-dim: #57534e;
+
+  /* Switchable palette aliases */
+  --sage-50: #232820;
+  --sage-100: #2d3529;
+  --sage-200: #3d4a35;
+  --sage-300: #a8b496;
+  --gold-400: #c8a951;
+
+  /* Logo filters */
+  --logo-filter: brightness(0) invert(0.75) sepia(0.15) saturate(3) hue-rotate(70deg);
+  --logo-footer-filter: invert(1);
+}
+
 /* ===== Design Tokens ===== */
 @theme {
-  /* Sage green palette — dark end repurposed as dark surfaces */
-  --color-sage-50: #232820;
-  --color-sage-100: #2d3529;
-  --color-sage-200: #3d4a35;
-  --color-sage-300: #a8b496;
+  /* Sage green palette — switchable shades use CSS vars */
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-200: var(--sage-200);
+  --color-sage-300: var(--sage-300);
+  /* Static sage shades — work in both modes */
   --color-sage-400: #7f9268;
   --color-sage-500: #5c7a45;
   --color-sage-600: #4a6338;
   --color-sage-700: #3a4d2d;
 
-  /* Charcoal neutrals (replaces warm neutrals) */
-  --color-warm-white: #1c1917;
-  --color-warm-50: #292524;
-  --color-warm-100: #44403c;
-  --color-warm-200: #57534e;
+  /* Charcoal neutrals — aliased to semantic tokens */
+  --color-warm-white: var(--bg-primary);
+  --color-warm-50: var(--bg-card);
+  --color-warm-100: var(--border-default);
+  --color-warm-200: var(--border-muted);
 
-  /* Gold accent — unchanged */
-  --color-gold-400: #c8a951;
+  /* Gold accent — switchable */
+  --color-gold-400: var(--gold-400);
+
+  /* Semantic colors */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-card: var(--bg-card);
+  --color-bg-alt: var(--bg-alt);
+  --color-border-default: var(--border-default);
+  --color-border-muted: var(--border-muted);
+  --color-text-heading: var(--text-heading);
+  --color-text-body: var(--text-body);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
 
   /* Typography — unchanged */
   --font-sans: var(--font-nunito-sans), "Nunito Sans", sans-serif;
@@ -30,11 +92,11 @@
 /* ===== Base Styles ===== */
 @layer base {
   body {
-    @apply bg-warm-white text-stone-300 font-sans antialiased;
+    @apply bg-bg-primary text-text-body font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-stone-200;
+    @apply font-serif text-text-heading;
   }
 
   /* Accessible focus ring */
