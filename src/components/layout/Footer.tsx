@@ -40,7 +40,7 @@ export default function Footer() {
                             alt="Attic to Basement Estate Liquidators"
                             width={160}
                             height={120}
-                            className="h-12 w-auto mb-2 invert"
+                            className="h-24 w-auto mb-6 invert"
                         />
                         <p className="text-sm text-stone-400 mt-1">
                             Sacramento, CA 95821
