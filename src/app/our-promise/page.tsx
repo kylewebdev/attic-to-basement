@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
@@ -60,11 +61,15 @@ export default function OurPromisePage() {
                     <div className="grid md:grid-cols-2 gap-12 items-start">
                         <div
                             data-reveal
-                            className="aspect-[4/5] rounded-xl bg-bg-card border border-border-default flex items-center justify-center"
+                            className="relative aspect-[4/5] rounded-xl overflow-hidden"
                         >
-                            <span className="text-text-muted text-sm">
-                                Photo of Cortnee
-                            </span>
+                            <Image
+                                src="/628271296_10173841942780224_559075670986886364_n.jpg"
+                                alt="Cortnee Beggs, founder of Attic to Basement Estate Liquidators"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
                         </div>
 
                         <div data-reveal data-reveal-delay="200">
