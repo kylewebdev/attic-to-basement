@@ -104,6 +104,30 @@ export default function EstateLiquidationPage() {
                             </li>
                         ))}
                     </ul>
+                    <p
+                        className="mt-10 text-center text-sm text-stone-400"
+                        data-reveal
+                    >
+                        See our reviews on{" "}
+                        <a
+                            href="https://www.yelp.com/biz/attic-to-basement-estate-liquidators-sacramento"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            Yelp
+                        </a>
+                        {" · "}
+                        Browse our sales on{" "}
+                        <a
+                            href="https://www.estatesales.net/companies/CA/Sacramento/95821/156176"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            EstateSales.net
+                        </a>
+                    </p>
                 </div>
             </section>
 

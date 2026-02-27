@@ -35,9 +35,12 @@ const values = [
 ];
 
 const credentials = [
-    "BBB Accredited",
-    "Fully Insured & Bonded",
-    "Licensed & Certified",
+    {
+        text: "BBB Accredited",
+        href: "https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497",
+    },
+    { text: "Fully Insured & Bonded" },
+    { text: "Licensed & Certified" },
 ];
 
 export default function OurPromisePage() {
@@ -133,14 +136,26 @@ export default function OurPromisePage() {
                         data-reveal
                         className="flex flex-wrap justify-center gap-6 md:gap-10"
                     >
-                        {credentials.map((credential) => (
-                            <span
-                                key={credential}
-                                className="text-stone-300 font-semibold text-sm md:text-base"
-                            >
-                                {credential}
-                            </span>
-                        ))}
+                        {credentials.map((credential) =>
+                            credential.href ? (
+                                <a
+                                    key={credential.text}
+                                    href={credential.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-stone-300 font-semibold text-sm md:text-base underline decoration-sage-500 underline-offset-2 hover:text-sage-300 transition-colors"
+                                >
+                                    {credential.text}
+                                </a>
+                            ) : (
+                                <span
+                                    key={credential.text}
+                                    className="text-stone-300 font-semibold text-sm md:text-base"
+                                >
+                                    {credential.text}
+                                </span>
+                            )
+                        )}
                     </div>
                 </div>
             </section>

@@ -152,6 +152,20 @@ export default function AppraisalsPage() {
                             </div>
                         ))}
                     </div>
+                    <p
+                        className="mt-8 text-center text-sm text-stone-400"
+                        data-reveal
+                    >
+                        Verify our accreditation on{" "}
+                        <a
+                            href="https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            BBB
+                        </a>
+                    </p>
                 </div>
             </section>
 

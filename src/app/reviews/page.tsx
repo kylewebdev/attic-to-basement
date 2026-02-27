@@ -17,10 +17,10 @@ const filters: { label: string; value: FilterCategory }[] = [
 ];
 
 const platformLinks = [
-    { label: "Yelp", href: "https://www.yelp.com" },
-    { label: "BBB", href: "https://www.bbb.org" },
-    { label: "EstateSales.org", href: "https://www.estatesales.org" },
-    { label: "EstateSales.net", href: "https://www.estatesales.net" },
+    { label: "Yelp", href: "https://www.yelp.com/biz/attic-to-basement-estate-liquidators-sacramento" },
+    { label: "BBB", href: "https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497" },
+    { label: "EstateSales.org", href: "https://estatesales.org/estate-sale-companies/attic-to-basement-estate-liquidators-23935" },
+    { label: "EstateSales.net", href: "https://www.estatesales.net/companies/CA/Sacramento/95821/156176" },
 ];
 
 export default function ReviewsPage() {

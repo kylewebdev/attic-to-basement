@@ -105,11 +105,12 @@ export interface Stat {
   label: string;
   isBadge?: boolean;
   decimals?: number;
+  href?: string;
 }
 
 export const stats: Stat[] = [
   { value: 20, suffix: "+", label: "Years Combined Experience" },
   { value: 4.5, suffix: "", label: "Star Average Rating", decimals: 1 },
-  { value: 49, suffix: "+", label: "Reviews on Yelp" },
-  { value: 0, suffix: "", label: "BBB Accredited", isBadge: true },
+  { value: 49, suffix: "+", label: "Reviews on Yelp", href: "https://www.yelp.com/biz/attic-to-basement-estate-liquidators-sacramento" },
+  { value: 0, suffix: "", label: "BBB Accredited", isBadge: true, href: "https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497" },
 ];

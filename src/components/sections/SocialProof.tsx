@@ -148,35 +148,55 @@ export default function SocialProof() {
 
         {/* Stats bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-sage-200">
-          {stats.map((stat, i) => (
-            <div
-              key={i}
-              data-social-stat
-              data-animate
-              className="text-center"
-            >
-              {stat.isBadge ? (
-                <div
-                  data-stat-badge
-                  className="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-sage-500 text-white text-lg md:text-xl font-bold mx-auto"
-                >
-                  A+
-                </div>
-              ) : (
-                <div className="text-2xl md:text-3xl font-serif text-sage-300 font-bold">
-                  <span
-                    data-stat-number
-                    data-target={stat.value}
-                    data-decimals={stat.decimals || 0}
+          {stats.map((stat, i) => {
+            const content = (
+              <>
+                {stat.isBadge ? (
+                  <div
+                    data-stat-badge
+                    className="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-sage-500 text-white text-lg md:text-xl font-bold mx-auto"
                   >
-                    0
-                  </span>
-                  {stat.suffix}
-                </div>
-              )}
-              <p className="mt-1 text-sm text-stone-400">{stat.label}</p>
-            </div>
-          ))}
+                    A+
+                  </div>
+                ) : (
+                  <div className="text-2xl md:text-3xl font-serif text-sage-300 font-bold">
+                    <span
+                      data-stat-number
+                      data-target={stat.value}
+                      data-decimals={stat.decimals || 0}
+                    >
+                      0
+                    </span>
+                    {stat.suffix}
+                  </div>
+                )}
+                <p className="mt-1 text-sm text-stone-400">{stat.label}</p>
+              </>
+            );
+
+            return stat.href ? (
+              <a
+                key={i}
+                href={stat.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-social-stat
+                data-animate
+                className="text-center hover:opacity-80 transition-opacity"
+              >
+                {content}
+              </a>
+            ) : (
+              <div
+                key={i}
+                data-social-stat
+                data-animate
+                className="text-center"
+              >
+                {content}
+              </div>
+            );
+          })}
         </div>
 
         {/* Footer links */}
