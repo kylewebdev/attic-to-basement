@@ -55,23 +55,23 @@ export default function OurPromisePage() {
             />
 
             {/* Cortnee's Story */}
-            {/*<section className="py-16 md:py-24 bg-warm-white">
+            <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-12 items-start">
                         <div
                             data-reveal
-                            className="aspect-[4/5] rounded-xl bg-warm-50 border border-warm-100 flex items-center justify-center"
+                            className="aspect-[4/5] rounded-xl bg-bg-card border border-border-default flex items-center justify-center"
                         >
-                            <span className="text-stone-500 text-sm">
+                            <span className="text-text-muted text-sm">
                                 Photo of Cortnee
                             </span>
                         </div>
 
                         <div data-reveal data-reveal-delay="200">
-                            <h2 className="font-serif text-3xl text-stone-200 mb-6">
+                            <h2 className="font-serif text-3xl text-text-heading mb-6">
                                 Meet Cortnee Beggs
                             </h2>
-                            <div className="space-y-4 text-stone-400 leading-relaxed">
+                            <div className="space-y-4 text-text-secondary leading-relaxed">
                                 <p>
                                     Cortnee Beggs started Attic to Basement
                                     Estate Liquidators because she saw families
@@ -101,10 +101,10 @@ export default function OurPromisePage() {
                         </div>
                     </div>
                 </div>
-            </section>*/}
+            </section>
 
             {/* Values */}
-            <section className="py-16 md:py-24 bg-sage-50">
+            <section className="py-16 md:py-24 bg-bg-alt">
                 <div className="max-w-6xl mx-auto px-4">
                     <div data-reveal>
                         <SectionHeading
@@ -130,7 +130,7 @@ export default function OurPromisePage() {
             </section>
 
             {/* Credentials */}
-            <section className="py-12 bg-warm-white">
+            <section className="py-12 bg-bg-primary">
                 <div className="max-w-6xl mx-auto px-4">
                     <div
                         data-reveal
@@ -143,14 +143,14 @@ export default function OurPromisePage() {
                                     href={credential.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-stone-300 font-semibold text-sm md:text-base underline decoration-sage-500 underline-offset-2 hover:text-sage-300 transition-colors"
+                                    className="text-text-body font-semibold text-sm md:text-base underline decoration-sage-500 underline-offset-2 hover:text-sage-300 transition-colors"
                                 >
                                     {credential.text}
                                 </a>
                             ) : (
                                 <span
                                     key={credential.text}
-                                    className="text-stone-300 font-semibold text-sm md:text-base"
+                                    className="text-text-body font-semibold text-sm md:text-base"
                                 >
                                     {credential.text}
                                 </span>
@@ -161,9 +161,9 @@ export default function OurPromisePage() {
             </section>
 
             {/* CTA */}
-            <section className="py-12 bg-sage-50">
+            <section className="py-12 bg-bg-alt">
                 <div className="max-w-3xl mx-auto px-4 text-center" data-reveal>
-                    <p className="text-lg text-stone-400 mb-6">
+                    <p className="text-lg text-text-secondary mb-6">
                         See what our clients have to say.
                     </p>
                     <Button href="/reviews" variant="primary">
