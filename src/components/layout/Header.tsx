@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import posthog from "posthog-js";
 import { gsap, useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/ui/ThemeToggle";
@@ -164,7 +165,10 @@ export default function Header() {
             <ThemeToggle />
             <button
               className="p-2 text-text-secondary hover:text-text-heading min-h-11 min-w-11 flex items-center justify-center"
-            onClick={() => setMobileNavOpen(true)}
+            onClick={() => {
+              setMobileNavOpen(true);
+              posthog.capture("mobile_nav_opened");
+            }}
             aria-label="Open menu"
           >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

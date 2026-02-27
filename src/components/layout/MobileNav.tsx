@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState, useCallback } from "react";
 import Link from "next/link";
+import posthog from "posthog-js";
 import { gsap, useGSAP } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 
@@ -199,7 +200,10 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
           ))}
         </ul>
 
-        <div className="px-6 mt-6">
+        <div
+          className="px-6 mt-6"
+          onClick={() => posthog.capture("mobile_nav_cta_clicked", { destination: "/contact" })}
+        >
           <Button href="/contact" variant="primary" className="w-full">
             Free Consultation
           </Button>

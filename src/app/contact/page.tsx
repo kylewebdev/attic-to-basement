@@ -1,11 +1,17 @@
 "use client";
 
+import { useEffect } from "react";
+import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import ConsultationForm from "@/components/forms/ConsultationForm";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export default function ContactPage() {
     const containerRef = useScrollReveal();
+
+    useEffect(() => {
+        posthog.capture("consultation_page_viewed");
+    }, []);
 
     return (
         <div ref={containerRef}>
@@ -41,6 +47,11 @@ export default function ContactPage() {
                                     <a
                                         href="tel:+19165211077"
                                         className="text-lg text-sage-300 hover:text-sage-400 font-semibold transition-colors"
+                                        onClick={() =>
+                                            posthog.capture("phone_number_clicked", {
+                                                location: "contact_page",
+                                            })
+                                        }
                                     >
                                         (916) 521-1077
                                     </a>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import TestimonialCard from "@/components/ui/TestimonialCard";
@@ -50,7 +51,13 @@ export default function ReviewsPage() {
                         {filters.map((f) => (
                             <button
                                 key={f.value}
-                                onClick={() => setActiveFilter(f.value)}
+                                onClick={() => {
+                                    setActiveFilter(f.value);
+                                    posthog.capture("review_filter_selected", {
+                                        filter_value: f.value,
+                                        filter_label: f.label,
+                                    });
+                                }}
                                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors min-h-11 ${
                                     activeFilter === f.value
                                         ? "bg-sage-500 text-white"
@@ -111,6 +118,12 @@ export default function ReviewsPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-sage-500 text-sage-300 hover:bg-bg-alt font-semibold text-sm transition-colors min-h-11"
+                                onClick={() =>
+                                    posthog.capture("external_review_platform_clicked", {
+                                        platform: link.label,
+                                        url: link.href,
+                                    })
+                                }
                             >
                                 {link.label}
                             </a>

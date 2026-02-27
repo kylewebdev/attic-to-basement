@@ -1,5 +1,6 @@
 "use client";
 
+import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SaleCard from "@/components/ui/SaleCard";
@@ -55,6 +56,11 @@ export default function EstateSalesPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 text-sage-300 hover:text-sage-400 font-semibold transition-colors"
+                                onClick={() =>
+                                    posthog.capture("instagram_link_clicked", {
+                                        location: "estate_sales_page",
+                                    })
+                                }
                             >
                                 <svg
                                     className="w-5 h-5"

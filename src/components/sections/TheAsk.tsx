@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import posthog from "posthog-js";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import Button from "@/components/ui/Button";
@@ -86,7 +87,18 @@ export default function TheAsk() {
           Schedule your free, no-obligation consultation. We will come to you,
           walk through your situation, and give you a clear plan. No surprises.
         </p>
-        <div data-ask-cta data-animate className="mt-10">
+        <div
+          data-ask-cta
+          data-animate
+          className="mt-10"
+          onClick={() =>
+            posthog.capture("cta_clicked", {
+              label: "Schedule Your Free Consultation",
+              location: "home_the_ask_section",
+              destination: "/contact",
+            })
+          }
+        >
           <Button href="/contact" variant="primary">
             Schedule Your Free Consultation
           </Button>
@@ -100,6 +112,11 @@ export default function TheAsk() {
           <a
             href="tel:+19165211077"
             className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
+            onClick={() =>
+              posthog.capture("phone_number_clicked", {
+                location: "home_the_ask_section",
+              })
+            }
           >
             (916) 521-1077
           </a>
