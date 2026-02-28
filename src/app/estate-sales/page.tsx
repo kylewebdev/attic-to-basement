@@ -82,7 +82,7 @@ export default function EstateSalesPage() {
                 </div>
             </section>
 
-            <NewsletterSignup location="estate_sales_page" />
+            <NewsletterSignup />
 
             {/* Cross-sell */}
             <section className="py-16 md:py-24 bg-bg-alt">
