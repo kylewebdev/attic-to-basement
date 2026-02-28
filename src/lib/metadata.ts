@@ -10,7 +10,9 @@ type PageKey =
     | "appraisals"
     | "ourPromise"
     | "reviews"
-    | "contact";
+    | "contact"
+    | "privacy"
+    | "terms";
 
 const pages: Record<
     PageKey,
@@ -57,6 +59,18 @@ const pages: Record<
         description:
             "Schedule a free, no-obligation estate sale consultation. Call (916) 521-1077 or fill out our contact form. Available 24/7.",
         path: "/contact",
+    },
+    privacy: {
+        title: "Privacy Policy | Attic To Basement Estate Liquidators",
+        description:
+            "How Attic To Basement Estate Liquidators collects, uses, and protects your personal information.",
+        path: "/privacy",
+    },
+    terms: {
+        title: "Terms of Service | Attic To Basement Estate Liquidators",
+        description:
+            "Terms and conditions for using the Attic To Basement Estate Liquidators website.",
+        path: "/terms",
     },
 };
 
