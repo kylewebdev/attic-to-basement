@@ -1,4 +1,4 @@
-import { Libre_Baskerville, Nunito_Sans } from "next/font/google";
+import { Libre_Baskerville, Nunito_Sans, DM_Serif_Display, DM_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -20,6 +20,20 @@ const libreBaskerville = Libre_Baskerville({
 const nunitoSans = Nunito_Sans({
     subsets: ["latin"],
     variable: "--font-nunito-sans",
+    display: "swap",
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+    subsets: ["latin"],
+    weight: "400",
+    variable: "--font-dm-serif-display",
+    display: "swap",
+});
+
+const dmSans = DM_Sans({
+    subsets: ["latin"],
+    weight: ["400", "500"],
+    variable: "--font-dm-sans",
     display: "swap",
 });
 
@@ -49,7 +63,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${libreBaskerville.variable} ${nunitoSans.variable}`}
+            className={`${libreBaskerville.variable} ${nunitoSans.variable} ${dmSerifDisplay.variable} ${dmSans.variable}`}
             suppressHydrationWarning
         >
             <head>
