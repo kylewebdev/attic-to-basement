@@ -11,6 +11,7 @@ import {
     GoogleTagManagerHead,
     GoogleTagManagerBody,
 } from "@/components/layout/GoogleTagManager";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
 const libreBaskerville = Libre_Baskerville({
@@ -69,6 +70,7 @@ export default function RootLayout({
                     </SmoothScroll>
                     <GoogleTagManagerHead />
                 </ThemeProvider>
+                <SpeedInsights />
             </body>
         </html>
     );
