@@ -20,10 +20,6 @@
   --sage-200: #bccaaf;
   --sage-300: #6b8c55;
   --gold-400: #b8942f;
-
-  /* Logo filters */
-  --logo-filter: brightness(0) saturate(100%) sepia(15%) hue-rotate(70deg) saturate(300%);
-  --logo-footer-filter: brightness(0);
 }
 
 :root.dark {
@@ -44,10 +40,6 @@
   --sage-200: #3d4a35;
   --sage-300: #a8b496;
   --gold-400: #c8a951;
-
-  /* Logo filters */
-  --logo-filter: brightness(0) invert(0.75) sepia(0.15) saturate(3) hue-rotate(70deg);
-  --logo-footer-filter: invert(1);
 }
 
 /* ===== Design Tokens ===== */

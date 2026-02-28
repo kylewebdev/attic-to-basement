@@ -77,8 +77,7 @@ export default function Header() {
               alt="Attic to Basement Estate Liquidators"
               width={160}
               height={120}
-              className="h-14 w-auto"
-              style={{ filter: "var(--logo-filter)" }}
+              className="h-14 w-auto invert"
               priority
             />
           </Link>
