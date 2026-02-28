@@ -66,15 +66,7 @@ What's needed to go from "builds cleanly" to "ready for launch."
 - [x] Add `sitemap.ts` to `src/app/` (Next.js auto-generates XML sitemap)
 - [x] Add `robots.ts` to `src/app/` (allow all, reference sitemap URL)
 
-### Step 3: Google Tag Manager ✅
-
-- [x] GTM component with env var toggle (`NEXT_PUBLIC_GTM_ID`)
-- [x] Add `<Script>` tag with afterInteractive strategy
-- [x] Add `noscript` GTM iframe to `<body>`
-- [ ] Get GTM container ID from client
-- [ ] Set up GA4 tag inside GTM
-- [ ] Configure form submission conversion event
-- [ ] Configure phone click tracking event
+### Step 3: PostHog
 
 ### Step 4: Image optimization ✅
 
@@ -104,7 +96,7 @@ What's needed to go from "builds cleanly" to "ready for launch."
 - [x] Run Lighthouse on every page — target 90+ performance
 - [x] Verify LCP < 2.5s, CLS < 0.1
 - [x] Verify total page weight < 1MB per page (excluding lazy images)
-- [ ] Check bundle size — tree-shake GSAP if possible
+- [x] Check bundle size — tree-shake GSAP if possible
 - [x] Ensure fonts load with `font-display: swap` (already configured)
 
 ---
@@ -115,7 +107,7 @@ Last round before handing off to the client.
 
 ### Step 1: Content review
 
-- [ ] Client reviews and approves all page copy
+- [x] Client reviews and approves all page copy
 - [x] Replace dummy estate sale listings with real data (or hide section if no upcoming sales)
 - [x] Verify all phone numbers, email addresses, and external links are correct
 - [x] Verify Instagram handle (@abe.liquidators) links correctly
@@ -135,7 +127,7 @@ Last round before handing off to the client.
 - [x] Test on real iOS device (iPhone)
 - [x] Test on real Android device
 - [x] Verify click-to-call works on mobile
-- [ ] Verify no horizontal scrolling at any viewport
+- [x] Verify no horizontal scrolling at any viewport
 - [x] Verify hamburger menu opens/closes correctly
 
 ### Step 4: Pre-launch SEO checklist
@@ -161,7 +153,5 @@ Last round before handing off to the client.
 ## Notes
 
 - **No CMS at launch** — all content is hardcoded but structured for future CMS extraction
-- **GTM ID needed from client** — GTM script is ready in layout.tsx, just needs the real container ID
 - **Real photos needed** — professional headshot of Cortnee, estate sale staging shots, detail shots of items, team photos
-- **Cookie/privacy notice** — may be needed depending on GTM/analytics setup; check with client
 - **`type: "module"` warning** — Tailwind logs a minor warning about package.json missing `"type": "module"`; doesn't affect builds
