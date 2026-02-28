@@ -6,7 +6,6 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import SaleCard from "@/components/ui/SaleCard";
 import Button from "@/components/ui/Button";
 import { sales } from "@/lib/data/sales";
-import NewsletterSignup from "@/components/sections/NewsletterSignup";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export default function EstateSalesPage() {
@@ -82,7 +81,8 @@ export default function EstateSalesPage() {
                 </div>
             </section>
 
-            <NewsletterSignup location="estate_sales_page" />
+            {/* TODO: Re-enable newsletter signup when ready */}
+            {/* <NewsletterSignup location="estate_sales_page" /> */}
 
             {/* Cross-sell */}
             <section className="py-16 md:py-24 bg-bg-alt">
