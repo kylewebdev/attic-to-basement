@@ -3,7 +3,7 @@ export default function ThemeScript() {
 (function() {
   try {
     var theme = localStorage.getItem('theme');
-    if (theme === 'dark' || (!theme && !window.matchMedia('(prefers-color-scheme: light)').matches)) {
+    if (theme === 'dark' || !theme) {
       document.documentElement.classList.add('dark');
     }
   } catch (e) {
