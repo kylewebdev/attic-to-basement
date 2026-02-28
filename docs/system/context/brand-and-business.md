@@ -2,7 +2,7 @@
 
 ## Brand & Design Guidelines
 
-Full brand guide: `.ai/context/brand.md`. Key points:
+Full brand guide: `docs/system/context/brand.md`. Key points:
 
 - **Tone:** Warm, reassuring, professional. Lead with empathy, follow with competence. Never salesy, corporate, or dismissive of sentimental value.
 - **Voice:** First-person plural ("we"). Plain language, no jargon. Confident but not condescending.

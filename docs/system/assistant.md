@@ -3,9 +3,9 @@
 ## Getting Started
 
 - Read this file before starting any task.
-- Check `.ai/buildplan.md` for the current implementation plan.
-- Check `.ai/conventions.md` for project conventions and patterns.
-- Reference files in `.ai/context/` for brand, business, and design context.
+- Check `docs/system/buildplan.md` for the current implementation plan.
+- Check `docs/system/conventions.md` for project conventions and patterns.
+- Reference files in `docs/system/context/` for brand, business, and design context.
 
 ## Project
 
@@ -83,11 +83,11 @@ Pages are composed of section components. Each page has a hero, content sections
 
 ## Reference Documents
 
-- `.ai/context/prd.md` — Full product requirements with page-by-page specs
-- `.ai/context/brand.md` — Brand voice, values, visual identity, messaging framework
-- `.ai/context/brand-and-business.md` — Brand guidelines and business context summary
-- `.ai/context/story-driven.md` — Scroll-story homepage narrative
-- `.ai/context/plans/` — Design and implementation plans
+- `docs/system/context/prd.md` — Full product requirements with page-by-page specs
+- `docs/system/context/brand.md` — Brand voice, values, visual identity, messaging framework
+- `docs/system/context/brand-and-business.md` — Brand guidelines and business context summary
+- `docs/system/context/story-driven.md` — Scroll-story homepage narrative
+- `docs/system/context/plans/` — Design and implementation plans
 
 ## Runbooks
 
@@ -102,7 +102,7 @@ Pages are composed of section components. Each page has a hero, content sections
 
 ## Conventions Reference
 
-See `.ai/conventions.md` for:
+See `docs/system/conventions.md` for:
 - Code style and formatting rules
 - Naming conventions
 - File organization patterns
