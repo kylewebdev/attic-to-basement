@@ -78,7 +78,7 @@ export default function AppraisalsPage() {
                 <div className="max-w-6xl mx-auto px-4">
                     <div data-reveal>
                         <SectionHeading
-                            title="What we appraise"
+                            title="What We Appraise — Categories and Item Types"
                             subtitle="From everyday household items to rare collectibles, we provide accurate valuations across a wide range of categories."
                         />
                     </div>
@@ -103,7 +103,7 @@ export default function AppraisalsPage() {
             <section className="py-16 md:py-24 bg-bg-alt">
                 <div className="max-w-4xl mx-auto px-4">
                     <div data-reveal>
-                        <SectionHeading title="When you need an appraisal" />
+                        <SectionHeading title="When Do You Need a Professional Appraisal?" />
                     </div>
                     <ul className="mt-12 grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto">
                         {appraisalReasons.map((reason, i) => (
@@ -132,13 +132,25 @@ export default function AppraisalsPage() {
                             </li>
                         ))}
                     </ul>
+                    <p
+                        className="mt-10 text-sm text-text-secondary max-w-2xl mx-auto text-center"
+                        data-reveal
+                    >
+                        All appraisals are performed by Cortnee Beggs and her
+                        team — Northern California estate professionals with
+                        over 20 years of combined experience in personal
+                        property valuation.
+                    </p>
                 </div>
             </section>
 
             {/* Credentials */}
             <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-6xl mx-auto px-4">
-                    <div className="grid gap-6 md:grid-cols-3">
+                    <div data-reveal>
+                        <SectionHeading title="Our Appraisal Qualifications" />
+                    </div>
+                    <div className="mt-12 grid gap-6 md:grid-cols-3">
                         {credentials.map((credential, i) => (
                             <div
                                 key={credential.title}
@@ -164,6 +176,14 @@ export default function AppraisalsPage() {
                             className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
                         >
                             BBB
+                        </a>
+                        {" · "}
+                        Learn about{" "}
+                        <a
+                            href="/our-promise"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            our promise to you
                         </a>
                     </p>
                 </div>

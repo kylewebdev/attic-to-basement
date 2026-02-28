@@ -105,6 +105,11 @@ export default function Turn() {
                     >
                         That is where we come in.
                     </h2>
+                    <p className="sr-only">
+                        Attic to Basement Estate Liquidators provides
+                        full-service estate sales, cleanouts, and appraisals
+                        across Northern California.
+                    </p>
                     <p
                         data-turn-subtext
                         data-animate

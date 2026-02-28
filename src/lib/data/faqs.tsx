@@ -11,15 +11,10 @@ export const faq: FAQItem[] = [
         answer: (
             <>
                 <p>
-                    We love what we do, and every sale is accomplished with a
-                    carefully organized plan to achieve the greatest possible
-                    results.
-                </p>
-                <p>
-                    Our sales are a success because we understand the staging
-                    and organization needed to properly conduct the event, as
-                    well as the professional and friendly atmosphere our
-                    customers love.
+                    An estate sale is a multi-day public sale held inside the
+                    home, where personal property is organized, priced, and sold
+                    to walk-in buyers. We handle everything from setup to
+                    cleanup.
                 </p>
                 <p>
                     Typically, we operate within the following stages to ensure
@@ -32,7 +27,7 @@ export const faq: FAQItem[] = [
                     </li>
                     <li>
                         Promote the sale through a variety of on-line
-                        advertising sites and other outlets.
+                        advertising sites and other outlets
                     </li>
                     <li>
                         Conduct the sale with professionalism, attention to
@@ -104,15 +99,12 @@ export const faq: FAQItem[] = [
         answer: (
             <>
                 <p>
-                    Attic to Basement Estate Liquidators will promote the estate
-                    sale using appropriate venues for maximum sale visibility.
-                    The following platforms are used for advertising:
+                    We list every sale on EstateSales.org and EstateSales.net,
+                    and promote to our email list of 25,000+ subscribers.
                 </p>
                 <ul>
-                    <li>Estatesales.org</li>
-                    <li>Estatesales.net</li>
-                    <li>Garagesale.com</li>
-                    <li>Facebook</li>
+                    <li>EstateSales.org</li>
+                    <li>EstateSales.net</li>
                     <li>
                         ABELs email distribution list (approximately 25,000
                         subscribers)
@@ -245,7 +237,7 @@ export const faq: FAQItem[] = [
 export const faqPlainText: { question: string; answer: string }[] = [
     {
         question: "How does an estate sale work?",
-        answer: "We love what we do, and every sale is accomplished with a carefully organized plan to achieve the greatest possible results. Our sales are a success because we understand the staging and organization needed to properly conduct the event, as well as the professional and friendly atmosphere our customers love. Typically, we operate within the following stages to ensure a complete sale process: organize sale items, carefully stage the sale for maximum returns, promote the sale through a variety of on-line advertising sites and other outlets, conduct the sale with professionalism, attention to detail and enthusiasm, dispose of any remaining unwanted items, and remove our property and clean as directed.",
+        answer: "An estate sale is a multi-day public sale held inside the home, where personal property is organized, priced, and sold to walk-in buyers. We handle everything from setup to cleanup. Typically, we operate within the following stages to ensure a complete sale process: organize sale items, carefully stage the sale for maximum returns, promote the sale through a variety of on-line advertising sites and other outlets, conduct the sale with professionalism, attention to detail and enthusiasm, dispose of any remaining unwanted items, and remove our property and clean as directed.",
     },
     {
         question: "How much does it cost to have you handle my estate sale?",
@@ -257,7 +249,7 @@ export const faqPlainText: { question: string; answer: string }[] = [
     },
     {
         question: "How is the estate sale promoted?",
-        answer: "Attic to Basement Estate Liquidators will promote the estate sale using appropriate venues for maximum sale visibility. The following platforms are used for advertising: Estatesales.org, Estatesales.net, Garagesale.com, Facebook, ABELs email distribution list (approximately 25,000 subscribers). Some items may be listed on Craigslist or Offer Up.",
+        answer: "We list every sale on EstateSales.org and EstateSales.net, and promote to our email list of 25,000+ subscribers. Some items may also be listed on Craigslist or Offer Up.",
     },
     {
         question: "How do you price items for sale?",

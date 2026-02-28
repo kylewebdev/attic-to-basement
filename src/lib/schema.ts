@@ -13,6 +13,10 @@ const sameAs = [
     "https://estatesales.net/companies/CA/Citrus-Heights/95610/156176",
 ];
 
+// Yelp-wide aggregate rating — update these when the Yelp profile changes
+const YELP_RATING = "4.5";
+const YELP_REVIEW_COUNT = 49;
+
 export function getLocalBusinessSchema() {
     return {
         "@context": "https://schema.org",
@@ -106,11 +110,12 @@ export function getLocalBusinessSchema() {
                 },
             ],
         },
+        // Yelp-wide aggregate rating (49 reviews across Yelp)
         aggregateRating: {
             "@type": "AggregateRating",
-            ratingValue: "4.5",
+            ratingValue: YELP_RATING,
             bestRating: "5",
-            reviewCount: 49,
+            reviewCount: YELP_REVIEW_COUNT,
         },
         description:
             "Full-service estate sales, buyouts, cleanouts, and appraisals across Northern California.",
@@ -175,9 +180,10 @@ export function getFAQSchema(items: { question: string; answer: string }[]) {
 }
 
 export function getReviewSchema(testimonials: Testimonial[]) {
-    const total = testimonials.length;
-    const avg = testimonials.reduce((sum, t) => sum + t.rating, 0) / total;
-
+    // The aggregateRating uses the Yelp-wide numbers (49 reviews, 4.5 stars)
+    // to represent the business's overall rating across platforms.
+    // The individual review[] array below contains the on-site testimonials
+    // (currently 11) — these are a curated subset, not the full review corpus.
     return {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
@@ -185,9 +191,9 @@ export function getReviewSchema(testimonials: Testimonial[]) {
         name: businessName,
         aggregateRating: {
             "@type": "AggregateRating",
-            ratingValue: avg.toFixed(1),
+            ratingValue: YELP_RATING,
             bestRating: "5",
-            reviewCount: total,
+            reviewCount: YELP_REVIEW_COUNT,
         },
         review: testimonials.map((t) => ({
             "@type": "Review",

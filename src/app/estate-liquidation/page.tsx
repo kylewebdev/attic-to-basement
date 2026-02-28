@@ -10,7 +10,7 @@ import { useScrollReveal } from "@/lib/useScrollReveal";
 
 const services = [
     {
-        title: "Estate Sales",
+        title: "Full-Service Estate Sales",
         description:
             "Full-service estate sale management. We organize, stage, price, market, execute, and clean up. You receive an itemized accounting of every sale. Remaining items are handled through buyout, donation, or disposal. One team, start to finish.",
     },
@@ -20,7 +20,7 @@ const services = [
             "Need to move faster than a traditional sale allows? We make a fair offer on the entire contents of a home. Quick, clean, and straightforward — ideal when speed matters more than maximizing individual item value.",
     },
     {
-        title: "Cleanouts",
+        title: "Property Cleanouts and Donation Coordination",
         description:
             "After a sale, after a buyout, or on their own. We clear out and clean up the property so it is ready for sale, rental, or whatever comes next. Donations are coordinated with the nonprofit of your choice.",
     },
@@ -50,7 +50,7 @@ export default function EstateLiquidationPage() {
                 <div className="max-w-6xl mx-auto px-4">
                     <div data-reveal>
                         <SectionHeading
-                            title="Services tailored to your situation"
+                            title="Estate Sales and Cleanouts"
                             subtitle="Every estate is different. We offer a range of services to match your timeline, goals, and comfort level."
                         />
                     </div>
@@ -75,7 +75,7 @@ export default function EstateLiquidationPage() {
             <section className="py-16 md:py-24 bg-bg-alt">
                 <div className="max-w-4xl mx-auto px-4">
                     <div data-reveal>
-                        <SectionHeading title="What makes us different" />
+                        <SectionHeading title="Why Families Choose ABE Liquidators" />
                     </div>
                     <ul className="mt-12 grid gap-4 sm:grid-cols-2">
                         {differentiators.map((item, i) => (
@@ -126,6 +126,14 @@ export default function EstateLiquidationPage() {
                             className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
                         >
                             EstateSales.net
+                        </a>
+                        {" · "}
+                        Learn about{" "}
+                        <a
+                            href="/our-promise"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            our promise to you
                         </a>
                     </p>
                 </div>

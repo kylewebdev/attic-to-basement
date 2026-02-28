@@ -84,6 +84,25 @@ export default function EstateSalesPage() {
 
             <NewsletterSignup />
 
+            {/* Trust strip */}
+            <section className="py-8 bg-bg-primary border-y border-border-default">
+                <div
+                    className="max-w-3xl mx-auto px-4 text-center text-sm text-text-secondary font-semibold tracking-wide"
+                    data-reveal
+                >
+                    Fully Insured &amp; Bonded{" · "}
+                    <a
+                        href="https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                    >
+                        BBB Accredited
+                    </a>
+                    {" · "}20+ Years Combined Experience
+                </div>
+            </section>
+
             {/* Cross-sell */}
             <section className="py-16 md:py-24 bg-bg-alt">
                 <div className="max-w-3xl mx-auto px-4 text-center" data-reveal>

@@ -100,12 +100,12 @@ export default function ReviewsPage() {
             {/* External platform links */}
             <section className="py-12 bg-bg-alt">
                 <div className="max-w-3xl mx-auto px-4 text-center">
-                    <p
+                    <h2
                         className="font-serif text-xl text-text-heading mb-6"
                         data-reveal
                     >
-                        Read more reviews on these platforms
-                    </p>
+                        Read More Reviews on Yelp, BBB, and Estate Sale Platforms
+                    </h2>
                     <div
                         className="flex flex-wrap justify-center gap-4"
                         data-reveal
