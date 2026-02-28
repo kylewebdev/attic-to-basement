@@ -5,21 +5,24 @@ const businessName = "Attic to Basement Estate Liquidators";
 const businessId = `${siteUrl}/#business`;
 
 const sameAs = [
-    "https://www.instagram.com/abe.liquidators",
-    "https://www.bbb.org",
-    "https://www.yelp.com",
-    "https://www.estatesales.net",
-    "https://www.estatesales.org",
+    "https://www.facebook.com/profile.php?id=100094393143202",
+    "https://www.instagram.com/abe.liquidators/",
+    "https://www.tiktok.com/@attic.to.basement",
+    "https://www.yelp.com/biz/attic-to-basement-estate-liquidators-sacramento",
+    "https://estatesales.org/estate-sale-companies/attic-to-basement-estate-liquidators-23935",
+    "https://estatesales.net/companies/CA/Citrus-Heights/95610/156176",
 ];
 
 export function getLocalBusinessSchema() {
     return {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "ProfessionalService",
         "@id": businessId,
         name: businessName,
+        alternateName: "ABE Liquidators",
         url: siteUrl,
         telephone: "+19165211077",
+        priceRange: "$",
         address: {
             "@type": "PostalAddress",
             addressLocality: "Sacramento",
@@ -30,14 +33,84 @@ export function getLocalBusinessSchema() {
         logo: `${siteUrl}/logo.webp`,
         image: `${siteUrl}/logo.webp`,
         sameAs,
-        areaServed: {
-            "@type": "GeoCircle",
-            geoMidpoint: {
-                "@type": "GeoCoordinates",
-                latitude: 38.5816,
-                longitude: -121.4944,
-            },
-            geoRadius: "150",
+        founder: {
+            "@type": "Person",
+            name: "Cortnee Beggs",
+            jobTitle: "Owner",
+        },
+        areaServed: [
+            { "@type": "State", name: "California" },
+            { "@type": "City", name: "Sacramento" },
+            { "@type": "City", name: "Roseville" },
+            { "@type": "City", name: "Elk Grove" },
+            { "@type": "City", name: "Folsom" },
+            { "@type": "City", name: "Citrus Heights" },
+            { "@type": "City", name: "Rocklin" },
+            { "@type": "AdministrativeArea", name: "Sacramento County" },
+            { "@type": "AdministrativeArea", name: "Placer County" },
+            { "@type": "AdministrativeArea", name: "El Dorado County" },
+        ],
+        openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+        },
+        hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Estate Liquidation Services",
+            itemListElement: [
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Estate Sales",
+                        description:
+                            "Full-service estate sale management including setup, pricing, marketing, and cleanup.",
+                    },
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Estate Liquidation & Cleanouts",
+                        description:
+                            "Complete estate liquidation, buyouts, and cleanout services for homes and properties.",
+                    },
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Personal Property Appraisals",
+                        description:
+                            "Expert valuations for household goods, antiques, collectibles, and personal property.",
+                    },
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Free Consultation",
+                        description:
+                            "No-obligation consultation to discuss your estate sale or liquidation needs.",
+                    },
+                },
+            ],
+        },
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.5",
+            bestRating: "5",
+            reviewCount: 49,
         },
         description:
             "Full-service estate sales, buyouts, cleanouts, and appraisals across Northern California.",
@@ -60,7 +133,7 @@ export function getServiceSchema({
         description,
         url: `${siteUrl}${path}`,
         provider: {
-            "@type": "LocalBusiness",
+            "@type": "ProfessionalService",
             "@id": businessId,
         },
         areaServed: {
@@ -70,9 +143,7 @@ export function getServiceSchema({
     };
 }
 
-export function getBreadcrumbSchema(
-    crumbs: { name: string; path: string }[]
-) {
+export function getBreadcrumbSchema(crumbs: { name: string; path: string }[]) {
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -88,9 +159,7 @@ export function getBreadcrumbSchema(
     };
 }
 
-export function getFAQSchema(
-    items: { question: string; answer: string }[]
-) {
+export function getFAQSchema(items: { question: string; answer: string }[]) {
     return {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -107,12 +176,11 @@ export function getFAQSchema(
 
 export function getReviewSchema(testimonials: Testimonial[]) {
     const total = testimonials.length;
-    const avg =
-        testimonials.reduce((sum, t) => sum + t.rating, 0) / total;
+    const avg = testimonials.reduce((sum, t) => sum + t.rating, 0) / total;
 
     return {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "ProfessionalService",
         "@id": businessId,
         name: businessName,
         aggregateRating: {
