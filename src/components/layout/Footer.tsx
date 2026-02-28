@@ -128,6 +128,21 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-10 pt-6 border-t border-border-default text-center text-sm text-text-secondary">
+                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mb-2">
+                        <Link
+                            href="/privacy"
+                            className="hover:text-text-heading transition-colors"
+                        >
+                            Privacy Policy
+                        </Link>
+                        <span aria-hidden="true">&middot;</span>
+                        <Link
+                            href="/terms"
+                            className="hover:text-text-heading transition-colors"
+                        >
+                            Terms of Service
+                        </Link>
+                    </div>
                     &copy; {new Date().getFullYear()} Attic to Basement Estate
                     Liquidators. All Rights Reserved.
                 </div>
