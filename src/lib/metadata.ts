@@ -19,7 +19,7 @@ const pages: Record<
     { title: string; description: string; path: string }
 > = {
     home: {
-        title: "Estate Sale Services Sacramento | Attic To Basement Estate Liquidators",
+        title: "Estate Sale Services in Sacramento & Northern CA | Attic To Basement Estate Liquidators",
         description:
             "Full-service estate sales, cleanouts, and appraisals across Northern California. Free consultation. 20+ years experience.",
         path: "",
@@ -43,7 +43,7 @@ const pages: Record<
         path: "/appraisals",
     },
     ourPromise: {
-        title: "Our Commitment to You | Attic To Basement Estate Liquidators",
+        title: "Our Promise to You | Attic To Basement Estate Liquidators",
         description:
             "Transparent, respectful, and professional estate liquidation. Learn about ABE's values and client-centered approach.",
         path: "/our-promise",
