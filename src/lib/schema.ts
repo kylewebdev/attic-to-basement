@@ -34,8 +34,8 @@ export function getLocalBusinessSchema() {
             postalCode: "95821",
             addressCountry: "US",
         },
-        logo: `${siteUrl}/logo.webp`,
-        image: `${siteUrl}/logo.webp`,
+        logo: `${siteUrl}/new-logo.svg`,
+        image: `${siteUrl}/new-logo.svg`,
         sameAs,
         founder: {
             "@type": "Person",

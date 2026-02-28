@@ -2,10 +2,10 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import posthog from "posthog-js";
 import { gsap, useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
+import Logo from "@/components/ui/Logo";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import MobileNav from "@/components/layout/MobileNav";
 
@@ -16,7 +16,7 @@ const serviceLinks = [
 
 export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
-  const logoRef = useRef<HTMLImageElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -37,7 +37,8 @@ export default function Header() {
           });
           if (logoRef.current) {
             gsap.to(logoRef.current, {
-              height: scrolled ? 36 : 56,
+              scale: scrolled ? 0.75 : 1,
+              transformOrigin: "left center",
               duration: 0.3,
             });
           }
@@ -70,18 +71,9 @@ export default function Header() {
       >
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="block">
-            <Image
-              ref={logoRef}
-              src="/logo.webp"
-              alt="Attic to Basement Estate Liquidators"
-              width={160}
-              height={120}
-              className="h-14 w-auto"
-              style={{ filter: "var(--logo-filter)" }}
-              priority
-            />
-          </Link>
+          <div ref={logoRef}>
+            <Logo />
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">

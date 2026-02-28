@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/ui/Logo";
 
 const navLinks = [
     { label: "Estate Sales", href: "/estate-sales" },
@@ -35,14 +35,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Company info */}
                     <div>
-                        <Image
-                            src="/logo.webp"
-                            alt="Attic to Basement Estate Liquidators"
-                            width={160}
-                            height={120}
-                            className="h-24 w-auto mb-6"
-                            style={{ filter: "var(--logo-footer-filter)" }}
-                        />
+                        <Logo size="lg" className="mb-6" />
                         <p className="text-sm text-text-secondary mt-1">
                             Sacramento, CA 95821
                         </p>
