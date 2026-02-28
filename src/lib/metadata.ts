@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const siteUrl = "https://abeliquidators.com";
-const siteName = "Attic To Basement Estate Liquidators Liquidators";
+const siteName = "Attic To Basement Estate Liquidators";
 
 type PageKey =
     | "home"
@@ -17,43 +17,43 @@ const pages: Record<
     { title: string; description: string; path: string }
 > = {
     home: {
-        title: "Estate Sale Services Sacramento | Attic To Basement Estate Liquidators Liquidators",
+        title: "Estate Sale Services Sacramento | Attic To Basement Estate Liquidators",
         description:
-            "Full-service estate sales, buyouts, cleanouts, and appraisals across Northern California. Free consultation. 20+ years experience.",
+            "Full-service estate sales, cleanouts, and appraisals across Northern California. Free consultation. 20+ years experience.",
         path: "",
     },
     estateSales: {
-        title: "Estate Sale Management | Attic To Basement Estate Liquidators Liquidators",
+        title: "Estate Sale Management | Attic To Basement Estate Liquidators",
         description:
             "Professional estate sale services from setup to cleanup. Free estimates, expert pricing, and full marketing included.",
         path: "/estate-sales",
     },
     estateLiquidation: {
-        title: "Estate Liquidation Services | Attic To Basement Estate Liquidators Liquidators",
+        title: "Estate Liquidation Services | Attic To Basement Estate Liquidators",
         description:
-            "Estate sales, buyouts, and cleanouts for Northern California families. Fully insured, bonded, and experienced.",
+            "Estate sales, and cleanouts for Northern California families. Fully insured, bonded, and experienced.",
         path: "/estate-liquidation",
     },
     appraisals: {
-        title: "Personal Property Appraisals | Attic To Basement Estate Liquidators Liquidators",
+        title: "Personal Property Appraisals | Attic To Basement Estate Liquidators",
         description:
             "Accurate appraisals for household goods, antiques, collectibles, and more. Expert valuations backed by 20+ years of experience.",
         path: "/appraisals",
     },
     ourPromise: {
-        title: "Our Commitment to You | Attic To Basement Estate Liquidators Liquidators",
+        title: "Our Commitment to You | Attic To Basement Estate Liquidators",
         description:
             "Transparent, respectful, and professional estate liquidation. Learn about ABE's values and client-centered approach.",
         path: "/our-promise",
     },
     reviews: {
-        title: "Client Reviews and Testimonials | Attic To Basement Estate Liquidators Liquidators",
+        title: "Client Reviews and Testimonials | Attic To Basement Estate Liquidators",
         description:
-            "See what families across Northern California say about working with Attic To Basement Estate Liquidators Liquidators. 4.5 stars across review platforms.",
+            "See what families across Northern California say about working with Attic To Basement Estate Liquidators. 4.5 stars across review platforms.",
         path: "/reviews",
     },
     contact: {
-        title: "Contact Us | Free Consultation | Attic To Basement Estate Liquidators Liquidators",
+        title: "Contact Us | Free Consultation | Attic To Basement Estate Liquidators",
         description:
             "Schedule a free, no-obligation estate sale consultation. Call (916) 521-1077 or fill out our contact form. Available 24/7.",
         path: "/contact",
@@ -79,7 +79,7 @@ export function getPageMetadata(page: PageKey): Metadata {
                     url: `${siteUrl}/og-image.jpg`,
                     width: 1200,
                     height: 630,
-                    alt: "Attic To Basement Estate Liquidators Liquidators — Estate Sales & Liquidation Services",
+                    alt: "Attic To Basement Estate Liquidators — Estate Sales & Liquidation Services",
                 },
             ],
         },
