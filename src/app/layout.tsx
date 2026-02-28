@@ -7,10 +7,6 @@ import ThemeScript from "@/components/layout/ThemeScript";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import JsonLd from "@/components/seo/JsonLd";
 import { getLocalBusinessSchema } from "@/lib/schema";
-import {
-    GoogleTagManagerHead,
-    GoogleTagManagerBody,
-} from "@/components/layout/GoogleTagManager";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
@@ -61,14 +57,12 @@ export default function RootLayout({
             </head>
             <body>
                 <ThemeProvider>
-                    <GoogleTagManagerBody />
                     <JsonLd data={getLocalBusinessSchema()} />
                     <SmoothScroll>
                         <Header />
                         <main id="main-content">{children}</main>
                         <Footer />
                     </SmoothScroll>
-                    <GoogleTagManagerHead />
                 </ThemeProvider>
                 <SpeedInsights />
             </body>

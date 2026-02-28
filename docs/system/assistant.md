@@ -19,7 +19,7 @@ ABE Liquidators (abeliquidators.com) — a 6-page marketing website for a Northe
 - **Deployment:** Vercel
 - **Content:** Hardcoded (structured for future CMS extraction)
 - **Form handling:** Formspree or Resend (serverless, no backend)
-- **Analytics:** Google Analytics 4 via Google Tag Manager
+- **Analytics:** PostHog
 
 ## Commands
 
@@ -35,7 +35,7 @@ npm run start        # Serve production build locally
 ```
 src/
 ├── app/                    # Next.js App Router — one page.tsx per route
-│   ├── layout.tsx          # Root layout (Header, Footer, metadata, GTM)
+│   ├── layout.tsx          # Root layout (Header, Footer, metadata)
 │   ├── page.tsx            # Homepage (/)
 │   ├── estate-sales/       # /estate-sales
 │   ├── estate-liquidation/ # /estate-liquidation

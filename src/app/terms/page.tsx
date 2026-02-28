@@ -21,7 +21,7 @@ export default function TermsPage() {
                         data-reveal
                         className="text-sm text-text-muted mb-8"
                     >
-                        Last Updated: November 30, 2023
+                        Last Updated: February 27, 2026
                     </p>
 
                     <div

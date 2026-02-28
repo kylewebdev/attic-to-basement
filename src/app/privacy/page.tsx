@@ -21,7 +21,7 @@ export default function PrivacyPage() {
                         data-reveal
                         className="text-sm text-text-muted mb-8"
                     >
-                        Last Updated: November 30, 2023
+                        Last Updated: February 27, 2026
                     </p>
 
                     <div
@@ -93,14 +93,44 @@ export default function PrivacyPage() {
                             <h2 className="font-serif text-xl md:text-2xl text-text-heading mb-3">
                                 3. Information Sharing
                             </h2>
-                            <p className="text-text-secondary leading-relaxed">
+                            <p className="text-text-secondary leading-relaxed mb-3">
                                 We do not sell, trade, or otherwise transfer
                                 personal information to third parties without
                                 your consent, except as required by law.
-                                Non-personal information may be shared with
-                                trusted third parties for analytics and website
-                                optimization purposes.
                             </p>
+                            <p className="text-text-secondary leading-relaxed mb-3">
+                                We use the following third-party services to
+                                operate our website:
+                            </p>
+                            <ul className="list-disc pl-6 space-y-2 text-text-secondary">
+                                <li>
+                                    <strong className="text-text-body">
+                                        Formspree
+                                    </strong>{" "}
+                                    — processes consultation form submissions on
+                                    our behalf. Your name, email, phone number,
+                                    and message content are transmitted to
+                                    Formspree when you submit a form.
+                                </li>
+                                <li>
+                                    <strong className="text-text-body">
+                                        PostHog
+                                    </strong>{" "}
+                                    — provides website analytics to help us
+                                    understand how visitors use our site.
+                                    PostHog may collect non-personal information
+                                    such as page views, clicks, and session
+                                    data.
+                                </li>
+                                <li>
+                                    <strong className="text-text-body">
+                                        Vercel
+                                    </strong>{" "}
+                                    — hosts our website and may collect standard
+                                    server logs including IP addresses and
+                                    request data.
+                                </li>
+                            </ul>
                         </div>
 
                         <div>
@@ -117,13 +147,20 @@ export default function PrivacyPage() {
 
                         <div>
                             <h2 className="font-serif text-xl md:text-2xl text-text-heading mb-3">
-                                5. Cookies
+                                5. Cookies and Tracking
                             </h2>
+                            <p className="text-text-secondary leading-relaxed mb-3">
+                                Our website uses cookies and similar
+                                technologies to enhance the user experience and
+                                analyze site usage. Specifically, we use PostHog
+                                analytics, which may set cookies to track
+                                anonymous usage patterns such as pages visited,
+                                buttons clicked, and session duration.
+                            </p>
                             <p className="text-text-secondary leading-relaxed">
-                                Our website may use cookies to enhance the user
-                                experience. Users can control cookie settings in
-                                their browsers, but disabling cookies may affect
-                                website functionality.
+                                You can control cookie settings in your browser,
+                                but disabling cookies may affect website
+                                functionality.
                             </p>
                         </div>
 
