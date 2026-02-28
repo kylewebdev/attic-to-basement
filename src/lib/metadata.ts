@@ -24,8 +24,6 @@ interface PageConfig {
     robots?: string;
 }
 
-const noIndexRobots = "noindex, nofollow";
-
 const pages: Record<PageKey, PageConfig> = {
     home: {
         title: "Estate Sale Services in Sacramento & Northern CA | Attic To Basement Estate Liquidators",
@@ -117,7 +115,6 @@ const pages: Record<PageKey, PageConfig> = {
             "How Attic To Basement Estate Liquidators collects, uses, and protects your personal information.",
         path: "/privacy",
         keywords: [],
-        robots: noIndexRobots,
     },
     terms: {
         title: "Terms of Service | Attic To Basement Estate Liquidators",
@@ -125,7 +122,6 @@ const pages: Record<PageKey, PageConfig> = {
             "Terms and conditions for using the Attic To Basement Estate Liquidators website.",
         path: "/terms",
         keywords: [],
-        robots: noIndexRobots,
     },
 };
 
