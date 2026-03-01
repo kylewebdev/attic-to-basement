@@ -6,7 +6,7 @@ interface SaleCardProps {
 
 export default function SaleCard({ sale }: SaleCardProps) {
     return (
-        <div className="relative overflow-hidden rounded-xl bg-bg-card border border-border-default p-6">
+        <div className="sale-card-glow relative overflow-hidden rounded-xl bg-bg-card border border-sage-500/20 p-6">
             {/* Decorative gradient + dot pattern on the right */}
             <div
                 className="pointer-events-none absolute inset-y-0 right-0 w-1/2"
