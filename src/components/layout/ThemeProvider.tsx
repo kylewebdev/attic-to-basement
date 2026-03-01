@@ -32,19 +32,25 @@ function applyTheme(resolved: ResolvedTheme) {
     }
 }
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-    const [theme, setThemeState] = useState<Theme>("dark");
-    const [resolved, setResolved] = useState<ResolvedTheme>("dark");
+function getInitialTheme(): Theme {
+    if (typeof window === "undefined") return "dark";
+    return (localStorage.getItem("theme") as Theme | null) || "dark";
+}
 
-    // Initialize from localStorage on mount
+function resolveTheme(theme: Theme): ResolvedTheme {
+    return theme === "system" ? getSystemTheme() : theme;
+}
+
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+    const [theme, setThemeState] = useState<Theme>(getInitialTheme);
+    const [resolved, setResolved] = useState<ResolvedTheme>(() =>
+        resolveTheme(getInitialTheme())
+    );
+
+    // Apply theme class on mount and when resolved changes
     useEffect(() => {
-        const stored = localStorage.getItem("theme") as Theme | null;
-        const initial = stored || "dark";
-        setThemeState(initial);
-        const res = initial === "system" ? getSystemTheme() : initial;
-        setResolved(res);
-        applyTheme(res);
-    }, []);
+        applyTheme(resolved);
+    }, [resolved]);
 
     // Listen for system preference changes
     useEffect(() => {
