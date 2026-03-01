@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -12,6 +13,14 @@ import { useScrollReveal } from "@/lib/useScrollReveal";
 export default function EstateSalesPage() {
     const containerRef = useScrollReveal();
     const activeSales = sales.filter(isSaleActive);
+    const uniqueAreas = Array.from(
+        new Set(activeSales.map((s) => s.area))
+    );
+    const [activeFilter, setActiveFilter] = useState("all");
+    const filteredSales =
+        activeFilter === "all"
+            ? activeSales
+            : activeSales.filter((s) => s.area === activeFilter);
 
     return (
         <div ref={containerRef}>
@@ -32,8 +41,45 @@ export default function EstateSalesPage() {
                                     subtitle="Check back often — new sales are added regularly."
                                 />
                             </div>
+                            {uniqueAreas.length >= 2 && (
+                                <div
+                                    data-reveal
+                                    className="flex flex-wrap gap-2 justify-center mt-8"
+                                >
+                                    {[
+                                        { label: "All", value: "all" },
+                                        ...uniqueAreas.map((area) => ({
+                                            label: area,
+                                            value: area,
+                                        })),
+                                    ].map((f) => (
+                                        <button
+                                            key={f.value}
+                                            onClick={() => {
+                                                setActiveFilter(f.value);
+                                                posthog.capture(
+                                                    "estate_sale_filter_selected",
+                                                    {
+                                                        filter_value: f.value,
+                                                        filter_label: f.label,
+                                                    }
+                                                );
+                                            }}
+                                            className={`rounded-full text-sm font-semibold transition-colors min-h-11 ${
+                                                f.value === "all" ? "px-6 py-2.5" : "px-4 py-2"
+                                            } ${
+                                                activeFilter === f.value
+                                                    ? "bg-sage-500 text-white"
+                                                    : "bg-bg-card text-text-secondary hover:bg-border-default border border-border-default"
+                                            }`}
+                                        >
+                                            {f.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
                             <div className="mt-12 grid gap-6">
-                                {activeSales.map((sale, i) => (
+                                {filteredSales.map((sale, i) => (
                                     <div
                                         key={sale.id}
                                         data-reveal
@@ -43,6 +89,11 @@ export default function EstateSalesPage() {
                                     </div>
                                 ))}
                             </div>
+                            {filteredSales.length === 0 && (
+                                <p className="text-center text-text-secondary mt-12">
+                                    No sales in this area right now.
+                                </p>
+                            )}
                         </>
                     ) : (
                         <div data-reveal className="text-center py-12">
