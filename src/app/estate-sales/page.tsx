@@ -5,12 +5,13 @@ import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SaleCard from "@/components/ui/SaleCard";
 import Button from "@/components/ui/Button";
-import { sales } from "@/lib/data/sales";
+import { sales, isSaleActive } from "@/lib/data/sales";
 import NewsletterSignup from "@/components/sections/NewsletterSignup";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export default function EstateSalesPage() {
     const containerRef = useScrollReveal();
+    const activeSales = sales.filter(isSaleActive);
 
     return (
         <div ref={containerRef}>
@@ -23,7 +24,7 @@ export default function EstateSalesPage() {
             {/* Sale listings */}
             <section className="py-16 md:py-24 bg-bg-primary">
                 <div className="max-w-6xl mx-auto px-4">
-                    {sales.length > 0 ? (
+                    {activeSales.length > 0 ? (
                         <>
                             <div data-reveal>
                                 <SectionHeading
@@ -32,7 +33,7 @@ export default function EstateSalesPage() {
                                 />
                             </div>
                             <div className="mt-12 grid gap-6">
-                                {sales.map((sale, i) => (
+                                {activeSales.map((sale, i) => (
                                     <div
                                         key={sale.id}
                                         data-reveal

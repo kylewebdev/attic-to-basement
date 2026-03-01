@@ -2,6 +2,8 @@ export interface Sale {
     id: string;
     title: string;
     dates: string;
+    /** Last day of the sale in YYYY-MM-DD format (e.g. "2026-03-01"). Used to auto-hide sales after 5 PM on their final day. */
+    endDate: string;
     area: string;
     categories: string[];
     externalUrlNet?: string;
@@ -9,11 +11,19 @@ export interface Sale {
     imageAlt?: string;
 }
 
+/** Returns true if the sale should still be displayed. Hides sales after 5 PM on their end date. */
+export function isSaleActive(sale: Sale): boolean {
+    const [year, month, day] = sale.endDate.split("-").map(Number);
+    const cutoff = new Date(year, month - 1, day, 17, 0, 0); // 5 PM on end date
+    return new Date() < cutoff;
+}
+
 export const sales: Sale[] = [
     {
         id: "sacramento-vintage-modern-march-2026",
-        title: "Sacramento — 50% Off Sunday: Vintage & Modern Mix Estate Sale",
+        title: "50% Off Sunday: Vintage & Modern Mix Estate Sale",
         dates: "February 27 – March 1, 2026 | 9 AM – 2 PM",
+        endDate: "2026-03-01",
         area: "Sacramento, CA",
         categories: ["Vintage", "Modern Furnishings"],
         externalUrlNet:
@@ -23,8 +33,9 @@ export const sales: Sale[] = [
     },
     {
         id: "rancho-cordova-march-2026",
-        title: "Rancho Cordova — Atomic Age Accents & Cozy Classics",
+        title: "Atomic Age Accents & Cozy Classics",
         dates: "February 27 – March 1, 2026 | 9 AM – 2 PM",
+        endDate: "2026-03-01",
         area: "Rancho Cordova, CA",
         categories: ["Mid-Century Modern", "Vintage"],
         externalUrlNet:
@@ -34,8 +45,9 @@ export const sales: Sale[] = [
     },
     {
         id: "sacramento-sea-ray-march-2026",
-        title: "Sacramento — 1987 Sea Ray 4.3 V6 Boat, Tools, Sporting Goods, Antiques & More",
+        title: "1987 Sea Ray 4.3 V6 Boat, Tools, Sporting Goods, Antiques & More",
         dates: "February 27 – March 1, 2026 | 9 AM – 2 PM",
+        endDate: "2026-03-01",
         area: "Sacramento, CA",
         categories: [
             "Boats & Watercraft",
@@ -50,10 +62,17 @@ export const sales: Sale[] = [
     },
     {
         id: "sacramento-natomas-march-2026",
-        title: "Sacramento — Nifty Natomas Sale",
+        title: "Nifty Natomas Sale",
         dates: "March 6–7, 2026 | 9 AM – 3 PM",
+        endDate: "2026-03-07",
         area: "Sacramento, CA",
-        categories: ["Clothing", "Luggage", "Books", "Kitchen Items", "Jewelry"],
+        categories: [
+            "Clothing",
+            "Luggage",
+            "Books",
+            "Kitchen Items",
+            "Jewelry",
+        ],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95835/4814823",
         externalUrlOrg:
@@ -61,8 +80,9 @@ export const sales: Sale[] = [
     },
     {
         id: "west-sacramento-march-2026",
-        title: "West Sacramento — Scent-sational Treasures",
+        title: "Scent-sational Treasures",
         dates: "March 6–8, 2026 | 9 AM – 2 PM",
+        endDate: "2026-03-08",
         area: "West Sacramento, CA",
         categories: ["Home Goods", "Collectibles", "Décor"],
         externalUrlNet:
