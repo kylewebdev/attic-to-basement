@@ -51,7 +51,7 @@ export const sales: Sale[] = [
     {
         id: "sacramento-natomas-march-2026",
         title: "Sacramento — Nifty Natomas Sale",
-        dates: "March 6, 2026 | 9 AM – 3 PM",
+        dates: "March 6–7, 2026 | 9 AM – 3 PM",
         area: "Sacramento, CA",
         categories: ["Clothing", "Luggage", "Books", "Kitchen Items", "Jewelry"],
         externalUrlNet:
@@ -62,7 +62,7 @@ export const sales: Sale[] = [
     {
         id: "west-sacramento-march-2026",
         title: "West Sacramento — Scent-sational Treasures",
-        dates: "March 6, 2026 | 9 AM – 2 PM",
+        dates: "March 6–8, 2026 | 9 AM – 2 PM",
         area: "West Sacramento, CA",
         categories: ["Home Goods", "Collectibles", "Décor"],
         externalUrlNet:
