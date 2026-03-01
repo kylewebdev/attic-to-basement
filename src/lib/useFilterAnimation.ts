@@ -128,7 +128,12 @@ export function useFilterAnimation(options: FilterAnimationOptions) {
 
             // Phase 2: Enter — expand height + fade in
             if (entering.length > 0) {
-                const enterLabel = exiting.length > 0 ? ">" : 0;
+                // Overlap enter with the tail end of exit to avoid a visual gap
+                // where everything appears to vanish before the new items appear
+                const enterLabel =
+                    exiting.length > 0
+                        ? `>-=${exitDuration * 0.5}`
+                        : 0;
 
                 tl.call(
                     () => {
