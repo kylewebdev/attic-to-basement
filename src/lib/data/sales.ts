@@ -11,31 +11,20 @@ export interface Sale {
 
 export const sales: Sale[] = [
     {
-        id: "cameron-park-february-2026",
-        title: "Cameron Park — Vintage, Antiques & More Blow Out Sale",
-        dates: "February 27–28, 2026 | 9 AM – 3 PM",
-        area: "Cameron Park, CA",
-        categories: ["Vintage", "Antiques", "Military Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Shingle-Springs/95682/4814808",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/cameron-park/95682/30-off-blow-out-sale-2426359",
-    },
-    {
         id: "sacramento-vintage-modern-march-2026",
-        title: "Sacramento — Vintage & Modern Mix Estate Sale",
+        title: "Sacramento — 50% Off Sunday: Vintage & Modern Mix Estate Sale",
         dates: "February 27 & March 1, 2026 | 9 AM – 2 PM",
         area: "Sacramento, CA",
         categories: ["Vintage", "Modern Furnishings"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95826/4817208",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95826/vintage-modern-mix-estate-sale-2426680",
+            "https://estatesales.org/estate-sales/ca/sacramento/95826/50-off-sunday-vintage-modern-2426680",
     },
     {
         id: "rancho-cordova-march-2026",
         title: "Rancho Cordova — Atomic Age Accents & Cozy Classics",
-        dates: "February 27 & March 1, 2026 | 9 AM – 3 PM",
+        dates: "February 27 & March 1, 2026 | 9 AM – 2 PM",
         area: "Rancho Cordova, CA",
         categories: ["Mid-Century Modern", "Vintage"],
         externalUrlNet:
@@ -45,8 +34,8 @@ export const sales: Sale[] = [
     },
     {
         id: "sacramento-sea-ray-march-2026",
-        title: "Sacramento — Sea Ray Boat, Tools, Sporting Goods & Antiques",
-        dates: "February 27 & March 1, 2026 | 9 AM – 3 PM",
+        title: "Sacramento — 1987 Sea Ray 4.3 V6 Boat, Tools, Sporting Goods, Antiques & More",
+        dates: "February 27 & March 1, 2026 | 9 AM – 2 PM",
         area: "Sacramento, CA",
         categories: [
             "Boats & Watercraft",
@@ -64,10 +53,21 @@ export const sales: Sale[] = [
         title: "Sacramento — Nifty Natomas Sale",
         dates: "March 6, 2026 | 9 AM",
         area: "Sacramento, CA",
-        categories: ["Clothing", "Books", "Kitchen Items", "Jewelry"],
+        categories: ["Clothing", "Luggage", "Books", "Kitchen Items", "Jewelry"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95835/4814823",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95835/nifty-natomas-sale-2426361",
+    },
+    {
+        id: "west-sacramento-march-2026",
+        title: "West Sacramento — Scent-sational Treasures",
+        dates: "March 6, 2026 | 9 AM",
+        area: "West Sacramento, CA",
+        categories: ["Home Goods", "Collectibles", "Décor"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/West-Sacramento/95691/4823448",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/west-sacramento-/95691/scentsational-treasures-2427554",
     },
 ];
