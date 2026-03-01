@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import ConsultationForm from "@/components/forms/ConsultationForm";
@@ -111,6 +112,32 @@ export default function ContactPage() {
                     >
                         We typically respond within 24 hours. Your information
                         stays private, always.
+                    </p>
+                    <p
+                        data-reveal
+                        className="mt-4 text-center text-sm text-text-secondary"
+                    >
+                        Learn more:{" "}
+                        <Link
+                            href="/our-promise"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            Our Promise
+                        </Link>
+                        {" · "}
+                        <Link
+                            href="/reviews"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            Reviews
+                        </Link>
+                        {" · "}
+                        <Link
+                            href="/estate-sales"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            Upcoming Sales
+                        </Link>
                     </p>
                 </div>
             </section>

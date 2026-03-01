@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
@@ -130,6 +131,37 @@ export default function ReviewsPage() {
                             </a>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* Our Services */}
+            <section className="py-12 bg-bg-primary">
+                <div
+                    className="max-w-3xl mx-auto px-4 text-center text-sm text-text-secondary"
+                    data-reveal
+                >
+                    We offer{" "}
+                    <Link
+                        href="/estate-sales"
+                        className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                    >
+                        estate sales
+                    </Link>
+                    ,{" "}
+                    <Link
+                        href="/estate-liquidation"
+                        className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                    >
+                        full-service estate liquidation
+                    </Link>
+                    , and{" "}
+                    <Link
+                        href="/appraisals"
+                        className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                    >
+                        professional appraisals
+                    </Link>
+                    .
                 </div>
             </section>
 

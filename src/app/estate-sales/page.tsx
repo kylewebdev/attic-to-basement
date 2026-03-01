@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -114,9 +115,19 @@ export default function EstateSalesPage() {
                             <p className="text-lg text-text-secondary mb-2">
                                 No upcoming sales right now.
                             </p>
-                            <p className="text-text-muted mb-6">
+                            <p className="text-text-muted mb-4">
                                 Follow us on Instagram for the latest updates
                                 and sale announcements.
+                            </p>
+                            <p className="text-text-muted mb-6">
+                                Looking for estate liquidation help?{" "}
+                                <Link
+                                    href="/contact"
+                                    className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                                >
+                                    Schedule a free consultation
+                                </Link>
+                                .
                             </p>
                             <a
                                 href="https://www.instagram.com/abe.liquidators/"
@@ -185,6 +196,23 @@ export default function EstateSalesPage() {
                             Schedule a Free Consultation
                         </Button>
                     </div>
+                    <p className="mt-4 text-sm text-text-secondary">
+                        Learn more about our{" "}
+                        <Link
+                            href="/estate-liquidation"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            estate liquidation services
+                        </Link>
+                        {" "}or get an{" "}
+                        <Link
+                            href="/appraisals"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            accurate appraisal
+                        </Link>
+                        {" "}before your sale.
+                    </p>
                 </div>
             </section>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
@@ -127,7 +128,14 @@ export default function Turn() {
                         Over 20 years of combined experience across Northern
                         California. Hundreds of families served. Led by Cortnee
                         Beggs, who treats every home like it matters, because it
-                        does.
+                        does. Learn more about{" "}
+                        <Link
+                            href="/our-promise"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            our promise
+                        </Link>
+                        {" "}to every family we work with.
                     </p>
                 </div>
 

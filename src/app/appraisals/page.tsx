@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -141,6 +142,26 @@ export default function AppraisalsPage() {
                         over 20 years of combined experience in personal
                         property valuation.
                     </p>
+                    <p
+                        className="mt-4 text-sm text-text-secondary max-w-2xl mx-auto text-center"
+                        data-reveal
+                    >
+                        Ready to move forward? Browse our{" "}
+                        <Link
+                            href="/estate-sales"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            upcoming estate sales
+                        </Link>
+                        {" "}or explore our full{" "}
+                        <Link
+                            href="/estate-liquidation"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            estate liquidation services
+                        </Link>
+                        .
+                    </p>
                 </div>
             </section>
 
@@ -178,13 +199,21 @@ export default function AppraisalsPage() {
                             BBB
                         </a>
                         {" · "}
+                        See what our clients say in our{" "}
+                        <Link
+                            href="/reviews"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            reviews
+                        </Link>
+                        {" · "}
                         Learn about{" "}
-                        <a
+                        <Link
                             href="/our-promise"
                             className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
                         >
                             our promise to you
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </section>

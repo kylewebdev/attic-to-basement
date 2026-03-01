@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import ServiceAreaMap from "./ServiceAreaMap";
@@ -136,7 +137,14 @@ export default function ServiceArea() {
           >
             Call us
           </a>
-          . We will figure it out.
+          . We will figure it out. Or{" "}
+          <Link
+            href="/contact"
+            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors font-semibold"
+          >
+            schedule a free consultation
+          </Link>
+          {" "}online.
         </p>
       </div>
     </section>

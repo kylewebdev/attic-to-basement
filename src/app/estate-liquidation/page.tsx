@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -68,6 +69,19 @@ export default function EstateLiquidationPage() {
                             </div>
                         ))}
                     </div>
+                    <p
+                        className="mt-10 text-center text-sm text-text-secondary"
+                        data-reveal
+                    >
+                        Need an accurate appraisal first?{" "}
+                        <Link
+                            href="/appraisals"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            Learn about our appraisal services
+                        </Link>
+                        .
+                    </p>
                 </div>
             </section>
 
@@ -108,33 +122,28 @@ export default function EstateLiquidationPage() {
                         className="mt-10 text-center text-sm text-text-secondary"
                         data-reveal
                     >
-                        See our reviews on{" "}
-                        <a
-                            href="https://www.yelp.com/biz/attic-to-basement-estate-liquidators-sacramento"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link
+                            href="/reviews"
                             className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
                         >
-                            Yelp
-                        </a>
+                            Read what families say about working with us
+                        </Link>
                         {" · "}
-                        Browse our sales on{" "}
-                        <a
-                            href="https://www.estatesales.net/companies/CA/Sacramento/95821/156176"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        Browse our{" "}
+                        <Link
+                            href="/estate-sales"
                             className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
                         >
-                            EstateSales.net
-                        </a>
+                            upcoming estate sales
+                        </Link>
                         {" · "}
                         Learn about{" "}
-                        <a
+                        <Link
                             href="/our-promise"
                             className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
                         >
                             our promise to you
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </section>
