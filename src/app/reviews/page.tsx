@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import { testimonials, type Testimonial } from "@/lib/data/testimonials";
 import { useScrollReveal } from "@/lib/useScrollReveal";
+import { useFilterAnimation } from "@/lib/useFilterAnimation";
 
 type FilterCategory = "all" | Testimonial["category"];
 
@@ -26,12 +27,23 @@ const platformLinks = [
 
 export default function ReviewsPage() {
     const containerRef = useScrollReveal();
+    const { applyFilter } = useFilterAnimation({ containerRef });
     const [activeFilter, setActiveFilter] = useState<FilterCategory>("all");
 
-    const filtered =
-        activeFilter === "all"
-            ? testimonials
-            : testimonials.filter((t) => t.category === activeFilter);
+    const handleFilter = useCallback(
+        (value: FilterCategory, label: string) => {
+            setActiveFilter(value);
+            applyFilter((el) => {
+                if (value === "all") return true;
+                return el.getAttribute("data-category") === value;
+            });
+            posthog.capture("review_filter_selected", {
+                filter_value: value,
+                filter_label: label,
+            });
+        },
+        [applyFilter]
+    );
 
     return (
         <div ref={containerRef}>
@@ -51,13 +63,7 @@ export default function ReviewsPage() {
                         {filters.map((f) => (
                             <button
                                 key={f.value}
-                                onClick={() => {
-                                    setActiveFilter(f.value);
-                                    posthog.capture("review_filter_selected", {
-                                        filter_value: f.value,
-                                        filter_label: f.label,
-                                    });
-                                }}
+                                onClick={() => handleFilter(f.value, f.label)}
                                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors min-h-11 ${
                                     activeFilter === f.value
                                         ? "bg-sage-500 text-white"
@@ -71,12 +77,14 @@ export default function ReviewsPage() {
 
                     {/* Testimonial grid — CSS columns for masonry effect */}
                     <div className="columns-1 md:columns-2 gap-6 space-y-6">
-                        {filtered.map((t, i) => (
+                        {testimonials.map((t, i) => (
                             <div
                                 key={i}
                                 className="break-inside-avoid"
                                 data-reveal
                                 data-reveal-delay={i * 50}
+                                data-filter-item
+                                data-category={t.category}
                             >
                                 <TestimonialCard
                                     quote={t.quote}
@@ -87,13 +95,6 @@ export default function ReviewsPage() {
                             </div>
                         ))}
                     </div>
-
-                    {filtered.length === 0 && (
-                        <p className="text-center text-text-secondary py-12">
-                            No reviews in this category yet. Try selecting a
-                            different filter.
-                        </p>
-                    )}
                 </div>
             </section>
 

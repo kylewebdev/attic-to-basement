@@ -102,3 +102,9 @@
   0%, 100% { opacity: 0.8; }
   50% { opacity: 1; }
 }
+
+/* ===== Filter Animation ===== */
+.filter-hidden {
+  display: none !important;
+}
+

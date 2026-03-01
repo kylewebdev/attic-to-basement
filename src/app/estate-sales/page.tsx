@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -9,18 +9,37 @@ import Button from "@/components/ui/Button";
 import { sales, isSaleActive } from "@/lib/data/sales";
 import NewsletterSignup from "@/components/sections/NewsletterSignup";
 import { useScrollReveal } from "@/lib/useScrollReveal";
+import { useFilterAnimation } from "@/lib/useFilterAnimation";
 
 export default function EstateSalesPage() {
     const containerRef = useScrollReveal();
+    const { applyFilter } = useFilterAnimation({ containerRef });
     const activeSales = sales.filter(isSaleActive);
     const uniqueAreas = Array.from(
         new Set(activeSales.map((s) => s.area))
     );
     const [activeFilter, setActiveFilter] = useState("all");
-    const filteredSales =
+
+    // Count visible items for empty state
+    const visibleCount =
         activeFilter === "all"
-            ? activeSales
-            : activeSales.filter((s) => s.area === activeFilter);
+            ? activeSales.length
+            : activeSales.filter((s) => s.area === activeFilter).length;
+
+    const handleFilter = useCallback(
+        (value: string, label: string) => {
+            setActiveFilter(value);
+            applyFilter((el) => {
+                if (value === "all") return true;
+                return el.getAttribute("data-area") === value;
+            });
+            posthog.capture("estate_sale_filter_selected", {
+                filter_value: value,
+                filter_label: label,
+            });
+        },
+        [applyFilter]
+    );
 
     return (
         <div ref={containerRef}>
@@ -55,16 +74,9 @@ export default function EstateSalesPage() {
                                     ].map((f) => (
                                         <button
                                             key={f.value}
-                                            onClick={() => {
-                                                setActiveFilter(f.value);
-                                                posthog.capture(
-                                                    "estate_sale_filter_selected",
-                                                    {
-                                                        filter_value: f.value,
-                                                        filter_label: f.label,
-                                                    }
-                                                );
-                                            }}
+                                            onClick={() =>
+                                                handleFilter(f.value, f.label)
+                                            }
                                             className={`rounded-full text-sm font-semibold transition-colors min-h-11 ${
                                                 f.value === "all" ? "px-6 py-2.5" : "px-4 py-2"
                                             } ${
@@ -79,17 +91,19 @@ export default function EstateSalesPage() {
                                 </div>
                             )}
                             <div className="mt-12 grid gap-6">
-                                {filteredSales.map((sale, i) => (
+                                {activeSales.map((sale, i) => (
                                     <div
                                         key={sale.id}
                                         data-reveal
                                         data-reveal-delay={i * 100}
+                                        data-filter-item
+                                        data-area={sale.area}
                                     >
                                         <SaleCard sale={sale} />
                                     </div>
                                 ))}
                             </div>
-                            {filteredSales.length === 0 && (
+                            {visibleCount === 0 && (
                                 <p className="text-center text-text-secondary mt-12">
                                     No sales in this area right now.
                                 </p>
