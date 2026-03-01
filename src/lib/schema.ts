@@ -180,21 +180,14 @@ export function getFAQSchema(items: { question: string; answer: string }[]) {
 }
 
 export function getReviewSchema(testimonials: Testimonial[]) {
-    // The aggregateRating uses the Yelp-wide numbers (49 reviews, 4.5 stars)
-    // to represent the business's overall rating across platforms.
-    // The individual review[] array below contains the on-site testimonials
-    // (currently 11) — these are a curated subset, not the full review corpus.
+    // Individual reviews attached to the same business entity.
+    // aggregateRating lives only on the LocalBusiness schema (root layout)
+    // to avoid Google's "multiple aggregate ratings" error.
     return {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "@id": businessId,
         name: businessName,
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: YELP_RATING,
-            bestRating: "5",
-            reviewCount: YELP_REVIEW_COUNT,
-        },
         review: testimonials.map((t) => ({
             "@type": "Review",
             author: {
