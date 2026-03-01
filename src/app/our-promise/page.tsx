@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import Hero from "@/components/sections/Hero";
+import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
@@ -100,7 +102,14 @@ export default function OurPromisePage() {
                                     downsizing, or just ready for a fresh start,
                                     Cortnee and her team are here to make the
                                     process as smooth and respectful as
-                                    possible.
+                                    possible. Browse our{" "}
+                                    <Link
+                                        href="/estate-sales"
+                                        className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                                    >
+                                        upcoming estate sales
+                                    </Link>
+                                    {" "}to see our work in action.
                                 </p>
                             </div>
                         </div>
@@ -131,6 +140,26 @@ export default function OurPromisePage() {
                             </div>
                         ))}
                     </div>
+                    <p
+                        className="mt-10 text-center text-sm text-text-secondary"
+                        data-reveal
+                    >
+                        Learn more about our{" "}
+                        <Link
+                            href="/estate-liquidation"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            estate liquidation
+                        </Link>
+                        {" "}and{" "}
+                        <Link
+                            href="/appraisals"
+                            className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        >
+                            appraisal
+                        </Link>
+                        {" "}services.
+                    </p>
                 </div>
             </section>
 
@@ -166,7 +195,7 @@ export default function OurPromisePage() {
             </section>
 
             {/* CTA */}
-            <section className="py-12 bg-bg-alt">
+            <section className="py-12 bg-bg-card">
                 <div className="max-w-3xl mx-auto px-4 text-center" data-reveal>
                     <p className="text-lg text-text-secondary mb-6">
                         See what our clients have to say.
@@ -176,6 +205,8 @@ export default function OurPromisePage() {
                     </Button>
                 </div>
             </section>
+
+            <ConsultationCTA />
         </div>
     );
 }
