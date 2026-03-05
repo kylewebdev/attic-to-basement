@@ -61,7 +61,7 @@ export default function EstateSalesPage() {
                                     subtitle="Check back often — new sales are added regularly."
                                 />
                             </div>
-                            {uniqueAreas.length >= 2 && (
+                            {uniqueAreas.length >= 3 && (
                                 <div
                                     data-reveal
                                     className="flex flex-wrap gap-2 justify-center mt-8"

@@ -1,20 +1,17 @@
-// This file configures the initialization of Sentry on the client.
-// The added config here will be used whenever a users loads a page in their browser.
-// https://docs.sentry.io/platforms/javascript/guides/nextjs/
+import posthog from "posthog-js";
 
-import * as Sentry from "@sentry/nextjs";
-
-Sentry.init({
-  dsn: "https://204447c06d4e5c645121a5b73a1ea0c4@o4510977123287040.ingest.us.sentry.io/4510977126629376",
-
-  // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
-  tracesSampleRate: 1,
-  // Enable logs to be sent to Sentry
-  enableLogs: true,
-
-  // Enable sending user PII (Personally Identifiable Information)
-  // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/options/#sendDefaultPii
-  sendDefaultPii: true,
+posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
+  api_host: "/ingest",
+  ui_host: "https://us.posthog.com",
+  // Include the defaults option as required by PostHog
+  defaults: "2026-01-30",
+  // Enables capturing unhandled exceptions via Error Tracking
+  capture_exceptions: true,
+  // Turn on debug in development mode
+  debug: process.env.NODE_ENV === "development",
 });
 
-export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;
+// IMPORTANT: Never combine this approach with other client-side PostHog
+// initialization approaches, especially components like a PostHogProvider.
+// instrumentation-client.ts is the correct solution for initializing
+// client-side PostHog in Next.js 15.3+ apps.
