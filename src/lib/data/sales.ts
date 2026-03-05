@@ -47,7 +47,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/West-Sacramento/95691/4823448",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/west-sacramento-/95691/scentsational-treasures-2427554",
+            "https://estatesales.org/estate-sales/ca/west-sacramento/95691/scentsational-treasures-2427554",
     },
     {
         id: "citrus-heights-march-2026",
