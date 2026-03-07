@@ -2,6 +2,8 @@ export interface Sale {
     id: string;
     title: string;
     dates: string;
+    /** First day of the sale in YYYY-MM-DD format (e.g. "2026-03-01"). */
+    startDate: string;
     /** Last day of the sale in YYYY-MM-DD format (e.g. "2026-03-01"). Used to auto-hide sales after 5 PM on their final day. */
     endDate: string;
     area: string;
@@ -23,6 +25,7 @@ export const sales: Sale[] = [
         id: "sacramento-natomas-march-2026",
         title: "Nifty Natomas Sale",
         dates: "March 6–7th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-06",
         endDate: "2026-03-07",
         area: "Sacramento, CA",
         categories: [
@@ -41,6 +44,7 @@ export const sales: Sale[] = [
         id: "west-sacramento-march-2026",
         title: "Scent-sational Treasures",
         dates: "March 6–8th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-06",
         endDate: "2026-03-08",
         area: "West Sacramento, CA",
         categories: ["Trains", "Crystal", "Holiday Décor", "Clothing", "Bar Ware"],
@@ -53,6 +57,7 @@ export const sales: Sale[] = [
         id: "citrus-heights-march-2026",
         title: "Treasures From Around the Globe",
         dates: "March 6–8th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-03-06",
         endDate: "2026-03-08",
         area: "Citrus Heights, CA",
         categories: ["Collectibles", "Antiques", "Décor"],
@@ -65,6 +70,7 @@ export const sales: Sale[] = [
         id: "sacramento-treasures-march-2026",
         title: "70+ Years of Treasures — Lanterns, Knick-Knacks, Jewelry & More",
         dates: "March 6–8th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-06",
         endDate: "2026-03-08",
         area: "Sacramento, CA",
         categories: ["Lanterns", "Knick-Knacks", "Jewelry", "Collectibles"],
@@ -77,6 +83,7 @@ export const sales: Sale[] = [
         id: "placerville-march-2026",
         title: "Pickin' in Placerville — Vehicles, Equipment & More",
         dates: "March 13–15th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-13",
         endDate: "2026-03-15",
         area: "Placerville, CA",
         categories: ["Vehicles", "Equipment", "Outdoor", "Household"],
@@ -89,6 +96,7 @@ export const sales: Sale[] = [
         id: "yuba-city-march-2026",
         title: "Decades of Treasures in Yuba City",
         dates: "March 13–15th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-13",
         endDate: "2026-03-15",
         area: "Yuba City, CA",
         categories: ["Collectibles", "Household", "Vintage"],
@@ -101,6 +109,7 @@ export const sales: Sale[] = [
         id: "citrus-heights-2-march-2026",
         title: "A Little of Everything in Citrus Heights",
         dates: "March 13–15th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-13",
         endDate: "2026-03-15",
         area: "Citrus Heights, CA",
         categories: ["Household", "Collectibles", "Décor"],
@@ -113,6 +122,7 @@ export const sales: Sale[] = [
         id: "sacramento-collecting-march-2026",
         title: "Clothes, Shoes & Decades of Collecting",
         dates: "March 13–15th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-13",
         endDate: "2026-03-15",
         area: "Sacramento, CA",
         categories: ["Clothing", "Shoes", "Collectibles"],

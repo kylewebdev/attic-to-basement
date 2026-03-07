@@ -21,6 +21,7 @@ export interface Sale {
     id: string;
     title: string;
     dates: string;
+    startDate: string;
     endDate: string;
     area: string;
     categories: string[];
@@ -36,6 +37,7 @@ export interface Sale {
 | `id` | Yes | kebab-case slug: `"roseville-march-2026"` (city + month + year) |
 | `title` | Yes | Sale headline: `"Mid-Century Modern & Vintage Collection"` |
 | `dates` | Yes | Human-readable date range spanning first through last date: `"March 7–8th, 2026 \| 8 AM – 3 PM"` |
+| `startDate` | Yes | First day of the sale in `YYYY-MM-DD` format: `"2026-03-07"`. Used for Event schema markup. |
 | `endDate` | Yes | Last day of the sale in `YYYY-MM-DD` format: `"2026-03-08"`. Used to auto-hide sales after 5 PM on their final day. |
 | `area` | Yes | City and state: `"Roseville, CA"` |
 | `categories` | Yes | Array of 3–5 category strings describing item types |
@@ -103,6 +105,7 @@ content: update estate sales data
     id: "roseville-march-2026",
     title: "Roseville Estate — Mid-Century Modern & Vintage Collection",
     dates: "March 7–8, 2026 | 8 AM – 3 PM",
+    startDate: "2026-03-07",
     endDate: "2026-03-08",
     area: "Roseville, CA",
     categories: [
@@ -125,4 +128,5 @@ content: update estate sales data
 - **If zero sales are provided**, set the array to empty: `export const sales: Sale[] = [];`
 - **estatesales.net is the source of truth.** When .net and .org data conflict, use all field values from .net. Only use .org for its listing URL (`externalUrlOrg`).
 - **Dates span first through last.** Always format as a range from the earliest date to the latest date (e.g., `"March 6–8"`), not as individual dates.
+- **`startDate` must match the first date in `dates`.** Set `startDate` to the first day of the sale in `YYYY-MM-DD` format. Used for Event schema markup.
 - **`endDate` must match the last date in `dates`.** Set `endDate` to the final day of the sale in `YYYY-MM-DD` format. Sales are automatically hidden after 5 PM on this date.

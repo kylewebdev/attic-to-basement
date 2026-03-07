@@ -32,8 +32,8 @@ export default function EstateSalesLayout({
                 ])}
             />
             {activeSales.length > 0 &&
-                getEventSchema(activeSales).map((event) => (
-                    <JsonLd key={event.name} data={event} />
+                getEventSchema(activeSales).map((event, i) => (
+                    <JsonLd key={activeSales[i].id} data={event} />
                 ))}
             {children}
         </>

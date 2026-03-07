@@ -167,31 +167,12 @@ export function getFAQSchema(items: { question: string; answer: string }[]) {
     };
 }
 
-/**
- * Derives the start date (YYYY-MM-DD) from the `dates` display string and `endDate`.
- * Format: "March 6–8th, 2026 | 9 AM – 2 PM" → extracts first day number,
- * uses year/month from endDate.
- */
-function deriveStartDate(dates: string, endDate: string): string {
-    const match = dates.match(/(\w+)\s+(\d+)/);
-    if (!match) return endDate;
-    const monthNames: Record<string, string> = {
-        January: "01", February: "02", March: "03", April: "04",
-        May: "05", June: "06", July: "07", August: "08",
-        September: "09", October: "10", November: "11", December: "12",
-    };
-    const month = monthNames[match[1]] || endDate.slice(5, 7);
-    const day = match[2].padStart(2, "0");
-    const year = endDate.slice(0, 4);
-    return `${year}-${month}-${day}`;
-}
-
 export function getEventSchema(salesToRender: Sale[]) {
     return salesToRender.map((sale) => ({
         "@context": "https://schema.org",
         "@type": "Event",
         name: sale.title,
-        startDate: deriveStartDate(sale.dates, sale.endDate),
+        startDate: sale.startDate,
         endDate: sale.endDate,
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         eventStatus: "https://schema.org/EventScheduled",
