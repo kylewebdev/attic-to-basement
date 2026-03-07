@@ -1,6 +1,11 @@
 import { getPageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/seo/JsonLd";
-import { getServiceSchema, getBreadcrumbSchema } from "@/lib/schema";
+import {
+    getServiceSchema,
+    getBreadcrumbSchema,
+    getEventSchema,
+} from "@/lib/schema";
+import { sales, isSaleActive } from "@/lib/data/sales";
 
 export const metadata = getPageMetadata("estateSales");
 
@@ -9,6 +14,8 @@ export default function EstateSalesLayout({
 }: {
     children: React.ReactNode;
 }) {
+    const activeSales = sales.filter(isSaleActive);
+
     return (
         <>
             <JsonLd
@@ -24,6 +31,10 @@ export default function EstateSalesLayout({
                     { name: "Estate Sales", path: "/estate-sales" },
                 ])}
             />
+            {activeSales.length > 0 &&
+                getEventSchema(activeSales).map((event) => (
+                    <JsonLd key={event.name} data={event} />
+                ))}
             {children}
         </>
     );
