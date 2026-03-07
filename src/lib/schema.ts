@@ -1,6 +1,4 @@
 import type { Sale } from "@/lib/data/sales";
-import type { Testimonial } from "@/lib/data/testimonials";
-
 const siteUrl = "https://abeliquidators.com";
 const businessName = "Attic to Basement Estate Liquidators";
 const businessId = `${siteUrl}/#business`;
@@ -13,10 +11,6 @@ const sameAs = [
     "https://estatesales.org/estate-sale-companies/attic-to-basement-estate-liquidators-23935",
     "https://estatesales.net/companies/CA/Citrus-Heights/95610/156176",
 ];
-
-// Yelp-wide aggregate rating — update these when the Yelp profile changes
-const YELP_RATING = "4.5";
-const YELP_REVIEW_COUNT = 49;
 
 export function getLocalBusinessSchema() {
     return {
@@ -110,13 +104,6 @@ export function getLocalBusinessSchema() {
                     },
                 },
             ],
-        },
-        // Yelp-wide aggregate rating (49 reviews across Yelp)
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: YELP_RATING,
-            bestRating: "5",
-            reviewCount: YELP_REVIEW_COUNT,
         },
         description:
             "Full-service estate sales, buyouts, cleanouts, and appraisals across Northern California.",
@@ -229,27 +216,3 @@ export function getEventSchema(salesToRender: Sale[]) {
     }));
 }
 
-export function getReviewSchema(testimonials: Testimonial[]) {
-    // Individual reviews attached to the same business entity.
-    // aggregateRating lives only on the LocalBusiness schema (root layout)
-    // to avoid Google's "multiple aggregate ratings" error.
-    return {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "@id": businessId,
-        name: businessName,
-        review: testimonials.map((t) => ({
-            "@type": "Review",
-            author: {
-                "@type": "Person",
-                name: t.name,
-            },
-            reviewRating: {
-                "@type": "Rating",
-                ratingValue: t.rating,
-                bestRating: 5,
-            },
-            reviewBody: t.quote,
-        })),
-    };
-}
