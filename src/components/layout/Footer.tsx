@@ -43,6 +43,11 @@ export default function Footer() {
                             className="h-24 w-auto mb-6 invert"
                         />
                         <p className="text-sm text-text-secondary mt-1">
+                            Professional estate sales, liquidation, and
+                            appraisal services across Sacramento and Northern
+                            California.
+                        </p>
+                        <p className="text-sm text-text-secondary mt-1">
                             Sacramento, CA 95821
                         </p>
                         <a

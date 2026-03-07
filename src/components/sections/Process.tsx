@@ -206,10 +206,16 @@ export default function Process() {
                     <h2
                         data-process-headline
                         data-animate
-                        className="font-serif text-3xl md:text-4xl text-text-heading text-center mb-16"
+                        className="font-serif text-3xl md:text-4xl text-text-heading text-center mb-4"
                     >
                         From attic to basement. Here is how it works.
                     </h2>
+                    <p
+                        data-animate
+                        className="text-center text-text-secondary mb-16 text-lg"
+                    >
+                        Our full-service estate sale process
+                    </p>
 
                     <div className="relative">
                         {/* Progress line — top/height set dynamically via JS to span first→last icon */}

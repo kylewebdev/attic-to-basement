@@ -116,9 +116,9 @@ export default function Turn() {
                         data-animate
                         className="mt-6 text-lg text-text-secondary leading-relaxed"
                     >
-                        Attic to Basement Estate Liquidators handles everything,
-                        from the first walkthrough to the final sweep, so you do
-                        not have to figure it out alone.
+                        Attic to Basement Estate Liquidators handles your entire
+                        estate sale, from the first walkthrough to the final
+                        sweep, so you do not have to figure it out alone.
                     </p>
                     <p
                         data-turn-supporting

@@ -84,8 +84,9 @@ export default function TheAsk() {
           data-animate
           className="mt-6 text-lg text-text-secondary leading-relaxed"
         >
-          Schedule your free, no-obligation consultation. We will come to you,
-          walk through your situation, and give you a clear plan. No surprises.
+          Schedule your free, no-obligation estate sale consultation. We will
+          come to you, walk through your situation, and give you a clear plan.
+          No surprises.
         </p>
         <div
           data-ask-cta
