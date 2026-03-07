@@ -1,7 +1,17 @@
 import type { MetadataRoute } from "next";
+import { cities, services } from "@/lib/data/service-areas";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://abeliquidators.com";
+
+    const serviceAreaPages: MetadataRoute.Sitemap = cities.flatMap((city) =>
+        services.map((service) => ({
+            url: `${baseUrl}/services/${city.slug}/${service.slug}`,
+            lastModified: "2026-03-07",
+            changeFrequency: "monthly" as const,
+            priority: service.slug === "estate-sales" ? 0.7 : 0.5,
+        }))
+    );
 
     return [
         {
@@ -58,5 +68,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "yearly",
             priority: 0.3,
         },
+        ...serviceAreaPages,
     ];
 }

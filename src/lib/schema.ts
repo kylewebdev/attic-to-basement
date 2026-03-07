@@ -167,6 +167,42 @@ export function getFAQSchema(items: { question: string; answer: string }[]) {
     };
 }
 
+export function getServiceAreaSchema({
+    serviceName,
+    description,
+    path,
+    city,
+    county,
+}: {
+    serviceName: string;
+    description: string;
+    path: string;
+    city: string;
+    county: string;
+}) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: `${serviceName} in ${city}, CA`,
+        description,
+        url: `${siteUrl}${path}`,
+        provider: {
+            "@type": "ProfessionalService",
+            "@id": businessId,
+        },
+        areaServed: [
+            { "@type": "City", name: city },
+            { "@type": "AdministrativeArea", name: `${county} County` },
+        ],
+    };
+}
+
+export function getServiceAreaBreadcrumbSchema(
+    crumbs: { name: string; path: string }[]
+) {
+    return getBreadcrumbSchema(crumbs);
+}
+
 export function getEventSchema(salesToRender: Sale[]) {
     return salesToRender.map((sale) => ({
         "@context": "https://schema.org",
