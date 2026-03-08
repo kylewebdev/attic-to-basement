@@ -22,25 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-natomas-march-2026",
-        title: "Nifty Natomas Sale",
-        dates: "March 6–7th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-03-06",
-        endDate: "2026-03-07",
-        area: "Sacramento, CA",
-        categories: [
-            "Clothing",
-            "Luggage",
-            "Books",
-            "Kitchen Items",
-            "Jewelry",
-        ],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95835/4814823",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95835/50-off-10-off-jewelry-2426361",
-    },
-    {
         id: "west-sacramento-march-2026",
         title: "Scent-sational Treasures",
         dates: "March 6–8th, 2026 | 9 AM – 2 PM",
