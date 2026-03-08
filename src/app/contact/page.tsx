@@ -81,6 +81,12 @@ export default function ContactPage() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
+                                        onClick={() =>
+                                            posthog.capture("social_link_clicked", {
+                                                platform: "Instagram",
+                                                location: "contact_page",
+                                            })
+                                        }
                                     >
                                         @abe.liquidators
                                     </a>

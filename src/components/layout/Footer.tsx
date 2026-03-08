@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import posthog from "posthog-js";
 
 const navLinks = [
     { label: "Estate Sales", href: "/estate-sales" },
@@ -53,6 +56,11 @@ export default function Footer() {
                         <a
                             href="tel:+19165211077"
                             className="inline-block mt-3 text-sage-300 hover:text-sage-400 font-semibold transition-colors"
+                            onClick={() =>
+                                posthog.capture("phone_number_clicked", {
+                                    location: "footer",
+                                })
+                            }
                         >
                             (916) 521-1077
                         </a>
@@ -63,6 +71,12 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 className="text-text-secondary hover:text-text-heading transition-colors"
                                 aria-label="Instagram"
+                                onClick={() =>
+                                    posthog.capture("social_link_clicked", {
+                                        platform: "Instagram",
+                                        location: "footer",
+                                    })
+                                }
                             >
                                 <svg
                                     className="w-5 h-5"
@@ -78,6 +92,12 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 className="text-text-secondary hover:text-text-heading transition-colors"
                                 aria-label="TikTok"
+                                onClick={() =>
+                                    posthog.capture("social_link_clicked", {
+                                        platform: "TikTok",
+                                        location: "footer",
+                                    })
+                                }
                             >
                                 <svg
                                     className="w-5 h-5"
@@ -118,6 +138,13 @@ export default function Footer() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-sm text-text-secondary hover:text-text-heading transition-colors"
+                                        onClick={() =>
+                                            posthog.capture("external_review_platform_clicked", {
+                                                platform: link.label,
+                                                location: "footer",
+                                                url: link.href,
+                                            })
+                                        }
                                     >
                                         {link.label}
                                     </a>

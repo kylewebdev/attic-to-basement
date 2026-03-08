@@ -173,10 +173,16 @@ export default function EstateSalesPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                        onClick={() =>
+                            posthog.capture("external_review_platform_clicked", {
+                                platform: "BBB",
+                                location: "estate_sales_trust_strip",
+                                url: "https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497",
+                            })
+                        }
                     >
                         BBB Accredited
-                    </a>
-                    {" · "}20+ Years Combined Experience
+                    </a>{" · "}20+ Years Combined Experience
                 </div>
             </section>
 

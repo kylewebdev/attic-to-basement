@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
+import posthog from "posthog-js";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import ServiceAreaMap from "./ServiceAreaMap";
@@ -134,6 +135,11 @@ export default function ServiceArea() {
           <a
             href="tel:+19165211077"
             className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
+            onClick={() =>
+              posthog.capture("phone_number_clicked", {
+                location: "home_service_area",
+              })
+            }
           >
             Call us
           </a>

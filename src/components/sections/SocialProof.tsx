@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import posthog from "posthog-js";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import TestimonialCard from "@/components/ui/TestimonialCard";
@@ -183,6 +184,13 @@ export default function SocialProof() {
                 data-social-stat
                 data-animate
                 className="text-center hover:opacity-80 transition-opacity"
+                onClick={() =>
+                  posthog.capture("external_review_platform_clicked", {
+                    platform: stat.label,
+                    location: "home_social_proof",
+                    url: stat.href,
+                  })
+                }
               >
                 {content}
               </a>
