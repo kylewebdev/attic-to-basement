@@ -32,12 +32,12 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/West-Sacramento/95691/4823448",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/west-sacramento/95691/scentsational-treasures-2427554",
+            "https://estatesales.org/estate-sales/ca/west-sacramento/95691/50-off-sunday-scentsational-treasures-2427554",
     },
     {
         id: "citrus-heights-march-2026",
         title: "Treasures From Around the Globe",
-        dates: "March 6–8th, 2026 | 9 AM – 3 PM",
+        dates: "March 6–8th, 2026 | 9 AM – 2 PM",
         startDate: "2026-03-06",
         endDate: "2026-03-08",
         area: "Citrus Heights, CA",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Citrus-Heights/95610/4823748",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/treasures-from-around-the-globe-2427749",
+            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/50-off-sunday-treasures-from-2427749",
     },
     {
         id: "sacramento-treasures-march-2026",
@@ -58,7 +58,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95820/4825929",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95820/70-years-of-treasures-lanterns-2427879",
+            "https://estatesales.org/estate-sales/ca/sacramento/95820/50-off-sunday-70-years-2427879",
     },
     {
         id: "placerville-march-2026",
