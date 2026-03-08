@@ -7,11 +7,12 @@ import {
     getCityBySlug,
     getServiceBySlug,
 } from "@/lib/data/service-areas";
-import { siteUrl, siteName, sitePhone } from "@/lib/metadata";
+import { siteUrl, siteName } from "@/lib/metadata";
 import {
     getServiceAreaSchema,
     getServiceAreaBreadcrumbSchema,
 } from "@/lib/schema";
+import ServiceAreaCTA from "./ServiceAreaCTA";
 
 interface PageProps {
     params: Promise<{ city: string; service: string }>;
@@ -248,20 +249,7 @@ export default async function ServiceAreaPage({ params }: PageProps) {
                         no-obligation consultation. We respond to inquiries 7
                         days a week.
                     </p>
-                    <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center justify-center rounded-full bg-sage-500 text-white font-semibold px-8 py-3 hover:bg-sage-600 transition-colors min-h-11"
-                        >
-                            Schedule a Free Consultation
-                        </Link>
-                        <a
-                            href={`tel:+1${sitePhone.replace(/\D/g, "")}`}
-                            className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
-                        >
-                            Or call: {sitePhone}
-                        </a>
-                    </div>
+                    <ServiceAreaCTA serviceSlug={service.slug} cityName={city.city} />
 
                     {/* Cross-links */}
                     <div className="mt-8 space-y-2 text-sm text-text-secondary">

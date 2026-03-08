@@ -1,50 +1,31 @@
 <wizard-report>
 # PostHog post-wizard report
 
-The wizard has completed a deep integration of PostHog analytics into the ABE Liquidators Next.js App Router project. Here's a summary of everything that was set up:
+The wizard has completed a targeted pass to fill gaps in the existing PostHog instrumentation. PostHog was already initialized via `instrumentation-client.ts` with exception capture, a reverse proxy, and debug mode. This pass added 5 new events across 4 files — with one new client component (`ServiceAreaCTA`) created to enable tracking on the Server Component service area pages.
 
-**SDK initialization** was added via `instrumentation-client.ts` at the project root — the correct approach for Next.js 15.3+. This initializes PostHog with a reverse proxy through `/ingest` (configured in `next.config.ts`), exception capture enabled, and debug mode in development.
-
-**10 custom events** were instrumented across 7 files, focusing on the most business-critical user actions: consultation form submissions and errors, phone number clicks, CTA button clicks, review filter interactions, external platform link clicks, Instagram clicks, and mobile navigation engagement.
-
-**Environment variables** (`NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST`) were written to `.env.local` and are referenced via `process.env` — no keys are hardcoded anywhere.
-
-## Files changed
-
-| File | Changes |
-|------|---------|
-| `instrumentation-client.ts` | **New file** — PostHog client-side initialization for Next.js 15.3+ |
-| `next.config.ts` | Added PostHog reverse proxy rewrites and `skipTrailingSlashRedirect` |
-| `.env.local` | Added `NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST` |
-
-## Events instrumented
+## New events added
 
 | Event | Description | File |
 |-------|-------------|------|
-| `consultation_form_submitted` | User submits the free consultation request form successfully | `src/components/forms/ConsultationForm.tsx` |
-| `consultation_form_errored` | Consultation form submission fails with a server or network error | `src/components/forms/ConsultationForm.tsx` |
-| `consultation_page_viewed` | User views the contact/consultation page (top of conversion funnel) | `src/app/contact/page.tsx` |
-| `phone_number_clicked` | User clicks a phone number link to call the business | `src/app/contact/page.tsx`, `src/components/sections/TheAsk.tsx` |
-| `cta_clicked` | User clicks the primary "Schedule Your Free Consultation" CTA on the homepage | `src/components/sections/TheAsk.tsx` |
-| `review_filter_selected` | User clicks a filter tab on the Reviews page | `src/app/reviews/page.tsx` |
-| `external_review_platform_clicked` | User clicks a link to Yelp, BBB, EstateSales.org, or EstateSales.net | `src/app/reviews/page.tsx` |
-| `instagram_link_clicked` | User clicks the Instagram profile link on the Estate Sales page | `src/app/estate-sales/page.tsx` |
-| `mobile_nav_opened` | User opens the mobile navigation drawer | `src/components/layout/Header.tsx` |
-| `mobile_nav_cta_clicked` | User clicks the Free Consultation CTA inside the mobile nav drawer | `src/components/layout/MobileNav.tsx` |
+| `service_area_cta_clicked` | User clicks "Schedule a Free Consultation" on a programmatic SEO service area page | `src/app/services/[city]/[service]/ServiceAreaCTA.tsx` (new) |
+| `service_area_phone_clicked` | User clicks the phone number on a programmatic SEO service area page | `src/app/services/[city]/[service]/ServiceAreaCTA.tsx` (new) |
+| `estate_sale_cross_sell_cta_clicked` | User clicks the cross-sell CTA at the bottom of the estate sales page | `src/app/estate-sales/page.tsx` |
+| `appraisals_bbb_link_clicked` | User clicks the BBB accreditation link in the appraisals credentials section | `src/app/appraisals/page.tsx` |
+| `global_error_captured` | Unhandled global error caught and reported via `captureException` | `src/app/global-error.tsx` |
 
 ## Next steps
 
 We've built some insights and a dashboard for you to keep an eye on user behavior, based on the events we just instrumented:
 
 **Dashboard**
-- [Analytics basics](https://us.posthog.com/project/144315/dashboard/1317210)
+- [Analytics basics](https://us.posthog.com/project/144315/dashboard/1340981)
 
 **Insights**
-- [Consultation Conversion Funnel](https://us.posthog.com/project/144315/insights/SKQtuWNc) — Contact page views → form submissions funnel
-- [Lead Generation Actions (Daily)](https://us.posthog.com/project/144315/insights/qfeliBU5) — Daily trend of form submissions, phone clicks, and CTA clicks
-- [Consultation Form Success vs Error Rate](https://us.posthog.com/project/144315/insights/4U3B7Jfc) — Weekly form health monitoring
-- [External Link & Social Engagement](https://us.posthog.com/project/144315/insights/tT8Y0kxE) — Clicks to Yelp, BBB, and Instagram
-- [Mobile Navigation Engagement](https://us.posthog.com/project/144315/insights/yrbEBzox) — Mobile nav opens vs CTA clicks inside the drawer
+- [Consultation Conversion Funnel](https://us.posthog.com/project/144315/insights/PiTQOCOM) — CTA click → page view → form submit funnel
+- [Lead Generation Over Time](https://us.posthog.com/project/144315/insights/Bg1pejL0) — Daily form submissions and phone clicks
+- [All Conversions by Channel](https://us.posthog.com/project/144315/insights/Yi4TeHpY) — Phone, form, and newsletter totals
+- [Service Area Page Conversions](https://us.posthog.com/project/144315/insights/ERP5Ps8V) — Conversions from SEO landing pages
+- [Engagement: Reviews & Social Links](https://us.posthog.com/project/144315/insights/RFR3skvY) — External link engagement weekly
 
 ### Agent skill
 

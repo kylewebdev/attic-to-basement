@@ -197,7 +197,11 @@ export default function EstateSalesPage() {
                         staging, pricing, marketing, and cleanup. Let us take it
                         from here.
                     </p>
-                    <div className="mt-8">
+                    <div className="mt-8" onClick={() =>
+                        posthog.capture("estate_sale_cross_sell_cta_clicked", {
+                            location: "estate_sales_cross_sell",
+                        })
+                    }>
                         <Button href="/contact" variant="primary">
                             Schedule a Free Consultation
                         </Button>

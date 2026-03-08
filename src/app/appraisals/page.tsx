@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import posthog from "posthog-js";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -195,6 +196,11 @@ export default function AppraisalsPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
+                            onClick={() =>
+                                posthog.capture("appraisals_bbb_link_clicked", {
+                                    location: "appraisals_credentials",
+                                })
+                            }
                         >
                             BBB
                         </a>
