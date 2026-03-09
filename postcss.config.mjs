@@ -1,11 +1,7 @@
 const config = {
   plugins: {
     "@tailwindcss/postcss": {},
-    "postcss-preset-env": {
-      features: {
-        "nesting-rules": false,
-      },
-    },
+    "@csstools/postcss-oklab-function": { preserve: true },
   },
 };
 
