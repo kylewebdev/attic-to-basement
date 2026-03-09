@@ -26,27 +26,20 @@ export default function SaleCard({ sale }: SaleCardProps) {
 
             {/* Card content */}
             <div className="relative z-10">
-                <div className="flex items-start justify-between gap-4 mb-3">
+                <div className="flex items-start justify-between gap-4 mb-1">
                     <h3 className="font-serif text-xl text-text-heading">
                         {sale.title}
                     </h3>
                 </div>
+                {sale.categories.length > 0 && (
+                    <p className="text-xs text-text-secondary mb-3">
+                        {sale.categories.join(' · ')}
+                    </p>
+                )}
                 <p className="text-sage-300 font-semibold text-sm mb-1">
                     {sale.dates}
                 </p>
                 <p className="text-text-secondary text-sm mb-4">{sale.area}</p>
-                {sale.categories.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        {sale.categories.map((cat) => (
-                            <span
-                                key={cat}
-                                className="text-xs bg-sage-50/30 text-sage-300 px-2 py-1 rounded-full border border-sage-200/30"
-                            >
-                                {cat}
-                            </span>
-                        ))}
-                    </div>
-                )}
                 {(sale.externalUrlNet || sale.externalUrlOrg) && (
                     <div className="flex flex-wrap gap-x-3 gap-y-2">
                         {sale.externalUrlNet && (
