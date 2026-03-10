@@ -12,6 +12,7 @@ type PageKey =
     | "appraisals"
     | "ourPromise"
     | "reviews"
+    | "resources"
     | "contact"
     | "privacy"
     | "terms";
@@ -97,6 +98,19 @@ const pages: Record<PageKey, PageConfig> = {
             "estate liquidator reviews",
             "Attic to Basement reviews",
             "estate sale testimonials",
+        ],
+    },
+    resources: {
+        title: "Resources & Partners | Attic To Basement Estate Liquidators",
+        description:
+            "Trusted partners and helpful resources for families navigating estate sales, probate, and life transitions in Northern California.",
+        path: "/resources",
+        keywords: [
+            "estate sale resources Sacramento",
+            "probate attorney Sacramento",
+            "estate liquidation partners",
+            "senior move manager Northern California",
+            "estate planning resources",
         ],
     },
     contact: {

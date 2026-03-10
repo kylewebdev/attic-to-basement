@@ -1,6 +1,6 @@
 import Button from "@/components/ui/Button";
 
-type ColorScheme = "estate-sales" | "estate-liquidation" | "appraisals" | "our-promise" | "reviews" | "contact";
+type ColorScheme = "estate-sales" | "estate-liquidation" | "appraisals" | "our-promise" | "reviews" | "resources" | "contact";
 
 interface HeroProps {
   title: string;
@@ -49,6 +49,14 @@ const colorSchemes: Record<ColorScheme, {
     blobs: [
       { color: "var(--color-sage-100)", opacity: 0.2, size: 340, top: "-70px", left: "-60px", borderRadius: "55% 45% 60% 40% / 45% 55% 40% 60%" },
       { color: "var(--color-gold-400)", opacity: 0.08, size: 200, bottom: "-40px", right: "-50px", borderRadius: "40% 60% 45% 55% / 60% 40% 55% 45%" },
+    ],
+  },
+  resources: {
+    gradient: "linear-gradient(155deg, var(--color-warm-white) 0%, var(--color-sage-50) 60%, var(--color-warm-50) 100%)",
+    blobs: [
+      { color: "var(--color-sage-200)", opacity: 0.25, size: 340, top: "-60px", left: "-70px", borderRadius: "50% 60% 45% 55% / 55% 45% 60% 50%" },
+      { color: "var(--color-warm-100)", opacity: 0.2, size: 260, bottom: "-50px", right: "-40px", borderRadius: "45% 55% 60% 40% / 60% 40% 50% 55%" },
+      { color: "var(--color-sage-100)", opacity: 0.15, size: 200, top: "25%", right: "15%", borderRadius: "55% 45% 50% 60% / 45% 55% 60% 40%" },
     ],
   },
   contact: {
