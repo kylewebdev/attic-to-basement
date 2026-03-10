@@ -193,7 +193,7 @@ export default function ConsultationForm() {
       </fieldset>
 
       {status === "error" && (
-        <p role="alert" aria-live="assertive" className="text-red-600 text-sm">
+        <p role="alert" aria-live="assertive" className="text-text-error text-sm">
           Something went wrong. Please try again or call us at{" "}
           <a href="tel:+19165211077" className="underline">(916) 521-1077</a>.
         </p>

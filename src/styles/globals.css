@@ -13,6 +13,7 @@
   --text-secondary: #78716c;
   --text-muted: #a8a29e;
   --text-dim: #d6d3d1;
+  --text-error: #dc2626;
 
   /* Switchable palette aliases */
   --sage-50: #f0f3ed;
@@ -33,6 +34,7 @@
   --text-secondary: #a8a29e;
   --text-muted: #78716c;
   --text-dim: #57534e;
+  --text-error: #f87171;
 
   /* Switchable palette aliases */
   --sage-50: #232820;
@@ -75,6 +77,7 @@
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --color-text-dim: var(--text-dim);
+  --color-text-error: var(--text-error);
 
   /* Typography — unchanged */
   --font-sans: var(--font-nunito-sans), "Nunito Sans", sans-serif;

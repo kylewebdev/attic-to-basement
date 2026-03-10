@@ -56,7 +56,7 @@ export default function NewsletterSignup() {
                 aria-hidden="true"
                 style={{
                     background:
-                        "radial-gradient(ellipse at center, rgba(58, 77, 45, 1) 0%, rgba(58, 77, 45, 0.95) 30%, transparent 65%)",
+                        "radial-gradient(ellipse at center, var(--color-sage-700) 0%, color-mix(in srgb, var(--color-sage-700) 95%, transparent) 30%, transparent 65%)",
                 }}
             />
 
@@ -74,7 +74,7 @@ export default function NewsletterSignup() {
                         href="https://estatesales.org/subscriber/company/add/23935"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-sans font-semibold text-sm transition-colors duration-200 min-h-11 min-w-11 bg-white text-[#3a4d2d] hover:bg-white/85 active:bg-white/75"
+                        className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-sans font-semibold text-sm transition-colors duration-200 min-h-11 min-w-11 bg-white text-sage-700 hover:bg-white/85 active:bg-white/75"
                         onClick={() =>
                             capture("newsletter_signup_clicked", {
                                 location: "newsletter_section",
