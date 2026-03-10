@@ -28,7 +28,7 @@ export default function Header() {
         end: "max",
         onUpdate: (self) => {
           if (!headerRef.current) return;
-          const scrolled = self.scroll() > 80;
+          const scrolled = self.scroll() > 120;
           gsap.to(headerRef.current, {
             paddingTop: scrolled ? "0.5rem" : "1.25rem",
             paddingBottom: scrolled ? "0.5rem" : "1.25rem",
@@ -60,13 +60,13 @@ export default function Header() {
     <>
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-sage-500 focus:text-white focus:text-sm focus:font-semibold"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-14 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-sage-500 focus:text-white focus:text-sm focus:font-semibold"
       >
         Skip to main content
       </a>
       <header
         ref={headerRef}
-        className="fixed top-0 left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm py-5 transition-[padding]"
+        className="fixed top-10 left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm py-5 transition-[padding]"
       >
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}

@@ -120,7 +120,7 @@ export default async function ServiceAreaPage({ params }: PageProps) {
             />
 
             {/* Hero */}
-            <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-bg-alt border-b border-border-default">
+            <section className="pt-[10.5rem] pb-16 md:pt-[12.5rem] md:pb-24 bg-bg-alt border-b border-border-default">
                 <div className="max-w-3xl mx-auto px-4 text-center">
                     <h1 className="font-serif text-4xl md:text-5xl text-text-heading">
                         {service.name} in {city.city}, CA

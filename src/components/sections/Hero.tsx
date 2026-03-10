@@ -79,7 +79,7 @@ export default function Hero({
 
   return (
     <section
-      className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-bg-primary overflow-hidden"
+      className="relative pt-[10.5rem] pb-20 md:pt-[12.5rem] md:pb-28 bg-bg-primary overflow-hidden"
       style={scheme ? { background: scheme.gradient } : undefined}
     >
       {scheme && (

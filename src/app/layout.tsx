@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import ThemeScript from "@/components/layout/ThemeScript";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import JsonLd from "@/components/seo/JsonLd";
 import { getLocalBusinessSchema } from "@/lib/schema";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -59,6 +60,7 @@ export default function RootLayout({
                 <ThemeProvider>
                     <JsonLd data={getLocalBusinessSchema()} />
                     <SmoothScroll>
+                        <AnnouncementBar />
                         <Header />
                         <main id="main-content">{children}</main>
                         <Footer />

@@ -77,7 +77,7 @@ export default async function ResourcePostPage({ params }: PageProps) {
     return (
         <>
             <JsonLd data={articleSchema} />
-            <article className="pt-32 pb-16 md:pt-40 md:pb-24 bg-bg-primary">
+            <article className="pt-[10.5rem] pb-16 md:pt-[12.5rem] md:pb-24 bg-bg-primary">
                 <div className="max-w-3xl mx-auto px-4">
                     <Link
                         href="/resources"
