@@ -5,6 +5,7 @@ import Link from "next/link";
 import { capture } from "@/lib/posthog";
 import Hero from "@/components/sections/Hero";
 import ConsultationForm from "@/components/forms/ConsultationForm";
+import PhoneLink from "@/components/ui/PhoneLink";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export default function ContactPage() {
@@ -45,17 +46,10 @@ export default function ContactPage() {
                                     <p className="text-sm font-semibold text-text-body mb-1">
                                         Phone
                                     </p>
-                                    <a
-                                        href="tel:+19165211077"
+                                    <PhoneLink
                                         className="text-lg text-sage-300 hover:text-sage-400 font-semibold transition-colors"
-                                        onClick={() =>
-                                            capture("phone_number_clicked", {
-                                                location: "contact_page",
-                                            })
-                                        }
-                                    >
-                                        (916) 521-1077
-                                    </a>
+                                        location="contact_page"
+                                    />
                                     <p className="text-sm text-text-secondary mt-1">
                                         Available 24/7
                                     </p>

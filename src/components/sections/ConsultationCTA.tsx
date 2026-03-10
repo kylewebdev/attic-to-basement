@@ -3,6 +3,7 @@
 import { capture } from "@/lib/posthog";
 import ConsultationForm from "@/components/forms/ConsultationForm";
 import Button from "@/components/ui/Button";
+import PhoneLink, { PHONE_NUMBER } from "@/components/ui/PhoneLink";
 
 interface ConsultationCTAProps {
   showForm?: boolean;
@@ -20,17 +21,12 @@ export default function ConsultationCTA({ showForm = false }: ConsultationCTAPro
             Schedule a free, no-obligation consultation. We respond to inquiries
             7 days a week.
           </p>
-          <a
-            href="tel:+19165211077"
+          <PhoneLink
             className="inline-block mt-3 text-sage-300 hover:text-sage-400 font-semibold transition-colors"
-            onClick={() =>
-              capture("phone_number_clicked", {
-                location: "consultation_cta",
-              })
-            }
+            location="consultation_cta"
           >
-            Or call us: (916) 521-1077
-          </a>
+            Or call us: {PHONE_NUMBER}
+          </PhoneLink>
         </div>
 
         {showForm ? (

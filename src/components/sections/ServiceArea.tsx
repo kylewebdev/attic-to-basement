@@ -6,6 +6,7 @@ import { capture } from "@/lib/posthog";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import ServiceAreaMap from "./ServiceAreaMap";
+import PhoneLink from "@/components/ui/PhoneLink";
 
 export default function ServiceArea() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -132,17 +133,7 @@ export default function ServiceArea() {
           className="text-lg text-text-secondary"
         >
           Not sure if you are in our range?{" "}
-          <a
-            href="tel:+19165211077"
-            className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
-            onClick={() =>
-              capture("phone_number_clicked", {
-                location: "home_service_area",
-              })
-            }
-          >
-            Call us
-          </a>
+          <PhoneLink location="home_service_area">Call us</PhoneLink>
           . We will figure it out. Or{" "}
           <Link
             href="/contact"

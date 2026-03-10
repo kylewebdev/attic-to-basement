@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { capture, captureException } from "@/lib/posthog";
 import Button from "@/components/ui/Button";
+import PhoneLink from "@/components/ui/PhoneLink";
 
 export default function ConsultationForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -84,7 +85,7 @@ export default function ConsultationForm() {
           id="name"
           name="name"
           required
-          className="w-full rounded-lg border border-border-default bg-bg-card px-4 py-3 text-text-heading placeholder:text-text-muted focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+          className="form-input"
           placeholder="Your full name"
         />
       </div>
@@ -98,7 +99,7 @@ export default function ConsultationForm() {
             type="tel"
             id="phone"
             name="phone"
-            className="w-full rounded-lg border border-border-default bg-bg-card px-4 py-3 text-text-heading placeholder:text-text-muted focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+            className="form-input"
             placeholder="(555) 555-5555"
           />
         </div>
@@ -111,7 +112,7 @@ export default function ConsultationForm() {
             id="email"
             name="email"
             required
-            className="w-full rounded-lg border border-border-default bg-bg-card px-4 py-3 text-text-heading placeholder:text-text-muted focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+            className="form-input"
             placeholder="you@example.com"
           />
         </div>
@@ -125,7 +126,7 @@ export default function ConsultationForm() {
           type="text"
           id="city"
           name="city"
-          className="w-full rounded-lg border border-border-default bg-bg-card px-4 py-3 text-text-heading placeholder:text-text-muted focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+          className="form-input"
           placeholder="Sacramento, 95821, etc."
         />
       </div>
@@ -137,7 +138,7 @@ export default function ConsultationForm() {
         <select
           id="situation"
           name="situation"
-          className="w-full rounded-lg border border-border-default bg-bg-card px-4 py-3 text-text-heading focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors"
+          className="form-input"
           defaultValue=""
         >
           <option value="" disabled>Select one...</option>
@@ -159,7 +160,7 @@ export default function ConsultationForm() {
           name="description"
           required
           rows={4}
-          className="w-full rounded-lg border border-border-default bg-bg-card px-4 py-3 text-text-heading placeholder:text-text-muted focus:border-sage-500 focus:ring-1 focus:ring-sage-500 transition-colors resize-y"
+          className="form-input resize-y"
           placeholder="Tell us briefly about your situation..."
         />
       </div>
@@ -195,7 +196,7 @@ export default function ConsultationForm() {
       {status === "error" && (
         <p role="alert" aria-live="assertive" className="text-text-error text-sm">
           Something went wrong. Please try again or call us at{" "}
-          <a href="tel:+19165211077" className="underline">(916) 521-1077</a>.
+          <PhoneLink className="underline" location="consultation_form_error" />.
         </p>
       )}
 

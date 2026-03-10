@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { capture } from "@/lib/posthog";
+import PhoneLink from "@/components/ui/PhoneLink";
 
 const navLinks = [
     { label: "Estate Sales", href: "/estate-sales" },
@@ -54,17 +55,10 @@ export default function Footer() {
                         <p className="text-sm text-text-secondary mt-1">
                             Sacramento, CA 95821
                         </p>
-                        <a
-                            href="tel:+19165211077"
+                        <PhoneLink
                             className="inline-block mt-3 text-sage-300 hover:text-sage-400 font-semibold transition-colors"
-                            onClick={() =>
-                                capture("phone_number_clicked", {
-                                    location: "footer",
-                                })
-                            }
-                        >
-                            (916) 521-1077
-                        </a>
+                            location="footer"
+                        />
                         <div className="mt-4 flex items-center gap-4">
                             <a
                                 href="https://www.instagram.com/abe.liquidators"

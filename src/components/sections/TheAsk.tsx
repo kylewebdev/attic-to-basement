@@ -5,6 +5,7 @@ import { capture } from "@/lib/posthog";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import Button from "@/components/ui/Button";
+import PhoneLink from "@/components/ui/PhoneLink";
 
 export default function TheAsk() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -122,17 +123,7 @@ export default function TheAsk() {
           className="mt-6 text-text-secondary"
         >
           Prefer to call?{" "}
-          <a
-            href="tel:+19165211077"
-            className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
-            onClick={() =>
-              capture("phone_number_clicked", {
-                location: "home_the_ask_section",
-              })
-            }
-          >
-            (916) 521-1077
-          </a>
+          <PhoneLink location="home_the_ask_section" />
           . We are available 24/7.
         </p>
       </div>
