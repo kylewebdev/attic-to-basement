@@ -1,6 +1,6 @@
 "use client";
 
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 
 export default function NewsletterSignup() {
     return (
@@ -76,7 +76,7 @@ export default function NewsletterSignup() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-sans font-semibold text-sm transition-colors duration-200 min-h-11 min-w-11 bg-white text-[#3a4d2d] hover:bg-white/85 active:bg-white/75"
                         onClick={() =>
-                            posthog.capture("newsletter_signup_clicked", {
+                            capture("newsletter_signup_clicked", {
                                 location: "newsletter_section",
                             })
                         }

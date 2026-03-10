@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import posthog from "posthog-js";
+import { capture, captureException } from "@/lib/posthog";
 import Button from "@/components/ui/Button";
 
 export default function ConsultationForm() {
@@ -25,7 +25,7 @@ export default function ConsultationForm() {
 
       if (response.ok) {
         setStatus("success");
-        posthog.capture("consultation_form_submitted", {
+        capture("consultation_form_submitted", {
           situation: data.get("situation") as string | null,
           contact_method: data.get("contact_method") as string | null,
           has_city: Boolean(data.get("city")),
@@ -34,15 +34,15 @@ export default function ConsultationForm() {
         form.reset();
       } else {
         setStatus("error");
-        posthog.capture("consultation_form_errored", {
+        capture("consultation_form_errored", {
           error_type: "server_error",
           status_code: response.status,
         });
       }
     } catch (err) {
       setStatus("error");
-      posthog.captureException(err);
-      posthog.capture("consultation_form_errored", {
+      captureException(err);
+      capture("consultation_form_errored", {
         error_type: "network_error",
       });
     }

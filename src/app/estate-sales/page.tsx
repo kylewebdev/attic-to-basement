@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import Hero from "@/components/sections/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SaleCard from "@/components/ui/SaleCard";
@@ -34,7 +34,7 @@ export default function EstateSalesPage() {
                 if (value === "all") return true;
                 return el.getAttribute("data-area") === value;
             });
-            posthog.capture("estate_sale_filter_selected", {
+            capture("estate_sale_filter_selected", {
                 filter_value: value,
                 filter_label: label,
             });
@@ -135,7 +135,7 @@ export default function EstateSalesPage() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 text-sage-300 hover:text-sage-400 font-semibold transition-colors"
                                 onClick={() =>
-                                    posthog.capture("instagram_link_clicked", {
+                                    capture("instagram_link_clicked", {
                                         location: "estate_sales_page",
                                     })
                                 }
@@ -174,7 +174,7 @@ export default function EstateSalesPage() {
                         rel="noopener noreferrer"
                         className="text-sage-300 underline underline-offset-2 hover:text-sage-500 transition-colors"
                         onClick={() =>
-                            posthog.capture("external_review_platform_clicked", {
+                            capture("external_review_platform_clicked", {
                                 platform: "BBB",
                                 location: "estate_sales_trust_strip",
                                 url: "https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497",
@@ -198,7 +198,7 @@ export default function EstateSalesPage() {
                         from here.
                     </p>
                     <div className="mt-8" onClick={() =>
-                        posthog.capture("estate_sale_cross_sell_cta_clicked", {
+                        capture("estate_sale_cross_sell_cta_clicked", {
                             location: "estate_sales_cross_sell",
                         })
                     }>

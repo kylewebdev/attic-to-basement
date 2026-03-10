@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import NextError from "next/error";
-import posthog from "posthog-js";
+import { captureException } from "@/lib/posthog";
 
 export default function GlobalError({
   error,
@@ -10,9 +10,7 @@ export default function GlobalError({
   error: Error & { digest?: string };
 }) {
   useEffect(() => {
-    posthog.captureException(error, {
-      tags: { digest: error.digest },
-    });
+    captureException(error);
   }, [error]);
 
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import Button from "@/components/ui/Button";
@@ -93,7 +93,7 @@ export default function TheAsk() {
           data-animate
           className="mt-10"
           onClick={() =>
-            posthog.capture("cta_clicked", {
+            capture("cta_clicked", {
               label: "Schedule Your Free Consultation",
               location: "home_the_ask_section",
               destination: "/contact",
@@ -114,7 +114,7 @@ export default function TheAsk() {
             href="tel:+19165211077"
             className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
             onClick={() =>
-              posthog.capture("phone_number_clicked", {
+              capture("phone_number_clicked", {
                 location: "home_the_ask_section",
               })
             }

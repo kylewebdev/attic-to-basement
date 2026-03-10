@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import { gsap, useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/ui/ThemeToggle";
@@ -19,7 +19,16 @@ export default function Header() {
   const logoRef = useRef<HTMLImageElement>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const servicesMenuRef = useRef<HTMLDivElement>(null);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Focus first menu item when dropdown opens via keyboard
+  useEffect(() => {
+    if (servicesOpen && servicesMenuRef.current) {
+      const first = servicesMenuRef.current.querySelector<HTMLElement>("[role=menuitem]");
+      first?.focus();
+    }
+  }, [servicesOpen]);
 
   useGSAP(
     () => {
@@ -96,12 +105,24 @@ export default function Header() {
               className="relative"
               onMouseEnter={openServices}
               onMouseLeave={closeServices}
+              onKeyDown={(e) => {
+                if (e.key === "Escape" && servicesOpen) {
+                  setServicesOpen(false);
+                  (e.currentTarget.querySelector("button") as HTMLElement)?.focus();
+                }
+              }}
             >
               <button
                 className="text-sm font-sans text-text-secondary hover:text-sage-300 transition-colors flex items-center gap-1"
                 onClick={() => setServicesOpen(!servicesOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === "ArrowDown" && !servicesOpen) {
+                    e.preventDefault();
+                    setServicesOpen(true);
+                  }
+                }}
                 aria-expanded={servicesOpen}
-                aria-haspopup="true"
+                aria-haspopup="menu"
               >
                 Services
                 <svg
@@ -123,12 +144,29 @@ export default function Header() {
                   onMouseEnter={openServices}
                   onMouseLeave={closeServices}
                 >
-                  <div className="bg-bg-card border border-border-default rounded-lg shadow-lg py-2 min-w-[180px]">
+                  <div
+                    ref={servicesMenuRef}
+                    role="menu"
+                    className="bg-bg-card border border-border-default rounded-lg shadow-lg py-2 min-w-[180px]"
+                    onKeyDown={(e) => {
+                      const items = e.currentTarget.querySelectorAll<HTMLElement>("[role=menuitem]");
+                      const idx = Array.from(items).indexOf(e.target as HTMLElement);
+                      if (e.key === "ArrowDown") {
+                        e.preventDefault();
+                        items[(idx + 1) % items.length]?.focus();
+                      } else if (e.key === "ArrowUp") {
+                        e.preventDefault();
+                        items[(idx - 1 + items.length) % items.length]?.focus();
+                      }
+                    }}
+                  >
                     {serviceLinks.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="block px-4 py-2 text-sm text-text-secondary hover:text-sage-300 hover:bg-bg-primary/50 transition-colors"
+                        role="menuitem"
+                        tabIndex={-1}
+                        className="block px-4 py-2 text-sm text-text-secondary hover:text-sage-300 hover:bg-bg-primary/50 transition-colors focus:bg-bg-primary/50 focus:text-sage-300 focus:outline-none"
                         onClick={() => setServicesOpen(false)}
                       >
                         {link.label}
@@ -174,7 +212,7 @@ export default function Header() {
               className="p-2 text-text-secondary hover:text-text-heading min-h-11 min-w-11 flex items-center justify-center"
             onClick={() => {
               setMobileNavOpen(true);
-              posthog.capture("mobile_nav_opened");
+              capture("mobile_nav_opened");
             }}
             aria-label="Open menu"
           >

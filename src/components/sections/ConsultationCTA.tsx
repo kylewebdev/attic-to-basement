@@ -1,6 +1,6 @@
 "use client";
 
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import ConsultationForm from "@/components/forms/ConsultationForm";
 import Button from "@/components/ui/Button";
 
@@ -24,7 +24,7 @@ export default function ConsultationCTA({ showForm = false }: ConsultationCTAPro
             href="tel:+19165211077"
             className="inline-block mt-3 text-sage-300 hover:text-sage-400 font-semibold transition-colors"
             onClick={() =>
-              posthog.capture("phone_number_clicked", {
+              capture("phone_number_clicked", {
                 location: "consultation_cta",
               })
             }
@@ -37,7 +37,7 @@ export default function ConsultationCTA({ showForm = false }: ConsultationCTAPro
           <ConsultationForm />
         ) : (
           <div className="text-center" onClick={() =>
-            posthog.capture("cta_clicked", {
+            capture("cta_clicked", {
               label: "Schedule a Free Consultation",
               location: "consultation_cta",
               destination: "/contact",

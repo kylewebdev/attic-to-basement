@@ -1,4 +1,4 @@
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import type { Sale } from "@/lib/data/sales";
 
 interface SaleCardProps {
@@ -49,7 +49,7 @@ export default function SaleCard({ sale }: SaleCardProps) {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center px-4 py-2 rounded-lg border-2 border-sage-500 text-sage-300 hover:bg-bg-alt active:bg-sage-100 font-sans font-semibold text-sm transition-colors duration-200"
                                 onClick={() =>
-                                    posthog.capture("estate_sale_link_clicked", {
+                                    capture("estate_sale_link_clicked", {
                                         platform: "EstateSales.NET",
                                         sale_title: sale.title,
                                         sale_area: sale.area,
@@ -67,7 +67,7 @@ export default function SaleCard({ sale }: SaleCardProps) {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center px-4 py-2 rounded-lg border-2 border-sage-500 text-sage-300 hover:bg-bg-alt active:bg-sage-100 font-sans font-semibold text-sm transition-colors duration-200"
                                 onClick={() =>
-                                    posthog.capture("estate_sale_link_clicked", {
+                                    capture("estate_sale_link_clicked", {
                                         platform: "EstateSales.ORG",
                                         sale_title: sale.title,
                                         sale_area: sale.area,

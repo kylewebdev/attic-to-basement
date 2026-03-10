@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 
 const navLinks = [
     { label: "Estate Sales", href: "/estate-sales" },
@@ -58,7 +58,7 @@ export default function Footer() {
                             href="tel:+19165211077"
                             className="inline-block mt-3 text-sage-300 hover:text-sage-400 font-semibold transition-colors"
                             onClick={() =>
-                                posthog.capture("phone_number_clicked", {
+                                capture("phone_number_clicked", {
                                     location: "footer",
                                 })
                             }
@@ -73,7 +73,7 @@ export default function Footer() {
                                 className="text-text-secondary hover:text-text-heading transition-colors"
                                 aria-label="Instagram"
                                 onClick={() =>
-                                    posthog.capture("social_link_clicked", {
+                                    capture("social_link_clicked", {
                                         platform: "Instagram",
                                         location: "footer",
                                     })
@@ -94,7 +94,7 @@ export default function Footer() {
                                 className="text-text-secondary hover:text-text-heading transition-colors"
                                 aria-label="TikTok"
                                 onClick={() =>
-                                    posthog.capture("social_link_clicked", {
+                                    capture("social_link_clicked", {
                                         platform: "TikTok",
                                         location: "footer",
                                     })
@@ -140,7 +140,7 @@ export default function Footer() {
                                         rel="noopener noreferrer"
                                         className="text-sm text-text-secondary hover:text-text-heading transition-colors"
                                         onClick={() =>
-                                            posthog.capture("external_review_platform_clicked", {
+                                            capture("external_review_platform_clicked", {
                                                 platform: link.label,
                                                 location: "footer",
                                                 url: link.href,

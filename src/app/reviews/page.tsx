@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import TestimonialCard from "@/components/ui/TestimonialCard";
@@ -38,7 +38,7 @@ export default function ReviewsPage() {
                 if (value === "all") return true;
                 return el.getAttribute("data-category") === value;
             });
-            posthog.capture("review_filter_selected", {
+            capture("review_filter_selected", {
                 filter_value: value,
                 filter_label: label,
             });
@@ -121,7 +121,7 @@ export default function ReviewsPage() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-sage-500 text-sage-300 hover:bg-bg-alt font-semibold text-sm transition-colors min-h-11"
                                 onClick={() =>
-                                    posthog.capture("external_review_platform_clicked", {
+                                    capture("external_review_platform_clicked", {
                                         platform: link.label,
                                         url: link.href,
                                     })

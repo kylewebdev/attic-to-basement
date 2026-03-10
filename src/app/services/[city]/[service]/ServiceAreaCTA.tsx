@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import { sitePhone } from "@/lib/metadata";
 
 interface ServiceAreaCTAProps {
@@ -16,7 +16,7 @@ export default function ServiceAreaCTA({ serviceSlug, cityName }: ServiceAreaCTA
         href="/contact"
         className="inline-flex items-center justify-center rounded-full bg-sage-500 text-white font-semibold px-8 py-3 hover:bg-sage-600 transition-colors min-h-11"
         onClick={() =>
-          posthog.capture("service_area_cta_clicked", {
+          capture("service_area_cta_clicked", {
             service: serviceSlug,
             city: cityName,
           })
@@ -28,7 +28,7 @@ export default function ServiceAreaCTA({ serviceSlug, cityName }: ServiceAreaCTA
         href={`tel:+1${sitePhone.replace(/\D/g, "")}`}
         className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
         onClick={() =>
-          posthog.capture("service_area_phone_clicked", {
+          capture("service_area_phone_clicked", {
             service: serviceSlug,
             city: cityName,
           })

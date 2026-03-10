@@ -49,7 +49,12 @@ export default function Button({
   }
 
   return (
-    <button type={type} className={styles} onClick={onClick} aria-disabled={ariaDisabled}>
+    <button
+      type={type}
+      className={styles}
+      onClick={ariaDisabled ? (e) => e.preventDefault() : onClick}
+      aria-disabled={ariaDisabled}
+    >
       {children}
     </button>
   );

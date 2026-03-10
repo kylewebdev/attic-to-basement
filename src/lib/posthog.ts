@@ -14,3 +14,11 @@ export function capture(
     // Silently ignore — analytics should never break the UI
   }
 }
+
+export function captureException(err: unknown): void {
+  try {
+    posthog.captureException(err);
+  } catch {
+    // Silently ignore
+  }
+}

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import Button from "@/components/ui/Button";
@@ -30,7 +30,7 @@ function PartnerLink({ partner }: { partner: Partner }) {
             rel="noopener noreferrer"
             className="group flex items-start gap-3 py-3 first:pt-0 last:pb-0"
             onClick={() =>
-                posthog.capture("partner_link_clicked", {
+                capture("partner_link_clicked", {
                     partner: partner.name,
                     category: partner.category,
                     url: partner.url,
@@ -186,7 +186,7 @@ export default function ResourcesPageClient({
                                         (posts.length + i) * 100
                                     }
                                     onClick={() =>
-                                        posthog.capture(
+                                        capture(
                                             "resource_link_clicked",
                                             {
                                                 resource: resource.title,

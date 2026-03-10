@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import posthog from "posthog-js";
+import { capture } from "@/lib/posthog";
 import Hero from "@/components/sections/Hero";
 import ConsultationForm from "@/components/forms/ConsultationForm";
 import { useScrollReveal } from "@/lib/useScrollReveal";
@@ -11,7 +11,7 @@ export default function ContactPage() {
     const containerRef = useScrollReveal();
 
     useEffect(() => {
-        posthog.capture("consultation_page_viewed");
+        capture("consultation_page_viewed");
     }, []);
 
     return (
@@ -49,7 +49,7 @@ export default function ContactPage() {
                                         href="tel:+19165211077"
                                         className="text-lg text-sage-300 hover:text-sage-400 font-semibold transition-colors"
                                         onClick={() =>
-                                            posthog.capture("phone_number_clicked", {
+                                            capture("phone_number_clicked", {
                                                 location: "contact_page",
                                             })
                                         }
@@ -82,7 +82,7 @@ export default function ContactPage() {
                                         rel="noopener noreferrer"
                                         className="text-sage-300 hover:text-sage-400 font-semibold transition-colors"
                                         onClick={() =>
-                                            posthog.capture("social_link_clicked", {
+                                            capture("social_link_clicked", {
                                                 platform: "Instagram",
                                                 location: "contact_page",
                                             })
