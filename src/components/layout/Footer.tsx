@@ -113,7 +113,7 @@ export default function Footer() {
 
                     {/* Navigation */}
                     <nav aria-label="Footer navigation">
-                        <p className="font-semibold text-text-heading mb-3">Pages</p>
+                        <h2 className="font-sans text-base font-semibold text-text-heading mb-3">Pages</h2>
                         <ul className="space-y-2">
                             {navLinks.map((link) => (
                                 <li key={link.href}>
@@ -130,7 +130,7 @@ export default function Footer() {
 
                     {/* External links + service area */}
                     <div>
-                        <p className="font-semibold text-text-heading mb-3">Find Us</p>
+                        <h2 className="font-sans text-base font-semibold text-text-heading mb-3">Find Us</h2>
                         <ul className="space-y-2 mb-6">
                             {externalLinks.map((link) => (
                                 <li key={link.href}>

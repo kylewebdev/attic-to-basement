@@ -64,11 +64,10 @@ export default function TheAsk() {
     >
       {/* Center glow */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 animate-breathe"
         aria-hidden="true"
         style={{
           background: "radial-gradient(ellipse at center, color-mix(in srgb, var(--color-gold-400) 8%, var(--color-warm-50)) 0%, transparent 45%)",
-          animation: "breathe 6s ease-in-out infinite",
         }}
       />
       <div className="relative max-w-2xl mx-auto px-4 text-center py-20">

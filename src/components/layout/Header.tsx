@@ -14,7 +14,7 @@ const serviceLinks = [
   { label: "Appraisals", href: "/appraisals" },
 ];
 
-export default function Header() {
+export default function Header({ hasAnnouncement = true }: { hasAnnouncement?: boolean }) {
   const headerRef = useRef<HTMLElement>(null);
   const logoRef = useRef<HTMLImageElement>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -75,7 +75,7 @@ export default function Header() {
       </a>
       <header
         ref={headerRef}
-        className="fixed top-10 left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm py-5 transition-[padding]"
+        className={`fixed left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm py-5 transition-[padding] ${hasAnnouncement ? "top-10" : "top-0"}`}
       >
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}

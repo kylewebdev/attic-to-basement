@@ -59,6 +59,8 @@ export default function ConsultationForm() {
     );
   }
 
+  const isSubmitting = status === "submitting";
+
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       {/* Honeypot — hidden from humans, catches bots */}
@@ -70,6 +72,8 @@ export default function ConsultationForm() {
         autoComplete="off"
         aria-hidden="true"
       />
+
+      <fieldset disabled={isSubmitting} className="space-y-5">
 
       <div>
         <label htmlFor="name" className="block text-sm font-semibold text-text-body mb-1">
@@ -185,6 +189,7 @@ export default function ConsultationForm() {
             <span className="text-sm text-text-body">Email</span>
           </label>
         </div>
+      </fieldset>
       </fieldset>
 
       {status === "error" && (

@@ -13,8 +13,8 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <blockquote className="rounded-xl bg-bg-card border border-border-default p-6">
-      {rating && (
-        <div className="flex gap-1 mb-3" aria-label={`${rating} out of 5 stars`}>
+      {rating != null && rating > 0 && (
+        <div className="flex gap-1 mb-3" role="img" aria-label={`${rating} out of 5 stars`}>
           {Array.from({ length: 5 }, (_, i) => (
             <span
               key={i}

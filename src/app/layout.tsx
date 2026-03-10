@@ -6,6 +6,7 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 import ThemeScript from "@/components/layout/ThemeScript";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
+import { getAnnouncementContent } from "@/lib/data/announcement";
 import JsonLd from "@/components/seo/JsonLd";
 import { getLocalBusinessSchema } from "@/lib/schema";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -47,6 +48,8 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    const hasAnnouncement = getAnnouncementContent() !== null;
+
     return (
         <html
             lang="en"
@@ -61,7 +64,7 @@ export default function RootLayout({
                     <JsonLd data={getLocalBusinessSchema()} />
                     <SmoothScroll>
                         <AnnouncementBar />
-                        <Header />
+                        <Header hasAnnouncement={hasAnnouncement} />
                         <main id="main-content">{children}</main>
                         <Footer />
                     </SmoothScroll>

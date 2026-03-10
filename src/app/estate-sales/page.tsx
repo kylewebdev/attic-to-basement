@@ -64,6 +64,8 @@ export default function EstateSalesPage() {
                             {uniqueAreas.length >= 3 && (
                                 <div
                                     data-reveal
+                                    role="group"
+                                    aria-label="Filter by area"
                                     className="flex flex-wrap gap-2 justify-center mt-8"
                                 >
                                     {[
@@ -78,6 +80,7 @@ export default function EstateSalesPage() {
                                             onClick={() =>
                                                 handleFilter(f.value, f.label)
                                             }
+                                            aria-pressed={activeFilter === f.value}
                                             className={`rounded-full text-sm font-semibold transition-colors min-h-11 ${
                                                 f.value === "all" ? "px-6 py-2.5" : "px-4 py-2"
                                             } ${

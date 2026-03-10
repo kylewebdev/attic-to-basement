@@ -59,12 +59,15 @@ export default function ReviewsPage() {
                     {/* Filter tabs */}
                     <div
                         data-reveal
+                        role="group"
+                        aria-label="Filter by category"
                         className="flex flex-wrap gap-2 justify-center mb-10"
                     >
                         {filters.map((f) => (
                             <button
                                 key={f.value}
                                 onClick={() => handleFilter(f.value, f.label)}
+                                aria-pressed={activeFilter === f.value}
                                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors min-h-11 ${
                                     activeFilter === f.value
                                         ? "bg-sage-500 text-white"

@@ -14,6 +14,10 @@ export default function Hook() {
         () => {
             if (!sectionRef.current) return;
 
+            const prefersReducedMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)",
+            ).matches;
+
             const headline = sectionRef.current.querySelector(
                 "[data-hook-headline]",
             );
@@ -21,6 +25,9 @@ export default function Hook() {
                 "[data-hook-subtext]",
             );
             const arrow = sectionRef.current.querySelector("[data-hook-arrow]");
+
+            // Skip entrance animation for reduced motion
+            if (prefersReducedMotion) return;
 
             // Page-load entrance animation (not scroll-driven)
             const loadTl = gsap.timeline({ delay: 0.2 });
@@ -150,7 +157,7 @@ export default function Hook() {
                 {/* Scroll indicator */}
                 <div
                     data-hook-arrow
-                    className="absolute bottom-12 left-1/2 -translate-x-1/2 text-text-muted animate-bounce"
+                    className="absolute bottom-12 left-1/2 -translate-x-1/2 text-text-muted animate-bounce motion-reduce:animate-none"
                     aria-hidden="true"
                 >
                     <svg
