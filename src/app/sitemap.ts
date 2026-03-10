@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { cities, services } from "@/lib/data/service-areas";
+import { getPublishedResourcePosts } from "@/lib/mdx";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://abeliquidators.com";
@@ -69,5 +70,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.3,
         },
         ...serviceAreaPages,
+        ...getPublishedResourcePosts().map((post) => ({
+            url: `${baseUrl}/resources/${post.slug}`,
+            lastModified: post.publishedAt,
+            changeFrequency: "monthly" as const,
+            priority: 0.6,
+        })),
     ];
 }

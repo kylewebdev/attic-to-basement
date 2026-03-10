@@ -151,6 +151,14 @@ export default function Header() {
             >
               Reviews
             </Link>
+            {/* Draft — re-enable when ready to publish
+            <Link
+              href="/resources"
+              className="text-sm font-sans text-text-secondary hover:text-sage-300 transition-colors"
+            >
+              Resources
+            </Link>
+            */}
 
             <ThemeToggle />
 

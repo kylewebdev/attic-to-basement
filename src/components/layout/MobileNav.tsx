@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Estate Sales", href: "/estate-sales" },
   { label: "Our Promise", href: "/our-promise" },
   { label: "Reviews", href: "/reviews" },
+  // { label: "Resources", href: "/resources" }, // Draft — re-enable when ready to publish
 ];
 
 const serviceLinks = [

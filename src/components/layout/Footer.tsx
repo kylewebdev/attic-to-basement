@@ -10,6 +10,7 @@ const navLinks = [
     { label: "Appraisals", href: "/appraisals" },
     { label: "Our Promise", href: "/our-promise" },
     { label: "Reviews", href: "/reviews" },
+    // { label: "Resources", href: "/resources" }, // Draft — re-enable when ready to publish
 ];
 
 const externalLinks = [
