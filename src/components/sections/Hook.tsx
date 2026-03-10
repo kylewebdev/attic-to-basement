@@ -157,7 +157,7 @@ export default function Hook() {
                 {/* Scroll indicator */}
                 <div
                     data-hook-arrow
-                    className="absolute bottom-12 left-1/2 -translate-x-1/2 text-text-muted animate-bounce motion-reduce:animate-none"
+                    className="absolute bottom-12 left-1/2 -translate-x-1/2 text-text-muted animate-scroll-hint"
                     aria-hidden="true"
                 >
                     <svg

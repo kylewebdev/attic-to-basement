@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { capture } from "@/lib/posthog";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
@@ -8,8 +8,20 @@ import Button from "@/components/ui/Button";
 
 export default function TheAsk() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
   const { registerSection } = useScrollStory();
   const { start, duration } = getSectionPosition(6);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { rootMargin: "200px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useGSAP(() => {
     registerSection(start, duration, (tl, s, d) => {
@@ -68,6 +80,7 @@ export default function TheAsk() {
         aria-hidden="true"
         style={{
           background: "radial-gradient(ellipse at center, color-mix(in srgb, var(--color-gold-400) 8%, var(--color-warm-50)) 0%, transparent 45%)",
+          animationPlayState: visible ? "running" : "paused",
         }}
       />
       <div className="relative max-w-2xl mx-auto px-4 text-center py-20">

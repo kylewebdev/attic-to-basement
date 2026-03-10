@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { capture } from "@/lib/posthog";
-import { gsap, useGSAP, ScrollTrigger } from "@/lib/gsap";
+import { useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import MobileNav from "@/components/layout/MobileNav";
@@ -16,7 +16,6 @@ const serviceLinks = [
 
 export default function Header({ hasAnnouncement = true }: { hasAnnouncement?: boolean }) {
   const headerRef = useRef<HTMLElement>(null);
-  const logoRef = useRef<HTMLImageElement>(null);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const servicesMenuRef = useRef<HTMLDivElement>(null);
@@ -30,26 +29,15 @@ export default function Header({ hasAnnouncement = true }: { hasAnnouncement?: b
     }
   }, [servicesOpen]);
 
+  const [scrolled, setScrolled] = useState(false);
+
   useGSAP(
     () => {
       ScrollTrigger.create({
         start: "top top",
         end: "max",
         onUpdate: (self) => {
-          if (!headerRef.current) return;
-          const scrolled = self.scroll() > 120;
-          gsap.to(headerRef.current, {
-            paddingTop: scrolled ? "0.5rem" : "1.25rem",
-            paddingBottom: scrolled ? "0.5rem" : "1.25rem",
-            boxShadow: scrolled ? "0 1px 3px rgba(0,0,0,0.1)" : "none",
-            duration: 0.3,
-          });
-          if (logoRef.current) {
-            gsap.to(logoRef.current, {
-              height: scrolled ? 36 : 56,
-              duration: 0.3,
-            });
-          }
+          setScrolled(self.scroll() > 120);
         },
       });
     },
@@ -75,18 +63,17 @@ export default function Header({ hasAnnouncement = true }: { hasAnnouncement?: b
       </a>
       <header
         ref={headerRef}
-        className={`fixed left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm py-5 transition-[padding] ${hasAnnouncement ? "top-10" : "top-0"}`}
+        className={`fixed left-0 right-0 z-40 bg-warm-white/95 backdrop-blur-sm transition-[padding,box-shadow] duration-300 ${scrolled ? "py-2 shadow-sm" : "py-5 shadow-none"} ${hasAnnouncement ? "top-10" : "top-0"}`}
       >
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="block">
             <Image
-              ref={logoRef}
               src="/logo.webp"
               alt="Attic to Basement Estate Liquidators"
               width={160}
               height={120}
-              className="h-14 w-auto invert"
+              className={`w-auto invert transition-[height] duration-300 ${scrolled ? "h-9" : "h-14"}`}
               priority
             />
           </Link>

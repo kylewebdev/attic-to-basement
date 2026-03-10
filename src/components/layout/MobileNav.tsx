@@ -170,21 +170,25 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 <path d="M4 6l4 4 4-4" />
               </svg>
             </button>
-            {servicesExpanded && (
-              <ul className="pl-4 space-y-1">
+            <div
+              className="grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]"
+              style={{ gridTemplateRows: servicesExpanded ? "1fr" : "0fr" }}
+            >
+              <ul className="pl-4 space-y-1 overflow-hidden">
                 {serviceLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
                       onClick={onClose}
                       className="block py-2 text-base text-text-secondary hover:text-sage-300 transition-colors"
+                      tabIndex={servicesExpanded ? 0 : -1}
                     >
                       {link.label}
                     </Link>
                   </li>
                 ))}
               </ul>
-            )}
+            </div>
           </li>
 
           {/* Remaining top-level links */}

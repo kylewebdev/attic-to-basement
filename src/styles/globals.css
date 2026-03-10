@@ -106,6 +106,14 @@
   animation: breathe 6s ease-in-out infinite;
 }
 
+@keyframes scroll-hint {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.animate-scroll-hint {
+  animation: scroll-hint 2.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
 
 /* ===== Sale Card Glow ===== */
 .sale-card-glow {
@@ -121,7 +129,8 @@
   .sale-card-glow {
     transition: none;
   }
-  .animate-breathe {
+  .animate-breathe,
+  .animate-scroll-hint {
     animation: none;
   }
 }
