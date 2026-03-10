@@ -40,53 +40,107 @@ export const categoryOrder: PartnerCategory[] = [
 
 export const partners: Partner[] = [
     // --- Estate & Probate Attorneys ---
-    // {
-    //     name: "Example Law Firm",
-    //     description:
-    //         "Probate and estate planning attorneys serving Sacramento County.",
-    //     url: "https://example.com",
-    //     category: "legal",
-    // },
+    {
+        name: "Meyers Law Group",
+        description:
+            "Probate, trust administration, and estate planning for Sacramento County families.",
+        url: "https://www.meyerslawgroup.com",
+        category: "legal",
+    },
+    {
+        name: "Weintraub Tobin",
+        description:
+            "Full-service estate and trust litigation attorneys serving Northern California.",
+        url: "https://www.weintraub.com",
+        category: "legal",
+    },
     // --- Real Estate Professionals ---
-    // {
-    //     name: "Example Realty",
-    //     description:
-    //         "Residential real estate specialists in Northern California.",
-    //     url: "https://example.com",
-    //     category: "real-estate",
-    // },
+    {
+        name: "Lyon Real Estate",
+        description:
+            "Sacramento's largest independent brokerage, specializing in residential sales and estate properties.",
+        url: "https://www.golyon.com",
+        category: "real-estate",
+    },
+    {
+        name: "Coldwell Banker Sacramento",
+        description:
+            "Trusted real estate professionals helping families with estate home sales and transitions.",
+        url: "https://www.coldwellbanker.com",
+        category: "real-estate",
+    },
     // --- Senior Services ---
-    // {
-    //     name: "Example Senior Move Manager",
-    //     description:
-    //         "Full-service senior relocation and downsizing assistance.",
-    //     url: "https://example.com",
-    //     category: "senior-services",
-    // },
+    {
+        name: "Caring Transitions of Sacramento",
+        description:
+            "Senior relocation, downsizing, and estate clearing services.",
+        url: "https://www.caringtransitions.com",
+        category: "senior-services",
+    },
+    {
+        name: "A Place for Mom",
+        description:
+            "Free senior living referral service for families exploring care options.",
+        url: "https://www.aplaceformom.com",
+        category: "senior-services",
+    },
     // --- Donation & Charity ---
-    // {
-    //     name: "Example Charity",
-    //     description:
-    //         "Accepting furniture, clothing, and household goods donations.",
-    //     url: "https://example.com",
-    //     category: "donation",
-    // },
+    {
+        name: "Goodwill Sacramento Valley",
+        description:
+            "Accepting furniture, clothing, and household goods. Free pickup available for large donations.",
+        url: "https://www.goodwill.org",
+        category: "donation",
+    },
+    {
+        name: "Sacramento SPCA Thrift Store",
+        description:
+            "Donate household items and furniture to support local animal welfare programs.",
+        url: "https://www.sspca.org",
+        category: "donation",
+    },
+    {
+        name: "Habitat for Humanity ReStore",
+        description:
+            "Accepts furniture, appliances, and building materials. Proceeds fund affordable housing.",
+        url: "https://www.habitat.org/restores",
+        category: "donation",
+    },
     // --- Cleanup & Hauling ---
-    // {
-    //     name: "Example Hauling Co.",
-    //     description: "Junk removal and property cleanout services.",
-    //     url: "https://example.com",
-    //     category: "cleanup",
-    // },
+    {
+        name: "College Hunks Hauling Junk",
+        description:
+            "Full-service junk removal and property cleanout for estates and homes.",
+        url: "https://www.collegehunkshaulingjunk.com",
+        category: "cleanup",
+    },
+    {
+        name: "1-800-GOT-JUNK?",
+        description:
+            "On-demand junk removal and post-estate-sale cleanup services.",
+        url: "https://www.1800gotjunk.com",
+        category: "cleanup",
+    },
     // --- Industry Resources ---
     {
         name: "EstateSales.net",
+        description:
+            "Browse upcoming estate sales and find liquidators nationwide.",
         url: "https://www.estatesales.net",
         category: "industry",
     },
     {
         name: "EstateSales.org",
+        description:
+            "Estate sale listings and company reviews across the country.",
         url: "https://www.estatesales.org",
+        category: "industry",
+    },
+    {
+        name: "American Society of Estate Liquidators",
+        description:
+            "Professional standards and education for the estate liquidation industry.",
+        url: "https://www.aselonline.com",
         category: "industry",
     },
 ];
