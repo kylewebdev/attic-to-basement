@@ -28,7 +28,7 @@ function PartnerLink({ partner }: { partner: Partner }) {
             href={partner.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-start gap-3 py-3 first:pt-0 last:pb-0"
+            className="group flex items-start gap-3 py-3 first:pt-0 last:pb-0 rounded-md focus-visible:ring-2 focus-visible:ring-sage-500 focus-visible:ring-offset-2"
             onClick={() =>
                 capture("partner_link_clicked", {
                     partner: partner.name,
@@ -130,7 +130,7 @@ export default function ResourcesPageClient({
                                 <Link
                                     key={post.slug}
                                     href={`/resources/${post.slug}`}
-                                    className="group flex flex-col rounded-xl bg-bg-card border border-border-default overflow-hidden hover:shadow-md transition-shadow duration-200 h-full"
+                                    className="group flex flex-col rounded-xl bg-bg-card border border-border-default overflow-hidden hover:shadow-md focus-visible:ring-2 focus-visible:ring-sage-500 focus-visible:ring-offset-2 transition-shadow duration-200 h-full"
                                     data-reveal
                                     data-reveal-delay={i * 100}
                                 >

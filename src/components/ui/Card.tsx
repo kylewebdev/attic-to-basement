@@ -18,7 +18,7 @@ export default function Card({ title, description, href, icon }: CardProps) {
 
   if (href) {
     return (
-      <Link href={href} className="block hover:shadow-md transition-shadow duration-200">
+      <Link href={href} className="block rounded-xl hover:shadow-md focus-visible:ring-2 focus-visible:ring-sage-500 focus-visible:ring-offset-2 transition-shadow duration-200">
         {content}
       </Link>
     );

@@ -20,7 +20,7 @@ export default function AccordionItem({
         <div className="border-b border-border-default">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-between w-full py-5 text-left text-lg font-medium text-text-heading hover:text-sage-300 transition-colors"
+                className="flex items-center justify-between w-full py-5 text-left text-lg font-medium text-text-heading hover:text-sage-300 focus-visible:text-sage-300 transition-colors"
                 aria-expanded={isOpen}
             >
                 {question}

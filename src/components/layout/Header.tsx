@@ -153,7 +153,7 @@ export default function Header({ hasAnnouncement = true }: { hasAnnouncement?: b
                         href={link.href}
                         role="menuitem"
                         tabIndex={-1}
-                        className="block px-4 py-2 text-sm text-text-secondary hover:text-sage-300 hover:bg-bg-primary/50 transition-colors focus:bg-bg-primary/50 focus:text-sage-300 focus:outline-none"
+                        className="block px-4 py-3 text-sm text-text-secondary hover:text-sage-300 hover:bg-bg-primary/50 transition-colors focus:bg-bg-primary/50 focus:text-sage-300 focus:outline-none"
                         onClick={() => setServicesOpen(false)}
                       >
                         {link.label}
