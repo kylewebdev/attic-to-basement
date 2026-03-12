@@ -24,7 +24,7 @@ export const sales: Sale[] = [
     {
         id: "yuba-city-march-2026",
         title: "Decades of Treasures in Yuba City",
-        dates: "March 13–15th, 2026 | 9 AM – 4 PM",
+        dates: "March 13–15th, 2026 | 9 AM – 2 PM",
         startDate: "2026-03-13",
         endDate: "2026-03-15",
         area: "Yuba City, CA",
