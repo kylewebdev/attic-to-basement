@@ -24,7 +24,7 @@ export const sales: Sale[] = [
     {
         id: "yuba-city-march-2026",
         title: "Decades of Treasures in Yuba City",
-        dates: "March 13–15th, 2026 | 9 AM – 2 PM",
+        dates: "March 13–15th, 2026 | 9 AM – 4 PM",
         startDate: "2026-03-13",
         endDate: "2026-03-15",
         area: "Yuba City, CA",
@@ -37,7 +37,7 @@ export const sales: Sale[] = [
     {
         id: "citrus-heights-march-2026",
         title: "A Little of Everything in Citrus Heights",
-        dates: "March 13–15th, 2026 | 9 AM – 2 PM",
+        dates: "March 13–15th, 2026 | 9 AM – 3 PM",
         startDate: "2026-03-13",
         endDate: "2026-03-15",
         area: "Citrus Heights, CA",
@@ -72,5 +72,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Placerville/95667/4831455",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/placerville/95667/pickin-in-placerville-vehicles-equipment-2428669",
+    },
+    {
+        id: "east-sacramento-march-2026",
+        title: "Revved Up Relics in East Sacramento",
+        dates: "March 27–29th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-27",
+        endDate: "2026-03-29",
+        area: "Sacramento, CA",
+        categories: ["Automotive", "Vintage", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95819/4836036",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95819/revved-up-relics-in-east-2429237",
     },
 ];
