@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "placerville-march-2026",
-        title: "Pickin' in Placerville — Vehicles, Equipment & More",
-        dates: "March 14–16th, 2026 | 9 AM – 1 PM",
-        startDate: "2026-03-14",
-        endDate: "2026-03-16",
-        area: "Placerville, CA",
-        categories: ["Vehicles", "Equipment", "Outdoor", "Household"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Placerville/95667/4831455",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/placerville/95667/50-off-monday-pickin-in-2428669",
-    },
-    {
         id: "sacramento-pocket-march-2026",
         title: "Packed Pocket Area Estate Sale",
         dates: "March 20–22nd, 2026 | 9 AM – 2 PM",
@@ -46,6 +33,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95831/4839660",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95831/packed-pocket-area-estate-sale-2429771",
+    },
+    {
+        id: "antelope-march-2026",
+        title: "Timeless Treasures and Tool Trove",
+        dates: "March 21–23rd, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-21",
+        endDate: "2026-03-23",
+        area: "Antelope, CA",
+        categories: ["Tools", "Collectibles", "Household"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Antelope/95843/4842525",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/antelope/95843/timeless-treasures-and-tool-trove-2430179",
     },
     {
         id: "east-sacramento-march-2026",
