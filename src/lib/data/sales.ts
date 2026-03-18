@@ -35,6 +35,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento/95831/packed-pocket-area-estate-sale-2429771",
     },
     {
+        id: "roseville-march-2026",
+        title: "Time Capsule in Roseville",
+        dates: "March 20–22nd, 2026 | 9 AM – 3 PM",
+        startDate: "2026-03-20",
+        endDate: "2026-03-22",
+        area: "Roseville, CA",
+        categories: ["Antiques", "Vintage", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Roseville/95747/4843182",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/roseville/95678/time-capsule-in-roseville-2430255",
+    },
+    {
         id: "antelope-march-2026",
         title: "Timeless Treasures and Tool Trove",
         dates: "March 21–23rd, 2026 | 9 AM – 2 PM",
