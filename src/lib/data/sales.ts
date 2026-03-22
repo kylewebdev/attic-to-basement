@@ -32,12 +32,12 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95831/4839660",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95831/packed-pocket-area-estate-sale-2429771",
+            "https://estatesales.org/estate-sales/ca/sacramento/95831/50-off-most-items-sunday-2429771",
     },
     {
         id: "roseville-march-2026",
         title: "Time Capsule in Roseville",
-        dates: "March 20–22nd, 2026 | 9 AM – 3 PM",
+        dates: "March 20–22nd, 2026 | 9 AM – 2 PM",
         startDate: "2026-03-20",
         endDate: "2026-03-22",
         area: "Roseville, CA",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Roseville/95747/4843182",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95678/time-capsule-in-roseville-2430255",
+            "https://estatesales.org/estate-sales/ca/roseville/95678/50-off-most-items-sunday-2430255",
     },
     {
         id: "antelope-march-2026",
@@ -58,7 +58,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Antelope/95843/4842525",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/antelope/95843/timeless-treasures-and-tool-trove-2430179",
+            "https://estatesales.org/estate-sales/ca/antelope/95843/25-off-sunday-50-off-2430179",
     },
     {
         id: "east-sacramento-march-2026",
