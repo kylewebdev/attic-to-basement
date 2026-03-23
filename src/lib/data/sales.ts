@@ -22,35 +22,9 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-pocket-march-2026",
-        title: "Packed Pocket Area Estate Sale",
-        dates: "March 20–22nd, 2026 | 9 AM – 2 PM",
-        startDate: "2026-03-20",
-        endDate: "2026-03-22",
-        area: "Sacramento, CA",
-        categories: ["Household", "Collectibles", "Décor"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95831/4839660",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95831/50-off-most-items-sunday-2429771",
-    },
-    {
-        id: "roseville-march-2026",
-        title: "Time Capsule in Roseville",
-        dates: "March 20–22nd, 2026 | 9 AM – 2 PM",
-        startDate: "2026-03-20",
-        endDate: "2026-03-22",
-        area: "Roseville, CA",
-        categories: ["Antiques", "Vintage", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Roseville/95747/4843182",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95678/50-off-most-items-sunday-2430255",
-    },
-    {
         id: "antelope-march-2026",
         title: "Timeless Treasures and Tool Trove",
-        dates: "March 21–23rd, 2026 | 9 AM – 2 PM",
+        dates: "March 21–23rd, 2026 | 9 AM – 1 PM",
         startDate: "2026-03-21",
         endDate: "2026-03-23",
         area: "Antelope, CA",
