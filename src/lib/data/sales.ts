@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "antelope-march-2026",
-        title: "Timeless Treasures and Tool Trove",
-        dates: "March 21–23rd, 2026 | 9 AM – 1 PM",
-        startDate: "2026-03-21",
-        endDate: "2026-03-23",
-        area: "Antelope, CA",
-        categories: ["Tools", "Collectibles", "Household"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Antelope/95843/4842525",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/antelope/95843/25-off-sunday-50-off-2430179",
-    },
-    {
         id: "east-sacramento-march-2026",
         title: "Revved Up Relics in East Sacramento",
         dates: "March 27–29th, 2026 | 9 AM – 2 PM",
@@ -46,5 +33,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95819/4836036",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95819/revved-up-relics-in-east-2429237",
+    },
+    {
+        id: "elk-grove-march-2026",
+        title: "Holiday Treasures (Jim Shore & More) & Other Beautiful Finds!",
+        dates: "March 28–29th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-03-28",
+        endDate: "2026-03-29",
+        area: "Elk Grove, CA",
+        categories: ["Holiday Decor", "Jim Shore", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Elk-Grove/95757/4851429",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/elk-grove/95757/holiday-treasures-jim-shore-more-2431363",
     },
 ];
