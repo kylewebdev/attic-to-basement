@@ -37,7 +37,7 @@ export const sales: Sale[] = [
     {
         id: "elk-grove-march-2026",
         title: "Holiday Treasures (Jim Shore & More) & Other Beautiful Finds!",
-        dates: "March 28–29th, 2026 | 9 AM – 2 PM",
+        dates: "March 28–29th, 2026 | 9 AM – 3 PM",
         startDate: "2026-03-28",
         endDate: "2026-03-29",
         area: "Elk Grove, CA",
