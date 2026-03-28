@@ -47,4 +47,30 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/elk-grove/95757/holiday-treasures-jim-shore-more-2431363",
     },
+    {
+        id: "rio-linda-april-2026",
+        title: "Rusty to Riches — A Pickers Dream, Auto, Household & More!",
+        dates: "April 3–5th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-04-03",
+        endDate: "2026-04-05",
+        area: "Rio Linda, CA",
+        categories: ["Automotive", "Household", "Vintage", "Tools"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Rio-Linda/95673/4857336",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/rio-linda/95673/rusty-to-riches-a-pickers-2432185",
+    },
+    {
+        id: "elk-grove-april-2026",
+        title: "A Glass Act — Glass, Trinkets, Knick Knacks & More!",
+        dates: "April 3–5th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-04-03",
+        endDate: "2026-04-05",
+        area: "Elk Grove, CA",
+        categories: ["Art Glass", "Teacups", "Collectibles", "Figurines"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Elk-Grove/95758/4857414",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/elk-grove/95758/a-glass-act-glass-trinkets-2432205",
+    },
 ];
