@@ -24,20 +24,18 @@ export const sales: Sale[] = [
     {
         id: "east-sacramento-march-2026",
         title: "Revved Up Relics in East Sacramento",
-        dates: "March 27–29th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-03-27",
+        dates: "March 29th, 2026 | 12 PM",
+        startDate: "2026-03-29",
         endDate: "2026-03-29",
         area: "Sacramento, CA",
-        categories: ["Automotive", "Vintage", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95819/4836036",
+        categories: ["Art", "Automotive", "Vintage", "Collectibles"],
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95819/revved-up-relics-in-east-2429237",
+            "https://estatesales.org/estate-sales/ca/sacramento/95819/30-off-art-50-off-2429237",
     },
     {
         id: "elk-grove-march-2026",
         title: "Holiday Treasures (Jim Shore & More) & Other Beautiful Finds!",
-        dates: "March 28–29th, 2026 | 9 AM – 3 PM",
+        dates: "March 28–29th, 2026 | 9 AM – 2 PM",
         startDate: "2026-03-28",
         endDate: "2026-03-29",
         area: "Elk Grove, CA",
@@ -45,7 +43,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95757/4851429",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95757/holiday-treasures-jim-shore-more-2431363",
+            "https://estatesales.org/estate-sales/ca/elk-grove/95757/50-off-sundayholiday-treasures-jim-2431363",
     },
     {
         id: "rio-linda-april-2026",
