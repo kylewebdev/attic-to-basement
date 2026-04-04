@@ -24,7 +24,7 @@ export const sales: Sale[] = [
     {
         id: "rio-linda-april-2026",
         title: "Rusty to Riches — A Pickers Dream, Auto, Household & More!",
-        dates: "April 3–5th, 2026 | 9 AM – 3 PM",
+        dates: "April 3–5th, 2026 | 9 AM – 2 PM",
         startDate: "2026-04-03",
         endDate: "2026-04-05",
         area: "Rio Linda, CA",
@@ -46,5 +46,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Elk-Grove/95758/4857414",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/elk-grove/95758/a-glass-act-glass-trinkets-2432205",
+    },
+    {
+        id: "sacramento-april-2026",
+        title: "Man Cave Mayhem Estate Sale",
+        dates: "April 10–12th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-04-10",
+        endDate: "2026-04-12",
+        area: "Sacramento, CA",
+        categories: ["Man Cave", "Collectibles", "Household", "Tools"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95835/4865124",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95835/man-cave-mayhem-estate-sale-2433182",
     },
 ];
