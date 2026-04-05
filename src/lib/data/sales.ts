@@ -24,7 +24,7 @@ export const sales: Sale[] = [
     {
         id: "rio-linda-april-2026",
         title: "Rusty to Riches — A Pickers Dream, Auto, Household & More!",
-        dates: "April 3–5th, 2026 | 9 AM – 2 PM",
+        dates: "April 3–5th, 2026 | 8 AM – 1 PM",
         startDate: "2026-04-03",
         endDate: "2026-04-05",
         area: "Rio Linda, CA",
@@ -32,12 +32,12 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Rio-Linda/95673/4857336",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rio-linda/95673/rusty-to-riches-a-pickers-2432185",
+            "https://estatesales.org/estate-sales/ca/rio-linda/95673/50-off-sunday-rusty-to-2432185",
     },
     {
         id: "elk-grove-april-2026",
         title: "A Glass Act — Glass, Trinkets, Knick Knacks & More!",
-        dates: "April 3–5th, 2026 | 9 AM – 3 PM",
+        dates: "April 3–5th, 2026 | 8 AM – 1 PM",
         startDate: "2026-04-03",
         endDate: "2026-04-05",
         area: "Elk Grove, CA",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95758/4857414",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95758/a-glass-act-glass-trinkets-2432205",
+            "https://estatesales.org/estate-sales/ca/elk-grove/95758/50-off-sunday-a-glass-2432205",
     },
     {
         id: "sacramento-april-2026",
