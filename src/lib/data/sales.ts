@@ -50,12 +50,27 @@ export const sales: Sale[] = [
     {
         id: "el-dorado-hills-april-2026",
         title: "The Great El Dorado Hills Estate",
-        dates: "April 11th, 2026 | 9 AM",
+        dates: "April 11–12th, 2026 | 9 AM – 3 PM",
         startDate: "2026-04-11",
-        endDate: "2026-04-11",
+        endDate: "2026-04-12",
         area: "El Dorado Hills, CA",
         categories: ["Estate Furnishings", "Household", "Décor"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/El-Dorado-Hills/95762/4868211",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/the-great-el-dorado-hills-2433557",
+    },
+    {
+        id: "natomas-april-2026",
+        title: "Farmhouse Finds in Natomas",
+        dates: "April 17–19th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-04-17",
+        endDate: "2026-04-19",
+        area: "Sacramento, CA",
+        categories: ["Farmhouse", "Household", "Vintage", "Décor"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95835/4869123",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95835/farmhouse-finds-in-natomas-2433660",
     },
 ];
