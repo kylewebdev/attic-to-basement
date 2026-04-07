@@ -34,4 +34,28 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95835/man-cave-mayhem-estate-sale-2433182",
     },
+    {
+        id: "valley-springs-april-2026",
+        title: "Country Manor in Valley Springs",
+        dates: "April 10–12th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-04-10",
+        endDate: "2026-04-12",
+        area: "Valley Springs, CA",
+        categories: ["Vintage", "Country Décor", "Household", "Furniture"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Valley-Springs/95252/4867737",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/valley-springs/95252/country-manor-in-valley-springs-2433512",
+    },
+    {
+        id: "el-dorado-hills-april-2026",
+        title: "The Great El Dorado Hills Estate",
+        dates: "April 11th, 2026 | 9 AM",
+        startDate: "2026-04-11",
+        endDate: "2026-04-11",
+        area: "El Dorado Hills, CA",
+        categories: ["Estate Furnishings", "Household", "Décor"],
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/the-great-el-dorado-hills-2433557",
+    },
 ];
