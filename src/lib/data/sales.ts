@@ -73,4 +73,15 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95835/farmhouse-finds-in-natomas-2433660",
     },
+    {
+        id: "rocklin-april-2026",
+        title: "Old Rocklin Charm: Antiques & Treasures",
+        dates: "April 17–19th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-04-17",
+        endDate: "2026-04-19",
+        area: "Rocklin, CA",
+        categories: ["Antiques", "Vintage", "Treasures", "Household"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Rocklin/95765/4874016",
+    },
 ];
