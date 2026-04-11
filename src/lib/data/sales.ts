@@ -83,5 +83,7 @@ export const sales: Sale[] = [
         categories: ["Antiques", "Vintage", "Treasures", "Household"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Rocklin/95765/4874016",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/rocklin/95765/old-rocklin-charm-antiques-treasures-2434372",
     },
 ];
