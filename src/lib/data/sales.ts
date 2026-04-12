@@ -32,12 +32,12 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95835/4865124",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95835/man-cave-mayhem-estate-sale-2433182",
+            "https://estatesales.org/estate-sales/ca/sacramento/95835/50-off-sunday-man-cave-2433182",
     },
     {
         id: "valley-springs-april-2026",
         title: "Country Manor in Valley Springs",
-        dates: "April 10–12th, 2026 | 9 AM – 2 PM",
+        dates: "April 10–12th, 2026 | 9 AM – 1 PM",
         startDate: "2026-04-10",
         endDate: "2026-04-12",
         area: "Valley Springs, CA",
@@ -45,12 +45,12 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Valley-Springs/95252/4867737",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/valley-springs/95252/country-manor-in-valley-springs-2433512",
+            "https://estatesales.org/estate-sales/ca/valley-springs/95252/50-off-sunday-country-manor-2433512",
     },
     {
         id: "el-dorado-hills-april-2026",
         title: "The Great El Dorado Hills Estate",
-        dates: "April 11–12th, 2026 | 9 AM – 3 PM",
+        dates: "April 11–12th, 2026 | 9 AM – 2 PM",
         startDate: "2026-04-11",
         endDate: "2026-04-12",
         area: "El Dorado Hills, CA",
@@ -58,7 +58,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/El-Dorado-Hills/95762/4868211",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/the-great-el-dorado-hills-2433557",
+            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/50-off-sunday-the-great-2433557",
     },
     {
         id: "natomas-april-2026",
@@ -67,7 +67,7 @@ export const sales: Sale[] = [
         startDate: "2026-04-17",
         endDate: "2026-04-19",
         area: "Sacramento, CA",
-        categories: ["Farmhouse", "Household", "Vintage", "Décor"],
+        categories: ["Farmhouse", "Vintage Clothing", "Leather Apparel", "Household"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95835/4869123",
         externalUrlOrg:
