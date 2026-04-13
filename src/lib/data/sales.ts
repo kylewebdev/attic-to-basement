@@ -22,45 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-april-2026",
-        title: "Man Cave Mayhem Estate Sale",
-        dates: "April 10–12th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-04-10",
-        endDate: "2026-04-12",
-        area: "Sacramento, CA",
-        categories: ["Man Cave", "Collectibles", "Household", "Tools"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95835/4865124",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95835/50-off-sunday-man-cave-2433182",
-    },
-    {
-        id: "valley-springs-april-2026",
-        title: "Country Manor in Valley Springs",
-        dates: "April 10–12th, 2026 | 9 AM – 1 PM",
-        startDate: "2026-04-10",
-        endDate: "2026-04-12",
-        area: "Valley Springs, CA",
-        categories: ["Vintage", "Country Décor", "Household", "Furniture"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Valley-Springs/95252/4867737",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/valley-springs/95252/50-off-sunday-country-manor-2433512",
-    },
-    {
-        id: "el-dorado-hills-april-2026",
-        title: "The Great El Dorado Hills Estate",
-        dates: "April 11–12th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-04-11",
-        endDate: "2026-04-12",
-        area: "El Dorado Hills, CA",
-        categories: ["Estate Furnishings", "Household", "Décor"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/El-Dorado-Hills/95762/4868211",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/50-off-sunday-the-great-2433557",
-    },
-    {
         id: "natomas-april-2026",
         title: "Farmhouse Finds in Natomas",
         dates: "April 17–19th, 2026 | 9 AM – 3 PM",
