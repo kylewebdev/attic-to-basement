@@ -47,4 +47,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/rocklin/95765/old-rocklin-charm-antiques-treasures-2434372",
     },
+    {
+        id: "gilroy-april-2026",
+        title: "Grand Gilroy Sale — Decades of Collecting",
+        dates: "April 17–19th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-04-17",
+        endDate: "2026-04-19",
+        area: "Gilroy, CA",
+        categories: ["Collectibles", "Vintage", "Household"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Gilroy/95020/4877367",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/gilroy/95020/grand-gilroy-sale-decades-of-2434821",
+    },
 ];
