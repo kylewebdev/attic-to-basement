@@ -60,4 +60,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/gilroy/95020/grand-gilroy-sale-decades-of-2434821",
     },
+    {
+        id: "galt-april-2026",
+        title: "The Great Galt Sale",
+        dates: "April 24–26th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-04-24",
+        endDate: "2026-04-26",
+        area: "Galt, CA",
+        categories: ["Estate Finds", "Household", "General"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Galt/95632/4878381",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/galt/95632/the-great-galt-sale-2434951",
+    },
 ];
