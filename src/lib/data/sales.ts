@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95835/4869123",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95835/farmhouse-finds-in-natomas-2433660",
+            "https://estatesales.org/estate-sales/ca/sacramento/95835/farmhouse-finds-in-natomas-vintage-2433660",
     },
     {
         id: "rocklin-april-2026",
@@ -61,13 +61,26 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/gilroy/95020/grand-gilroy-sale-decades-of-2434821",
     },
     {
-        id: "galt-april-2026",
+        id: "sacramento-april-2026",
+        title: "Charming Cottage Estate Sale",
+        dates: "April 17–19th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-04-17",
+        endDate: "2026-04-19",
+        area: "Sacramento, CA",
+        categories: ["Collectibles", "Home Decor", "Estate Finds"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95819/4879239",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento-/95819/charming-cottage-estate-sale-2435074",
+    },
+    {
+        id: "galt-may-2026",
         title: "The Great Galt Sale",
-        dates: "April 24–26th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-04-24",
-        endDate: "2026-04-26",
+        dates: "May 1–3rd, 2026 | 9 AM – 3 PM",
+        startDate: "2026-05-01",
+        endDate: "2026-05-03",
         area: "Galt, CA",
-        categories: ["Estate Finds", "Household", "General"],
+        categories: ["Automobiles", "Estate Finds", "Household"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Galt/95632/4878381",
         externalUrlOrg:
