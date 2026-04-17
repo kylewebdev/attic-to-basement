@@ -50,7 +50,7 @@ export const sales: Sale[] = [
     {
         id: "gilroy-april-2026",
         title: "Grand Gilroy Sale — Decades of Collecting",
-        dates: "April 17–19th, 2026 | 9 AM – 2 PM",
+        dates: "April 17–19th, 2026 | 9 AM – 3 PM",
         startDate: "2026-04-17",
         endDate: "2026-04-19",
         area: "Gilroy, CA",
