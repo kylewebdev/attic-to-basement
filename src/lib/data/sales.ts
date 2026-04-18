@@ -37,7 +37,7 @@ export const sales: Sale[] = [
     {
         id: "rocklin-april-2026",
         title: "Old Rocklin Charm: Antiques & Treasures",
-        dates: "April 17–19th, 2026 | 9 AM – 3 PM",
+        dates: "April 17–19th, 2026 | 9 AM – 2 PM",
         startDate: "2026-04-17",
         endDate: "2026-04-19",
         area: "Rocklin, CA",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Rocklin/95765/4874016",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rocklin/95765/old-rocklin-charm-antiques-treasures-2434372",
+            "https://estatesales.org/estate-sales/ca/rocklin/95765/old-rocklin-charm-antiques-treasuressee-2434372",
     },
     {
         id: "gilroy-april-2026",
