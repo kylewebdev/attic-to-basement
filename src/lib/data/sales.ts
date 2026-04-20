@@ -22,56 +22,17 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "natomas-april-2026",
-        title: "Farmhouse Finds in Natomas",
-        dates: "April 17–19th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-04-17",
-        endDate: "2026-04-19",
-        area: "Sacramento, CA",
-        categories: ["Farmhouse", "Vintage Clothing", "Leather Apparel", "Household"],
+        id: "fair-oaks-april-2026",
+        title: "Massive Disney, Antique, Art & Collectibles Sale",
+        dates: "April 23–25th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-04-23",
+        endDate: "2026-04-25",
+        area: "Fair Oaks, CA",
+        categories: ["Disney", "Antiques", "Art", "Collectibles", "Depression Glass"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95835/4869123",
+            "https://www.estatesales.net/CA/Fair-Oaks/95628/4884966",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95835/farmhouse-finds-in-natomas-vintage-2433660",
-    },
-    {
-        id: "rocklin-april-2026",
-        title: "Old Rocklin Charm: Antiques & Treasures",
-        dates: "April 17–19th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-04-17",
-        endDate: "2026-04-19",
-        area: "Rocklin, CA",
-        categories: ["Antiques", "Vintage", "Treasures", "Household"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Rocklin/95765/4874016",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rocklin/95765/old-rocklin-charm-antiques-treasuressee-2434372",
-    },
-    {
-        id: "gilroy-april-2026",
-        title: "Grand Gilroy Sale — Decades of Collecting",
-        dates: "April 17–19th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-04-17",
-        endDate: "2026-04-19",
-        area: "Gilroy, CA",
-        categories: ["Collectibles", "Vintage", "Household"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Gilroy/95020/4877367",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/gilroy/95020/grand-gilroy-sale-decades-of-2434821",
-    },
-    {
-        id: "sacramento-april-2026",
-        title: "Charming Cottage Estate Sale",
-        dates: "April 17–19th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-04-17",
-        endDate: "2026-04-19",
-        area: "Sacramento, CA",
-        categories: ["Collectibles", "Home Decor", "Estate Finds"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95819/4879239",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento-/95819/charming-cottage-estate-sale-2435074",
+            "https://estatesales.org/estate-sales/ca/fair-oaks/95628/massive-disney-antique-art-collectibles-2435935",
     },
     {
         id: "galt-may-2026",
