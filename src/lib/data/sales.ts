@@ -24,15 +24,50 @@ export const sales: Sale[] = [
     {
         id: "fair-oaks-april-2026",
         title: "Massive Disney, Antique, Art & Collectibles Sale",
-        dates: "April 23–25th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-04-23",
-        endDate: "2026-04-25",
+        dates: "April 24–26th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-04-24",
+        endDate: "2026-04-26",
         area: "Fair Oaks, CA",
         categories: ["Disney", "Antiques", "Art", "Collectibles", "Depression Glass"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Fair-Oaks/95628/4884966",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/fair-oaks/95628/massive-disney-antique-art-collectibles-2435935",
+    },
+    {
+        id: "sacramento-tools-april-2026",
+        title: "Tools & Computer Tech",
+        dates: "April 24–26th, 2026 | 9 AM – 4 PM",
+        startDate: "2026-04-24",
+        endDate: "2026-04-26",
+        area: "Sacramento, CA",
+        categories: ["Tools", "Computer Tech", "Electronics"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95841/4886676",
+    },
+    {
+        id: "carmichael-april-2026",
+        title: "Carmichael Clean Well Kept Beautiful Home",
+        dates: "April 24–26th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-04-24",
+        endDate: "2026-04-26",
+        area: "Carmichael, CA",
+        categories: ["Furniture", "Household", "Estate Finds"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Carmichael/95608/4886976",
+    },
+    {
+        id: "sacramento-treasures-april-2026",
+        title: "Decades of Treasures",
+        dates: "April 24–26th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-04-24",
+        endDate: "2026-04-26",
+        area: "Sacramento, CA",
+        categories: ["Vintage", "Collectibles", "Estate Finds"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95821/4887453",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95821/decades-of-treasures-2436233",
     },
     {
         id: "galt-may-2026",
@@ -46,5 +81,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Galt/95632/4878381",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/galt/95632/the-great-galt-sale-2434951",
+    },
+    {
+        id: "citrus-heights-may-2026",
+        title: "The Nesting Hen House",
+        dates: "May 1–3rd, 2026 | 9 AM – 2 PM",
+        startDate: "2026-05-01",
+        endDate: "2026-05-03",
+        area: "Citrus Heights, CA",
+        categories: ["Home Decor", "Collectibles", "Household"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Citrus-Heights/95610/4887357",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/the-nesting-hen-house-2436220",
     },
 ];
