@@ -44,6 +44,8 @@ export const sales: Sale[] = [
         categories: ["Tools", "Computer Tech", "Electronics"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95841/4886676",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95841/tools-computer-tech-2436321",
     },
     {
         id: "carmichael-april-2026",
@@ -55,6 +57,8 @@ export const sales: Sale[] = [
         categories: ["Furniture", "Household", "Estate Finds"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Carmichael/95608/4886976",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/carmichael/95608/carmichael-clean-well-kept-beautiful-2436422",
     },
     {
         id: "sacramento-treasures-april-2026",
