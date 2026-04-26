@@ -24,7 +24,7 @@ export const sales: Sale[] = [
     {
         id: "fair-oaks-april-2026",
         title: "Massive Disney, Antique, Art & Collectibles Sale",
-        dates: "April 24–26th, 2026 | 9 AM – 3 PM",
+        dates: "April 24–26th, 2026 | 9 AM – 2 PM",
         startDate: "2026-04-24",
         endDate: "2026-04-26",
         area: "Fair Oaks, CA",
@@ -32,12 +32,12 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Fair-Oaks/95628/4884966",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/fair-oaks/95628/massive-disney-antique-art-collectibles-2435935",
+            "https://estatesales.org/estate-sales/ca/fair-oaks/95628/25-off-disney-30-off-2435935",
     },
     {
         id: "sacramento-tools-april-2026",
         title: "Tools & Computer Tech",
-        dates: "April 24–26th, 2026 | 9 AM – 4 PM",
+        dates: "April 24–26th, 2026 | 9 AM – 3 PM",
         startDate: "2026-04-24",
         endDate: "2026-04-26",
         area: "Sacramento, CA",
@@ -50,7 +50,7 @@ export const sales: Sale[] = [
     {
         id: "carmichael-april-2026",
         title: "Carmichael Clean Well Kept Beautiful Home",
-        dates: "April 24–26th, 2026 | 9 AM – 3 PM",
+        dates: "April 24–26th, 2026 | 9 AM – 2 PM",
         startDate: "2026-04-24",
         endDate: "2026-04-26",
         area: "Carmichael, CA",
@@ -71,7 +71,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95821/4887453",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95821/decades-of-treasures-2436233",
+            "https://estatesales.org/estate-sales/ca/sacramento/95821/50-off-sunday-decades-of-2436233",
     },
     {
         id: "galt-may-2026",
@@ -89,7 +89,7 @@ export const sales: Sale[] = [
     {
         id: "citrus-heights-may-2026",
         title: "The Nesting Hen House",
-        dates: "May 1–3rd, 2026 | 9 AM – 2 PM",
+        dates: "May 1–3rd, 2026 | 9 AM – 3 PM",
         startDate: "2026-05-01",
         endDate: "2026-05-03",
         area: "Citrus Heights, CA",
