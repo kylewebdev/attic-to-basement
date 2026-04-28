@@ -47,4 +47,30 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/citrus-heights/95610/the-nesting-hen-house-2436220",
     },
+    {
+        id: "yuba-city-may-2026",
+        title: "Maticulous Marysville Home",
+        dates: "May 1–3rd, 2026 | 9 AM – 3 PM",
+        startDate: "2026-05-01",
+        endDate: "2026-05-03",
+        area: "Yuba City, CA",
+        categories: ["Household", "Home Decor", "Estate Finds"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Yuba-City/95993/4898559",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/yuba-city/95993/maticulous-marysville-home-2437723",
+    },
+    {
+        id: "placerville-may-2026",
+        title: "Classic Barn Finds — Equipment & Vehicles",
+        dates: "May 2–4th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-05-02",
+        endDate: "2026-05-04",
+        area: "Placerville, CA",
+        categories: ["Vehicles", "Equipment", "Barn Finds"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Placerville/95667/4897821",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/placerville/95667/classic-barn-finds-equipment-vehicles-2437619",
+    },
 ];
