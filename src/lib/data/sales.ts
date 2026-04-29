@@ -49,10 +49,10 @@ export const sales: Sale[] = [
     },
     {
         id: "yuba-city-may-2026",
-        title: "Maticulous Marysville Home",
-        dates: "May 1–3rd, 2026 | 9 AM – 3 PM",
+        title: "Meticulous Marysville Home",
+        dates: "May 1–2nd, 2026 | 9 AM – 3 PM",
         startDate: "2026-05-01",
-        endDate: "2026-05-03",
+        endDate: "2026-05-02",
         area: "Yuba City, CA",
         categories: ["Household", "Home Decor", "Estate Finds"],
         externalUrlNet:
