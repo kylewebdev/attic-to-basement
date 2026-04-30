@@ -58,7 +58,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Yuba-City/95993/4898559",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/yuba-city/95993/maticulous-marysville-home-2437723",
+            "https://estatesales.org/estate-sales/ca/yuba-city/95993/meticulous-marysville-home-2437723",
     },
     {
         id: "placerville-may-2026",
