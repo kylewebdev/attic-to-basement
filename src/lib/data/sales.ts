@@ -22,55 +22,36 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "galt-may-2026",
-        title: "The Great Galt Sale",
-        dates: "May 1–3rd, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-01",
-        endDate: "2026-05-03",
-        area: "Galt, CA",
-        categories: ["Automobiles", "Estate Finds", "Household"],
+        id: "sacramento-vintage-variety-may-2026",
+        title: "Vintage & Variety Estate Sale",
+        dates: "May 8–10th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-05-08",
+        endDate: "2026-05-10",
+        area: "Sacramento, CA",
+        categories: ["Vintage", "Estate Finds", "Household"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Galt/95632/4878381",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/galt/95632/the-great-galt-sale-2434951",
+            "https://www.estatesales.net/CA/Sacramento/95816/4906569",
     },
     {
-        id: "citrus-heights-may-2026",
-        title: "The Nesting Hen House",
-        dates: "May 1–3rd, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-01",
-        endDate: "2026-05-03",
-        area: "Citrus Heights, CA",
-        categories: ["Home Decor", "Collectibles", "Household"],
+        id: "roseville-may-2026",
+        title: "Roseville Home Full of Beautiful Decor and More",
+        dates: "May 8–10th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-05-08",
+        endDate: "2026-05-10",
+        area: "Roseville, CA",
+        categories: ["Home Decor", "Household", "Estate Finds"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Citrus-Heights/95610/4887357",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/the-nesting-hen-house-2436220",
+            "https://www.estatesales.net/CA/Roseville/95747/4907685",
     },
     {
-        id: "yuba-city-may-2026",
-        title: "Meticulous Marysville Home",
-        dates: "May 1–2nd, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-01",
-        endDate: "2026-05-02",
-        area: "Yuba City, CA",
-        categories: ["Household", "Home Decor", "Estate Finds"],
+        id: "sacramento-ming-may-2026",
+        title: "Mid Century Meets Ming Dynasty",
+        dates: "May 15–17th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-05-15",
+        endDate: "2026-05-17",
+        area: "Sacramento, CA",
+        categories: ["Mid-Century Furniture", "Asian Antiques", "Collectibles"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Yuba-City/95993/4898559",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/yuba-city/95993/meticulous-marysville-home-2437723",
-    },
-    {
-        id: "placerville-may-2026",
-        title: "Classic Barn Finds — Equipment & Vehicles",
-        dates: "May 2–4th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-02",
-        endDate: "2026-05-04",
-        area: "Placerville, CA",
-        categories: ["Vehicles", "Equipment", "Barn Finds"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Placerville/95667/4897821",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/placerville/95667/classic-barn-finds-equipment-vehicles-2437619",
+            "https://www.estatesales.net/CA/Sacramento/95822/4903269",
     },
 ];
