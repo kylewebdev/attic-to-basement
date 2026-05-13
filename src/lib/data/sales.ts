@@ -22,28 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-vintage-variety-may-2026",
-        title: "Vintage & Variety Estate Sale",
-        dates: "May 8–10th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-05-08",
-        endDate: "2026-05-10",
-        area: "Sacramento, CA",
-        categories: ["Vintage", "Estate Finds", "Household"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95816/4906569",
-    },
-    {
-        id: "roseville-may-2026",
-        title: "Roseville Home Full of Beautiful Decor and More",
-        dates: "May 8–10th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-08",
-        endDate: "2026-05-10",
-        area: "Roseville, CA",
-        categories: ["Home Decor", "Household", "Estate Finds"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Roseville/95747/4907685",
-    },
-    {
         id: "sacramento-ming-may-2026",
         title: "Mid Century Meets Ming Dynasty",
         dates: "May 15–17th, 2026 | 9 AM – 3 PM",
@@ -53,5 +31,20 @@ export const sales: Sale[] = [
         categories: ["Mid-Century Furniture", "Asian Antiques", "Collectibles"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95822/4903269",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95822/mid-century-meets-ming-dynasty-2438477",
+    },
+    {
+        id: "lincoln-cottage-core-may-2026",
+        title: "Cottage-Core Estate Sale",
+        dates: "May 16–17th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-05-16",
+        endDate: "2026-05-17",
+        area: "Lincoln, CA",
+        categories: ["Cottage Decor", "Vintage", "Estate Finds"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Lincoln/95648/4917861",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/lincoln/95648/cottagecore-estate-sale-2440408",
     },
 ];
