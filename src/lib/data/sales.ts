@@ -22,29 +22,53 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-ming-may-2026",
-        title: "Mid Century Meets Ming Dynasty",
-        dates: "May 15–17th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-15",
-        endDate: "2026-05-17",
-        area: "Sacramento, CA",
-        categories: ["Mid-Century Furniture", "Asian Antiques", "Collectibles"],
+        id: "roseville-downsizing-may-2026",
+        title: "54 Years Same Family Downsizing",
+        dates: "May 22–24th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-05-22",
+        endDate: "2026-05-24",
+        area: "Roseville, CA",
+        categories: ["Family Heirlooms", "Vintage Finds", "Estate Treasures"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95822/4903269",
+            "https://www.estatesales.net/CA/Roseville/95661/4919874",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95822/mid-century-meets-ming-dynasty-2438477",
+            "https://estatesales.org/estate-sales/ca/roseville/95661/54-years-same-family-downsizing-2440684",
+    },
+    {
+        id: "penryn-barn-bash-may-2026",
+        title: "Penryn Barn Bash",
+        dates: "May 22–23rd, 2026 | 9 AM – 3 PM",
+        startDate: "2026-05-22",
+        endDate: "2026-05-23",
+        area: "Penryn, CA",
+        categories: ["Barn Finds", "Antiques", "Rustic Decor", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Penryn/95663/4922979",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/penryn/95663/penryn-barn-bash-2441157",
+    },
+    {
+        id: "sacramento-toys-may-2026",
+        title: "Toys & Treasures Estate Sale",
+        dates: "May 22–24th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-05-22",
+        endDate: "2026-05-24",
+        area: "Sacramento, CA",
+        categories: ["Toys", "Vintage Toys", "Collectibles", "Estate Finds"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95821/4925244",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95821/toys-treasures-estate-sale-2441428",
     },
     {
         id: "lincoln-cottage-core-may-2026",
-        title: "Cottage-Core Estate Sale",
-        dates: "May 16–17th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-16",
-        endDate: "2026-05-17",
+        title: "50% Off Sunday Cottage-Core Estate Sale",
+        dates: "May 23rd, 2026 | 9 AM",
+        startDate: "2026-05-23",
+        endDate: "2026-05-23",
         area: "Lincoln, CA",
         categories: ["Cottage Decor", "Vintage", "Estate Finds"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Lincoln/95648/4917861",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/lincoln/95648/cottagecore-estate-sale-2440408",
+            "https://estatesales.org/estate-sales/ca/lincoln/95648/50-off-sundaycottagecore-estate-sale-2440408",
     },
 ];
