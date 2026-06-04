@@ -22,42 +22,47 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "gilroy-second-round-may-2026",
-        title: "Second Round in Gilroy!!",
-        dates: "May 29–31st, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-29",
-        endDate: "2026-05-31",
-        area: "Gilroy, CA",
-        categories: ["Estate Treasures", "Vintage Finds", "Collectibles"],
+        id: "rocklin-faith-books-treasures-june-2026",
+        title: "Faith, Books & Treasures Estate Sale!",
+        dates: "June 5–7th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-05",
+        endDate: "2026-06-07",
+        area: "Rocklin, CA",
+        categories: ["Books", "Religious Items", "Estate Treasures"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Gilroy/95020/4932828",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/gilroy/95020/second-round-in-gilroy-2442374",
+            "https://www.estatesales.net/CA/Rocklin/95677/4944396",
     },
     {
-        id: "winters-super-clean-may-2026",
-        title: "Wonderful Winters Home Super Clean",
-        dates: "May 29–31st, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-29",
-        endDate: "2026-05-31",
-        area: "Winters, CA",
-        categories: ["Home Furnishings", "Estate Finds", "Vintage Treasures"],
+        id: "carmichael-unique-tour-items-june-2026",
+        title: "Carmichael Home Filled With Unique Items Collected While On Tour",
+        dates: "June 5–7th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-05",
+        endDate: "2026-06-07",
+        area: "Carmichael, CA",
+        categories: ["Unique Collectibles", "Travel Finds", "Estate Treasures"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Winters/95694/4933215",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/winters/95694/wonderful-winters-home-super-clean-2442442",
+            "https://www.estatesales.net/CA/Carmichael/95608/4946076",
     },
     {
-        id: "sacramento-parkways-may-2026",
-        title: "Picking in the Parkways",
-        dates: "May 29–31st, 2026 | 9 AM – 3 PM",
-        startDate: "2026-05-29",
-        endDate: "2026-05-31",
+        id: "rancho-cordova-gold-river-june-2026",
+        title: "Glamorous Gold River Sale",
+        dates: "June 5–7th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-05",
+        endDate: "2026-06-07",
+        area: "Rancho Cordova, CA",
+        categories: ["Glamorous Decor", "Home Furnishings", "Estate Finds"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Rancho-Cordova/95670/4946085",
+    },
+    {
+        id: "sacramento-lladro-crystal-christmas-june-2026",
+        title: "Lladro, Crystal, Christmas & Much More!",
+        dates: "June 12–14th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-12",
+        endDate: "2026-06-14",
         area: "Sacramento, CA",
-        categories: ["Collections", "Vintage Finds", "Estate Treasures"],
+        categories: ["Lladro Figurines", "Crystal", "Christmas Decor", "Collectibles"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95833/4933278",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95823/picking-in-the-parkways-2442450",
+            "https://www.estatesales.net/CA/Sacramento/95835/4944393",
     },
 ];
