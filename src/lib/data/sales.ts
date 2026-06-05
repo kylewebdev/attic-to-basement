@@ -50,7 +50,7 @@ export const sales: Sale[] = [
     {
         id: "rancho-cordova-gold-river-june-2026",
         title: "Glamorous Gold River Sale",
-        dates: "June 5–7th, 2026 | 9 AM – 3 PM",
+        dates: "June 5–7th, 2026 | 9 AM – 2 PM",
         startDate: "2026-06-05",
         endDate: "2026-06-07",
         area: "Rancho Cordova, CA",
