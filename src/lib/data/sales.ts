@@ -47,4 +47,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/rancho-cordova/95742/tech-tools-and-treasures-2445049",
     },
+    {
+        id: "el-dorado-hills-estate-june-2026",
+        title: "El Dorado Estate Sale",
+        dates: "June 12–14th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-06-12",
+        endDate: "2026-06-14",
+        area: "El Dorado Hills, CA",
+        categories: ["Furniture", "Home Decor", "Collectibles", "Estate Items"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/El-Dorado-Hills/95762/4952148",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/el-dorado-estate-sale-2445069",
+    },
 ];
