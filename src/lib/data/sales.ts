@@ -60,4 +60,41 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/el-dorado-estate-sale-2445069",
     },
+    {
+        id: "sacramento-arden-arcade-quality-june-2026",
+        title: "Quality in Arden-Arcade!!",
+        dates: "June 18–20th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-18",
+        endDate: "2026-06-20",
+        area: "Sacramento, CA",
+        categories: ["Furniture", "Home Decor", "Collectibles", "Quality Estate"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95864/4955712",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95864/quality-in-ardenarcade-2445538",
+    },
+    {
+        id: "auburn-outdoorsman-barbies-cottage-core-june-2026",
+        title: "Outdoorsman, Barbies, Collectibles & Cottage-Core!!",
+        dates: "June 21–23rd, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-21",
+        endDate: "2026-06-23",
+        area: "Auburn, CA",
+        categories: ["Outdoorsman Gear", "Barbies", "Collectibles", "Cottage-Core"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Auburn/95603/4955721",
+    },
+    {
+        id: "sacramento-carmichael-jam-packed-june-2026",
+        title: "Jam Packed Sacramento/Carmichael Home!!",
+        dates: "June 24–26th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-24",
+        endDate: "2026-06-26",
+        area: "Sacramento, CA",
+        categories: ["Bedroom Set", "Vinyl Records", "Vintage Christmas", "Uranium Glass"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95821/4955628",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95821/jam-packed-sacramentocarmichael-home-2445535",
+    },
 ];
