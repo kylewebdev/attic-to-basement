@@ -83,6 +83,8 @@ export const sales: Sale[] = [
         categories: ["Outdoorsman Gear", "Barbies", "Collectibles", "Cottage-Core"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Auburn/95603/4955721",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/auburn/95603/outdoorsman-barbies-collectibles-cottagecore-2445545",
     },
     {
         id: "sacramento-carmichael-jam-packed-june-2026",
