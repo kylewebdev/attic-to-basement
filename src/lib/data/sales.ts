@@ -22,45 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-lladro-crystal-christmas-june-2026",
-        title: "Lladro, Crystal, Christmas & Much More!",
-        dates: "June 12–14th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-06-12",
-        endDate: "2026-06-14",
-        area: "Sacramento, CA",
-        categories: ["Lladro Figurines", "Crystal", "Christmas Decor", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95835/4944393",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95835/lladro-crystal-christmas-much-more-2443943",
-    },
-    {
-        id: "rancho-cordova-tech-tools-treasures-june-2026",
-        title: "Tech, Tools and Treasures!",
-        dates: "June 12–14th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-06-12",
-        endDate: "2026-06-14",
-        area: "Rancho Cordova, CA",
-        categories: ["Tech", "Tools", "Estate Treasures"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Rancho-Cordova/95742/4951899",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rancho-cordova/95742/tech-tools-and-treasures-2445049",
-    },
-    {
-        id: "el-dorado-hills-estate-june-2026",
-        title: "El Dorado Estate Sale",
-        dates: "June 12–14th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-06-12",
-        endDate: "2026-06-14",
-        area: "El Dorado Hills, CA",
-        categories: ["Furniture", "Home Decor", "Collectibles", "Estate Items"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/El-Dorado-Hills/95762/4952148",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/el-dorado-estate-sale-2445069",
-    },
-    {
         id: "sacramento-arden-arcade-quality-june-2026",
         title: "Quality in Arden-Arcade!!",
         dates: "June 18–20th, 2026 | 9 AM – 3 PM",
@@ -74,9 +35,35 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento/95864/quality-in-ardenarcade-2445538",
     },
     {
+        id: "roseville-another-amazing-home-june-2026",
+        title: "Another Amazing Home in the Heart of Roseville",
+        dates: "June 19–21st, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-19",
+        endDate: "2026-06-21",
+        area: "Roseville, CA",
+        categories: ["Furniture", "Home Decor", "Collectibles", "Estate Items"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Roseville/95747/4961745",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/roseville/95747/another-amazing-sale-in-the-2446446",
+    },
+    {
+        id: "sacramento-garage-studio-liquidation-june-2026",
+        title: "Garage & Studio Liquidation Sale!",
+        dates: "June 20–21st, 2026 | 9 AM – 2 PM",
+        startDate: "2026-06-20",
+        endDate: "2026-06-21",
+        area: "Sacramento, CA",
+        categories: ["Tools", "Outdoor Gear", "Trailers", "Garage Items"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95829/4962972",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95829/garage-studio-liquidation-sale-2446598",
+    },
+    {
         id: "auburn-outdoorsman-barbies-cottage-core-june-2026",
         title: "Outdoorsman, Barbies, Collectibles & Cottage-Core!!",
-        dates: "June 21–23rd, 2026 | 9 AM – 3 PM",
+        dates: "June 21–23rd, 2026 | 8 AM – 3 PM",
         startDate: "2026-06-21",
         endDate: "2026-06-23",
         area: "Auburn, CA",
