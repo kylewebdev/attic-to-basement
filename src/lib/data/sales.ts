@@ -48,6 +48,32 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/roseville/95747/another-amazing-sale-in-the-2446446",
     },
     {
+        id: "sacramento-time-to-shop-june-2026",
+        title: "Time to Shop Estate Sale",
+        dates: "June 19–21st, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-19",
+        endDate: "2026-06-21",
+        area: "Sacramento, CA",
+        categories: ["Furniture", "Home Decor", "Collectibles", "Estate Items"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95831/4963692",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento-/95831/time-to-shop-estate-sale-2446702",
+    },
+    {
+        id: "sacramento-70-off-blowout-june-2026",
+        title: "70% Off One Day Blow Out Sale!!!!",
+        dates: "June 19th, 2026",
+        startDate: "2026-06-19",
+        endDate: "2026-06-19",
+        area: "Sacramento, CA",
+        categories: ["Furniture", "Home Decor", "Collectibles", "Clearance"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95835/4963932",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95835/70-off-one-day-blow-2446744",
+    },
+    {
         id: "sacramento-garage-studio-liquidation-june-2026",
         title: "Garage & Studio Liquidation Sale!",
         dates: "June 20–21st, 2026 | 9 AM – 2 PM",
