@@ -22,94 +22,42 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-arden-arcade-quality-june-2026",
-        title: "Quality in Arden-Arcade!!",
-        dates: "June 18–20th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-06-18",
-        endDate: "2026-06-20",
-        area: "Sacramento, CA",
-        categories: ["Furniture", "Home Decor", "Collectibles", "Quality Estate"],
+        id: "elk-grove-lovely-estate-sale-june-2026",
+        title: "Lovely Elk Grove Estate Sale",
+        dates: "June 27–28th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-27",
+        endDate: "2026-06-28",
+        area: "Elk Grove, CA",
+        categories: ["Furniture", "Home Decor", "Kitchenware", "Barware"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95864/4955712",
+            "https://www.estatesales.net/CA/Elk-Grove/95758/4970424",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95864/quality-in-ardenarcade-2445538",
+            "https://estatesales.org/estate-sales/ca/elk-grove/95758/lovely-elk-grove-estate-sale-2447694",
     },
     {
-        id: "roseville-another-amazing-home-june-2026",
-        title: "Another Amazing Home in the Heart of Roseville",
-        dates: "June 19–21st, 2026 | 9 AM – 3 PM",
-        startDate: "2026-06-19",
-        endDate: "2026-06-21",
-        area: "Roseville, CA",
-        categories: ["Furniture", "Home Decor", "Collectibles", "Estate Items"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Roseville/95747/4961745",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95747/another-amazing-sale-in-the-2446446",
-    },
-    {
-        id: "sacramento-time-to-shop-june-2026",
-        title: "Time to Shop Estate Sale",
-        dates: "June 19–21st, 2026 | 9 AM – 3 PM",
-        startDate: "2026-06-19",
-        endDate: "2026-06-21",
+        id: "sacramento-back-in-sac-june-2026",
+        title: "Back in Sac, With Tons of Fun",
+        dates: "June 27–28th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-06-27",
+        endDate: "2026-06-28",
         area: "Sacramento, CA",
         categories: ["Furniture", "Home Decor", "Collectibles", "Estate Items"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95831/4963692",
+            "https://www.estatesales.net/CA/Sacramento/95834/4974015",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento-/95831/time-to-shop-estate-sale-2446702",
-    },
-    {
-        id: "sacramento-70-off-blowout-june-2026",
-        title: "70% Off One Day Blow Out Sale!!!!",
-        dates: "June 19th, 2026",
-        startDate: "2026-06-19",
-        endDate: "2026-06-19",
-        area: "Sacramento, CA",
-        categories: ["Furniture", "Home Decor", "Collectibles", "Clearance"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95835/4963932",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95835/70-off-one-day-blow-2446744",
-    },
-    {
-        id: "sacramento-garage-studio-liquidation-june-2026",
-        title: "Garage & Studio Liquidation Sale!",
-        dates: "June 20–21st, 2026 | 9 AM – 2 PM",
-        startDate: "2026-06-20",
-        endDate: "2026-06-21",
-        area: "Sacramento, CA",
-        categories: ["Tools", "Outdoor Gear", "Trailers", "Garage Items"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95829/4962972",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95829/garage-studio-liquidation-sale-2446598",
-    },
-    {
-        id: "auburn-outdoorsman-barbies-cottage-core-june-2026",
-        title: "Outdoorsman, Barbies, Collectibles & Cottage-Core!!",
-        dates: "June 21–23rd, 2026 | 8 AM – 3 PM",
-        startDate: "2026-06-21",
-        endDate: "2026-06-23",
-        area: "Auburn, CA",
-        categories: ["Outdoorsman Gear", "Barbies", "Collectibles", "Cottage-Core"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Auburn/95603/4955721",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/auburn/95603/outdoorsman-barbies-collectibles-cottagecore-2445545",
+            "https://estatesales.org/estate-sales/ca/sacramento-/95834/back-and-sac-with-tons-2448152",
     },
     {
         id: "sacramento-carmichael-jam-packed-june-2026",
         title: "Jam Packed Sacramento/Carmichael Home!!",
-        dates: "June 24–26th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-06-24",
-        endDate: "2026-06-26",
+        dates: "June 30 – July 2nd, 2026 | 9 AM – 2 PM",
+        startDate: "2026-06-30",
+        endDate: "2026-07-02",
         area: "Sacramento, CA",
         categories: ["Bedroom Set", "Vinyl Records", "Vintage Christmas", "Uranium Glass"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95821/4955628",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95821/jam-packed-sacramentocarmichael-home-2445535",
+            "https://estatesales.org/estate-sales/ca/sacramento/95821/dates-changed-jam-packed-sacramentocarmichael-2445535",
     },
 ];
