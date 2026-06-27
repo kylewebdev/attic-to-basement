@@ -48,6 +48,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento-/95834/back-and-sac-with-tons-2448152",
     },
     {
+        id: "auburn-two-warehouses-june-2026",
+        title: "70% Off Two Warehouses - One Day - It's All Gotta Go!",
+        dates: "June 28th, 2026",
+        startDate: "2026-06-28",
+        endDate: "2026-06-28",
+        area: "Auburn, CA",
+        categories: ["Vintage", "Antiques", "Man Cave", "Warehouse"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Auburn/95603/4978086",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/auburn/95603/70-off-two-warehouses-one-2448819",
+    },
+    {
         id: "sacramento-carmichael-jam-packed-july-2026",
         title: "Jam Packed Sacramento/Carmichael Home!!",
         dates: "July 1–3rd, 2026 | 9 AM – 4 PM",
