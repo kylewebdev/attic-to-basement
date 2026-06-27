@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95834/4974015",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento-/95834/back-and-sac-with-tons-2448152",
+            "https://estatesales.org/estate-sales/ca/sacramento/95834/back-and-sac-with-tons-2448152",
     },
     {
         id: "auburn-two-warehouses-june-2026",
