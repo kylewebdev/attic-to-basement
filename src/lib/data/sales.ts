@@ -48,11 +48,11 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento-/95834/back-and-sac-with-tons-2448152",
     },
     {
-        id: "sacramento-carmichael-jam-packed-june-2026",
+        id: "sacramento-carmichael-jam-packed-july-2026",
         title: "Jam Packed Sacramento/Carmichael Home!!",
-        dates: "June 30 – July 2nd, 2026 | 9 AM – 2 PM",
-        startDate: "2026-06-30",
-        endDate: "2026-07-02",
+        dates: "July 1–3rd, 2026 | 9 AM – 4 PM",
+        startDate: "2026-07-01",
+        endDate: "2026-07-03",
         area: "Sacramento, CA",
         categories: ["Bedroom Set", "Vinyl Records", "Vintage Christmas", "Uranium Glass"],
         externalUrlNet:
