@@ -22,16 +22,16 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-carmichael-jam-packed-july-2026",
-        title: "Jam Packed Sacramento/Carmichael Home!!",
-        dates: "July 1–3rd, 2026 | 9 AM – 4 PM",
-        startDate: "2026-07-01",
-        endDate: "2026-07-03",
-        area: "Sacramento, CA",
-        categories: ["Bedroom Set", "Vinyl Records", "Vintage Christmas", "Uranium Glass"],
+        id: "carmichael-july-2026",
+        title: "CARMICHAEL CAR. MOTORCYCLE. AND MORE! PLEASE READ DETAILS ON THIS ONE APPOINTMENT ONLY",
+        dates: "July 9–11th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-07-09",
+        endDate: "2026-07-11",
+        area: "Carmichael, CA",
+        categories: ["Cars", "Motorcycles", "Collectibles"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95821/4955628",
+            "https://www.estatesales.net/CA/Carmichael/95608/4987929",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95821/dates-changed-jam-packed-sacramentocarmichael-2445535",
+            "https://estatesales.org/estate-sales/ca/carmichael/95608/carmichael-car-motorcycle-and-more-2450109",
     },
 ];
