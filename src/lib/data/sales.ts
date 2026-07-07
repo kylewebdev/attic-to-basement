@@ -34,4 +34,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/carmichael/95608/carmichael-car-motorcycle-and-more-2450109",
     },
+    {
+        id: "carmichael-extreme-collecting-july-2026",
+        title: "EXTREME COLLECTING: CARMICHAEL EDITION",
+        dates: "July 22–24th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-07-22",
+        endDate: "2026-07-24",
+        area: "Carmichael, CA",
+        categories: ["Collectibles", "Antiques", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Carmichael/95608/4988688",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/carmichael/95608/extreme-collecting-carmichael-edition-2450167",
+    },
 ];
