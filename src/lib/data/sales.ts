@@ -48,6 +48,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento/95816/eclectic-estate-odyssey-2450226",
     },
     {
+        id: "oroville-july-2026",
+        title: "CITY OF GOLD ESTATE SALE",
+        dates: "July 17–19th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-07-17",
+        endDate: "2026-07-19",
+        area: "Oroville, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Oroville/95966/4989831",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/oroville/95966/city-of-gold-estate-sale-2450326",
+    },
+    {
         id: "carmichael-extreme-collecting-july-2026",
         title: "EXTREME COLLECTING: CARMICHAEL EDITION",
         dates: "July 22–24th, 2026 | 9 AM – 3 PM",
