@@ -35,6 +35,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/carmichael/95608/carmichael-car-motorcycle-and-more-2450109",
     },
     {
+        id: "sacramento-eclectic-july-2026",
+        title: "ECLECTIC ESTATE ODYSSEY",
+        dates: "July 10–12th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-07-10",
+        endDate: "2026-07-12",
+        area: "Sacramento, CA",
+        categories: ["Eclectic", "Antiques", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95816/4989153",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95816/eclectic-estate-odyssey-2450226",
+    },
+    {
         id: "carmichael-extreme-collecting-july-2026",
         title: "EXTREME COLLECTING: CARMICHAEL EDITION",
         dates: "July 22–24th, 2026 | 9 AM – 3 PM",
