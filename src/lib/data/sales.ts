@@ -61,6 +61,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/roseville/95747/roseville-glitz-glam-2450337",
     },
     {
+        id: "lincoln-july-2026",
+        title: "SUN CITY LINCOLN ESTATE SALE MID-CENTURY FURNITURE",
+        dates: "July 12–13th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-07-12",
+        endDate: "2026-07-13",
+        area: "Lincoln, CA",
+        categories: ["Mid-Century Furniture", "Vintage", "Home Decor"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Lincoln/95648/4991343",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/lincoln/95648/sun-city-lincoln-estate-sale-2450553",
+    },
+    {
         id: "oroville-july-2026",
         title: "CITY OF GOLD ESTATE SALE",
         dates: "July 17–19th, 2026 | 9 AM – 2 PM",
