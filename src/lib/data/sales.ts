@@ -80,7 +80,7 @@ export const sales: Sale[] = [
         startDate: "2026-07-17",
         endDate: "2026-07-19",
         area: "Oroville, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Mid-Century Furniture", "Antiques", "Collectibles", "Vintage", "Vinyl Records"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Oroville/95966/4989831",
         externalUrlOrg:
