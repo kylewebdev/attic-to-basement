@@ -1,0 +1,67 @@
+name: Update estate sales
+
+on:
+  schedule:
+    # Daily at 19:00 UTC = noon PDT / 11 AM PST
+    - cron: "0 19 * * *"
+  # Manual button in the GitHub UI / mobile app
+  workflow_dispatch:
+  # Fired by the site's /api/refresh-sales route (client-facing refresh link)
+  repository_dispatch:
+    types: [update-sales]
+  # Runs once when this workflow file itself changes, so edits are verified
+  push:
+    paths:
+      - ".github/workflows/update-sales.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-sales
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Scrape estate sales
+        run: node scripts/scrape-sales.mjs > /tmp/scrape.json
+
+      - name: Regenerate sales.ts
+        run: node scripts/generate-sales.mjs /tmp/scrape.json
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet src/lib/data/sales.ts; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to sales.ts"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff src/lib/data/sales.ts
+          fi
+
+      - name: Install dependencies
+        if: steps.diff.outputs.changed == 'true'
+        run: npm ci
+
+      - name: Validate build
+        if: steps.diff.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/data/sales.ts
+          git commit -m "content: update estate sales data"
+          git push

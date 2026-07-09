@@ -11,7 +11,7 @@ Brand voice, business context, and design specs live in `docs/system/context/` �
 
 ## Estate sales updates
 
-Automated: `scripts/update-sales.sh` scrapes and runs `scripts/generate-sales.mjs`, which deterministically rewrites the `sales` array in `src/lib/data/sales.ts`. Don't hand-edit that array — fix the generator instead. The format spec lives in `docs/system/runbooks/update-estate-sales.md`. estatesales.net is the source of truth; .org only supplies `externalUrlOrg`.
+Automated via GitHub Actions (`.github/workflows/update-sales.yml`, daily + manual + `repository_dispatch`): `scripts/scrape-sales.mjs` scrapes, `scripts/generate-sales.mjs` deterministically rewrites the `sales` array in `src/lib/data/sales.ts`. Don't hand-edit that array — fix the generator instead. Infrastructure details: `docs/system/runbooks/sales-update-infrastructure.md`; format spec: `docs/system/runbooks/update-estate-sales.md`. estatesales.net is the source of truth; .org only supplies `externalUrlOrg`.
 
 ## Forms
 
