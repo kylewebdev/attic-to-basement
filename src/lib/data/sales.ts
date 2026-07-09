@@ -62,7 +62,7 @@ export const sales: Sale[] = [
     },
     {
         id: "lincoln-july-2026",
-        title: "SUN CITY LINCOLN ESTATE SALE MID-CENTURY FURNITURE",
+        title: "SUN CITY LINCOLN ESTATE SALE",
         dates: "July 12–13th, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-12",
         endDate: "2026-07-13",
