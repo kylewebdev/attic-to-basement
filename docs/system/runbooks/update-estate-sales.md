@@ -1,5 +1,12 @@
 # Runbook: Update Estate Sales Data
 
+> **Note (2026-07-09):** This update is now performed deterministically by
+> `scripts/generate-sales.mjs` (invoked from `scripts/update-sales.sh`) — no AI session
+> is involved. The generator implements the rules below; this document remains the
+> spec for those rules and the fallback procedure for manual/AI edits. The `categories`
+> field is derived from keyword rules over the listing title + description
+> (see `CATEGORY_RULES` in the generator) rather than judgment.
+
 ## Purpose
 
 This runbook is for **scheduled AI sessions** that receive new estate sale data (from an API route or scraper) and need to update the site's sales listing.

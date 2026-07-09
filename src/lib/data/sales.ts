@@ -22,20 +22,20 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "carmichael-july-2026",
+        id: "carmichael-car-motorcycle-please-july-2026",
         title: "CARMICHAEL CAR. MOTORCYCLE. AND MORE! PLEASE READ DETAILS ON THIS ONE APPOINTMENT ONLY",
         dates: "July 9–11th, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-09",
         endDate: "2026-07-11",
         area: "Carmichael, CA",
-        categories: ["Cars", "Motorcycles", "Collectibles"],
+        categories: ["Cars", "Motorcycles", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Carmichael/95608/4987929",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/carmichael/95608/carmichael-car-motorcycle-and-more-2450109",
     },
     {
-        id: "sacramento-eclectic-july-2026",
+        id: "sacramento-july-2026",
         title: "ECLECTIC ESTATE ODYSSEY",
         dates: "July 10–12th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-10",
@@ -54,7 +54,7 @@ export const sales: Sale[] = [
         startDate: "2026-07-10",
         endDate: "2026-07-12",
         area: "Roseville, CA",
-        categories: ["Jewelry", "Fashion", "Home Decor"],
+        categories: ["Jewelry", "Fashion", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Roseville/95747/4989930",
         externalUrlOrg:
@@ -67,7 +67,7 @@ export const sales: Sale[] = [
         startDate: "2026-07-12",
         endDate: "2026-07-13",
         area: "Lincoln, CA",
-        categories: ["Mid-Century Furniture", "Vintage", "Home Decor"],
+        categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Lincoln/95648/4991343",
         externalUrlOrg:
@@ -87,7 +87,7 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/oroville/95966/city-of-gold-estate-sale-2450326",
     },
     {
-        id: "carmichael-extreme-collecting-july-2026",
+        id: "carmichael-extreme-collecting-edition-july-2026",
         title: "EXTREME COLLECTING: CARMICHAEL EDITION",
         dates: "July 22–24th, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-22",

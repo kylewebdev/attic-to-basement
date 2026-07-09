@@ -11,7 +11,7 @@ Brand voice, business context, and design specs live in `docs/system/context/` �
 
 ## Estate sales updates
 
-Follow `docs/system/runbooks/update-estate-sales.md` exactly. Only modify `src/lib/data/sales.ts`. Replace the array contents — never append. estatesales.net is the source of truth; only take `externalUrlOrg` and multi-day date corrections from .org.
+Automated: `scripts/update-sales.sh` scrapes and runs `scripts/generate-sales.mjs`, which deterministically rewrites the `sales` array in `src/lib/data/sales.ts`. Don't hand-edit that array — fix the generator instead. The format spec lives in `docs/system/runbooks/update-estate-sales.md`. estatesales.net is the source of truth; .org only supplies `externalUrlOrg`.
 
 ## Forms
 
