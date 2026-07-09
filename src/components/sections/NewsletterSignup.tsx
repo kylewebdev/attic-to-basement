@@ -1,6 +1,6 @@
 "use client";
 
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 
 export default function NewsletterSignup() {
     return (

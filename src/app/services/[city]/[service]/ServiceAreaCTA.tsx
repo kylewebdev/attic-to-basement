@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import { sitePhone } from "@/lib/metadata";
 
 interface ServiceAreaCTAProps {

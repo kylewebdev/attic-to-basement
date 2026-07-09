@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import NextError from "next/error";
-import { captureException } from "@/lib/posthog";
+import { captureException } from "@/lib/analytics";
 
 export default function GlobalError({
   error,

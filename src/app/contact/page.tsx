@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import Hero from "@/components/sections/Hero";
 import ConsultationForm from "@/components/forms/ConsultationForm";
 import PhoneLink from "@/components/ui/PhoneLink";

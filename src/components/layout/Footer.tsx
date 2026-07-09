@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import PhoneLink from "@/components/ui/PhoneLink";
 
 const navLinks = [

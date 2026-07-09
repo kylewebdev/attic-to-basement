@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import { useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/ui/ThemeToggle";

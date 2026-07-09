@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import Hero from "@/components/sections/Hero";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 import TestimonialCard from "@/components/ui/TestimonialCard";

@@ -1,6 +1,6 @@
 "use client";
 
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 
 export const PHONE_NUMBER = "(916) 521-1077";
 export const PHONE_HREF = "tel:+19165211077";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import { useGSAP } from "@/lib/gsap";
 import { useScrollStory, getSectionPosition } from "./ScrollStory";
 import TestimonialCard from "@/components/ui/TestimonialCard";

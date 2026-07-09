@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { capture, captureException } from "@/lib/posthog";
+import { capture, captureException } from "@/lib/analytics";
 import Button from "@/components/ui/Button";
 import PhoneLink from "@/components/ui/PhoneLink";
 

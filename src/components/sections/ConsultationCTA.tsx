@@ -1,6 +1,6 @@
 "use client";
 
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import ConsultationForm from "@/components/forms/ConsultationForm";
 import Button from "@/components/ui/Button";
 import PhoneLink, { PHONE_NUMBER } from "@/components/ui/PhoneLink";

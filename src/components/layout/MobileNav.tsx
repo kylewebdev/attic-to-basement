@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState, useCallback } from "react";
 import Link from "next/link";
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import { gsap, useGSAP } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 

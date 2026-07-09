@@ -114,13 +114,13 @@ export default function PrivacyPage() {
                                 </li>
                                 <li>
                                     <strong className="text-text-body">
-                                        PostHog
+                                        Google Analytics
                                     </strong>{" "}
                                     — provides website analytics to help us
                                     understand how visitors use our site.
-                                    PostHog may collect non-personal information
-                                    such as page views, clicks, and session
-                                    data.
+                                    Google Analytics may collect non-personal
+                                    information such as page views, clicks, and
+                                    session data.
                                 </li>
                                 <li>
                                     <strong className="text-text-body">
@@ -152,8 +152,8 @@ export default function PrivacyPage() {
                             <p className="text-text-secondary leading-relaxed mb-3">
                                 Our website uses cookies and similar
                                 technologies to enhance the user experience and
-                                analyze site usage. Specifically, we use PostHog
-                                analytics, which may set cookies to track
+                                analyze site usage. Specifically, we use Google
+                                Analytics, which may set cookies to track
                                 anonymous usage patterns such as pages visited,
                                 buttons clicked, and session duration.
                             </p>

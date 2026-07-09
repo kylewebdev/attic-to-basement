@@ -1,4 +1,4 @@
-import { capture } from "@/lib/posthog";
+import { capture } from "@/lib/analytics";
 import type { Sale } from "@/lib/data/sales";
 
 interface SaleCardProps {
