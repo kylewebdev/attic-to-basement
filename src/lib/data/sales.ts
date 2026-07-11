@@ -22,8 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "carmichael-car-motorcycle-please-july-2026",
-        title: "CARMICHAEL CAR. MOTORCYCLE. AND MORE! PLEASE READ DETAILS ON THIS ONE APPOINTMENT ONLY",
+        id: "carmichael-motorcycle-please-read-july-2026",
+        title: "CARMICHAEL. MOTORCYCLE. AND MORE! PLEASE READ DETAILS ON THIS ONE APPOINTMENT ONLY",
         dates: "July 9–11th, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-09",
         endDate: "2026-07-11",
@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Carmichael/95608/4987929",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/carmichael/95608/carmichael-car-motorcycle-and-more-2450109",
+            "https://estatesales.org/estate-sales/ca/carmichael/95608/carmichael-motorcycle-and-more-please-2450109",
     },
     {
         id: "sacramento-july-2026",
