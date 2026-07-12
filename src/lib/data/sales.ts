@@ -22,21 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "carmichael-motorcycle-please-read-july-2026",
-        title: "CARMICHAEL. MOTORCYCLE. AND MORE! PLEASE READ DETAILS ON THIS ONE APPOINTMENT ONLY",
-        dates: "July 9–11th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-07-09",
-        endDate: "2026-07-11",
-        area: "Carmichael, CA",
-        categories: ["Cars", "Motorcycles", "Antiques"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Carmichael/95608/4987929",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/carmichael/95608/carmichael-motorcycle-and-more-please-2450109",
-    },
-    {
         id: "sacramento-july-2026",
-        title: "ECLECTIC ESTATE ODYSSEY",
+        title: "50% OFF SUNDAY - ECLECTIC ESTATE ODYSSEY",
         dates: "July 10–12th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-10",
         endDate: "2026-07-12",
@@ -45,11 +32,11 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95816/4989153",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95816/eclectic-estate-odyssey-2450226",
+            "https://estatesales.org/estate-sales/ca/sacramento/95816/50-off-sunday-eclectic-estate-2450226",
     },
     {
         id: "roseville-july-2026",
-        title: "ROSEVILLE GLITZ & GLAM",
+        title: "50% off MOST ITEMS SUNDAY!! ROSEVILLE GLITZ & GLAM",
         dates: "July 10–12th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-10",
         endDate: "2026-07-12",
@@ -57,8 +44,19 @@ export const sales: Sale[] = [
         categories: ["Jewelry", "Fashion", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Roseville/95747/4989930",
+    },
+    {
+        id: "carmichael-50-off-sunday-july-2026",
+        title: "50% OFF SUNDAY! CARMICHAEL. MOTORCYCLE. AND MORE! PLEASE READ DETAILS ON THIS ONE APPOINTMENT ONLY",
+        dates: "July 11–12th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-07-11",
+        endDate: "2026-07-12",
+        area: "Carmichael, CA",
+        categories: ["Cars", "Motorcycles", "Antiques"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Carmichael/95608/4987929",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95747/roseville-glitz-glam-2450337",
+            "https://estatesales.org/estate-sales/ca/carmichael/95608/50-off-sunday-carmichael-motorcycle-2450109",
     },
     {
         id: "lincoln-july-2026",
@@ -67,7 +65,7 @@ export const sales: Sale[] = [
         startDate: "2026-07-12",
         endDate: "2026-07-13",
         area: "Lincoln, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Jewelry", "Vintage", "Art", "Vinyl Records"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Lincoln/95648/4991343",
         externalUrlOrg:
