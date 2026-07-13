@@ -22,17 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "lincoln-july-2026",
-        title: "50% OFF EVERYTHING, SUN CITY LINCOLN ESTATE SALE",
-        dates: "July 12–13th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-07-12",
-        endDate: "2026-07-13",
-        area: "Lincoln, CA",
-        categories: ["Jewelry", "Art", "Vinyl Records"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Lincoln/95648/4991343",
-    },
-    {
         id: "oroville-july-2026",
         title: "CITY OF GOLD ESTATE SALE",
         dates: "July 17–19th, 2026 | 9 AM – 2 PM",
