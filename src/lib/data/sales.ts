@@ -22,54 +22,15 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-july-2026",
-        title: "50% OFF SUNDAY - ECLECTIC ESTATE ODYSSEY",
-        dates: "July 10–12th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-07-10",
-        endDate: "2026-07-12",
-        area: "Sacramento, CA",
-        categories: ["Eclectic", "Antiques", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95816/4989153",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95816/50-off-sunday-eclectic-estate-2450226",
-    },
-    {
-        id: "roseville-july-2026",
-        title: "50% off MOST ITEMS SUNDAY!! ROSEVILLE GLITZ & GLAM",
-        dates: "July 10–12th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-07-10",
-        endDate: "2026-07-12",
-        area: "Roseville, CA",
-        categories: ["Jewelry", "Fashion", "Antiques"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Roseville/95747/4989930",
-    },
-    {
-        id: "carmichael-50-off-sunday-july-2026",
-        title: "50% OFF SUNDAY! CARMICHAEL. MOTORCYCLE. AND MORE! PLEASE READ DETAILS ON THIS ONE APPOINTMENT ONLY",
-        dates: "July 11–12th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-07-11",
-        endDate: "2026-07-12",
-        area: "Carmichael, CA",
-        categories: ["Cars", "Motorcycles", "Antiques"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Carmichael/95608/4987929",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/carmichael/95608/50-off-sunday-carmichael-motorcycle-2450109",
-    },
-    {
         id: "lincoln-july-2026",
-        title: "SUN CITY LINCOLN ESTATE SALE",
+        title: "50% OFF EVERYTHING, SUN CITY LINCOLN ESTATE SALE",
         dates: "July 12–13th, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-12",
         endDate: "2026-07-13",
         area: "Lincoln, CA",
-        categories: ["Jewelry", "Vintage", "Art", "Vinyl Records"],
+        categories: ["Jewelry", "Art", "Vinyl Records"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Lincoln/95648/4991343",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/lincoln/95648/sun-city-lincoln-estate-sale-2450553",
     },
     {
         id: "oroville-july-2026",
@@ -78,14 +39,25 @@ export const sales: Sale[] = [
         startDate: "2026-07-17",
         endDate: "2026-07-19",
         area: "Oroville, CA",
-        categories: ["Mid-Century Furniture", "Antiques", "Collectibles", "Vintage", "Vinyl Records"],
+        categories: ["Furniture", "Antiques", "Collectibles", "Vintage", "Vinyl Records"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Oroville/95966/4989831",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/oroville/95966/city-of-gold-estate-sale-2450326",
     },
     {
-        id: "carmichael-extreme-collecting-edition-july-2026",
+        id: "sacramento-july-2026",
+        title: "TOOLS, TREASURES & TEES",
+        dates: "July 18–19th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-07-18",
+        endDate: "2026-07-19",
+        area: "Sacramento, CA",
+        categories: ["Tools", "Antiques", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95816/4996497",
+    },
+    {
+        id: "carmichael-july-2026",
         title: "EXTREME COLLECTING: CARMICHAEL EDITION",
         dates: "July 22–24th, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-22",
