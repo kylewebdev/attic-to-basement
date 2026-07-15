@@ -44,15 +44,17 @@ export const sales: Sale[] = [
         categories: ["Jewelry", "Fashion", "Furniture", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95822/4999746",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95822/packed-in-the-pocket-2451691",
     },
     {
-        id: "sacramento-tools-treasures-tees-july-2026",
-        title: "TOOLS, TREASURES & TEES",
+        id: "sacramento-tools-treasures-toys-july-2026",
+        title: "TOOLS, TREASURES & TOYS",
         dates: "July 18–19th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-18",
         endDate: "2026-07-19",
         area: "Sacramento, CA",
-        categories: ["Tools", "Antiques", "Collectibles"],
+        categories: ["Tools", "Toys", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95816/4996497",
     },
