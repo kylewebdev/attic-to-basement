@@ -35,7 +35,18 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/oroville/95966/city-of-gold-estate-sale-2450326",
     },
     {
-        id: "sacramento-july-2026",
+        id: "sacramento-packed-in-pocket-july-2026",
+        title: "PACKED IN THE POCKET!",
+        dates: "July 17–19th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-07-17",
+        endDate: "2026-07-19",
+        area: "Sacramento, CA",
+        categories: ["Jewelry", "Fashion", "Furniture", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95822/4999746",
+    },
+    {
+        id: "sacramento-tools-treasures-tees-july-2026",
         title: "TOOLS, TREASURES & TEES",
         dates: "July 18–19th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-18",
