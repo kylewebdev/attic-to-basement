@@ -57,6 +57,8 @@ export const sales: Sale[] = [
         categories: ["Tools", "Toys", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95816/4996497",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95816/tools-treasures-and-tees-2451438",
     },
     {
         id: "carmichael-july-2026",
