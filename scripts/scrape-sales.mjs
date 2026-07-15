@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+import { pathToFileURL } from "node:url";
+
 /**
  * Self-contained estate-sales scraper (ported from the a2b-scrape repo so the
  * GitHub Actions workflow needs no cross-repo checkout). Prints the same JSON
@@ -10,7 +12,7 @@
  *   Angular app uses. Each sale's description comes from the detail page's
  *   embedded SSR state (best effort).
  * - EstateSales.org is only fetched to attach each sale's .org URL as altUrl,
- *   matched by zip + title-slug prefix. Never fatal.
+ *   matched by zip + exact, prefix, or confidently similar title. Never fatal.
  *
  * Exits non-zero (with success:false JSON on stdout) if the .NET fetch fails.
  */
@@ -180,6 +182,8 @@ function deriveStatus(start, end) {
 // ─── EstateSales.org URL matching ────────────────────────────────────
 
 const SALE_LINK_REGEX = /href="(\/estate-sales\/[a-z]{2}\/[a-z0-9-]+\/(\d{5})\/([a-z0-9-]+?)-(\d+))"/g;
+const FUZZY_TITLE_THRESHOLD = 0.82;
+const FUZZY_TITLE_MARGIN = 0.08;
 
 async function fetchOrgSaleLinks() {
     const res = await fetchWithRetry(`${ORG.baseUrl}${ORG.companyPath}`);
@@ -203,14 +207,11 @@ function attachOrgUrls(listings, orgLinks) {
     const available = [...orgLinks];
 
     for (const listing of listings) {
-        const titleSlug = slugify(listing.title);
         const candidates = available.filter((link) => link.zip === listing.zip);
 
         // The .org page also lists past sales, so an unmatched listing is left
         // without altUrl rather than guessed — a missing link beats a wrong one.
-        const match = candidates
-            .filter((link) => titleSlug.startsWith(link.slug) || link.slug.startsWith(titleSlug))
-            .sort((a, b) => b.slug.length - a.slug.length)[0];
+        const match = findMatchingOrgLink(listing.title, candidates);
 
         if (match) {
             listing.altUrl = match.url;
@@ -221,9 +222,70 @@ function attachOrgUrls(listings, orgLinks) {
     }
 }
 
+export function findMatchingOrgLink(title, candidates) {
+    const titleSlug = slugify(title);
+    if (!titleSlug) return undefined;
+
+    // Preserve the original deterministic behavior for exact/prefix matches.
+    const prefixMatch = candidates
+        .filter((link) => titleSlug.startsWith(link.slug) || link.slug.startsWith(titleSlug))
+        .sort((a, b) => b.slug.length - a.slug.length)[0];
+    if (prefixMatch) return prefixMatch;
+
+    const ranked = candidates
+        .map((link) => ({
+            link,
+            similarity: titleSimilarity(titleSlug, link.slug),
+        }))
+        .sort((a, b) => b.similarity - a.similarity || b.link.saleId - a.link.saleId);
+
+    const best = ranked[0];
+    const runnerUp = ranked[1];
+    if (!best || best.similarity < FUZZY_TITLE_THRESHOLD) return undefined;
+
+    // If two past/current links look nearly equally plausible, do not guess.
+    if (runnerUp
+        && runnerUp.similarity >= FUZZY_TITLE_THRESHOLD
+        && best.similarity - runnerUp.similarity < FUZZY_TITLE_MARGIN) {
+        return undefined;
+    }
+
+    return best.link;
+}
+
+function titleSimilarity(left, right) {
+    if (!left || !right) return 0;
+    if (left === right) return 1;
+
+    const distance = levenshteinDistance(left, right);
+    return 1 - distance / Math.max(left.length, right.length);
+}
+
+function levenshteinDistance(left, right) {
+    if (left.length < right.length) return levenshteinDistance(right, left);
+
+    let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+
+    for (let leftIndex = 1; leftIndex <= left.length; leftIndex++) {
+        const current = [leftIndex];
+        for (let rightIndex = 1; rightIndex <= right.length; rightIndex++) {
+            const substitutionCost = left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1;
+            current[rightIndex] = Math.min(
+                current[rightIndex - 1] + 1,
+                previous[rightIndex] + 1,
+                previous[rightIndex - 1] + substitutionCost,
+            );
+        }
+        previous = current;
+    }
+
+    return previous[right.length];
+}
+
 function slugify(text) {
     return (text || "")
         .toLowerCase()
+        .replace(/&/g, " and ")
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-+|-+$/g, "");
 }
@@ -257,4 +319,6 @@ async function fetchWithRetry(url, options = {}) {
     throw lastError;
 }
 
-main();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+    main();
+}

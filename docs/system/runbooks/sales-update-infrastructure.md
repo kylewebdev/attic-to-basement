@@ -54,7 +54,9 @@ Until both vars are set the route safely returns 503 ("Refresh is not configured
 - Zero listings with a healthy scrape → legitimately writes an empty array (site shows
   its "No upcoming sales" state).
 - The .org URL lookup is best-effort; a sale without a matched .org link just omits
-  `externalUrlOrg`.
+  `externalUrlOrg`. Matching requires the same ZIP code, prioritizes exact/title-prefix
+  matches, and falls back to a confidently similar title. Ambiguous fuzzy matches are
+  left unmatched rather than guessed.
 
 ## Known risks
 
