@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "oroville-july-2026",
-        title: "CITY OF GOLD ESTATE SALE",
+        title: "50%  OFF SUNDAY CITY OF GOLD ESTATE SALE",
         dates: "July 17–19th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-17",
         endDate: "2026-07-19",
@@ -31,12 +31,10 @@ export const sales: Sale[] = [
         categories: ["Furniture", "Antiques", "Collectibles", "Vintage", "Vinyl Records"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Oroville/95966/4989831",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/oroville/95966/city-of-gold-estate-sale-2450326",
     },
     {
-        id: "sacramento-packed-in-pocket-july-2026",
-        title: "PACKED IN THE POCKET!",
+        id: "sacramento-50-off-sunday-july-2026",
+        title: "50% off SUNDAY!! PACKED IN THE POCKET!",
         dates: "July 17–19th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-17",
         endDate: "2026-07-19",
@@ -45,11 +43,11 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95822/4999746",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95822/packed-in-the-pocket-2451691",
+            "https://estatesales.org/estate-sales/ca/sacramento/95822/50-off-sunday-packed-in-2451691",
     },
     {
-        id: "sacramento-tools-treasures-toys-july-2026",
-        title: "TOOLS, TREASURES & TOYS",
+        id: "sacramento-50-off-sunday-july-2026-4996497",
+        title: "50% OFF SUNDAY!!!! TOOLS, TREASURES & TOYS",
         dates: "July 18–19th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-18",
         endDate: "2026-07-19",
@@ -57,13 +55,11 @@ export const sales: Sale[] = [
         categories: ["Tools", "Toys", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95816/4996497",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95816/tools-treasures-and-tees-2451438",
     },
     {
         id: "carmichael-july-2026",
         title: "EXTREME COLLECTING: CARMICHAEL EDITION",
-        dates: "July 22–24th, 2026 | 9 AM – 3 PM",
+        dates: "July 22–24th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-22",
         endDate: "2026-07-24",
         area: "Carmichael, CA",
