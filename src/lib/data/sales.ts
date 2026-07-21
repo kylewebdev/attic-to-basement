@@ -60,4 +60,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/rio-linda-/95673/tools-tunes-treasures-2452870",
     },
+    {
+        id: "elk-grove-july-2026",
+        title: "HIGH END MASSIVE ESTATE IN RURAL ELK GROVE",
+        dates: "July 31 – August 2nd, 2026 | 9 AM – 3 PM",
+        startDate: "2026-07-31",
+        endDate: "2026-08-02",
+        area: "Elk Grove, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Elk-Grove/95624/5008431",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/elk-grove/95624/high-end-massive-estate-in-2452896",
+    },
 ];
