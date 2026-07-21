@@ -34,4 +34,30 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/carmichael/95608/extreme-collecting-carmichael-edition-2450167",
     },
+    {
+        id: "orangevale-july-2026",
+        title: "ORANGEVALE CHARM ESTATE SALE",
+        dates: "July 25–26th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-07-25",
+        endDate: "2026-07-26",
+        area: "Orangevale, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Orangevale/95662/5008032",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/orangevale/95662/orangevale-charm-estate-sale-2452863",
+    },
+    {
+        id: "rio-linda-july-2026",
+        title: "TOOLS, TUNES & TREASURES!",
+        dates: "July 25–26th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-07-25",
+        endDate: "2026-07-26",
+        area: "Rio Linda, CA",
+        categories: ["Tools", "Antiques", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Rio-Linda/95673/5008089",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/rio-linda-/95673/tools-tunes-treasures-2452870",
+    },
 ];
