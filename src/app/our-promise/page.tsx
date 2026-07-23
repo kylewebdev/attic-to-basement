@@ -66,7 +66,7 @@ export default function OurPromisePage() {
                             className="relative aspect-[4/5] rounded-xl overflow-hidden"
                         >
                             <Image
-                                src="/628271296_10173841942780224_559075670986886364_n.jpg"
+                                src="/cortnee-beggs.jpg"
                                 alt="Cortnee Beggs, founder of Attic to Basement Estate Liquidators"
                                 fill
                                 className="object-cover"
