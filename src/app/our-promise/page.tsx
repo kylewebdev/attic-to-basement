@@ -69,7 +69,7 @@ export default function OurPromisePage() {
                                 src="/cortnee-beggs.jpg"
                                 alt="Cortnee Beggs, founder of Attic to Basement Estate Liquidators"
                                 fill
-                                className="object-cover"
+                                className="object-cover scale-x-[-1]"
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
