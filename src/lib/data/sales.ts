@@ -61,6 +61,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/rio-linda-/95673/tools-tunes-treasures-2452870",
     },
     {
+        id: "sacramento-july-2026",
+        title: "MECHANIC & COLLECTOR ESTATE SALE!!!",
+        dates: "July 26–28th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-07-26",
+        endDate: "2026-07-28",
+        area: "Sacramento, CA",
+        categories: ["Collectibles", "Antiques", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95841/5010273",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95841/mechanic-collector-estate-sale-2453163",
+    },
+    {
         id: "elk-grove-july-2026",
         title: "HIGH END MASSIVE ESTATE IN RURAL ELK GROVE",
         dates: "July 31 – August 2nd, 2026 | 9 AM – 3 PM",
