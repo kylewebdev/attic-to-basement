@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "carmichael-july-2026",
-        title: "EXTREME COLLECTING: CARMICHAEL EDITION",
-        dates: "July 22–24th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-07-22",
-        endDate: "2026-07-24",
-        area: "Carmichael, CA",
-        categories: ["Collectibles", "Antiques", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Carmichael/95608/4988688",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/carmichael/95608/extreme-collecting-carmichael-edition-2450167",
-    },
-    {
         id: "orangevale-july-2026",
         title: "ORANGEVALE CHARM ESTATE SALE",
         dates: "July 25–26th, 2026 | 9 AM – 2 PM",
@@ -50,7 +37,7 @@ export const sales: Sale[] = [
     {
         id: "rio-linda-july-2026",
         title: "TOOLS, TUNES & TREASURES!",
-        dates: "July 25–26th, 2026 | 9 AM – 2 PM",
+        dates: "July 25–26th, 2026 | 7 AM – 12 PM",
         startDate: "2026-07-25",
         endDate: "2026-07-26",
         area: "Rio Linda, CA",
@@ -58,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Rio-Linda/95673/5008089",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rio-linda-/95673/tools-tunes-treasures-2452870",
+            "https://estatesales.org/estate-sales/ca/rio-linda/95673/tools-tunes-treasures-2452870",
     },
     {
         id: "sacramento-july-2026",
