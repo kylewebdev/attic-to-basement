@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "orangevale-july-2026",
-        title: "ORANGEVALE CHARM ESTATE SALE",
+        title: "50% off SUNDAY!!! ORANGEVALE CHARM ESTATE SALE",
         dates: "July 25–26th, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-25",
         endDate: "2026-07-26",
@@ -32,11 +32,11 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Orangevale/95662/5008032",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/orangevale/95662/orangevale-charm-estate-sale-2452863",
+            "https://estatesales.org/estate-sales/ca/orangevale/95662/50-off-sunday-orangevale-charm-2452863",
     },
     {
         id: "rio-linda-july-2026",
-        title: "TOOLS, TUNES & TREASURES!",
+        title: "50% off SUNDAY - TOOLS, TUNES & TREASURES!",
         dates: "July 25–26th, 2026 | 7 AM – 12 PM",
         startDate: "2026-07-25",
         endDate: "2026-07-26",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Rio-Linda/95673/5008089",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rio-linda/95673/tools-tunes-treasures-2452870",
+            "https://estatesales.org/estate-sales/ca/rio-linda/95673/50-off-sunday-tools-tunes-2452870",
     },
     {
         id: "sacramento-july-2026",
