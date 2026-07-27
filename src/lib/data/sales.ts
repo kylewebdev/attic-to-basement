@@ -22,32 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "orangevale-july-2026",
-        title: "50% off SUNDAY!!! ORANGEVALE CHARM ESTATE SALE",
-        dates: "July 25–26th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-07-25",
-        endDate: "2026-07-26",
-        area: "Orangevale, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Orangevale/95662/5008032",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/orangevale/95662/50-off-sunday-orangevale-charm-2452863",
-    },
-    {
-        id: "rio-linda-july-2026",
-        title: "50% off SUNDAY - TOOLS, TUNES & TREASURES!",
-        dates: "July 25–26th, 2026 | 7 AM – 12 PM",
-        startDate: "2026-07-25",
-        endDate: "2026-07-26",
-        area: "Rio Linda, CA",
-        categories: ["Tools", "Antiques", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Rio-Linda/95673/5008089",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rio-linda/95673/50-off-sunday-tools-tunes-2452870",
-    },
-    {
         id: "sacramento-july-2026",
         title: "MECHANIC & COLLECTOR ESTATE SALE!!!",
         dates: "July 26–28th, 2026 | 9 AM – 2 PM",
@@ -61,7 +35,7 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento/95841/mechanic-collector-estate-sale-2453163",
     },
     {
-        id: "elk-grove-july-2026",
+        id: "elk-grove-high-end-massive-july-2026",
         title: "HIGH END MASSIVE ESTATE IN RURAL ELK GROVE",
         dates: "July 31 – August 2nd, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-31",
@@ -72,5 +46,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Elk-Grove/95624/5008431",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/elk-grove/95624/high-end-massive-estate-in-2452896",
+    },
+    {
+        id: "elk-grove-old-town-treasures-july-2026",
+        title: "OLD TOWN TREASURES IN ELK GROVE",
+        dates: "July 31 – August 2nd, 2026 | 9 AM – 3 PM",
+        startDate: "2026-07-31",
+        endDate: "2026-08-02",
+        area: "Elk Grove, CA",
+        categories: ["Mid-Century Furniture", "Antiques", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Elk-Grove/95624/5014920",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/elk-grove/95624/old-town-treasures-in-elk-2453906",
     },
 ];
