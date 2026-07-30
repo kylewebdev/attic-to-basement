@@ -22,8 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "elk-grove-high-end-massive-july-2026",
-        title: "HIGH END MASSIVE ESTATE IN RURAL ELK GROVE",
+        id: "elk-grove-gated-community-massive-july-2026",
+        title: "*GATED COMMUNITY* MASSIVE ESTATE IN RURAL ELK GROVE",
         dates: "July 31 – August 2nd, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-31",
         endDate: "2026-08-02",
@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95624/5008431",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95624/high-end-massive-estate-in-2452896",
+            "https://estatesales.org/estate-sales/ca/elk-grove/95624/gated-community-massive-estate-in-2452896",
     },
     {
         id: "elk-grove-old-town-treasures-july-2026",
