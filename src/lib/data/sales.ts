@@ -60,4 +60,30 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/citrus-heights/95610/lifetime-estate-sale-kitchen-to-2454083",
     },
+    {
+        id: "sacramento-august-2026",
+        title: "EVENING BLOW OUT SALE!!!",
+        dates: "August 3rd, 2026 | 4 PM – 8 PM",
+        startDate: "2026-08-03",
+        endDate: "2026-08-03",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95841/5021373",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95841/evening-blow-out-sale-2454858",
+    },
+    {
+        id: "roseville-august-2026",
+        title: "A BLAST FROM THE PAST - TOYS & MORE!",
+        dates: "August 6–8th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-08-06",
+        endDate: "2026-08-08",
+        area: "Roseville, CA",
+        categories: ["Toys", "Antiques", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Roseville/95678/5020950",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/roseville/95678/a-blast-from-the-past-2454763",
+    },
 ];
