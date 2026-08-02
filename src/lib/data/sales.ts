@@ -22,8 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "elk-grove-gated-community-massive-july-2026",
-        title: "*GATED COMMUNITY* MASSIVE ESTATE IN RURAL ELK GROVE",
+        id: "elk-grove-50-off-sunday-july-2026",
+        title: "50% off SUNDAY!!! *GATED COMMUNITY* MASSIVE ESTATE IN RURAL ELK GROVE",
         dates: "July 31 – August 2nd, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-31",
         endDate: "2026-08-02",
@@ -32,11 +32,11 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95624/5008431",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95624/gated-community-massive-estate-in-2452896",
+            "https://estatesales.org/estate-sales/ca/elk-grove/95624/50-off-sunday-gated-community-2452896",
     },
     {
-        id: "elk-grove-old-town-treasures-july-2026",
-        title: "OLD TOWN TREASURES IN ELK GROVE",
+        id: "elk-grove-50-off-sunday-july-2026-5014920",
+        title: "50% OFF SUNDAY OLD TOWN TREASURES IN ELK GROVE",
         dates: "July 31 – August 2nd, 2026 | 9 AM – 3 PM",
         startDate: "2026-07-31",
         endDate: "2026-08-02",
@@ -44,12 +44,10 @@ export const sales: Sale[] = [
         categories: ["Mid-Century Furniture", "Antiques", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95624/5014920",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95624/old-town-treasures-in-elk-2453906",
     },
     {
         id: "citrus-heights-july-2026",
-        title: "LIFETIME ESTATE SALE - KITCHEN TO WORKSHOP",
+        title: "50% OFF SUNDAY - LIFETIME ESTATE SALE - KITCHEN TO WORKSHOP",
         dates: "July 31 – August 2nd, 2026 | 9 AM – 2 PM",
         startDate: "2026-07-31",
         endDate: "2026-08-02",
@@ -58,7 +56,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Citrus-Heights/95610/5016324",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/lifetime-estate-sale-kitchen-to-2454083",
+            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/50-off-sunday-lifetime-estate-2454083",
     },
     {
         id: "sacramento-august-2026",
