@@ -10,7 +10,7 @@ import { getAnnouncementContent } from "@/lib/data/announcement";
 import JsonLd from "@/components/seo/JsonLd";
 import { getLocalBusinessSchema } from "@/lib/schema";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import GoogleTag from "@/components/analytics/GoogleTag";
 import type { Metadata } from "next";
 
 const libreBaskerville = Libre_Baskerville({
@@ -71,7 +71,7 @@ export default function RootLayout({
                     </SmoothScroll>
                 </ThemeProvider>
                 <SpeedInsights />
-                <GoogleAnalytics gaId="G-ED32Z2R4RM" />
+                <GoogleTag />
             </body>
         </html>
     );

@@ -22,8 +22,12 @@ Full brand guide: `docs/system/context/brand.md`. Key points:
 
 ## Social
 
-- TikTok: https://www.tiktok.com/@attic.to.basement
-- Instagram: https://www.instagram.com/abe.liquidators
+- Instagram: https://www.instagram.com/abe.liquidators/
+- Facebook: https://www.facebook.com/profile.php?id=100094393143202
+- TikTok: https://www.tiktok.com/@abeliquidators
+- LinkedIn: https://www.linkedin.com/in/cortnee-beggs
+- YouTube: https://www.youtube.com/channel/UCpjAUP5CTfaCRy-cl172TeA
+- Google Business Profile (Auburn): https://www.google.com/maps/place/Attic+To+Basement+Estate+Liquidators/data=!4m2!3m1!1s0x0:0xfb929a50e6a0072a?sa=X&ved=1t:2428&hl=en&ictx=111
 
 - BBB: https://www.bbb.org/us/ca/sacramento/profile/estate-liquidators/attic-to-basement-estate-liquidators-1156-90098497
 - Yelp: https://www.yelp.com/biz/attic-to-basement-estate-liquidators-sacramento

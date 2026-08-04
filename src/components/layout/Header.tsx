@@ -6,6 +6,7 @@ import Image from "next/image";
 import { capture } from "@/lib/analytics";
 import { useGSAP, ScrollTrigger } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
+import PhoneLink from "@/components/ui/PhoneLink";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import MobileNav from "@/components/layout/MobileNav";
 
@@ -79,7 +80,7 @@ export default function Header({ hasAnnouncement = true }: { hasAnnouncement?: b
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-5" aria-label="Main navigation">
             <Link
               href="/estate-sales"
               className="text-sm font-sans text-text-secondary hover:text-sage-300 transition-colors"
@@ -184,6 +185,11 @@ export default function Header({ hasAnnouncement = true }: { hasAnnouncement?: b
               Resources
             </Link>
             */}
+
+            <PhoneLink
+              className="whitespace-nowrap text-sm font-semibold text-sage-300 hover:text-sage-400 transition-colors"
+              location="header"
+            />
 
             <ThemeToggle />
 

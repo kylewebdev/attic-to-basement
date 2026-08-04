@@ -5,6 +5,7 @@ import Link from "next/link";
 import { capture } from "@/lib/analytics";
 import { gsap, useGSAP } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
+import PhoneLink from "@/components/ui/PhoneLink";
 
 const navLinks = [
   { label: "Estate Sales", href: "/estate-sales" },
@@ -212,6 +213,14 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
           <Button href="/contact" variant="primary" className="w-full">
             Free Consultation
           </Button>
+        </div>
+        <div className="px-6 mt-4 text-center">
+          <PhoneLink
+            className="inline-flex min-h-11 items-center justify-center text-base font-semibold text-sage-300 hover:text-sage-400 transition-colors"
+            location="mobile_navigation"
+          >
+            Call (916) 521-1077
+          </PhoneLink>
         </div>
       </nav>
     </div>

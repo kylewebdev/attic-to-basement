@@ -26,6 +26,9 @@ export default function ConsultationForm() {
 
       if (response.ok) {
         setStatus("success");
+        capture("conversion", {
+          send_to: "AW-18304303495/-6ccCN337docEIeDlphE",
+        });
         capture("consultation_form_submitted", {
           situation: data.get("situation") as string | null,
           contact_method: data.get("contact_method") as string | null,

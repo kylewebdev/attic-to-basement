@@ -6,7 +6,10 @@ const businessId = `${siteUrl}/#business`;
 const sameAs = [
     "https://www.facebook.com/profile.php?id=100094393143202",
     "https://www.instagram.com/abe.liquidators/",
-    "https://www.tiktok.com/@attic.to.basement",
+    "https://www.tiktok.com/@abeliquidators",
+    "https://www.linkedin.com/in/cortnee-beggs",
+    "https://www.youtube.com/channel/UCpjAUP5CTfaCRy-cl172TeA",
+    "https://www.google.com/maps/place/Attic+To+Basement+Estate+Liquidators/data=!4m2!3m1!1s0x0:0xfb929a50e6a0072a?sa=X&ved=1t:2428&hl=en&ictx=111",
     "https://www.yelp.com/biz/attic-to-basement-estate-liquidators-sacramento",
     "https://estatesales.org/estate-sale-companies/attic-to-basement-estate-liquidators-23935",
     "https://estatesales.net/companies/CA/Citrus-Heights/95610/156176",
@@ -232,4 +235,3 @@ export function getEventSchema(salesToRender: Sale[]) {
         description: `Estate sale in ${sale.area}. ${sale.dates}.`,
     }));
 }
-

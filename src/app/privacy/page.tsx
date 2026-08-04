@@ -21,7 +21,7 @@ export default function PrivacyPage() {
                         data-reveal
                         className="text-sm text-text-muted mb-8"
                     >
-                        Last Updated: February 27, 2026
+                        Last Updated: August 4, 2026
                     </p>
 
                     <div
@@ -114,13 +114,21 @@ export default function PrivacyPage() {
                                 </li>
                                 <li>
                                     <strong className="text-text-body">
-                                        Google Analytics
+                                        Google Analytics and Google Ads
                                     </strong>{" "}
-                                    — provides website analytics to help us
-                                    understand how visitors use our site.
-                                    Google Analytics may collect non-personal
-                                    information such as page views, clicks, and
-                                    session data.
+                                    — provide website analytics and measure
+                                    advertising results, including page views,
+                                    clicks, completed consultation forms, and
+                                    interactions with our phone number.
+                                </li>
+                                <li>
+                                    <strong className="text-text-body">
+                                        Google Maps
+                                    </strong>{" "}
+                                    — displays our Google Business Profile and
+                                    location information. Google may receive
+                                    technical information when the embedded map
+                                    loads.
                                 </li>
                                 <li>
                                     <strong className="text-text-body">
@@ -153,9 +161,10 @@ export default function PrivacyPage() {
                                 Our website uses cookies and similar
                                 technologies to enhance the user experience and
                                 analyze site usage. Specifically, we use Google
-                                Analytics, which may set cookies to track
-                                anonymous usage patterns such as pages visited,
-                                buttons clicked, and session duration.
+                                Analytics and Google Ads, which may set cookies
+                                to track usage patterns and measure actions such
+                                as pages visited, buttons clicked, phone-number
+                                interactions, and completed consultation forms.
                             </p>
                             <p className="text-text-secondary leading-relaxed">
                                 You can control cookie settings in your browser,
