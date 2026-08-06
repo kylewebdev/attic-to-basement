@@ -1,14 +1,13 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { capture, captureException } from "@/lib/analytics";
 import Button from "@/components/ui/Button";
 import PhoneLink from "@/components/ui/PhoneLink";
 
 export default function ConsultationForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-
-  const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+  const submissionId = useRef<string | null>(null);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -16,9 +15,11 @@ export default function ConsultationForm() {
 
     const form = e.currentTarget;
     const data = new FormData(form);
+    submissionId.current ??= crypto.randomUUID();
+    data.set("submission_id", submissionId.current);
 
     try {
-      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+      const response = await fetch("/api/consultation", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -35,6 +36,7 @@ export default function ConsultationForm() {
           has_city: Boolean(data.get("city")),
           has_phone: Boolean(data.get("phone")),
         });
+        submissionId.current = null;
         form.reset();
       } else {
         setStatus("error");
@@ -122,6 +124,20 @@ export default function ConsultationForm() {
       </div>
 
       <div>
+        <label htmlFor="property_address" className="block text-sm font-semibold text-text-body mb-1">
+          Property address
+        </label>
+        <input
+          type="text"
+          id="property_address"
+          name="property_address"
+          className="form-input"
+          placeholder="123 Main Street"
+          autoComplete="street-address"
+        />
+      </div>
+
+      <div>
         <label htmlFor="city" className="block text-sm font-semibold text-text-body mb-1">
           City or Zip Code
         </label>
@@ -131,6 +147,7 @@ export default function ConsultationForm() {
           name="city"
           className="form-input"
           placeholder="Sacramento, 95821, etc."
+          autoComplete="postal-code"
         />
       </div>
 

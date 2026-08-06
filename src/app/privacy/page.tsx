@@ -109,8 +109,17 @@ export default function PrivacyPage() {
                                     </strong>{" "}
                                     — processes consultation form submissions on
                                     our behalf. Your name, email, phone number,
-                                    and message content are transmitted to
-                                    Formspree when you submit a form.
+                                    property information, and message content are
+                                    transmitted to Formspree when you submit a
+                                    form.
+                                </li>
+                                <li>
+                                    <strong className="text-text-body">
+                                        Basecamp
+                                    </strong>{" "}
+                                    — stores consultation details in our internal
+                                    lead workflow so our staff can respond and
+                                    coordinate services.
                                 </li>
                                 <li>
                                     <strong className="text-text-body">
