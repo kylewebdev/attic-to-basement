@@ -27,10 +27,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.16.0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Scrape estate sales
         run: node scripts/scrape-sales.mjs > /tmp/scrape.json
@@ -51,11 +56,11 @@ jobs:
 
       - name: Install dependencies
         if: steps.diff.outputs.changed == 'true'
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Validate build
         if: steps.diff.outputs.changed == 'true'
-        run: npm run build
+        run: pnpm run build
 
       - name: Commit and push
         if: steps.diff.outputs.changed == 'true'
