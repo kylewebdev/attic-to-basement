@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "roseville-august-2026",
-        title: "A BLAST FROM THE PAST - TOYS & MORE!",
+        title: "50% off SATURDAY!!! A BLAST FROM THE PAST - TOYS & MORE!",
         dates: "August 6–8th, 2026 | 9 AM – 3 PM",
         startDate: "2026-08-06",
         endDate: "2026-08-08",
@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Roseville/95678/5020950",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95678/a-blast-from-the-past-2454763",
+            "https://estatesales.org/estate-sales/ca/roseville/95678/50-off-saturday-a-blast-2454763",
     },
     {
         id: "rescue-august-2026",
@@ -57,6 +57,17 @@ export const sales: Sale[] = [
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95864/5025594",
+    },
+    {
+        id: "rancho-cordova-august-2026",
+        title: "LIFETIME COLLECTION: COINS, ART & HOLIDAY TREASURES",
+        dates: "August 14–16th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-08-14",
+        endDate: "2026-08-16",
+        area: "Rancho Cordova, CA",
+        categories: ["Collectibles", "Art", "Glassware", "Coins"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Rancho-Cordova/95670/5030841",
     },
     {
         id: "sacramento-college-glen-estate-august-2026",
