@@ -22,21 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "roseville-august-2026",
-        title: "50% off SATURDAY!!! A BLAST FROM THE PAST - TOYS & MORE!",
-        dates: "August 6–8th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-08-06",
-        endDate: "2026-08-08",
-        area: "Roseville, CA",
-        categories: ["Toys", "Antiques", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Roseville/95678/5020950",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95678/50-off-saturday-a-blast-2454763",
-    },
-    {
         id: "rescue-august-2026",
-        title: "LET’S GO TO OMA’S HOUSE!",
+        title: "50% OFF SUNDAY - LET’S GO TO OMA’S HOUSE!",
         dates: "August 7–9th, 2026 | 9 AM – 2 PM",
         startDate: "2026-08-07",
         endDate: "2026-08-09",
@@ -44,12 +31,10 @@ export const sales: Sale[] = [
         categories: ["Collectibles", "Antiques", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Rescue/95672/5025561",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/cameron-park/95672/lets-go-to-omas-house-2455397",
     },
     {
-        id: "sacramento-cool-80-s-august-2026",
-        title: "COOL 80'S CLOTHES, FIRE KING WIDE CABINETS, BIKES, AND SO MUCH MORE",
+        id: "sacramento-50-off-sunday-august-2026",
+        title: "50% OFF SUNDAY \"BEACH CRUSER EXCLUDED\" COOL 80'S CLOTHES, FIRE KING WIDE CABINETS, BIKES, AND MORE",
         dates: "August 8–9th, 2026 | 9 AM – 3 PM",
         startDate: "2026-08-08",
         endDate: "2026-08-09",
