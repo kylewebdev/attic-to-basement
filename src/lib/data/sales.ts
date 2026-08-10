@@ -22,26 +22,17 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "rescue-august-2026",
-        title: "50% OFF SUNDAY - LET’S GO TO OMA’S HOUSE!",
-        dates: "August 7–9th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-08-07",
-        endDate: "2026-08-09",
-        area: "Rescue, CA",
-        categories: ["Collectibles", "Antiques", "Vintage"],
+        id: "roseville-august-2026",
+        title: "HOLIDAY & COUNTRY CHARM IN ROSEVILLE!",
+        dates: "August 13–15th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-08-13",
+        endDate: "2026-08-15",
+        area: "Roseville, CA",
+        categories: ["Jewelry", "Home Decor", "Antiques"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/Rescue/95672/5025561",
-    },
-    {
-        id: "sacramento-50-off-sunday-august-2026",
-        title: "50% OFF SUNDAY \"BEACH CRUSER EXCLUDED\" COOL 80'S CLOTHES, FIRE KING WIDE CABINETS, BIKES, AND MORE",
-        dates: "August 8–9th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-08-08",
-        endDate: "2026-08-09",
-        area: "Sacramento, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95864/5025594",
+            "https://www.estatesales.net/CA/Roseville/95661/5032572",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/roseville/95661/holiday-country-charm-in-roseville-2456339",
     },
     {
         id: "rancho-cordova-august-2026",
@@ -55,7 +46,7 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Rancho-Cordova/95670/5030841",
     },
     {
-        id: "sacramento-college-glen-estate-august-2026",
+        id: "sacramento-august-2026",
         title: "COLLEGE/GLEN ESTATE SALE",
         dates: "August 20–22nd, 2026 | 9 AM – 3 PM",
         startDate: "2026-08-20",
