@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "roseville-august-2026",
-        title: "HOLIDAY & COUNTRY CHARM IN ROSEVILLE!",
+        title: "50% off SATURDAY!!! HOLIDAY & COUNTRY CHARM IN ROSEVILLE!",
         dates: "August 13–15th, 2026 | 9 AM – 2 PM",
         startDate: "2026-08-13",
         endDate: "2026-08-15",
@@ -31,8 +31,6 @@ export const sales: Sale[] = [
         categories: ["Jewelry", "Home Decor", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Roseville/95661/5032572",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95661/holiday-country-charm-in-roseville-2456339",
     },
     {
         id: "rancho-cordova-august-2026",
