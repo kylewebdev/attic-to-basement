@@ -2,6 +2,7 @@ import { timingSafeEqual } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 30;
 
 const REPO = "kylewebdev/attic-to-basement";
 
@@ -82,7 +83,7 @@ async function checkRecentRun(
             `https://api.github.com/repos/${REPO}/actions/workflows/update-sales.yml/runs?per_page=1`,
             {
                 headers: githubHeaders(githubToken),
-                signal: AbortSignal.timeout(5000),
+                signal: AbortSignal.timeout(3000),
                 cache: "no-store",
             },
         );
