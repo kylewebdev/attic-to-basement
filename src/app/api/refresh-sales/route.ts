@@ -73,6 +73,7 @@ function githubRequest(
     return new Promise((resolve, reject) => {
         const request = httpsRequest({
             hostname: "api.github.com",
+            family: 4,
             path,
             method: options.method ?? "GET",
             headers: {
@@ -134,7 +135,7 @@ function html(status: number, message: string): NextResponse {
             status,
             headers: {
                 "Content-Type": "text/html; charset=utf-8",
-                "X-Refresh-Route-Version": "3",
+                "X-Refresh-Route-Version": "4",
             },
         },
     ) as NextResponse;
