@@ -30,14 +30,6 @@ export async function GET(request: NextRequest) {
         return html(401, "Not authorized.");
     }
 
-    const recent = await checkRecentRun(githubToken);
-    if (recent === "running") {
-        return html(200, "An update is already on its way! The website will show the latest sales in a few minutes.");
-    }
-    if (recent === "cooldown") {
-        return html(200, "The website was just updated. If your latest changes aren't showing, wait 10 minutes and tap the link again.");
-    }
-
     try {
         const response = await githubRequest(
             `/repos/${REPO}/dispatches`,
@@ -65,44 +57,6 @@ export async function GET(request: NextRequest) {
         200,
         "Update started! The website will show the latest sales in a few minutes.",
     );
-}
-
-const COOLDOWN_MINUTES = 10;
-
-/**
- * Debounce duplicate taps by consulting the workflow's own run history
- * (stateless, so it works across serverless instances). Returns:
- *   "running"  — a run is queued or executing right now
- *   "cooldown" — the newest run started less than COOLDOWN_MINUTES ago
- *   "clear"    — go ahead and dispatch (including when the check itself
- *                fails: fail open so a GitHub API hiccup can't block updates)
- */
-async function checkRecentRun(
-    githubToken: string,
-): Promise<"running" | "cooldown" | "clear"> {
-    try {
-        const response = await githubRequest(
-            `/repos/${REPO}/actions/workflows/update-sales.yml/runs?per_page=1`,
-            githubToken,
-            { timeoutMs: 2000 },
-        );
-        if (response.statusCode !== 200) return "clear";
-
-        const data = JSON.parse(response.body);
-        const run = data.workflow_runs?.[0];
-        if (!run) return "clear";
-
-        if (run.status === "queued" || run.status === "in_progress") {
-            return "running";
-        }
-        const ageMs = Date.now() - new Date(run.created_at).getTime();
-        if (ageMs < COOLDOWN_MINUTES * 60 * 1000) {
-            return "cooldown";
-        }
-        return "clear";
-    } catch {
-        return "clear";
-    }
 }
 
 interface GitHubRequestOptions {
@@ -133,6 +87,9 @@ function githubRequest(
             },
         }, (response) => {
             const chunks: Buffer[] = [];
+            response.setTimeout(options.timeoutMs, () => {
+                response.destroy(new Error(`GitHub response timed out after ${options.timeoutMs}ms`));
+            });
             response.on("data", (chunk: Buffer) => chunks.push(chunk));
             response.on("end", () => {
                 clearTimeout(timeout);
@@ -173,6 +130,12 @@ function html(status: number, message: string): NextResponse {
 <body style="font-family: system-ui, sans-serif; display: grid; place-items: center; min-height: 80vh; margin: 0; padding: 24px; text-align: center;">
 <p style="font-size: 1.25rem; max-width: 28rem;">${message}</p>
 </body>`,
-        { status, headers: { "Content-Type": "text/html; charset=utf-8" } },
+        {
+            status,
+            headers: {
+                "Content-Type": "text/html; charset=utf-8",
+                "X-Refresh-Route-Version": "3",
+            },
+        },
     ) as NextResponse;
 }
