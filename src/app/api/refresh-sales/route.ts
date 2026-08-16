@@ -1,8 +1,8 @@
 import { timingSafeEqual } from "node:crypto";
+import { request as httpsRequest } from "node:https";
 import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 30;
 
 const REPO = "kylewebdev/attic-to-basement";
 
@@ -39,16 +39,18 @@ export async function GET(request: NextRequest) {
     }
 
     try {
-        const response = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
-            method: "POST",
-            headers: githubHeaders(githubToken),
-            body: JSON.stringify({ event_type: "update-sales" }),
-            signal: AbortSignal.timeout(5000),
-        });
+        const response = await githubRequest(
+            `/repos/${REPO}/dispatches`,
+            githubToken,
+            {
+                method: "POST",
+                body: JSON.stringify({ event_type: "update-sales" }),
+                timeoutMs: 5000,
+            },
+        );
 
-        if (response.status !== 204) {
-            const detail = await response.text();
-            console.error(`refresh-sales dispatch failed: ${response.status} ${detail}`);
+        if (response.statusCode !== 204) {
+            console.error(`refresh-sales dispatch failed: ${response.statusCode} ${response.body}`);
             return html(502, "Could not start the update. Please try again in a minute.");
         }
     } catch (error) {
@@ -79,17 +81,14 @@ async function checkRecentRun(
     githubToken: string,
 ): Promise<"running" | "cooldown" | "clear"> {
     try {
-        const response = await fetch(
-            `https://api.github.com/repos/${REPO}/actions/workflows/update-sales.yml/runs?per_page=1`,
-            {
-                headers: githubHeaders(githubToken),
-                signal: AbortSignal.timeout(3000),
-                cache: "no-store",
-            },
+        const response = await githubRequest(
+            `/repos/${REPO}/actions/workflows/update-sales.yml/runs?per_page=1`,
+            githubToken,
+            { timeoutMs: 2000 },
         );
-        if (!response.ok) return "clear";
+        if (response.statusCode !== 200) return "clear";
 
-        const data = await response.json();
+        const data = JSON.parse(response.body);
         const run = data.workflow_runs?.[0];
         if (!run) return "clear";
 
@@ -106,14 +105,60 @@ async function checkRecentRun(
     }
 }
 
-function githubHeaders(token: string): HeadersInit {
-    return {
-        Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-        "User-Agent": "attic-to-basement-sales-refresh",
-        "X-GitHub-Api-Version": "2022-11-28",
-    };
+interface GitHubRequestOptions {
+    method?: "GET" | "POST";
+    body?: string;
+    timeoutMs: number;
+}
+
+function githubRequest(
+    path: string,
+    token: string,
+    options: GitHubRequestOptions,
+): Promise<{ statusCode: number; body: string }> {
+    return new Promise((resolve, reject) => {
+        const request = httpsRequest({
+            hostname: "api.github.com",
+            path,
+            method: options.method ?? "GET",
+            headers: {
+                Accept: "application/vnd.github+json",
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+                "User-Agent": "attic-to-basement-sales-refresh",
+                "X-GitHub-Api-Version": "2022-11-28",
+                ...(options.body
+                    ? { "Content-Length": Buffer.byteLength(options.body) }
+                    : {}),
+            },
+        }, (response) => {
+            const chunks: Buffer[] = [];
+            response.on("data", (chunk: Buffer) => chunks.push(chunk));
+            response.on("end", () => {
+                clearTimeout(timeout);
+                resolve({
+                    statusCode: response.statusCode ?? 0,
+                    body: Buffer.concat(chunks).toString("utf8"),
+                });
+            });
+            response.on("error", (error) => {
+                clearTimeout(timeout);
+                reject(error);
+            });
+        });
+
+        const timeout = setTimeout(() => {
+            request.destroy(new Error(`GitHub request timed out after ${options.timeoutMs}ms`));
+        }, options.timeoutMs);
+
+        request.on("error", (error) => {
+            clearTimeout(timeout);
+            reject(error);
+        });
+
+        if (options.body) request.write(options.body);
+        request.end();
+    });
 }
 
 function safeEqual(a: string, b: string): boolean {
