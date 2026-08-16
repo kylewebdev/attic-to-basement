@@ -43,14 +43,17 @@ export async function GET(request: NextRequest) {
 
         if (response.statusCode !== 204) {
             console.error(`refresh-sales dispatch failed: ${response.statusCode} ${response.body}`);
-            return html(502, "Could not start the update. Please try again in a minute.");
+            if (response.statusCode === 401 || response.statusCode === 403) {
+                return html(424, "The update link needs its GitHub authorization renewed. Please contact Kyle.");
+            }
+            return html(424, "Could not start the update. Please try again in a minute.");
         }
     } catch (error) {
         const detail = error instanceof Error
             ? `${error.name}: ${error.message}`
             : "Unknown error";
         console.error(`refresh-sales dispatch request failed: ${detail}`);
-        return html(502, "Could not start the update. Please try again in a minute.");
+        return html(424, "Could not reach the update service. Please try again in a minute.");
     }
 
     return html(
@@ -136,7 +139,7 @@ function html(status: number, message: string): NextResponse {
             status,
             headers: {
                 "Content-Type": "text/html; charset=utf-8",
-                "X-Refresh-Route-Version": "5",
+                "X-Refresh-Route-Version": "6",
             },
         },
     ) as NextResponse;
