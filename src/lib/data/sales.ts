@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "rancho-cordova-august-2026",
-        title: "50% OFF SUNDAY - LIFETIME COLLECTION: COINS, ART & HOLIDAY TREASURES",
-        dates: "August 14–16th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-08-14",
-        endDate: "2026-08-16",
-        area: "Rancho Cordova, CA",
-        categories: ["Collectibles", "Art", "Glassware", "Coins"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Rancho-Cordova/95670/5030841",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rancho-cordova/95670/50-off-sunday-lifetime-collection-2456101",
-    },
-    {
         id: "sacramento-college-glen-estate-august-2026",
         title: "COLLEGE/GLEN ESTATE SALE",
         dates: "August 20–22nd, 2026 | 9 AM – 3 PM",
