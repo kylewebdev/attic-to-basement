@@ -106,7 +106,8 @@ function githubRequest(
         });
 
         const timeout = setTimeout(() => {
-            request.destroy(new Error(`GitHub request timed out after ${options.timeoutMs}ms`));
+            reject(new Error(`GitHub request timed out after ${options.timeoutMs}ms`));
+            request.destroy();
         }, options.timeoutMs);
 
         request.on("error", (error) => {
@@ -135,7 +136,7 @@ function html(status: number, message: string): NextResponse {
             status,
             headers: {
                 "Content-Type": "text/html; charset=utf-8",
-                "X-Refresh-Route-Version": "4",
+                "X-Refresh-Route-Version": "5",
             },
         },
     ) as NextResponse;
