@@ -18,7 +18,7 @@ const REPO = "kylewebdev/attic-to-basement";
  */
 export async function GET(request: NextRequest) {
     const refreshToken = process.env.SALES_REFRESH_TOKEN;
-    const githubToken = process.env.GH_DISPATCH_TOKEN;
+    const githubToken = process.env.GH_DISPATCH_TOKEN?.trim();
 
     if (!refreshToken || !githubToken) {
         return html(503, "Refresh is not configured.");
@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
         return html(401, "Not authorized.");
     }
 
-    const recent = await checkRecentRun();
+    const recent = await checkRecentRun(githubToken);
     if (recent === "running") {
         return html(200, "An update is already on its way! The website will show the latest sales in a few minutes.");
     }
@@ -37,19 +37,24 @@ export async function GET(request: NextRequest) {
         return html(200, "The website was just updated. If your latest changes aren't showing, wait 10 minutes and tap the link again.");
     }
 
-    const response = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
-        method: "POST",
-        headers: {
-            Accept: "application/vnd.github+json",
-            Authorization: `Bearer ${githubToken}`,
-            "X-GitHub-Api-Version": "2022-11-28",
-        },
-        body: JSON.stringify({ event_type: "update-sales" }),
-    });
+    try {
+        const response = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
+            method: "POST",
+            headers: githubHeaders(githubToken),
+            body: JSON.stringify({ event_type: "update-sales" }),
+            signal: AbortSignal.timeout(5000),
+        });
 
-    if (response.status !== 204) {
-        const detail = await response.text();
-        console.error(`refresh-sales dispatch failed: ${response.status} ${detail}`);
+        if (response.status !== 204) {
+            const detail = await response.text();
+            console.error(`refresh-sales dispatch failed: ${response.status} ${detail}`);
+            return html(502, "Could not start the update. Please try again in a minute.");
+        }
+    } catch (error) {
+        const detail = error instanceof Error
+            ? `${error.name}: ${error.message}`
+            : "Unknown error";
+        console.error(`refresh-sales dispatch request failed: ${detail}`);
         return html(502, "Could not start the update. Please try again in a minute.");
     }
 
@@ -69,12 +74,14 @@ const COOLDOWN_MINUTES = 10;
  *   "clear"    — go ahead and dispatch (including when the check itself
  *                fails: fail open so a GitHub API hiccup can't block updates)
  */
-async function checkRecentRun(): Promise<"running" | "cooldown" | "clear"> {
+async function checkRecentRun(
+    githubToken: string,
+): Promise<"running" | "cooldown" | "clear"> {
     try {
         const response = await fetch(
             `https://api.github.com/repos/${REPO}/actions/workflows/update-sales.yml/runs?per_page=1`,
             {
-                headers: { Accept: "application/vnd.github+json" },
+                headers: githubHeaders(githubToken),
                 signal: AbortSignal.timeout(5000),
                 cache: "no-store",
             },
@@ -96,6 +103,16 @@ async function checkRecentRun(): Promise<"running" | "cooldown" | "clear"> {
     } catch {
         return "clear";
     }
+}
+
+function githubHeaders(token: string): HeadersInit {
+    return {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "User-Agent": "attic-to-basement-sales-refresh",
+        "X-GitHub-Api-Version": "2022-11-28",
+    };
 }
 
 function safeEqual(a: string, b: string): boolean {
