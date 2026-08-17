@@ -28,7 +28,7 @@ export const sales: Sale[] = [
         startDate: "2026-08-20",
         endDate: "2026-08-22",
         area: "Sacramento, CA",
-        categories: ["Fashion", "Antiques", "Vintage"],
+        categories: ["Mid-Century Furniture", "Fashion", "Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95826/5025621",
         externalUrlOrg:
