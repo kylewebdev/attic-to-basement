@@ -60,4 +60,15 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95820/sacramento-fashion-furniture-2457521",
     },
+    {
+        id: "carmichael-september-2026",
+        title: "CARMICHAEL 1980'S TIMECAPSULE REVEALED LIMITED PARKING SO BEST TO MAKE APPOINTMENT THANKS",
+        dates: "September 3–5th, 2026 | 8 AM – 2 PM",
+        startDate: "2026-09-03",
+        endDate: "2026-09-05",
+        area: "Carmichael, CA",
+        categories: ["Cars", "Motorcycles", "Antiques"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Carmichael/95608/5046924",
+    },
 ];
