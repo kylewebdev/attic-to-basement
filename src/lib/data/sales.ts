@@ -22,8 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-college-glen-estate-august-2026",
-        title: "COLLEGE/GLEN ESTATE SALE",
+        id: "sacramento-50-off-everything-august-2026",
+        title: "50% OFF EVERYTHING/COLLEGE/GLEN ESTATE SALE",
         dates: "August 20–22nd, 2026 | 9 AM – 3 PM",
         startDate: "2026-08-20",
         endDate: "2026-08-22",
@@ -31,12 +31,10 @@ export const sales: Sale[] = [
         categories: ["Mid-Century Furniture", "Fashion", "Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95826/5025621",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95826/collegeglen-estate-sale-2455406",
     },
     {
-        id: "sacramento-full-home-treasures-august-2026",
-        title: "FULL HOME OF TREASURES!",
+        id: "sacramento-50-off-saturday-august-2026",
+        title: "50% OFF SATURDAY - FULL HOME OF TREASURES!",
         dates: "August 20–22nd, 2026 | 9 AM – 2 PM",
         startDate: "2026-08-20",
         endDate: "2026-08-22",
@@ -45,7 +43,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95819/5041365",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95819/full-home-of-treasures-2457534",
+            "https://estatesales.org/estate-sales/ca/sacramento/95819/50-off-saturday-full-home-2457534",
     },
     {
         id: "sacramento-fashion-furniture-august-2026",
@@ -59,6 +57,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95820/5041263",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95820/sacramento-fashion-furniture-2457521",
+    },
+    {
+        id: "elk-grove-august-2026",
+        title: "HODGE PODGE GARAGE & BACKYARD!",
+        dates: "August 30 – September 1st, 2026 | 9 AM – 2 PM",
+        startDate: "2026-08-30",
+        endDate: "2026-09-01",
+        area: "Elk Grove, CA",
+        categories: ["Collectibles", "Antiques", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Elk-Grove/95758/5049819",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/elk-grove/95758/hodge-podge-garage-backyard-2458827",
     },
     {
         id: "carmichael-september-2026",
