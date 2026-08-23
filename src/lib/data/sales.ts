@@ -22,31 +22,7 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-50-off-everything-august-2026",
-        title: "50% OFF EVERYTHING/COLLEGE/GLEN ESTATE SALE",
-        dates: "August 20–22nd, 2026 | 9 AM – 3 PM",
-        startDate: "2026-08-20",
-        endDate: "2026-08-22",
-        area: "Sacramento, CA",
-        categories: ["Mid-Century Furniture", "Fashion", "Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95826/5025621",
-    },
-    {
-        id: "sacramento-50-off-saturday-august-2026",
-        title: "50% OFF SATURDAY - FULL HOME OF TREASURES!",
-        dates: "August 20–22nd, 2026 | 9 AM – 2 PM",
-        startDate: "2026-08-20",
-        endDate: "2026-08-22",
-        area: "Sacramento, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95819/5041365",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95819/50-off-saturday-full-home-2457534",
-    },
-    {
-        id: "sacramento-fashion-furniture-august-2026",
+        id: "sacramento-august-2026",
         title: "SACRAMENTO FASHION & FURNITURE",
         dates: "August 27–29th, 2026 | 9 AM – 3 PM",
         startDate: "2026-08-27",
