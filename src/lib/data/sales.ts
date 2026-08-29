@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "sacramento-august-2026",
-        title: "SACRAMENTO FASHION & FURNITURE",
+        title: "50% OFF SATURDAY!!!! SACRAMENTO FASHION & FURNITURE",
         dates: "August 27–29th, 2026 | 9 AM – 3 PM",
         startDate: "2026-08-27",
         endDate: "2026-08-29",
@@ -31,8 +31,6 @@ export const sales: Sale[] = [
         categories: ["Fashion", "Furniture", "Vinyl Records"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95820/5041263",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95820/sacramento-fashion-furniture-2457521",
     },
     {
         id: "elk-grove-august-2026",
@@ -57,5 +55,18 @@ export const sales: Sale[] = [
         categories: ["Cars", "Motorcycles", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Carmichael/95608/5046924",
+    },
+    {
+        id: "elk-grove-september-2026",
+        title: "ELK GROVE COLLECTORS MENAGERIE",
+        dates: "September 3–5th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-03",
+        endDate: "2026-09-05",
+        area: "Elk Grove, CA",
+        categories: ["Collectibles", "Antiques", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Elk-Grove/95624/5057130",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/elk-grove/95624/elk-grove-collectors-menagerie-2459830",
     },
 ];
