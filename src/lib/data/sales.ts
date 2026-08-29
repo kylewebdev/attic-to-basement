@@ -22,17 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-august-2026",
-        title: "50% OFF SATURDAY!!!! SACRAMENTO FASHION & FURNITURE",
-        dates: "August 27–29th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-08-27",
-        endDate: "2026-08-29",
-        area: "Sacramento, CA",
-        categories: ["Fashion", "Furniture", "Vinyl Records"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95820/5041263",
-    },
-    {
         id: "elk-grove-august-2026",
         title: "HODGE PODGE GARAGE & BACKYARD!",
         dates: "August 30 – September 1st, 2026 | 9 AM – 2 PM",
