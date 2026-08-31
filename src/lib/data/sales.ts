@@ -58,4 +58,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/elk-grove/95624/elk-grove-collectors-menagerie-2459830",
     },
+    {
+        id: "folsom-september-2026",
+        title: "FURNITURE, FASHION & FINDS!",
+        dates: "September 4–6th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-04",
+        endDate: "2026-09-06",
+        area: "Folsom, CA",
+        categories: ["Fashion", "Furniture", "Antiques"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Folsom/95630/5060964",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/folsom/95630/furniture-fashion-finds-2460338",
+    },
 ];
