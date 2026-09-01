@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "elk-grove-august-2026",
-        title: "HODGE PODGE GARAGE & BACKYARD!",
-        dates: "August 30 – September 1st, 2026 | 9 AM – 2 PM",
-        startDate: "2026-08-30",
-        endDate: "2026-09-01",
-        area: "Elk Grove, CA",
-        categories: ["Collectibles", "Antiques", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Elk-Grove/95758/5049819",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95758/hodge-podge-garage-backyard-2458827",
-    },
-    {
         id: "carmichael-september-2026",
         title: "CARMICHAEL 1980'S TIMECAPSULE REVEALED LIMITED PARKING SO BEST TO MAKE APPOINTMENT THANKS",
         dates: "September 3–5th, 2026 | 8 AM – 2 PM",
@@ -46,7 +33,7 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Carmichael/95608/5046924",
     },
     {
-        id: "elk-grove-september-2026",
+        id: "elk-grove-collectors-menagerie-september-2026",
         title: "ELK GROVE COLLECTORS MENAGERIE",
         dates: "September 3–5th, 2026 | 9 AM – 2 PM",
         startDate: "2026-09-03",
@@ -70,5 +57,31 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Folsom/95630/5060964",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/folsom/95630/furniture-fashion-finds-2460338",
+    },
+    {
+        id: "el-dorado-hills-september-2026",
+        title: "EL DORADO HILLS ESTATE SALE",
+        dates: "September 5–6th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-05",
+        endDate: "2026-09-06",
+        area: "El Dorado Hills, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/El-Dorado-Hills/95762/5061426",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/el-dorado-hills-estate-sale-2460392",
+    },
+    {
+        id: "elk-grove-beautiful-estate-sale-september-2026",
+        title: "BEAUTIFUL ELK GROVE ESTATE SALE",
+        dates: "September 17–19th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-09-17",
+        endDate: "2026-09-19",
+        area: "Elk Grove, CA",
+        categories: ["Furniture", "Collectibles", "Antiques"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Elk-Grove/95757/5061405",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/elk-grove/95757/beautiful-elk-grove-estate-sale-2460391",
     },
 ];
