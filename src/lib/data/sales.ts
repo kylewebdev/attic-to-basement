@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "carmichael-september-2026",
-        title: "CARMICHAEL 1980'S TIMECAPSULE REVEALED LIMITED PARKING SO BEST TO MAKE APPOINTMENT THANKS",
+        title: "CARMICHAEL 1980'S TIMECAPSULE LIMITED PARKING  READ DETAILS IN DESCRIPTION \"VERY IMPORTANT \" THANKS",
         dates: "September 3–5th, 2026 | 8 AM – 2 PM",
         startDate: "2026-09-03",
         endDate: "2026-09-05",
@@ -65,7 +65,7 @@ export const sales: Sale[] = [
         startDate: "2026-09-05",
         endDate: "2026-09-06",
         area: "El Dorado Hills, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Vintage", "Tools", "Books", "Glassware", "Home Decor"],
         externalUrlNet:
             "https://www.estatesales.net/CA/El-Dorado-Hills/95762/5061426",
         externalUrlOrg:
