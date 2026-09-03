@@ -72,6 +72,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/el-dorado-hills-estate-sale-2460392",
     },
     {
+        id: "sacramento-september-2026",
+        title: "PACKED IN THE POCKET!",
+        dates: "September 11–13th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-09-11",
+        endDate: "2026-09-13",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95831/5064450",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95831/packed-in-the-pocket-2460764",
+    },
+    {
         id: "elk-grove-beautiful-estate-sale-september-2026",
         title: "BEAUTIFUL ELK GROVE ESTATE SALE",
         dates: "September 17–19th, 2026 | 9 AM – 3 PM",
