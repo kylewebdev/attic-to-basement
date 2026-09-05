@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "carmichael-september-2026",
-        title: "CARMICHAEL 1980'S TIMECAPSULE LIMITED PARKING  READ DETAILS IN DESCRIPTION \"VERY IMPORTANT \" THANKS",
+        title: "50% OFF SATURDAY CARMICHAEL 1980'S TIMECAPSULE  READ DETAILS IN DESCRIPTION \"VERY IMPORTANT \" THANKS",
         dates: "September 3–5th, 2026 | 8 AM – 2 PM",
         startDate: "2026-09-03",
         endDate: "2026-09-05",
@@ -33,8 +33,8 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Carmichael/95608/5046924",
     },
     {
-        id: "elk-grove-collectors-menagerie-september-2026",
-        title: "ELK GROVE COLLECTORS MENAGERIE",
+        id: "elk-grove-50-off-saturday-september-2026",
+        title: "50% off SATURDAY!!! ELK GROVE COLLECTORS MENAGERIE",
         dates: "September 3–5th, 2026 | 9 AM – 2 PM",
         startDate: "2026-09-03",
         endDate: "2026-09-05",
@@ -43,11 +43,11 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95624/5057130",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95624/elk-grove-collectors-menagerie-2459830",
+            "https://estatesales.org/estate-sales/ca/elk-grove/95624/50-off-saturday-elk-grove-2459830",
     },
     {
         id: "folsom-september-2026",
-        title: "FURNITURE, FASHION & FINDS!",
+        title: "50% OFF SUNDAY - FURNITURE, FASHION & FINDS!",
         dates: "September 4–6th, 2026 | 9 AM – 2 PM",
         startDate: "2026-09-04",
         endDate: "2026-09-06",
@@ -56,7 +56,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Folsom/95630/5060964",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/folsom/95630/furniture-fashion-finds-2460338",
+            "https://estatesales.org/estate-sales/ca/folsom/95630/50-off-sundayfurniture-fashion-finds-2460338",
     },
     {
         id: "el-dorado-hills-september-2026",
@@ -70,6 +70,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/El-Dorado-Hills/95762/5061426",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/el-dorado-hills-estate-sale-2460392",
+    },
+    {
+        id: "citrus-heights-september-2026",
+        title: "MAN CAVE MAYHEM: MOVIES, TOOLS & AUDIO",
+        dates: "September 10–12th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-10",
+        endDate: "2026-09-12",
+        area: "Citrus Heights, CA",
+        categories: ["Tools", "Antiques", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Citrus-Heights/95610/5066814",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/man-cave-mayhem-movies-tools-2461137",
     },
     {
         id: "sacramento-september-2026",
