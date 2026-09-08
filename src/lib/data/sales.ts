@@ -37,7 +37,7 @@ export const sales: Sale[] = [
     {
         id: "sacramento-packed-in-pocket-september-2026",
         title: "PACKED IN THE POCKET!",
-        dates: "September 11–13th, 2026 | 9 AM – 3 PM",
+        dates: "September 11–13th, 2026 | 9 AM – 2 PM",
         startDate: "2026-09-11",
         endDate: "2026-09-13",
         area: "Sacramento, CA",
@@ -59,6 +59,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/West-Sacramento/95691/5068722",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/west-sacramento/95691/sacramento-home-with-something-for-2461376",
+    },
+    {
+        id: "sacramento-heirlooms-hidden-treasures-september-2026",
+        title: "HEIRLOOMS AND HIDDEN TREASURES!",
+        dates: "September 11–13th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-11",
+        endDate: "2026-09-13",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95828/5069844",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95828/heirlooms-and-hidden-treasures-2461522",
     },
     {
         id: "sacramento-garage-finds-vintage-september-2026",
