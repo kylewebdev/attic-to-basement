@@ -99,4 +99,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/elk-grove/95757/beautiful-elk-grove-estate-sale-2460391",
     },
+    {
+        id: "sacramento-southland-park-treasures-september-2026",
+        title: "SOUTHLAND PARK TREASURES!",
+        dates: "September 19–20th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-19",
+        endDate: "2026-09-20",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95822/5072979",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento-/95822/southland-park-treasures-2462018",
+    },
 ];
