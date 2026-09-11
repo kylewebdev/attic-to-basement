@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "citrus-heights-september-2026",
-        title: "MAN CAVE MAYHEM: MOVIES, TOOLS & AUDIO",
+        title: "50% OFF SATURDAY - MAN CAVE MAYHEM: MOVIES, TOOLS & AUDIO",
         dates: "September 10–12th, 2026 | 9 AM – 2 PM",
         startDate: "2026-09-10",
         endDate: "2026-09-12",
@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Citrus-Heights/95610/5066814",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/man-cave-mayhem-movies-tools-2461137",
+            "https://estatesales.org/estate-sales/ca/citrus-heights/95610/50-off-saturday-man-cave-2461137",
     },
     {
         id: "sacramento-packed-in-pocket-september-2026",
