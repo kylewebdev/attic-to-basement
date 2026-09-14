@@ -48,6 +48,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento/95842/garage-finds-vintage-treasures-2461389",
     },
     {
+        id: "antelope-september-2026",
+        title: "TOYS, TOONS, & TREASURE HUNTS",
+        dates: "September 17–19th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-17",
+        endDate: "2026-09-19",
+        area: "Antelope, CA",
+        categories: ["Toys", "Antiques", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Antelope/95843/5077824",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/antelope/95843/toys-toons-treasure-hunts-2462705",
+    },
+    {
         id: "sacramento-southland-park-treasures-september-2026",
         title: "SOUTHLAND PARK TREASURES!",
         dates: "September 19–20th, 2026 | 9 AM – 2 PM",
