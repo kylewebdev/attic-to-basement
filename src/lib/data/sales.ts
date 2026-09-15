@@ -61,16 +61,29 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/antelope/95843/toys-toons-treasure-hunts-2462705",
     },
     {
+        id: "sacramento-antlers-to-ornaments-september-2026",
+        title: "ANTLERS TO ORNAMENTS",
+        dates: "September 20–21st, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-20",
+        endDate: "2026-09-21",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95816/5079273",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95816/antlers-to-ornaments-2462861",
+    },
+    {
         id: "sacramento-southland-park-treasures-september-2026",
         title: "SOUTHLAND PARK TREASURES!",
-        dates: "September 19–20th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-09-19",
-        endDate: "2026-09-20",
+        dates: "September 24–25th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-24",
+        endDate: "2026-09-25",
         area: "Sacramento, CA",
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95822/5072979",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento-/95822/southland-park-treasures-2462018",
+            "https://estatesales.org/estate-sales/ca/sacramento/95822/southland-park-treasures-2462018",
     },
 ];
