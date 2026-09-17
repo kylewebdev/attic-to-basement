@@ -28,7 +28,7 @@ export const sales: Sale[] = [
         startDate: "2026-09-17",
         endDate: "2026-09-19",
         area: "Elk Grove, CA",
-        categories: ["Furniture", "Collectibles", "Antiques"],
+        categories: ["Fashion", "Furniture", "Collectibles", "Vintage", "Vinyl Records"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95757/5061405",
         externalUrlOrg:
@@ -76,9 +76,9 @@ export const sales: Sale[] = [
     {
         id: "sacramento-southland-park-treasures-september-2026",
         title: "SOUTHLAND PARK TREASURES!",
-        dates: "September 24–25th, 2026 | 9 AM – 2 PM",
+        dates: "September 24–26th, 2026 | 9 AM – 2 PM",
         startDate: "2026-09-24",
-        endDate: "2026-09-25",
+        endDate: "2026-09-26",
         area: "Sacramento, CA",
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
