@@ -35,8 +35,8 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/elk-grove/95757/beautiful-elk-grove-estate-sale-2460391",
     },
     {
-        id: "sacramento-garage-finds-vintage-september-2026",
-        title: "GARAGE FINDS & VINTAGE TREASURES!",
+        id: "sacramento-50-off-saturday-september-2026",
+        title: "50% off SATURDAY!!! GARAGE FINDS & VINTAGE TREASURES!",
         dates: "September 17–19th, 2026 | 9 AM – 2 PM",
         startDate: "2026-09-17",
         endDate: "2026-09-19",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95842/5068824",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95842/garage-finds-vintage-treasures-2461389",
+            "https://estatesales.org/estate-sales/ca/sacramento/95842/50-off-saturday-garage-finds-2461389",
     },
     {
         id: "antelope-september-2026",
