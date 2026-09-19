@@ -22,45 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "elk-grove-september-2026",
-        title: "BEAUTIFUL ELK GROVE ESTATE SALE",
-        dates: "September 17–19th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-09-17",
-        endDate: "2026-09-19",
-        area: "Elk Grove, CA",
-        categories: ["Fashion", "Furniture", "Collectibles", "Vintage", "Vinyl Records"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Elk-Grove/95757/5061405",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95757/beautiful-elk-grove-estate-sale-2460391",
-    },
-    {
-        id: "sacramento-50-off-saturday-september-2026",
-        title: "50% off SATURDAY!!! GARAGE FINDS & VINTAGE TREASURES!",
-        dates: "September 17–19th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-09-17",
-        endDate: "2026-09-19",
-        area: "Sacramento, CA",
-        categories: ["Vintage", "Antiques", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95842/5068824",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95842/50-off-saturday-garage-finds-2461389",
-    },
-    {
-        id: "antelope-september-2026",
-        title: "TOYS, TOONS, & TREASURE HUNTS",
-        dates: "September 17–19th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-09-17",
-        endDate: "2026-09-19",
-        area: "Antelope, CA",
-        categories: ["Toys", "Antiques", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Antelope/95843/5077824",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/antelope/95843/toys-toons-treasure-hunts-2462705",
-    },
-    {
         id: "sacramento-antlers-to-ornaments-september-2026",
         title: "ANTLERS TO ORNAMENTS",
         dates: "September 20–21st, 2026 | 9 AM – 2 PM",
