@@ -47,4 +47,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95822/southland-park-treasures-2462018",
     },
+    {
+        id: "shingle-springs-october-2026",
+        title: "VINTAGE MEETS MODERN IN CAMERON PARK!",
+        dates: "October 1–3rd, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-01",
+        endDate: "2026-10-03",
+        area: "Shingle Springs, CA",
+        categories: ["Furniture", "Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Shingle-Springs/95682/5086728",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/cameron-park/95682/vintage-meets-modern-in-cameron-2463915",
+    },
 ];
