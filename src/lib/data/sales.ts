@@ -22,20 +22,7 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-antlers-to-ornaments-september-2026",
-        title: "ANTLERS TO ORNAMENTS",
-        dates: "September 20–21st, 2026 | 9 AM – 2 PM",
-        startDate: "2026-09-20",
-        endDate: "2026-09-21",
-        area: "Sacramento, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95816/5079273",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95816/antlers-to-ornaments-2462861",
-    },
-    {
-        id: "sacramento-southland-park-treasures-september-2026",
+        id: "sacramento-september-2026",
         title: "SOUTHLAND PARK TREASURES!",
         dates: "September 24–26th, 2026 | 9 AM – 2 PM",
         startDate: "2026-09-24",
@@ -46,6 +33,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95822/5072979",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95822/southland-park-treasures-2462018",
+    },
+    {
+        id: "auburn-september-2026",
+        title: "EVERYTHING YOU NEED IN AUBURN!!",
+        dates: "September 24–26th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-09-24",
+        endDate: "2026-09-26",
+        area: "Auburn, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Auburn/95603/5087181",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/auburn/95603/everything-you-need-in-auburn-2463970",
     },
     {
         id: "shingle-springs-october-2026",
