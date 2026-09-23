@@ -60,4 +60,15 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/cameron-park/95682/vintage-meets-modern-in-cameron-2463915",
     },
+    {
+        id: "rancho-cordova-october-2026",
+        title: "GOLD RIVER MATICULOUS HOME OF TREASURES",
+        dates: "October 8–10th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-10-08",
+        endDate: "2026-10-10",
+        area: "Rancho Cordova, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Rancho-Cordova/95670/5090682",
+    },
 ];
