@@ -44,8 +44,6 @@ export const sales: Sale[] = [
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Auburn/95603/5087181",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/auburn/95603/everything-you-need-in-auburn-2463970",
     },
     {
         id: "shingle-springs-october-2026",
