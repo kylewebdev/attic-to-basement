@@ -22,30 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-september-2026",
-        title: "SOUTHLAND PARK TREASURES!",
-        dates: "September 24–26th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-09-24",
-        endDate: "2026-09-26",
-        area: "Sacramento, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95822/5072979",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95822/southland-park-treasures-2462018",
-    },
-    {
-        id: "auburn-september-2026",
-        title: "EVERYTHING YOU NEED IN AUBURN!!",
-        dates: "September 24–26th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-09-24",
-        endDate: "2026-09-26",
-        area: "Auburn, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Auburn/95603/5087181",
-    },
-    {
         id: "shingle-springs-october-2026",
         title: "VINTAGE MEETS MODERN IN CAMERON PARK!",
         dates: "October 1–3rd, 2026 | 9 AM – 2 PM",
