@@ -36,7 +36,7 @@ export const sales: Sale[] = [
     },
     {
         id: "rancho-cordova-october-2026",
-        title: "GOLD RIVER MATICULOUS HOME OF TREASURES",
+        title: "GOLD RIVER METICULOUS HOME OF TREASURES",
         dates: "October 8–10th, 2026 | 9 AM – 3 PM",
         startDate: "2026-10-08",
         endDate: "2026-10-10",
