@@ -35,6 +35,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/cameron-park/95682/vintage-meets-modern-in-cameron-2463915",
     },
     {
+        id: "sacramento-october-2026",
+        title: "LIFETIME COLLECTION! LOTS OF EVERYTHING!",
+        dates: "October 2–4th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-02",
+        endDate: "2026-10-04",
+        area: "Sacramento, CA",
+        categories: ["Collectibles", "Antiques", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95821/5097882",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento-/95821/lifetime-collection-lots-of-everything-2465437",
+    },
+    {
         id: "rancho-cordova-october-2026",
         title: "GOLD RIVER METICULOUS HOME OF TREASURES",
         dates: "October 8–10th, 2026 | 9 AM – 3 PM",
