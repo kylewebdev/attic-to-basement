@@ -35,7 +35,7 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/cameron-park/95682/vintage-meets-modern-in-cameron-2463915",
     },
     {
-        id: "sacramento-october-2026",
+        id: "sacramento-lifetime-collection-lots-october-2026",
         title: "LIFETIME COLLECTION! LOTS OF EVERYTHING!",
         dates: "October 2–4th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-02",
@@ -57,5 +57,18 @@ export const sales: Sale[] = [
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Rancho-Cordova/95670/5090682",
+    },
+    {
+        id: "sacramento-radiant-rosemont-estate-october-2026",
+        title: "RADIANT ROSEMONT ESTATE SALE",
+        dates: "October 9–11th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-10-09",
+        endDate: "2026-10-11",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95826/5101404",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95826/radiant-rosemont-estate-sale-2465890",
     },
 ];
