@@ -22,21 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "shingle-springs-october-2026",
-        title: "VINTAGE MEETS MODERN IN CAMERON PARK!",
-        dates: "October 1–3rd, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-01",
-        endDate: "2026-10-03",
-        area: "Shingle Springs, CA",
-        categories: ["Furniture", "Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Shingle-Springs/95682/5086728",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/cameron-park/95682/vintage-meets-modern-in-cameron-2463915",
-    },
-    {
-        id: "sacramento-lifetime-collection-lots-october-2026",
-        title: "LIFETIME COLLECTION! LOTS OF EVERYTHING!",
+        id: "sacramento-50-off-sunday-october-2026",
+        title: "50% OFF SUNDAY - LIFETIME COLLECTION! LOTS OF EVERYTHING!",
         dates: "October 2–4th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-02",
         endDate: "2026-10-04",
@@ -45,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95821/5097882",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento-/95821/lifetime-collection-lots-of-everything-2465437",
+            "https://estatesales.org/estate-sales/ca/sacramento/95821/50-off-sunday-lifetime-collection-2465437",
     },
     {
         id: "rancho-cordova-october-2026",
@@ -57,6 +44,8 @@ export const sales: Sale[] = [
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Rancho-Cordova/95670/5090682",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/gold-river/95670/gold-river-meticulous-home-of-2464413",
     },
     {
         id: "sacramento-radiant-rosemont-estate-october-2026",
