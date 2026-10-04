@@ -22,33 +22,18 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-50-off-sunday-october-2026",
-        title: "50% OFF SUNDAY - LIFETIME COLLECTION! LOTS OF EVERYTHING!",
-        dates: "October 2–4th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-02",
-        endDate: "2026-10-04",
-        area: "Sacramento, CA",
-        categories: ["Collectibles", "Antiques", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95821/5097882",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95821/50-off-sunday-lifetime-collection-2465437",
-    },
-    {
         id: "rancho-cordova-october-2026",
-        title: "GOLD RIVER METICULOUS HOME OF TREASURES",
+        title: "GOLD RIVER WORLD TRAVELER HIGH-END COLLECTOR METICULOUS HOME OF TREASURES",
         dates: "October 8–10th, 2026 | 9 AM – 3 PM",
         startDate: "2026-10-08",
         endDate: "2026-10-10",
         area: "Rancho Cordova, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Collectibles", "Antiques", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Rancho-Cordova/95670/5090682",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/gold-river/95670/gold-river-meticulous-home-of-2464413",
     },
     {
-        id: "sacramento-radiant-rosemont-estate-october-2026",
+        id: "sacramento-october-2026",
         title: "RADIANT ROSEMONT ESTATE SALE",
         dates: "October 9–11th, 2026 | 9 AM – 3 PM",
         startDate: "2026-10-09",
