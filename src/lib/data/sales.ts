@@ -33,6 +33,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Rancho-Cordova/95670/5090682",
     },
     {
+        id: "lincoln-october-2026",
+        title: "LUXURIOUS LINCOLN HILLS ESTATE!",
+        dates: "October 8–10th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-08",
+        endDate: "2026-10-10",
+        area: "Lincoln, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Lincoln/95648/5107116",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/lincoln/95648/luxurious-lincoln-hills-estate-2466620",
+    },
+    {
         id: "sacramento-october-2026",
         title: "RADIANT ROSEMONT ESTATE SALE",
         dates: "October 9–11th, 2026 | 9 AM – 3 PM",
