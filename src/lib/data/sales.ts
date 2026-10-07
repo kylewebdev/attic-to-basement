@@ -52,7 +52,7 @@ export const sales: Sale[] = [
         startDate: "2026-10-09",
         endDate: "2026-10-11",
         area: "Sacramento, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Furniture", "Vintage", "Vinyl Records", "Books"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95826/5101404",
         externalUrlOrg:
@@ -70,5 +70,31 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95822/5107410",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento-/95822/workshop-clowns-and-holiday-decor-2466651",
+    },
+    {
+        id: "sacramento-high-end-mancave-october-2026",
+        title: "HIGH END MANCAVE!",
+        dates: "October 10–11th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-10",
+        endDate: "2026-10-11",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95829/5109324",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95829/high-end-mancave-2466901",
+    },
+    {
+        id: "sacramento-asian-meets-modern-october-2026",
+        title: "ASIAN MEETS MODERN IN SACRAMENTO/NATOMAS",
+        dates: "October 15–17th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-15",
+        endDate: "2026-10-17",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95834/5109321",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95834/asian-meets-modern-in-sacramentonatomas-2466900",
     },
 ];
