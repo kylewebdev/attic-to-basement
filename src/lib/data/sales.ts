@@ -78,7 +78,7 @@ export const sales: Sale[] = [
         startDate: "2026-10-10",
         endDate: "2026-10-11",
         area: "Sacramento, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Collectibles", "Tools", "Outdoors"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95829/5109324",
         externalUrlOrg:
