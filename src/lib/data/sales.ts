@@ -22,30 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "rancho-cordova-october-2026",
-        title: "GOLD RIVER WORLD TRAVELER HIGH-END COLLECTOR METICULOUS HOME OF TREASURES",
-        dates: "October 8–10th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-10-08",
-        endDate: "2026-10-10",
-        area: "Rancho Cordova, CA",
-        categories: ["Collectibles", "Antiques", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Rancho-Cordova/95670/5090682",
-    },
-    {
-        id: "lincoln-october-2026",
-        title: "LUXURIOUS LINCOLN HILLS ESTATE!",
-        dates: "October 8–10th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-08",
-        endDate: "2026-10-10",
-        area: "Lincoln, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Lincoln/95648/5107116",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/lincoln/95648/luxurious-lincoln-hills-estate-2466620",
-    },
-    {
         id: "sacramento-radiant-rosemont-estate-october-2026",
         title: "RADIANT ROSEMONT ESTATE SALE",
         dates: "October 9–11th, 2026 | 9 AM – 3 PM",
@@ -59,8 +35,8 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento/95826/radiant-rosemont-estate-sale-2465890",
     },
     {
-        id: "sacramento-workshop-clowns-holiday-october-2026",
-        title: "WORKSHOP, CLOWNS AND HOLIDAY DECOR!",
+        id: "sacramento-50-off-sunday-october-2026",
+        title: "50% OFF SUNDAY - WORKSHOP, CLOWNS AND HOLIDAY DECOR!",
         dates: "October 9–11th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-09",
         endDate: "2026-10-11",
@@ -68,8 +44,6 @@ export const sales: Sale[] = [
         categories: ["Tools", "Home Decor", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95822/5107410",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento-/95822/workshop-clowns-and-holiday-decor-2466651",
     },
     {
         id: "sacramento-high-end-mancave-october-2026",
