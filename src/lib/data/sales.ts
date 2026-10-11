@@ -22,44 +22,7 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-radiant-rosemont-estate-october-2026",
-        title: "RADIANT ROSEMONT ESTATE SALE",
-        dates: "October 9–11th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-10-09",
-        endDate: "2026-10-11",
-        area: "Sacramento, CA",
-        categories: ["Furniture", "Vintage", "Vinyl Records", "Books"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95826/5101404",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95826/radiant-rosemont-estate-sale-2465890",
-    },
-    {
-        id: "sacramento-50-off-sunday-october-2026",
-        title: "50% OFF SUNDAY - WORKSHOP, CLOWNS AND HOLIDAY DECOR!",
-        dates: "October 9–11th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-09",
-        endDate: "2026-10-11",
-        area: "Sacramento, CA",
-        categories: ["Tools", "Home Decor", "Antiques"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95822/5107410",
-    },
-    {
-        id: "sacramento-high-end-mancave-october-2026",
-        title: "HIGH END MANCAVE!",
-        dates: "October 10–11th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-10",
-        endDate: "2026-10-11",
-        area: "Sacramento, CA",
-        categories: ["Collectibles", "Tools", "Outdoors"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95829/5109324",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95829/high-end-mancave-2466901",
-    },
-    {
-        id: "sacramento-asian-meets-modern-october-2026",
+        id: "sacramento-october-2026",
         title: "ASIAN MEETS MODERN IN SACRAMENTO/NATOMAS",
         dates: "October 15–17th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-15",
