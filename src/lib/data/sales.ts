@@ -48,6 +48,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento/95824/collectibles-in-lemon-hill-2467794",
     },
     {
+        id: "roseville-october-2026",
+        title: "ART, ATTIRE & EVERYTHING IN BETWEEN!",
+        dates: "October 16–18th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-16",
+        endDate: "2026-10-18",
+        area: "Roseville, CA",
+        categories: ["Art", "Antiques", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Roseville/95747/5116968",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/roseville/95747/art-attire-everything-in-between-2467969",
+    },
+    {
         id: "vacaville-october-2026",
         title: "RUSTY TO RICHES!",
         dates: "October 22–24th, 2026 | 9 AM – 2 PM",
