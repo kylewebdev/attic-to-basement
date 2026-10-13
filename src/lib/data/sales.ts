@@ -22,7 +22,7 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-october-2026",
+        id: "sacramento-asian-meets-modern-october-2026",
         title: "ASIAN MEETS MODERN IN SACRAMENTO/NATOMAS",
         dates: "October 15–17th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-15",
@@ -33,6 +33,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95834/5109321",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95834/asian-meets-modern-in-sacramentonatomas-2466900",
+    },
+    {
+        id: "sacramento-collectibles-in-lemon-october-2026",
+        title: "COLLECTIBLES IN LEMON HILL",
+        dates: "October 16–18th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-10-16",
+        endDate: "2026-10-18",
+        area: "Sacramento, CA",
+        categories: ["Collectibles", "Antiques", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95824/5115456",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95824/collectibles-in-lemon-hill-2467794",
     },
     {
         id: "vacaville-october-2026",
@@ -46,5 +59,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Vacaville/95687/5112324",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/vacaville/95687/rusty-to-riches-2467342",
+    },
+    {
+        id: "lincoln-october-2026",
+        title: "CLEAN LINCOLN ESTATE SALE",
+        dates: "October 22–24th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-10-22",
+        endDate: "2026-10-24",
+        area: "Lincoln, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Lincoln/95648/5115462",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/lincoln/95648/clean-lincoln-estate-sale-2467795",
     },
 ];
