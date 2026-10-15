@@ -22,8 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-asian-meets-modern-october-2026",
-        title: "ASIAN MEETS MODERN IN SACRAMENTO/NATOMAS",
+        id: "sacramento-gated-community-asian-october-2026",
+        title: "*GATED COMMUNITY* ASIAN MEETS MODERN IN SACRAMENTO/NATOMAS",
         dates: "October 15–17th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-15",
         endDate: "2026-10-17",
@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95834/5109321",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95834/asian-meets-modern-in-sacramentonatomas-2466900",
+            "https://estatesales.org/estate-sales/ca/sacramento/95834/gated-community-asian-meets-modern-2466900",
     },
     {
         id: "sacramento-collectibles-in-lemon-october-2026",
