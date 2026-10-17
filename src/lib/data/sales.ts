@@ -86,4 +86,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/lincoln/95648/clean-lincoln-estate-sale-2467795",
     },
+    {
+        id: "sacramento-designer-threads-asian-october-2026",
+        title: "DESIGNER THREADS & ASIAN TREASURES",
+        dates: "October 23–25th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-23",
+        endDate: "2026-10-25",
+        area: "Sacramento, CA",
+        categories: ["Furniture", "Vintage", "Art"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95831/5123064",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95831/designer-threads-asian-treasures-2468866",
+    },
 ];
