@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-50-off-saturday-october-2026",
-        title: "50% off SATURDAY!!! *GATED COMMUNITY* ASIAN MEETS MODERN IN SACRAMENTO/NATOMAS",
-        dates: "October 15–17th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-15",
-        endDate: "2026-10-17",
-        area: "Sacramento, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95834/5109321",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95834/50-off-saturday-gated-community-2466900",
-    },
-    {
         id: "sacramento-collectibles-in-lemon-october-2026",
         title: "COLLECTIBLES IN LEMON HILL",
         dates: "October 16–18th, 2026 | 9 AM – 3 PM",
