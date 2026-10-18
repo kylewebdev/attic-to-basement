@@ -22,30 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-50-off-sunday-october-2026",
-        title: "50% OFF SUNDAY COLLECTIBLES IN LEMON HILL",
-        dates: "October 16–18th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-10-16",
-        endDate: "2026-10-18",
-        area: "Sacramento, CA",
-        categories: ["Collectibles", "Antiques", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95824/5115456",
-    },
-    {
-        id: "roseville-october-2026",
-        title: "50% OFF SUNDAY - ART, ATTIRE & EVERYTHING IN BETWEEN!",
-        dates: "October 16–18th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-16",
-        endDate: "2026-10-18",
-        area: "Roseville, CA",
-        categories: ["Art", "Antiques", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Roseville/95747/5116968",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95747/50-off-sunday-art-attire-2467969",
-    },
-    {
         id: "vacaville-october-2026",
         title: "RUSTY TO RICHES!",
         dates: "October 22–24th, 2026 | 9 AM – 2 PM",
@@ -85,7 +61,7 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/citrus-heights/95621/trailer-park-treasures-2468980",
     },
     {
-        id: "sacramento-designer-threads-asian-october-2026",
+        id: "sacramento-october-2026",
         title: "DESIGNER THREADS & ASIAN TREASURES",
         dates: "October 23–25th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-23",
@@ -96,5 +72,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95831/5123064",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95831/designer-threads-asian-treasures-2468866",
+    },
+    {
+        id: "elk-grove-october-2026",
+        title: "PACKED TO THE BRIM OF DECADES FROM ONE LARGE FAMILY",
+        dates: "October 30 – November 1st, 2026 | 9 AM – 3 PM",
+        startDate: "2026-10-30",
+        endDate: "2026-11-01",
+        area: "Elk Grove, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Elk-Grove/95624/5124207",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/elk-grove/95624/packed-to-the-brim-of-2469021",
     },
 ];
