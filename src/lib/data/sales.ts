@@ -22,8 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-collectibles-in-lemon-october-2026",
-        title: "COLLECTIBLES IN LEMON HILL",
+        id: "sacramento-50-off-sunday-october-2026",
+        title: "50% OFF SUNDAY COLLECTIBLES IN LEMON HILL",
         dates: "October 16–18th, 2026 | 9 AM – 3 PM",
         startDate: "2026-10-16",
         endDate: "2026-10-18",
@@ -31,8 +31,6 @@ export const sales: Sale[] = [
         categories: ["Collectibles", "Antiques", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95824/5115456",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95824/collectibles-in-lemon-hill-2467794",
     },
     {
         id: "roseville-october-2026",
