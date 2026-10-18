@@ -36,7 +36,7 @@ export const sales: Sale[] = [
     },
     {
         id: "roseville-october-2026",
-        title: "ART, ATTIRE & EVERYTHING IN BETWEEN!",
+        title: "50% OFF SUNDAY - ART, ATTIRE & EVERYTHING IN BETWEEN!",
         dates: "October 16–18th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-16",
         endDate: "2026-10-18",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Roseville/95747/5116968",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/roseville/95747/art-attire-everything-in-between-2467969",
+            "https://estatesales.org/estate-sales/ca/roseville/95747/50-off-sunday-art-attire-2467969",
     },
     {
         id: "vacaville-october-2026",
@@ -72,6 +72,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Lincoln/95648/5115462",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/lincoln/95648/clean-lincoln-estate-sale-2467795",
+    },
+    {
+        id: "citrus-heights-october-2026",
+        title: "TRAILER PARK TREASURES",
+        dates: "October 22–24th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-22",
+        endDate: "2026-10-24",
+        area: "Citrus Heights, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Citrus-Heights/95621/5123859",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/citrus-heights/95621/trailer-park-treasures-2468980",
     },
     {
         id: "sacramento-designer-threads-asian-october-2026",
