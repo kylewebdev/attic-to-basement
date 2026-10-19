@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "vacaville-october-2026",
-        title: "RUSTY TO RICHES!",
-        dates: "October 22–24th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-22",
-        endDate: "2026-10-24",
-        area: "Vacaville, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Vacaville/95687/5112324",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/vacaville/95687/rusty-to-riches-2467342",
-    },
-    {
         id: "lincoln-october-2026",
         title: "CLEAN LINCOLN ESTATE SALE",
         dates: "October 22–24th, 2026 | 9 AM – 3 PM",
@@ -59,6 +46,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Citrus-Heights/95621/5123859",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/citrus-heights/95621/trailer-park-treasures-2468980",
+    },
+    {
+        id: "vacaville-october-2026",
+        title: "*STARTING FRIDAY* RUSTY TO RICHES!",
+        dates: "October 23–25th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-23",
+        endDate: "2026-10-25",
+        area: "Vacaville, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Vacaville/95687/5112324",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/vacaville/95687/starting-friday-rusty-to-riches-2467342",
     },
     {
         id: "sacramento-october-2026",
