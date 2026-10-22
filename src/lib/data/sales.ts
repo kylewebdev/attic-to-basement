@@ -28,24 +28,11 @@ export const sales: Sale[] = [
         startDate: "2026-10-22",
         endDate: "2026-10-24",
         area: "Lincoln, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Jewelry", "Furniture", "Collectibles", "Vintage", "Art"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Lincoln/95648/5115462",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/lincoln/95648/clean-lincoln-estate-sale-2467795",
-    },
-    {
-        id: "citrus-heights-october-2026",
-        title: "TRAILER PARK TREASURES",
-        dates: "October 22–24th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-22",
-        endDate: "2026-10-24",
-        area: "Citrus Heights, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Citrus-Heights/95621/5123859",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/citrus-heights/95621/trailer-park-treasures-2468980",
     },
     {
         id: "vacaville-october-2026",
