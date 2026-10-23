@@ -61,6 +61,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/sacramento/95831/designer-threads-asian-treasures-2468866",
     },
     {
+        id: "rocklin-october-2026",
+        title: "FASHION FINDS & DECOR IN ROCKLIN",
+        dates: "October 29–31st, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-29",
+        endDate: "2026-10-31",
+        area: "Rocklin, CA",
+        categories: ["Fashion", "Home Decor", "Antiques"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Rocklin/95765/5130951",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/rocklin/95765/fashion-finds-decor-in-rocklin-2469872",
+    },
+    {
         id: "elk-grove-october-2026",
         title: "PACKED TO THE BRIM OF DECADES FROM ONE LARGE FAMILY",
         dates: "October 30 – November 1st, 2026 | 9 AM – 3 PM",
@@ -72,5 +85,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Elk-Grove/95624/5124207",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/elk-grove/95624/packed-to-the-brim-of-2469021",
+    },
+    {
+        id: "citrus-heights-november-2026",
+        title: "TRAILER PARK TREASURES",
+        dates: "November 13–14th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-13",
+        endDate: "2026-11-14",
+        area: "Citrus Heights, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Citrus-Heights/95621/5123859",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/citrus-heights/95621/trailer-park-treasures-2468980",
     },
 ];
