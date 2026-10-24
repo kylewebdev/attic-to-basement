@@ -22,21 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "lincoln-october-2026",
-        title: "CLEAN LINCOLN ESTATE SALE",
-        dates: "October 22–24th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-10-22",
-        endDate: "2026-10-24",
-        area: "Lincoln, CA",
-        categories: ["Jewelry", "Furniture", "Collectibles", "Vintage", "Art"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Lincoln/95648/5115462",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/lincoln/95648/clean-lincoln-estate-sale-2467795",
-    },
-    {
         id: "vacaville-october-2026",
-        title: "*STARTING FRIDAY* RUSTY TO RICHES!",
+        title: "50% off SUNDAY!!! RUSTY TO RICHES!",
         dates: "October 23–25th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-23",
         endDate: "2026-10-25",
@@ -45,11 +32,11 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Vacaville/95687/5112324",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/vacaville/95687/starting-friday-rusty-to-riches-2467342",
+            "https://estatesales.org/estate-sales/ca/vacaville/95687/50-off-sunday-rusty-to-2467342",
     },
     {
         id: "sacramento-october-2026",
-        title: "DESIGNER THREADS & ASIAN TREASURES",
+        title: "25% OFF SATURDAY - DESIGNER THREADS & ASIAN TREASURES",
         dates: "October 23–25th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-23",
         endDate: "2026-10-25",
@@ -58,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95831/5123064",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95831/designer-threads-asian-treasures-2468866",
+            "https://estatesales.org/estate-sales/ca/sacramento/95831/25-off-saturday-designer-threads-2468866",
     },
     {
         id: "rocklin-october-2026",
