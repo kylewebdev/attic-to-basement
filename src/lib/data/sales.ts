@@ -22,32 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "vacaville-october-2026",
-        title: "50% off SUNDAY!!! RUSTY TO RICHES!",
-        dates: "October 23–25th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-23",
-        endDate: "2026-10-25",
-        area: "Vacaville, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Vacaville/95687/5112324",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/vacaville/95687/50-off-sunday-rusty-to-2467342",
-    },
-    {
-        id: "sacramento-50-off-sunday-october-2026",
-        title: "50% OFF SUNDAY - DESIGNER THREADS & ASIAN TREASURES",
-        dates: "October 23–25th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-23",
-        endDate: "2026-10-25",
-        area: "Sacramento, CA",
-        categories: ["Furniture", "Vintage", "Art"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95831/5123064",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95831/50-off-sunday-designer-threads-2468866",
-    },
-    {
         id: "rocklin-october-2026",
         title: "FASHION FINDS & DECOR IN ROCKLIN",
         dates: "October 29–31st, 2026 | 9 AM – 2 PM",
@@ -61,7 +35,7 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/rocklin/95765/fashion-finds-decor-in-rocklin-2469872",
     },
     {
-        id: "sacramento-books-household-treasures-october-2026",
+        id: "sacramento-october-2026",
         title: "BOOKS & HOUSEHOLD TREASURES!",
         dates: "October 29–31st, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-29",
