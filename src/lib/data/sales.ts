@@ -35,8 +35,8 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/vacaville/95687/50-off-sunday-rusty-to-2467342",
     },
     {
-        id: "sacramento-october-2026",
-        title: "25% OFF SATURDAY - DESIGNER THREADS & ASIAN TREASURES",
+        id: "sacramento-50-off-sunday-october-2026",
+        title: "50% OFF SUNDAY - DESIGNER THREADS & ASIAN TREASURES",
         dates: "October 23–25th, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-23",
         endDate: "2026-10-25",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95831/5123064",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95831/25-off-saturday-designer-threads-2468866",
+            "https://estatesales.org/estate-sales/ca/sacramento/95831/50-off-sunday-designer-threads-2468866",
     },
     {
         id: "rocklin-october-2026",
@@ -59,6 +59,19 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Rocklin/95765/5130951",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/rocklin/95765/fashion-finds-decor-in-rocklin-2469872",
+    },
+    {
+        id: "sacramento-books-household-treasures-october-2026",
+        title: "BOOKS & HOUSEHOLD TREASURES!",
+        dates: "October 29–31st, 2026 | 9 AM – 2 PM",
+        startDate: "2026-10-29",
+        endDate: "2026-10-31",
+        area: "Sacramento, CA",
+        categories: ["Furniture", "Books", "Home Decor"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95835/5133186",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95835/books-household-treasures-2470211",
     },
     {
         id: "elk-grove-october-2026",
