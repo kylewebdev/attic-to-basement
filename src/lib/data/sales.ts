@@ -28,7 +28,7 @@ export const sales: Sale[] = [
         startDate: "2026-10-29",
         endDate: "2026-10-31",
         area: "Rocklin, CA",
-        categories: ["Fashion", "Home Decor", "Antiques"],
+        categories: ["Jewelry", "Fashion", "Coins", "Home Decor"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Rocklin/95765/5130951",
         externalUrlOrg:
@@ -49,12 +49,12 @@ export const sales: Sale[] = [
     },
     {
         id: "elk-grove-october-2026",
-        title: "PACKED TO THE BRIM OF DECADES FROM ONE LARGE FAMILY",
+        title: "PACKED TO THE BRIM OF DECADES FROM ONE LARGE FAMILY CLOTHES, TOOLS, ETC.",
         dates: "October 30 – November 1st, 2026 | 9 AM – 3 PM",
         startDate: "2026-10-30",
         endDate: "2026-11-01",
         area: "Elk Grove, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Fashion", "Tools", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95624/5124207",
         externalUrlOrg:
