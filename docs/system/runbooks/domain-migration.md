@@ -12,6 +12,8 @@ Do not replace the separate `log.abeliquidators.com` intake service, Gmail addre
 
 Local validation passed: ESLint, production build/TypeScript, and generated-output assertions for all 36 unique sitemap entries, matching new-domain canonical and Open Graph URLs, new-domain business schema, no old-origin strings in those HTML files, and the corrected robots sitemap directive.
 
+Published code: `c6c9e84` on `origin/main`. Live verification after deployment passed on October 28, 2026: all 36 unique sitemap URLs use the new origin and return 200 directly; all 36 page canonicals and Open Graph URLs match the corresponding new URL; robots.txt references the new sitemap; sampled structured data uses the new origin. All 36 old HTTPS apex paths still redirect once with 308 to matching new pages. The hosting redirect defects below remain unchanged. GSC indexing and account changes remain unverified.
+
 Existing indexing exception: the three resource articles in the sitemap inherit `noindex, nofollow` from `src/app/resources/layout.tsx`, which explicitly marks Resources as draft. This change preserves that publishing decision. Before treating all 36 entries as indexing targets, decide whether to publish those articles or exclude them from the sitemap. Do not silently remove their noindex setting during the domain migration.
 
 ## Live baseline before deployment
