@@ -1,10 +1,9 @@
 import type { MetadataRoute } from "next";
 import { cities, services } from "@/lib/data/service-areas";
 import { getPublishedResourcePosts } from "@/lib/mdx";
+import { siteUrl as baseUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://abeliquidators.com";
-
     const serviceAreaPages: MetadataRoute.Sitemap = cities.flatMap((city) =>
         services.map((service) => ({
             url: `${baseUrl}/services/${city.slug}/${service.slug}`,

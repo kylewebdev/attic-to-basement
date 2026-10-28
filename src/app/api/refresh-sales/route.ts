@@ -10,7 +10,7 @@ const REPO = "kylewebdev/attic-to-basement";
  * Trigger the "Update estate sales" GitHub Actions workflow. Meant to be
  * bookmarked as a plain link (e.g. on the client's phone):
  *
- *   https://abeliquidators.com/api/refresh-sales?token=<SALES_REFRESH_TOKEN>
+ *   https://attictobasement.com/api/refresh-sales?token=<SALES_REFRESH_TOKEN>
  *
  * Requires two Vercel env vars:
  *   SALES_REFRESH_TOKEN — shared secret expected in the ?token= param

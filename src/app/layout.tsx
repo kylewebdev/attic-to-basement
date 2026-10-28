@@ -12,6 +12,7 @@ import { getLocalBusinessSchema } from "@/lib/schema";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleTag from "@/components/analytics/GoogleTag";
 import type { Metadata } from "next";
+import { siteUrl } from "@/lib/site";
 
 const libreBaskerville = Libre_Baskerville({
     subsets: ["latin"],
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     },
     description:
         "Full-service estate sales, buyouts, cleanouts, and appraisals across Northern California.",
-    metadataBase: new URL("https://abeliquidators.com"),
+    metadataBase: new URL(siteUrl),
     icons: {
         icon: [
             { url: "/favicon.ico", sizes: "48x48" },

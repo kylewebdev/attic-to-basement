@@ -21,7 +21,7 @@ this pipeline.
 
 1. **Schedule** — daily at 19:00 UTC (noon PDT / 11 AM PST).
 2. **Manual** — "Run workflow" button on the Actions tab (also in the GitHub mobile app).
-3. **Client refresh link** — `https://abeliquidators.com/api/refresh-sales?token=…`
+3. **Client refresh link** — `https://attictobasement.com/api/refresh-sales?token=…`
    fires a `repository_dispatch`. See setup below.
 4. **Workflow file edits** — pushes touching the workflow file run it once as a smoke test.
 
@@ -43,7 +43,7 @@ The `/api/refresh-sales` route needs two Vercel environment variables:
    Permissions: **Contents: Read and write**. Set a long expiration and calendar the renewal.
 
 Add both in Vercel → Project → Settings → Environment Variables (Production), redeploy,
-then give the client: `https://abeliquidators.com/api/refresh-sales?token=<SALES_REFRESH_TOKEN>`
+then give the client: `https://attictobasement.com/api/refresh-sales?token=<SALES_REFRESH_TOKEN>`
 
 Until both vars are set the route safely returns 503 ("Refresh is not configured").
 

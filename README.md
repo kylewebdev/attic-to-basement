@@ -1,6 +1,8 @@
 # ABE Liquidators
 
-Marketing website for **Attic to Basement Estate Liquidators** (abeliquidators.com) — a Northern California estate liquidation company. Built with [Next.js](https://nextjs.org) App Router, React, and Tailwind CSS.
+Marketing website for **Attic to Basement Estate Liquidators** (attictobasement.com) — a Northern California estate liquidation company. Built with [Next.js](https://nextjs.org) App Router, React, and Tailwind CSS.
+
+The canonical public origin is defined in `src/lib/site.ts` and shared by metadata, structured data, sitemap, and robots generation. See `docs/system/runbooks/domain-migration.md` for migration validation and account follow-up.
 
 ## Tech Stack
 

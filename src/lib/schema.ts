@@ -1,5 +1,6 @@
 import type { Sale } from "@/lib/data/sales";
-const siteUrl = "https://abeliquidators.com";
+import { siteUrl } from "@/lib/site";
+
 const businessName = "Attic to Basement Estate Liquidators";
 const businessId = `${siteUrl}/#business`;
 

@@ -1,0 +1,101 @@
+source,status,redirect_count,final_url,hops
+http://abeliquidators.com/,200,2,https://attictobasement.com/,308 https://abeliquidators.com/ -> 308 https://attictobasement.com/
+http://abeliquidators.com/estate-sales,200,2,https://attictobasement.com/estate-sales,308 https://abeliquidators.com/estate-sales -> 308 https://attictobasement.com/estate-sales
+http://abeliquidators.com/estate-liquidation,200,2,https://attictobasement.com/estate-liquidation,308 https://abeliquidators.com/estate-liquidation -> 308 https://attictobasement.com/estate-liquidation
+http://abeliquidators.com/appraisals,200,2,https://attictobasement.com/appraisals,308 https://abeliquidators.com/appraisals -> 308 https://attictobasement.com/appraisals
+http://abeliquidators.com/contact,200,2,https://attictobasement.com/contact,308 https://abeliquidators.com/contact -> 308 https://attictobasement.com/contact
+http://abeliquidators.com/services/sacramento/estate-sales,200,2,https://attictobasement.com/services/sacramento/estate-sales,308 https://abeliquidators.com/services/sacramento/estate-sales -> 308 https://attictobasement.com/services/sacramento/estate-sales
+http://abeliquidators.com/estatesales,200,3,https://attictobasement.com/estate-sales,308 https://abeliquidators.com/estatesales -> 308 https://attictobasement.com/estatesales -> 308 /estate-sales
+http://abeliquidators.com/estate-sales?utm_source=migration-audit,200,2,https://attictobasement.com/estate-sales?utm_source=migration-audit,308 https://abeliquidators.com/estate-sales?utm_source=migration-audit -> 308 https://attictobasement.com/estate-sales?utm_source=migration-audit
+https://abeliquidators.com/,200,1,https://attictobasement.com/,308 https://attictobasement.com/
+https://abeliquidators.com/estate-sales,200,1,https://attictobasement.com/estate-sales,308 https://attictobasement.com/estate-sales
+https://abeliquidators.com/estate-liquidation,200,1,https://attictobasement.com/estate-liquidation,308 https://attictobasement.com/estate-liquidation
+https://abeliquidators.com/appraisals,200,1,https://attictobasement.com/appraisals,308 https://attictobasement.com/appraisals
+https://abeliquidators.com/contact,200,1,https://attictobasement.com/contact,308 https://attictobasement.com/contact
+https://abeliquidators.com/services/sacramento/estate-sales,200,1,https://attictobasement.com/services/sacramento/estate-sales,308 https://attictobasement.com/services/sacramento/estate-sales
+https://abeliquidators.com/estatesales,200,2,https://attictobasement.com/estate-sales,308 https://attictobasement.com/estatesales -> 308 /estate-sales
+https://abeliquidators.com/estate-sales?utm_source=migration-audit,200,1,https://attictobasement.com/estate-sales?utm_source=migration-audit,308 https://attictobasement.com/estate-sales?utm_source=migration-audit
+http://www.abeliquidators.com/,200,2,https://attictobasement.com/,308 https://www.abeliquidators.com/ -> 307 https://attictobasement.com/
+http://www.abeliquidators.com/estate-sales,200,2,https://attictobasement.com/estate-sales,308 https://www.abeliquidators.com/estate-sales -> 307 https://attictobasement.com/estate-sales
+http://www.abeliquidators.com/estate-liquidation,200,2,https://attictobasement.com/estate-liquidation,308 https://www.abeliquidators.com/estate-liquidation -> 307 https://attictobasement.com/estate-liquidation
+http://www.abeliquidators.com/appraisals,200,2,https://attictobasement.com/appraisals,308 https://www.abeliquidators.com/appraisals -> 307 https://attictobasement.com/appraisals
+http://www.abeliquidators.com/contact,200,2,https://attictobasement.com/contact,308 https://www.abeliquidators.com/contact -> 307 https://attictobasement.com/contact
+http://www.abeliquidators.com/services/sacramento/estate-sales,200,2,https://attictobasement.com/services/sacramento/estate-sales,308 https://www.abeliquidators.com/services/sacramento/estate-sales -> 307 https://attictobasement.com/services/sacramento/estate-sales
+http://www.abeliquidators.com/estatesales,200,3,https://attictobasement.com/estate-sales,308 https://www.abeliquidators.com/estatesales -> 307 https://attictobasement.com/estatesales -> 308 /estate-sales
+http://www.abeliquidators.com/estate-sales?utm_source=migration-audit,200,2,https://attictobasement.com/estate-sales?utm_source=migration-audit,308 https://www.abeliquidators.com/estate-sales?utm_source=migration-audit -> 307 https://attictobasement.com/estate-sales?utm_source=migration-audit
+https://www.abeliquidators.com/,200,1,https://attictobasement.com/,307 https://attictobasement.com/
+https://www.abeliquidators.com/estate-sales,200,1,https://attictobasement.com/estate-sales,307 https://attictobasement.com/estate-sales
+https://www.abeliquidators.com/estate-liquidation,200,1,https://attictobasement.com/estate-liquidation,307 https://attictobasement.com/estate-liquidation
+https://www.abeliquidators.com/appraisals,200,1,https://attictobasement.com/appraisals,307 https://attictobasement.com/appraisals
+https://www.abeliquidators.com/contact,200,1,https://attictobasement.com/contact,307 https://attictobasement.com/contact
+https://www.abeliquidators.com/services/sacramento/estate-sales,200,1,https://attictobasement.com/services/sacramento/estate-sales,307 https://attictobasement.com/services/sacramento/estate-sales
+https://www.abeliquidators.com/estatesales,200,2,https://attictobasement.com/estate-sales,307 https://attictobasement.com/estatesales -> 308 /estate-sales
+https://www.abeliquidators.com/estate-sales?utm_source=migration-audit,200,1,https://attictobasement.com/estate-sales?utm_source=migration-audit,307 https://attictobasement.com/estate-sales?utm_source=migration-audit
+http://attictobasement.com/,200,1,https://attictobasement.com/,308 https://attictobasement.com/
+http://attictobasement.com/estate-sales,200,1,https://attictobasement.com/estate-sales,308 https://attictobasement.com/estate-sales
+http://attictobasement.com/estate-liquidation,200,1,https://attictobasement.com/estate-liquidation,308 https://attictobasement.com/estate-liquidation
+http://attictobasement.com/appraisals,200,1,https://attictobasement.com/appraisals,308 https://attictobasement.com/appraisals
+http://attictobasement.com/contact,200,1,https://attictobasement.com/contact,308 https://attictobasement.com/contact
+http://attictobasement.com/services/sacramento/estate-sales,200,1,https://attictobasement.com/services/sacramento/estate-sales,308 https://attictobasement.com/services/sacramento/estate-sales
+http://attictobasement.com/estatesales,200,2,https://attictobasement.com/estate-sales,308 https://attictobasement.com/estatesales -> 308 /estate-sales
+http://attictobasement.com/estate-sales?utm_source=migration-audit,200,1,https://attictobasement.com/estate-sales?utm_source=migration-audit,308 https://attictobasement.com/estate-sales?utm_source=migration-audit
+https://attictobasement.com/,200,0,https://attictobasement.com/,
+https://attictobasement.com/estate-sales,200,0,https://attictobasement.com/estate-sales,
+https://attictobasement.com/estate-liquidation,200,0,https://attictobasement.com/estate-liquidation,
+https://attictobasement.com/appraisals,200,0,https://attictobasement.com/appraisals,
+https://attictobasement.com/contact,200,0,https://attictobasement.com/contact,
+https://attictobasement.com/services/sacramento/estate-sales,200,0,https://attictobasement.com/services/sacramento/estate-sales,
+https://attictobasement.com/estatesales,200,1,https://attictobasement.com/estate-sales,308 /estate-sales
+https://attictobasement.com/estate-sales?utm_source=migration-audit,200,0,https://attictobasement.com/estate-sales?utm_source=migration-audit,
+http://www.attictobasement.com/,200,1,https://www.attictobasement.com/,308 https://www.attictobasement.com/
+http://www.attictobasement.com/estate-sales,200,1,https://www.attictobasement.com/estate-sales,308 https://www.attictobasement.com/estate-sales
+http://www.attictobasement.com/estate-liquidation,200,1,https://www.attictobasement.com/estate-liquidation,308 https://www.attictobasement.com/estate-liquidation
+http://www.attictobasement.com/appraisals,200,1,https://www.attictobasement.com/appraisals,308 https://www.attictobasement.com/appraisals
+http://www.attictobasement.com/contact,200,1,https://www.attictobasement.com/contact,308 https://www.attictobasement.com/contact
+http://www.attictobasement.com/services/sacramento/estate-sales,200,1,https://www.attictobasement.com/services/sacramento/estate-sales,308 https://www.attictobasement.com/services/sacramento/estate-sales
+http://www.attictobasement.com/estatesales,200,2,https://www.attictobasement.com/estate-sales,308 https://www.attictobasement.com/estatesales -> 308 /estate-sales
+http://www.attictobasement.com/estate-sales?utm_source=migration-audit,200,1,https://www.attictobasement.com/estate-sales?utm_source=migration-audit,308 https://www.attictobasement.com/estate-sales?utm_source=migration-audit
+https://www.attictobasement.com/,200,0,https://www.attictobasement.com/,
+https://www.attictobasement.com/estate-sales,200,0,https://www.attictobasement.com/estate-sales,
+https://www.attictobasement.com/estate-liquidation,200,0,https://www.attictobasement.com/estate-liquidation,
+https://www.attictobasement.com/appraisals,200,0,https://www.attictobasement.com/appraisals,
+https://www.attictobasement.com/contact,200,0,https://www.attictobasement.com/contact,
+https://www.attictobasement.com/services/sacramento/estate-sales,200,0,https://www.attictobasement.com/services/sacramento/estate-sales,
+https://www.attictobasement.com/estatesales,200,1,https://www.attictobasement.com/estate-sales,308 /estate-sales
+https://www.attictobasement.com/estate-sales?utm_source=migration-audit,200,0,https://www.attictobasement.com/estate-sales?utm_source=migration-audit,
+https://abeliquidators.com/,200,1,https://attictobasement.com/,308 https://attictobasement.com/
+https://abeliquidators.com/estate-sales,200,1,https://attictobasement.com/estate-sales,308 https://attictobasement.com/estate-sales
+https://abeliquidators.com/estate-liquidation,200,1,https://attictobasement.com/estate-liquidation,308 https://attictobasement.com/estate-liquidation
+https://abeliquidators.com/appraisals,200,1,https://attictobasement.com/appraisals,308 https://attictobasement.com/appraisals
+https://abeliquidators.com/our-promise,200,1,https://attictobasement.com/our-promise,308 https://attictobasement.com/our-promise
+https://abeliquidators.com/reviews,200,1,https://attictobasement.com/reviews,308 https://attictobasement.com/reviews
+https://abeliquidators.com/contact,200,1,https://attictobasement.com/contact,308 https://attictobasement.com/contact
+https://abeliquidators.com/privacy,200,1,https://attictobasement.com/privacy,308 https://attictobasement.com/privacy
+https://abeliquidators.com/terms,200,1,https://attictobasement.com/terms,308 https://attictobasement.com/terms
+https://abeliquidators.com/services/sacramento/estate-sales,200,1,https://attictobasement.com/services/sacramento/estate-sales,308 https://attictobasement.com/services/sacramento/estate-sales
+https://abeliquidators.com/services/sacramento/appraisals,200,1,https://attictobasement.com/services/sacramento/appraisals,308 https://attictobasement.com/services/sacramento/appraisals
+https://abeliquidators.com/services/citrus-heights/estate-sales,200,1,https://attictobasement.com/services/citrus-heights/estate-sales,308 https://attictobasement.com/services/citrus-heights/estate-sales
+https://abeliquidators.com/services/citrus-heights/appraisals,200,1,https://attictobasement.com/services/citrus-heights/appraisals,308 https://attictobasement.com/services/citrus-heights/appraisals
+https://abeliquidators.com/services/elk-grove/estate-sales,200,1,https://attictobasement.com/services/elk-grove/estate-sales,308 https://attictobasement.com/services/elk-grove/estate-sales
+https://abeliquidators.com/services/elk-grove/appraisals,200,1,https://attictobasement.com/services/elk-grove/appraisals,308 https://attictobasement.com/services/elk-grove/appraisals
+https://abeliquidators.com/services/rancho-cordova/estate-sales,200,1,https://attictobasement.com/services/rancho-cordova/estate-sales,308 https://attictobasement.com/services/rancho-cordova/estate-sales
+https://abeliquidators.com/services/rancho-cordova/appraisals,200,1,https://attictobasement.com/services/rancho-cordova/appraisals,308 https://attictobasement.com/services/rancho-cordova/appraisals
+https://abeliquidators.com/services/west-sacramento/estate-sales,200,1,https://attictobasement.com/services/west-sacramento/estate-sales,308 https://attictobasement.com/services/west-sacramento/estate-sales
+https://abeliquidators.com/services/west-sacramento/appraisals,200,1,https://attictobasement.com/services/west-sacramento/appraisals,308 https://attictobasement.com/services/west-sacramento/appraisals
+https://abeliquidators.com/services/roseville/estate-sales,200,1,https://attictobasement.com/services/roseville/estate-sales,308 https://attictobasement.com/services/roseville/estate-sales
+https://abeliquidators.com/services/roseville/appraisals,200,1,https://attictobasement.com/services/roseville/appraisals,308 https://attictobasement.com/services/roseville/appraisals
+https://abeliquidators.com/services/rocklin/estate-sales,200,1,https://attictobasement.com/services/rocklin/estate-sales,308 https://attictobasement.com/services/rocklin/estate-sales
+https://abeliquidators.com/services/rocklin/appraisals,200,1,https://attictobasement.com/services/rocklin/appraisals,308 https://attictobasement.com/services/rocklin/appraisals
+https://abeliquidators.com/services/lincoln/estate-sales,200,1,https://attictobasement.com/services/lincoln/estate-sales,308 https://attictobasement.com/services/lincoln/estate-sales
+https://abeliquidators.com/services/lincoln/appraisals,200,1,https://attictobasement.com/services/lincoln/appraisals,308 https://attictobasement.com/services/lincoln/appraisals
+https://abeliquidators.com/services/auburn/estate-sales,200,1,https://attictobasement.com/services/auburn/estate-sales,308 https://attictobasement.com/services/auburn/estate-sales
+https://abeliquidators.com/services/auburn/appraisals,200,1,https://attictobasement.com/services/auburn/appraisals,308 https://attictobasement.com/services/auburn/appraisals
+https://abeliquidators.com/services/folsom/estate-sales,200,1,https://attictobasement.com/services/folsom/estate-sales,308 https://attictobasement.com/services/folsom/estate-sales
+https://abeliquidators.com/services/folsom/appraisals,200,1,https://attictobasement.com/services/folsom/appraisals,308 https://attictobasement.com/services/folsom/appraisals
+https://abeliquidators.com/services/placerville/estate-sales,200,1,https://attictobasement.com/services/placerville/estate-sales,308 https://attictobasement.com/services/placerville/estate-sales
+https://abeliquidators.com/services/placerville/appraisals,200,1,https://attictobasement.com/services/placerville/appraisals,308 https://attictobasement.com/services/placerville/appraisals
+https://abeliquidators.com/services/el-dorado-hills/estate-sales,200,1,https://attictobasement.com/services/el-dorado-hills/estate-sales,308 https://attictobasement.com/services/el-dorado-hills/estate-sales
+https://abeliquidators.com/services/el-dorado-hills/appraisals,200,1,https://attictobasement.com/services/el-dorado-hills/appraisals,308 https://attictobasement.com/services/el-dorado-hills/appraisals
+https://abeliquidators.com/resources/estate-sale-shopping-tips-for-beginners,200,1,https://attictobasement.com/resources/estate-sale-shopping-tips-for-beginners,308 https://attictobasement.com/resources/estate-sale-shopping-tips-for-beginners
+https://abeliquidators.com/resources/how-to-prepare-your-home-for-an-estate-sale,200,1,https://attictobasement.com/resources/how-to-prepare-your-home-for-an-estate-sale,308 https://attictobasement.com/resources/how-to-prepare-your-home-for-an-estate-sale
+https://abeliquidators.com/resources/what-to-expect-during-an-estate-sale,200,1,https://attictobasement.com/resources/what-to-expect-during-an-estate-sale,308 https://attictobasement.com/resources/what-to-expect-during-an-estate-sale

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { siteUrl } from "@/lib/site";
 
-export const siteUrl = "https://abeliquidators.com";
+export { siteUrl } from "@/lib/site";
 export const siteName = "Attic To Basement Estate Liquidators";
 export const sitePhone = "(916) 521-1077";
 export const siteOwner = "Cortnee Beggs";
