@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "rocklin-october-2026",
-        title: "FASHION FINDS & DECOR IN ROCKLIN",
+        title: "50% off SATURDAY!! FASHION FINDS & DECOR IN ROCKLIN",
         dates: "October 29–31st, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-29",
         endDate: "2026-10-31",
@@ -32,11 +32,11 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Rocklin/95765/5130951",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rocklin/95765/fashion-finds-decor-in-rocklin-2469872",
+            "https://estatesales.org/estate-sales/ca/rocklin/95765/50-off-saturday-fashion-finds-2469872",
     },
     {
         id: "sacramento-october-2026",
-        title: "BOOKS & HOUSEHOLD TREASURES!",
+        title: "50% OFF SATURDAY - BOOKS & HOUSEHOLD TREASURES!",
         dates: "October 29–31st, 2026 | 9 AM – 2 PM",
         startDate: "2026-10-29",
         endDate: "2026-10-31",
@@ -44,8 +44,6 @@ export const sales: Sale[] = [
         categories: ["Furniture", "Books", "Home Decor"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95835/5133186",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95835/books-household-treasures-2470211",
     },
     {
         id: "elk-grove-october-2026",
