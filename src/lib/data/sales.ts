@@ -22,32 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "rocklin-october-2026",
-        title: "50% off SATURDAY!! FASHION FINDS & DECOR IN ROCKLIN",
-        dates: "October 29–31st, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-29",
-        endDate: "2026-10-31",
-        area: "Rocklin, CA",
-        categories: ["Jewelry", "Fashion", "Coins", "Home Decor"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Rocklin/95765/5130951",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/rocklin/95765/50-off-saturday-fashion-finds-2469872",
-    },
-    {
-        id: "sacramento-october-2026",
-        title: "50% OFF SATURDAY - BOOKS & HOUSEHOLD TREASURES!",
-        dates: "October 29–31st, 2026 | 9 AM – 2 PM",
-        startDate: "2026-10-29",
-        endDate: "2026-10-31",
-        area: "Sacramento, CA",
-        categories: ["Furniture", "Books", "Home Decor"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95835/5133186",
-    },
-    {
         id: "elk-grove-october-2026",
-        title: "PACKED TO THE BRIM OF DECADES FROM ONE LARGE FAMILY CLOTHES, TOOLS, ETC.",
+        title: "25% OFF SATURDAY!!!! PACKED TO THE BRIM OF DECADES FROM ONE LARGE FAMILY CLOTHES, TOOLS, ETC.",
         dates: "October 30 – November 1st, 2026 | 9 AM – 3 PM",
         startDate: "2026-10-30",
         endDate: "2026-11-01",
@@ -55,8 +31,6 @@ export const sales: Sale[] = [
         categories: ["Fashion", "Tools", "Antiques"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Elk-Grove/95624/5124207",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/elk-grove/95624/packed-to-the-brim-of-2469021",
     },
     {
         id: "citrus-heights-november-2026",
