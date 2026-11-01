@@ -22,17 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "elk-grove-october-2026",
-        title: "25% OFF SATURDAY!!!! PACKED TO THE BRIM OF DECADES FROM ONE LARGE FAMILY CLOTHES, TOOLS, ETC.",
-        dates: "October 30 – November 1st, 2026 | 9 AM – 3 PM",
-        startDate: "2026-10-30",
-        endDate: "2026-11-01",
-        area: "Elk Grove, CA",
-        categories: ["Fashion", "Tools", "Antiques"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Elk-Grove/95624/5124207",
-    },
-    {
         id: "citrus-heights-november-2026",
         title: "TRAILER PARK TREASURES",
         dates: "November 13–14th, 2026 | 9 AM – 2 PM",
