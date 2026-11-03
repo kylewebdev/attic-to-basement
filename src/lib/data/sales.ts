@@ -35,6 +35,19 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/auburn/95602/a-little-bit-of-something-2471668",
     },
     {
+        id: "sacramento-november-2026",
+        title: "ANTIQUES, COLLECTIBLES & ODDITIES ESTATE SALE",
+        dates: "November 7–9th, 2026 | 9 AM – 3 PM",
+        startDate: "2026-11-07",
+        endDate: "2026-11-09",
+        area: "Sacramento, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95822/5145162",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95822/antiques-collectibles-oddities-estate-sale-2471683",
+    },
+    {
         id: "citrus-heights-november-2026",
         title: "TRAILER PARK TREASURES",
         dates: "November 13–14th, 2026 | 9 AM – 2 PM",
