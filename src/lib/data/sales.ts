@@ -22,6 +22,19 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
+        id: "auburn-november-2026",
+        title: "A LITTLE BIT OF SOMETHING FOR EVERYONE!",
+        dates: "November 6–8th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-06",
+        endDate: "2026-11-08",
+        area: "Auburn, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Auburn/95602/5145090",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/auburn/95602/a-little-bit-of-something-2471668",
+    },
+    {
         id: "citrus-heights-november-2026",
         title: "TRAILER PARK TREASURES",
         dates: "November 13–14th, 2026 | 9 AM – 2 PM",
