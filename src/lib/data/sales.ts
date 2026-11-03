@@ -22,20 +22,46 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
+        id: "red-bluff-november-2026",
+        title: "SIGNS, GLASS & COLLECTIBLES!",
+        dates: "November 5–7th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-05",
+        endDate: "2026-11-07",
+        area: "Red Bluff, CA",
+        categories: ["Cars", "Jewelry", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Red-Bluff/96080/5146059",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/red-bluff/96080/signs-glass-collectibles-2471799",
+    },
+    {
         id: "auburn-november-2026",
         title: "A LITTLE BIT OF SOMETHING FOR EVERYONE!",
         dates: "November 6–8th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-06",
         endDate: "2026-11-08",
         area: "Auburn, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
+        categories: ["Fashion", "Furniture", "Collectibles", "Art", "Tools"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Auburn/95602/5145090",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/auburn/95602/a-little-bit-of-something-2471668",
     },
     {
-        id: "sacramento-november-2026",
+        id: "sacramento-collectors-paradise-november-2026",
+        title: "COLLECTORS PARADISE",
+        dates: "November 6–8th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-06",
+        endDate: "2026-11-08",
+        area: "Sacramento, CA",
+        categories: ["Cars", "Antiques", "Collectibles", "Vintage", "Art"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95825/5145165",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95825/collectors-paradise-2471687",
+    },
+    {
+        id: "sacramento-antiques-collectibles-oddities-november-2026",
         title: "ANTIQUES, COLLECTIBLES & ODDITIES ESTATE SALE",
         dates: "November 7–9th, 2026 | 9 AM – 3 PM",
         startDate: "2026-11-07",
