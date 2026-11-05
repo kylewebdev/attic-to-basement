@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "red-bluff-november-2026",
-        title: "SIGNS, GLASS & COLLECTIBLES!",
+        title: "25% off FRIDAY! SIGNS, GLASS & COLLECTIBLES!",
         dates: "November 5–7th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-05",
         endDate: "2026-11-07",
@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Red-Bluff/96080/5146059",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/red-bluff/96080/signs-glass-collectibles-2471799",
+            "https://estatesales.org/estate-sales/ca/red-bluff/96080/25-off-friday-signs-glass-2471799",
     },
     {
         id: "auburn-november-2026",
