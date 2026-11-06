@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "red-bluff-november-2026",
-        title: "25% off FRIDAY! SIGNS, GLASS & COLLECTIBLES!",
+        title: "50% off SATURDAY! SIGNS, GLASS & COLLECTIBLES!",
         dates: "November 5–7th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-05",
         endDate: "2026-11-07",
@@ -32,11 +32,11 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Red-Bluff/96080/5146059",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/red-bluff/96080/25-off-friday-signs-glass-2471799",
+            "https://estatesales.org/estate-sales/ca/red-bluff/96080/50-off-saturday-signs-glass-2471799",
     },
     {
         id: "auburn-november-2026",
-        title: "A LITTLE BIT OF SOMETHING FOR EVERYONE!",
+        title: "25 % OFF SATURDAY - A LITTLE BIT OF SOMETHING FOR EVERYONE!",
         dates: "November 6–8th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-06",
         endDate: "2026-11-08",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Auburn/95602/5145090",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/auburn/95602/a-little-bit-of-something-2471668",
+            "https://estatesales.org/estate-sales/ca/auburn/95602/25-off-saturday-a-little-2471668",
     },
     {
         id: "sacramento-collectors-paradise-november-2026",
@@ -67,11 +67,24 @@ export const sales: Sale[] = [
         startDate: "2026-11-07",
         endDate: "2026-11-09",
         area: "Sacramento, CA",
-        categories: ["Furniture", "Antiques", "Collectibles"],
+        categories: ["Mid-Century Furniture", "Antiques", "Collectibles", "Vintage", "Art"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95822/5145162",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95822/antiques-collectibles-oddities-estate-sale-2471683",
+    },
+    {
+        id: "loomis-november-2026",
+        title: "HIGH END LOOMIS ESTATE SALE",
+        dates: "November 12–14th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-12",
+        endDate: "2026-11-14",
+        area: "Loomis, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Loomis/95650/5149587",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/loomis/95650/high-end-loomis-estate-sale-2472284",
     },
     {
         id: "citrus-heights-november-2026",
