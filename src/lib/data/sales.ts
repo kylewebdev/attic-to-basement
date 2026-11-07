@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "red-bluff-november-2026",
-        title: "50% off SATURDAY! SIGNS, GLASS & COLLECTIBLES!",
-        dates: "November 5–7th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-05",
-        endDate: "2026-11-07",
-        area: "Red Bluff, CA",
-        categories: ["Cars", "Jewelry", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Red-Bluff/96080/5146059",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/red-bluff/96080/50-off-saturday-signs-glass-2471799",
-    },
-    {
         id: "auburn-november-2026",
         title: "25 % OFF SATURDAY - A LITTLE BIT OF SOMETHING FOR EVERYONE!",
         dates: "November 6–8th, 2026 | 9 AM – 2 PM",
@@ -48,8 +35,8 @@ export const sales: Sale[] = [
             "https://estatesales.org/estate-sales/ca/auburn/95602/25-off-saturday-a-little-2471668",
     },
     {
-        id: "sacramento-collectors-paradise-november-2026",
-        title: "COLLECTORS PARADISE",
+        id: "sacramento-25-off-saturday-november-2026",
+        title: "25% OFF SATURDAY COLLECTORS PARADISE",
         dates: "November 6–8th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-06",
         endDate: "2026-11-08",
@@ -57,8 +44,6 @@ export const sales: Sale[] = [
         categories: ["Cars", "Furniture", "Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95825/5145165",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95825/collectors-paradise-2471687",
     },
     {
         id: "sacramento-antiques-collectibles-oddities-november-2026",
