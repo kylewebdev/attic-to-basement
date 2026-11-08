@@ -22,32 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "auburn-november-2026",
-        title: "25 % OFF SATURDAY - A LITTLE BIT OF SOMETHING FOR EVERYONE!",
-        dates: "November 6–8th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-06",
-        endDate: "2026-11-08",
-        area: "Auburn, CA",
-        categories: ["Fashion", "Furniture", "Collectibles", "Art", "Tools"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Auburn/95602/5145090",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/auburn/95602/25-off-saturday-a-little-2471668",
-    },
-    {
-        id: "sacramento-25-off-saturday-november-2026",
-        title: "25% OFF SATURDAY COLLECTORS PARADISE",
-        dates: "November 6–8th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-06",
-        endDate: "2026-11-08",
-        area: "Sacramento, CA",
-        categories: ["Cars", "Furniture", "Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95825/5145165",
-    },
-    {
-        id: "sacramento-antiques-collectibles-oddities-november-2026",
-        title: "ANTIQUES, COLLECTIBLES & ODDITIES ESTATE SALE",
+        id: "sacramento-november-2026",
+        title: "25% OFF SUNDAY, COLLECTIBLES & ODDITIES ESTATE SALE",
         dates: "November 7–9th, 2026 | 9 AM – 3 PM",
         startDate: "2026-11-07",
         endDate: "2026-11-09",
@@ -55,8 +31,6 @@ export const sales: Sale[] = [
         categories: ["Mid-Century Furniture", "Antiques", "Collectibles", "Vintage", "Art"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95822/5145162",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95822/antiques-collectibles-oddities-estate-sale-2471683",
     },
     {
         id: "loomis-november-2026",
