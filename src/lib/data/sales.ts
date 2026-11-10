@@ -22,17 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-november-2026",
-        title: "25% OFF SUNDAY, COLLECTIBLES & ODDITIES ESTATE SALE",
-        dates: "November 7–9th, 2026 | 9 AM – 3 PM",
-        startDate: "2026-11-07",
-        endDate: "2026-11-09",
-        area: "Sacramento, CA",
-        categories: ["Mid-Century Furniture", "Antiques", "Collectibles", "Vintage", "Art"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95822/5145162",
-    },
-    {
         id: "loomis-november-2026",
         title: "HIGH END LOOMIS ESTATE SALE",
         dates: "November 12–14th, 2026 | 9 AM – 2 PM",
