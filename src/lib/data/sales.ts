@@ -47,4 +47,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/citrus-heights/95621/trailer-park-treasures-2468980",
     },
+    {
+        id: "sacramento-november-2026",
+        title: "ECLECTIC ESTATE IN TAHOE PARK!!",
+        dates: "November 19–20th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-19",
+        endDate: "2026-11-20",
+        area: "Sacramento, CA",
+        categories: ["Eclectic", "Antiques", "Collectibles"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95820/5155701",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95820/eclectic-estate-in-tahoe-park-2473101",
+    },
 ];
