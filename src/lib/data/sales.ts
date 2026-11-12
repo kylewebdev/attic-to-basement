@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "loomis-november-2026",
-        title: "HIGH END LOOMIS ESTATE SALE",
+        title: "25% off FRIDAY!! HIGH END LOOMIS ESTATE SALE",
         dates: "November 12–14th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-12",
         endDate: "2026-11-14",
@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Loomis/95650/5149587",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/loomis/95650/high-end-loomis-estate-sale-2472284",
+            "https://estatesales.org/estate-sales/ca/loomis/95650/25-off-friday-high-end-2472284",
     },
     {
         id: "citrus-heights-november-2026",
@@ -59,5 +59,16 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95820/5155701",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95820/eclectic-estate-in-tahoe-park-2473101",
+    },
+    {
+        id: "roseville-november-2026",
+        title: "GLASS & CLASS",
+        dates: "November 20–22nd, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-20",
+        endDate: "2026-11-22",
+        area: "Roseville, CA",
+        categories: ["Furniture", "Collectibles", "Vintage", "Glassware", "Home Decor"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Roseville/95678/5157759",
     },
 ];
