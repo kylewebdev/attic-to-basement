@@ -36,7 +36,7 @@ export const sales: Sale[] = [
     },
     {
         id: "citrus-heights-november-2026",
-        title: "TRAILER PARK TREASURES",
+        title: "50% OFF SATURDAY - TRAILER PARK TREASURES",
         dates: "November 13–14th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-13",
         endDate: "2026-11-14",
@@ -45,7 +45,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Citrus-Heights/95621/5123859",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/citrus-heights/95621/trailer-park-treasures-2468980",
+            "https://estatesales.org/estate-sales/ca/citrus-heights/95621/50-off-saturday-trailer-park-2468980",
     },
     {
         id: "sacramento-november-2026",
@@ -70,5 +70,16 @@ export const sales: Sale[] = [
         categories: ["Furniture", "Collectibles", "Vintage", "Glassware", "Home Decor"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Roseville/95678/5157759",
+    },
+    {
+        id: "auburn-november-2026",
+        title: "CONSIGNMENT WAREHOUSE CLEARANCE",
+        dates: "November 21–22nd, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-21",
+        endDate: "2026-11-22",
+        area: "Auburn, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Auburn/95603/5159241",
     },
 ];
