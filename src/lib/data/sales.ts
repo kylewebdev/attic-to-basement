@@ -22,32 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "loomis-november-2026",
-        title: "25% off FRIDAY!! HIGH END LOOMIS ESTATE SALE",
-        dates: "November 12–14th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-12",
-        endDate: "2026-11-14",
-        area: "Loomis, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Loomis/95650/5149587",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/loomis/95650/25-off-friday-high-end-2472284",
-    },
-    {
-        id: "citrus-heights-november-2026",
-        title: "50% OFF SATURDAY - TRAILER PARK TREASURES",
-        dates: "November 13–14th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-13",
-        endDate: "2026-11-14",
-        area: "Citrus Heights, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Citrus-Heights/95621/5123859",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/citrus-heights/95621/50-off-saturday-trailer-park-2468980",
-    },
-    {
         id: "sacramento-november-2026",
         title: "ECLECTIC ESTATE IN TAHOE PARK!!",
         dates: "November 19–20th, 2026 | 9 AM – 2 PM",
