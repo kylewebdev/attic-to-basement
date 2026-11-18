@@ -56,4 +56,17 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Auburn/95603/5159241",
     },
+    {
+        id: "el-dorado-hills-november-2026",
+        title: "SMALL SALE IN EDH - APPT ONLY",
+        dates: "November 21–22nd, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-21",
+        endDate: "2026-11-22",
+        area: "El Dorado Hills, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/El-Dorado-Hills/95762/5164509",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/small-sale-in-edh-appt-2474323",
+    },
 ];
