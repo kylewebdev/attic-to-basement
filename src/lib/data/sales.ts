@@ -23,7 +23,7 @@ export function isSaleActive(sale: Sale): boolean {
 export const sales: Sale[] = [
     {
         id: "sacramento-november-2026",
-        title: "ECLECTIC ESTATE IN TAHOE PARK!!",
+        title: "50% off FRIDAY!! ECLECTIC ESTATE IN TAHOE PARK!!",
         dates: "November 19–20th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-19",
         endDate: "2026-11-20",
@@ -32,7 +32,7 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95820/5155701",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95820/eclectic-estate-in-tahoe-park-2473101",
+            "https://estatesales.org/estate-sales/ca/sacramento/95820/50-off-friday-eclectic-estate-2473101",
     },
     {
         id: "roseville-november-2026",
