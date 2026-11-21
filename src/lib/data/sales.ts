@@ -22,19 +22,6 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-november-2026",
-        title: "50% off FRIDAY!! ECLECTIC ESTATE IN TAHOE PARK!!",
-        dates: "November 19–20th, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-19",
-        endDate: "2026-11-20",
-        area: "Sacramento, CA",
-        categories: ["Eclectic", "Antiques", "Collectibles"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Sacramento/95820/5155701",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95820/50-off-friday-eclectic-estate-2473101",
-    },
-    {
         id: "roseville-november-2026",
         title: "GLASS & CLASS",
         dates: "November 20–22nd, 2026 | 9 AM – 2 PM",
@@ -55,6 +42,8 @@ export const sales: Sale[] = [
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Auburn/95603/5159241",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/auburn-/95603/consignment-warehouse-clearance-2474807",
     },
     {
         id: "el-dorado-hills-november-2026",
