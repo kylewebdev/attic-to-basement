@@ -43,19 +43,19 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Auburn/95603/5159241",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/auburn-/95603/consignment-warehouse-clearance-2474807",
+            "https://estatesales.org/estate-sales/ca/auburn/95603/consignment-warehouse-clearance-2474807",
     },
     {
-        id: "el-dorado-hills-november-2026",
-        title: "SMALL SALE IN EDH - APPT ONLY",
-        dates: "November 21–22nd, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-21",
-        endDate: "2026-11-22",
-        area: "El Dorado Hills, CA",
+        id: "sacramento-november-2026",
+        title: "POCKET FULL OF TREASURE!",
+        dates: "November 27–29th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-27",
+        endDate: "2026-11-29",
+        area: "Sacramento, CA",
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
-            "https://www.estatesales.net/CA/El-Dorado-Hills/95762/5164509",
+            "https://www.estatesales.net/CA/Sacramento/95831/5168520",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/el-dorado-hills/95762/small-sale-in-edh-appt-2474323",
+            "https://estatesales.org/estate-sales/ca/sacramento/95831/pocket-full-of-treasure-2474897",
     },
 ];
