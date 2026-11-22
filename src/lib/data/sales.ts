@@ -22,31 +22,7 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "roseville-november-2026",
-        title: "GLASS & CLASS",
-        dates: "November 20–22nd, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-20",
-        endDate: "2026-11-22",
-        area: "Roseville, CA",
-        categories: ["Furniture", "Collectibles", "Vintage", "Glassware", "Home Decor"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Roseville/95678/5157759",
-    },
-    {
-        id: "auburn-november-2026",
-        title: "CONSIGNMENT WAREHOUSE CLEARANCE",
-        dates: "November 21–22nd, 2026 | 9 AM – 2 PM",
-        startDate: "2026-11-21",
-        endDate: "2026-11-22",
-        area: "Auburn, CA",
-        categories: ["Antiques", "Collectibles", "Vintage"],
-        externalUrlNet:
-            "https://www.estatesales.net/CA/Auburn/95603/5159241",
-        externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/auburn/95603/consignment-warehouse-clearance-2474807",
-    },
-    {
-        id: "sacramento-november-2026",
+        id: "sacramento-pocket-full-treasure-november-2026",
         title: "POCKET FULL OF TREASURE!",
         dates: "November 27–29th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-27",
@@ -57,5 +33,18 @@ export const sales: Sale[] = [
             "https://www.estatesales.net/CA/Sacramento/95831/5168520",
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95831/pocket-full-of-treasure-2474897",
+    },
+    {
+        id: "sacramento-flock-fabulous-finds-november-2026",
+        title: "A FLOCK OF FABULOUS FINDS!",
+        dates: "November 27–29th, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-27",
+        endDate: "2026-11-29",
+        area: "Sacramento, CA",
+        categories: ["Collectibles", "Antiques", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Sacramento/95823/5169486",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/sacramento/95823/a-flock-of-fabulous-finds-2475040",
     },
 ];
