@@ -24,9 +24,9 @@ export const sales: Sale[] = [
     {
         id: "sacramento-pocket-full-treasure-november-2026",
         title: "POCKET FULL OF TREASURE!",
-        dates: "November 27–29th, 2026 | 9 AM – 2 PM",
+        dates: "November 27–28th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-27",
-        endDate: "2026-11-29",
+        endDate: "2026-11-28",
         area: "Sacramento, CA",
         categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
