@@ -47,4 +47,17 @@ export const sales: Sale[] = [
         externalUrlOrg:
             "https://estatesales.org/estate-sales/ca/sacramento/95823/a-flock-of-fabulous-finds-2475040",
     },
+    {
+        id: "lincoln-november-2026",
+        title: "LITTLE LUXURIOUS LINCOLN SALE!",
+        dates: "November 30 – December 1st, 2026 | 9 AM – 2 PM",
+        startDate: "2026-11-30",
+        endDate: "2026-12-01",
+        area: "Lincoln, CA",
+        categories: ["Antiques", "Collectibles", "Vintage"],
+        externalUrlNet:
+            "https://www.estatesales.net/CA/Lincoln/95648/5173074",
+        externalUrlOrg:
+            "https://estatesales.org/estate-sales/ca/lincoln/95648/little-luxurious-lincoln-sale-2475516",
+    },
 ];
