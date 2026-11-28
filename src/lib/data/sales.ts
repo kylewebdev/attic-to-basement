@@ -22,8 +22,8 @@ export function isSaleActive(sale: Sale): boolean {
 
 export const sales: Sale[] = [
     {
-        id: "sacramento-pocket-full-treasure-november-2026",
-        title: "POCKET FULL OF TREASURE!",
+        id: "sacramento-50-off-saturday-november-2026",
+        title: "50% off SATURDAY!!! POCKET FULL OF TREASURE!",
         dates: "November 27–28th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-27",
         endDate: "2026-11-28",
@@ -32,20 +32,20 @@ export const sales: Sale[] = [
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95831/5168520",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95831/pocket-full-of-treasure-2474897",
+            "https://estatesales.org/estate-sales/ca/sacramento/95831/50-off-saturday-pocket-full-2474897",
     },
     {
-        id: "sacramento-flock-fabulous-finds-november-2026",
-        title: "A FLOCK OF FABULOUS FINDS!",
+        id: "sacramento-25-off-saturday-november-2026",
+        title: "25% OFF SATURDAY - A FLOCK OF FABULOUS FINDS!",
         dates: "November 27–29th, 2026 | 9 AM – 2 PM",
         startDate: "2026-11-27",
         endDate: "2026-11-29",
         area: "Sacramento, CA",
-        categories: ["Collectibles", "Antiques", "Vintage"],
+        categories: ["Antiques", "Collectibles", "Vintage"],
         externalUrlNet:
             "https://www.estatesales.net/CA/Sacramento/95823/5169486",
         externalUrlOrg:
-            "https://estatesales.org/estate-sales/ca/sacramento/95823/a-flock-of-fabulous-finds-2475040",
+            "https://estatesales.org/estate-sales/ca/sacramento/95823/25-off-saturday-a-flock-2475040",
     },
     {
         id: "lincoln-november-2026",
